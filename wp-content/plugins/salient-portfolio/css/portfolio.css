@@ -1456,7 +1456,7 @@ body .container-wrap[data-nav-pos="after_project_2"] .bottom_controls .previous-
 
 .portfolio-items .col .work-item.style-3 a:not(.nectar-sharing),
 .portfolio-items .col .work-item.style-3-alt a:not(.nectar-sharing) {
-	background: transparent url('/wp-content/plugins/salient-portfolio/img/transparent.png') repeat 0 0;	
+	background: transparent url('../img/transparent.png') repeat 0 0;	
 }
 
 .portfolio-items .col .work-item.style-3 .vert-center h3, 
@@ -2698,7 +2698,7 @@ body.cssreflections .portfolio-items .parallaxImg.transition {
 	left: 50%;
 	top: 100px;
 	margin-left: -15px;
-	background-image: url('/wp-content/plugins/salient-portfolio/img/icons/loading-white-bg.gif');
+	background-image: url('../img/icons/loading-white-bg.gif');
 }
 
 .portfolio-loading.default-loader {

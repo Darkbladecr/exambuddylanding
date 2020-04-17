@@ -75,7 +75,7 @@ div.slider-nav span.left span {
 
 .orbit-wrapper div.slider-nav span.right {
 	background-color: #27CFC3;
-    background-image: url(/wp-content/plugins/salient-home-slider/img/icons/slider-arrows.png);
+    background-image: url(../img/icons/slider-arrows.png);
     right: 0px; 
     background-position: right top;
 }
@@ -86,7 +86,7 @@ body[data-smooth-scrolling="1"] .orbit-wrapper div.slider-nav span.right {
 
 .orbit-wrapper div.slider-nav span.left {
 	background-color: #27CFC3;
-    background-image: url(/wp-content/plugins/salient-home-slider/img/icons/slider-arrows.png);
+    background-image: url(../img/icons/slider-arrows.png);
     left: 0px; 
     background-position: left top;
 }
@@ -96,7 +96,7 @@ div.slider-nav span.right span.white {
 	top: 35px;
     right: 0px; 
     position: absolute;
-    background: url(/wp-content/plugins/salient-home-slider/img/icons/slider-arrows.png);
+    background: url(../img/icons/slider-arrows.png);
     background-position: right bottom;
 }
 
@@ -105,7 +105,7 @@ div.slider-nav span.left span.white {
 	top: 35px;
     right: 0px; 
     position: absolute;
-    background: url(/wp-content/plugins/salient-home-slider/img/icons/slider-arrows.png);
+    background: url(../img/icons/slider-arrows.png);
     background-position: left bottom;
 }
 
@@ -122,7 +122,7 @@ div.slider-nav span span.shadow {
     height: 7px;
     position: absolute;
     width: 56px;
-    background: url(/wp-content/plugins/salient-home-slider/img/icons/slider-arrows-shadows.png);
+    background: url(../img/icons/slider-arrows-shadows.png);
 }
 
 div.slider-nav span.left span.shadow { 
@@ -314,7 +314,7 @@ div.slider-nav span.right span.shadow {
 	position: relative;
 	z-index: 1;
 	height: 650px;
-	background: #000 url('/wp-content/plugins/salient-home-slider/img/icons/loading.gif') no-repeat center center;
+	background: #000 url('../img/icons/loading.gif') no-repeat center center;
 	overflow: hidden; 
 }
 
@@ -380,7 +380,7 @@ span.rotator {
     position: absolute;
     top: 0;
     left: -20px;
-    background: url(/wp-content/plugins/salient-home-slider/img/orbit/rotator-black.png) no-repeat;
+    background: url(../img/orbit/rotator-black.png) no-repeat;
     z-index: 3; }
 
 span.mask {
@@ -399,7 +399,7 @@ span.rotator.move {
 span.mask.move {
     width: 40px;
     left: 0;
-    background: url(/wp-content/plugins/salient-home-slider/img/orbit/timer-black.png) repeat 0 0; }
+    background: url(../img/orbit/timer-black.png) repeat 0 0; }
 
 span.pause {
     display: block;
@@ -408,12 +408,12 @@ span.pause {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/wp-content/plugins/salient-home-slider/img/orbit/pause-black.png) no-repeat;
+    background: url(../img/orbit/pause-black.png) no-repeat;
     z-index: 4;
     opacity: 0; }
 
 span.pause.active {
-    background: url(/wp-content/plugins/salient-home-slider/img/orbit/pause-black.png) no-repeat 0 -40px }
+    background: url(../img/orbit/pause-black.png) no-repeat 0 -40px }
 
 div.timer:hover span.pause,
 span.pause.active {
@@ -467,7 +467,7 @@ div.slider-nav span {
     		background-size: 140px 133px;
     		-webkit-background-size: 140px 133px;
     		-moz-background-size: 140px 133px;
-       	background-image: url(/wp-content/plugins/salient-home-slider/img/icons/slider-arrows@2x.png);
+       	background-image: url(../img/icons/slider-arrows@2x.png);
     }
  }
 

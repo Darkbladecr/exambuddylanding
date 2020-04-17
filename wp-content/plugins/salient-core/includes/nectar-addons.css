@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'nectar-editor-icons';
-  src: url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.eot');
-  src: url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.eot#iefix') format('embedded-opentype'),url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.woff') format('woff'),url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.ttf') format('truetype'),url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.svg#icomoon') format('svg');
+  src: url('img/nectar-editor-icons.eot');
+  src: url('img/nectar-editor-icons.eot?#iefix') format('embedded-opentype'),url('img/nectar-editor-icons.woff') format('woff'),url('img/nectar-editor-icons.ttf') format('truetype'),url('img/nectar-editor-icons.svg#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -113,12 +113,12 @@ body .wpb_content_element>.wpb_element_wrapper .icon-wpb-morphing-outline:before
 
 /* Rev Slider */
 .wpb-layout-element-button .icon-wpb-revslider {
-  background-image: url(/wp-content/plugins/salient-core/includes/img/rev-slider.png)!important;
+  background-image: url(img/rev-slider.png)!important;
   background-position: 0px 0px!important;
 }
 
 .wpb_rev_slider_vc .wpb_element_wrapper {
-  background-image: url(/wp-content/plugins/salient-core/includes/img/rev-slider.png)!important;
+  background-image: url(img/rev-slider.png)!important;
 }
 
 /* Team member */
@@ -352,12 +352,12 @@ body .wpb_content_element>.wpb_element_wrapper .icon-wpb-morphing-outline:before
 
 /* CF7 */
 .wpb-layout-element-button .icon-wpb-vc_gravityform {
-  background-image: url(/wp-content/plugins/salient-core/includes/img/contact-form-7.png);
+  background-image: url(img/contact-form-7.png);
   background-position: 0px 0px;
 }
 
 .wpb_contact-form-7 .wpb_element_wrapper {
-  background-image: url(/wp-content/plugins/salient-core/includes/img/contact-form-7.png);
+  background-image: url(img/contact-form-7.png);
 }
 
 .wpb_text-with-icon .wpb_element_wrapper .textarea_html {
@@ -563,7 +563,7 @@ body .wpb_pricing_table > .wpb_element_wrapper *:nth-child(4) .column_delete {
 
 /* accordion */
 .wpb-layout-element-button .icon-wpb-ui-accordion {
-  background-image: url(/wp-content/plugins/salient-core/includes/img/accordion.png)!important;
+  background-image: url(img/accordion.png)!important;
   background-position: 0px 0px!important;
 }
 
@@ -578,7 +578,7 @@ body .wpb_toggles > .wpb_element_wrapper .wpb_toggle {
 }
 
 body .wpb_toggles > .wpb_element_wrapper .ui-accordion-header span.ui-icon {
-  background-image: url("/wp-content/plugins/wpbakery/js_composer/assets/vc/plus.png");
+  background-image: url("../../wpbakery/js_composer/assets/vc/plus.png");
   background-position: 0 0;
   left: 7px;
   margin-top: 0;
@@ -587,7 +587,7 @@ body .wpb_toggles > .wpb_element_wrapper .ui-accordion-header span.ui-icon {
 }
 
 body .wpb_toggles > .wpb_element_wrapper .ui-state-active span.ui-icon {
-  background-image: url("/wp-content/plugins/wpbakery/js_composer/assets/vc/minus.png");
+  background-image: url("../../wpbakery/js_composer/assets/vc/minus.png");
 }
 
 .wpb_content_element .wpb_accordion_holder .wpb_toggle {
@@ -611,25 +611,25 @@ body .wpb_toggles > .wpb_element_wrapper .ui-state-active span.ui-icon {
 body .wpb_toggle > .controls_column .column_add, 
 body .wpb_tab > .controls_column .column_add, 
 body .wpb_item > .controls_column .column_add {
-  background-image: url("/wp-content/plugins/wpbakery/js_composer/assets/vc/add_grey.png");
+  background-image: url("../../wpbakery/js_composer/assets/vc/add_grey.png");
 }
 
 body .wpb_toggle > .controls_column .column_edit, 
 body .wpb_tab > .controls_column .column_edit, 
 body .wpb_item > .controls_column .column_edit {
-  background-image: url("/wp-content/plugins/wpbakery/js_composer/assets/vc/edit_grey.png");
+  background-image: url("../../wpbakery/js_composer/assets/vc/edit_grey.png");
 }
 
 body .wpb_toggle > .controls_column .column_clone, 
 body .wpb_tab > .controls_column .column_clone, 
 body .wpb_item > .controls_column .column_clone {
-  background-image: url("/wp-content/plugins/wpbakery/js_composer/assets/vc/clone_grey.png");
+  background-image: url("../../wpbakery/js_composer/assets/vc/clone_grey.png");
 }
 
 body .wpb_toggle > .controls_column .column_delete, 
 body .wpb_tab > .controls_column .column_delete, 
 body .wpb_item > .controls_column .column_delete {
-  background-image: url("/wp-content/plugins/wpbakery/js_composer/assets/vc/remove_grey.png");
+  background-image: url("../../wpbakery/js_composer/assets/vc/remove_grey.png");
 }
 
 body .wpb_toggle > .controls_column a,  
@@ -901,7 +901,7 @@ body .vc_ui-button.vc_ui-button-info:hover {
 
 body .vc_navbar .vc_icon-btn.salient-studio-templates {
   display: block;
-  background: url(/wp-content/plugins/salient-core/includes/img/salient-vc-toolbar.svg) no-repeat 15px center;
+  background: url(img/salient-vc-toolbar.svg) no-repeat 15px center;
   background-size: 20px;
 }
 
@@ -2389,7 +2389,7 @@ creating excess space at the bottom*/
 
 /* Compose mode - frontend editor */
 #vc_navbar[class*="-frontend"] .vc_icon-btn.salient-studio-templates {
-  background: url(/wp-content/plugins/salient-core/includes/img/salient.svg) no-repeat 15px center;
+  background: url(img/salient.svg) no-repeat 15px center;
   background-size: 20px;
 }
 

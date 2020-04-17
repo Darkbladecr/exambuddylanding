@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "linea-arrows-10";
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-arrows-10.eot");
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-arrows-10.eot#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-arrows-10.woff") format("woff"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-arrows-10.ttf") format("truetype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-arrows-10.svg#linea-arrows-10") format("svg");
+  src:url("linea-arrows-10.eot");
+  src:url("linea-arrows-10.eot?#iefix") format("embedded-opentype"),
+    url("linea-arrows-10.woff") format("woff"),
+    url("linea-arrows-10.ttf") format("truetype"),
+    url("linea-arrows-10.svg#linea-arrows-10") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -452,11 +452,11 @@ body [class^="icon-weather"], body [class*=" icon-weather"] {
 
 @font-face {
   font-family: "linea-basic-10";
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/inea-basic-10.eot");
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-10.eot#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-10.woff") format("woff"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-10.ttf") format("truetype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-10.svg#linea-basic-10") format("svg");
+  src:url("inea-basic-10.eot");
+  src:url("linea-basic-10.eot?#iefix") format("embedded-opentype"),
+    url("linea-basic-10.woff") format("woff"),
+    url("linea-basic-10.ttf") format("truetype"),
+    url("linea-basic-10.svg#linea-basic-10") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -886,11 +886,11 @@ body [class^="icon-weather"], body [class*=" icon-weather"] {
 
 @font-face {
   font-family: "linea-basic-elaboration-10";
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-elaboration-10.eot");
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-elaboration-10.eot#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-elaboration-10.woff") format("woff"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-elaboration-10.ttf") format("truetype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-basic-elaboration-10.svg#linea-basic-elaboration-10") format("svg");
+  src:url("linea-basic-elaboration-10.eot");
+  src:url("linea-basic-elaboration-10.eot?#iefix") format("embedded-opentype"),
+    url("linea-basic-elaboration-10.woff") format("woff"),
+    url("linea-basic-elaboration-10.ttf") format("truetype"),
+    url("linea-basic-elaboration-10.svg#linea-basic-elaboration-10") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -1350,11 +1350,11 @@ body [class^="icon-weather"], body [class*=" icon-weather"] {
 
 @font-face {
   font-family: "linea-ecommerce-10";
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-ecommerce-10.eot");
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-ecommerce-10.eot#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-ecommerce-10.woff") format("woff"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-ecommerce-10.ttf") format("truetype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-ecommerce-10.svg#linea-ecommerce-10") format("svg");
+  src:url("linea-ecommerce-10.eot");
+  src:url("linea-ecommerce-10.eot?#iefix") format("embedded-opentype"),
+    url("linea-ecommerce-10.woff") format("woff"),
+    url("linea-ecommerce-10.ttf") format("truetype"),
+    url("linea-ecommerce-10.svg#linea-ecommerce-10") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -1634,11 +1634,11 @@ body [class^="icon-weather"], body [class*=" icon-weather"] {
 
 @font-face {
   font-family: "linea-music-10";
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-music-10.eot");
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-music-10.eot#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-music-10.woff") format("woff"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-music-10.ttf") format("truetype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-music-10.svg#linea-music-10") format("svg");
+  src:url("linea-music-10.eot");
+  src:url("linea-music-10.eot?#iefix") format("embedded-opentype"),
+    url("linea-music-10.woff") format("woff"),
+    url("linea-music-10.ttf") format("truetype"),
+    url("linea-music-10.svg#linea-music-10") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -1751,11 +1751,11 @@ body [class^="icon-weather"], body [class*=" icon-weather"] {
 
 @font-face {
   font-family: "linea-software-10";
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-software-10.eot");
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-software-10.eot#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-software-10.woff") format("woff"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-software-10.ttf") format("truetype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-software-10.svg#linea-software-10") format("svg");
+  src:url("linea-software-10.eot");
+  src:url("linea-software-10.eot?#iefix") format("embedded-opentype"),
+    url("linea-software-10.woff") format("woff"),
+    url("linea-software-10.ttf") format("truetype"),
+    url("linea-software-10.svg#linea-software-10") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -2080,11 +2080,11 @@ body [class^="icon-weather"], body [class*=" icon-weather"] {
 
 @font-face {
   font-family: "linea-weather-10";
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-weather-10.eot");
-  src:url("/wp-content/themes/salient/css/fonts/svg/font/linea-weather-10.eot#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-weather-10.woff") format("woff"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-weather-10.ttf") format("truetype"),
-    url("/wp-content/themes/salient/css/fonts/svg/font/linea-weather-10.svg#linea-weather-10") format("svg");
+  src:url("linea-weather-10.eot");
+  src:url("linea-weather-10.eot?#iefix") format("embedded-opentype"),
+    url("linea-weather-10.woff") format("woff"),
+    url("linea-weather-10.ttf") format("truetype"),
+    url("linea-weather-10.svg#linea-weather-10") format("svg");
   font-weight: normal;
   font-style: normal;
 

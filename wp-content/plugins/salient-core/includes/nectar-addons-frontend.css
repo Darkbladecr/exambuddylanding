@@ -62,7 +62,7 @@ body.compose-mode .vc_helper .vc_element-icon {
 }
 
 @font-face {
-  font-family:'nectar-editor-icons'; src:url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.eot'); src:url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.eot#iefix') format('embedded-opentype'),url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.woff') format('woff'),url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.ttf') format('truetype'),url('/wp-content/plugins/salient-core/includes/img/nectar-editor-icons.svg#icomoon') format('svg'); font-weight:normal; font-style:normal;
+  font-family:'nectar-editor-icons'; src:url('img/nectar-editor-icons.eot'); src:url('img/nectar-editor-icons.eot?#iefix') format('embedded-opentype'),url('img/nectar-editor-icons.woff') format('woff'),url('img/nectar-editor-icons.ttf') format('truetype'),url('img/nectar-editor-icons.svg#icomoon') format('svg'); font-weight:normal; font-style:normal;
 }
 
 .compose-mode .vc_helper .vc_element-icon:before {

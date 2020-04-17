@@ -1737,7 +1737,7 @@ h2 .nectar-button {
 .team-member[data-style="bio_fullscreen"] a {
   display: block;
   position: absolute;
-  background: transparent url('/wp-content/plugins/salient-shortcodes/css/img/transparent.png') repeat 0 0;
+  background: transparent url('img/transparent.png') repeat 0 0;
   top: 0;
   left: 0;
   z-index: 20;
