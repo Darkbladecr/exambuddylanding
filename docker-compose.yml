@@ -40,10 +40,6 @@ services:
     restart: unless-stopped
     expose:
       - 80
-    environment:
-      VIRTUAL_HOST: wp.exambuddy.co.uk
-      LETSENCRYPT_HOST: wp.exambuddy.co.uk
-      LETSENCRYPT_EMAIL: stefan@exambuddy.co.uk
     labels:
       traefik.enable: true
       traefik.http.routers.exambuddy-http.rule: Host(`wp.exambuddy.co.uk`)
