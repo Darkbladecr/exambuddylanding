@@ -44,19 +44,28 @@ services:
       VIRTUAL_HOST: wp.exambuddy.co.uk
       LETSENCRYPT_HOST: wp.exambuddy.co.uk
       LETSENCRYPT_EMAIL: stefan@exambuddy.co.uk
+    labels:
+      traefik.enable: true
+      traefik.http.routers.exambuddy-http.rule: Host(`wp.exambuddy.co.uk`)
+      traefik.http.routers.exambuddy-http.entrypoints: web
+      traefik.http.routers.exambuddy.rule: Host(`wp.exambuddy.co.uk`)
+      traefik.http.routers.exambuddy.entrypoints: websecure
+      traefik.http.routers.exambuddy.tls.certresolver: letsencrypt
+      traefik.http.routers.exambuddy-http.middlewares: https_redirect@file
+      traefik.http.routers.exambuddy-http.middlewares: wwwtohttps@file
     volumes:
       - wordpress:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
     networks:
       - app-network
-      - nginx-proxy
+      - traefik-proxy
 
 volumes:
   wordpress:
   dbdata:
 
 networks:
-  nginx-proxy:
+  traefik-proxy:
     external: true
   app-network:
     driver: bridge
