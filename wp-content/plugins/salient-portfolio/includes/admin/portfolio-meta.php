@@ -1,5 +1,9 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 #-----------------------------------------------------------------#
 # Create the Portfolio meta boxes
@@ -532,6 +536,22 @@ if( !function_exists('salient_portfolio_metabox') ) {
 		
 		// only add header options when using Salient
 		if( defined( 'NECTAR_THEME_NAME' ) && !empty($options['transparent-header']) && $options['transparent-header'] == '1' ) {
+			
+			if( isset($options['portfolio_remove_single_header']) && 
+					!empty($options['portfolio_remove_single_header']) && 
+					'1' === $options['portfolio_remove_single_header'] ) {
+						
+						$force_transparency = array( 
+		          'name' =>  esc_html__('Force Transparency On Navigation', 'salient-core'),
+		          'desc' => esc_html__('You can use this option to force your navigation header to start transparent even if it does not qualify to trigger the','salient-core') . '<a target="_blank" href="'. esc_url(admin_url('?page=Salient#16_section_group_li_a')) .'"> transparent effect</a> ' . esc_html__('you have activated in the Salient options panel.', 'salient-core'),
+		          'id' => '_force_transparent_header',
+		          'type' => 'checkbox',
+		          'std' => ''
+		        );
+						
+						array_unshift($meta_box['fields'], $force_transparency);
+			} 
+			
 			nectar_reg_meta_box( $meta_box['id'], $meta_box['title'], 'nectar_metabox_portfolio_callback', $meta_box['post_type'], $meta_box['context'], $meta_box['priority'], $meta_box );
 		}
 		

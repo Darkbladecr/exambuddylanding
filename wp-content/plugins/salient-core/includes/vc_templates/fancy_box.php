@@ -1,5 +1,10 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $title = $el_class = $value = $label_value= $units = '';
 extract(shortcode_atts(array(
 	'image_url' => '',
@@ -8,7 +13,9 @@ extract(shortcode_atts(array(
 	'link_text' => '',
 	'min_height' => '300',
 	'color' => 'accent-color',
+	'color_custom' => '',
 	'hover_color' => 'accent-color',
+	'hover_color_custom' => '',
 	'box_style' => 'default',
 	'hover_content' => '',
 	'icon_family' => '',
@@ -22,6 +29,7 @@ extract(shortcode_atts(array(
 	'box_color' => '',
 	'content_color' => '#ffffff',
 	'box_color_opacity' => '1',
+	'color_box_hover_overlay_opacity' => 'default',
 	'css' => '',
 	'enable_animation' => '',
 	'animation' => '', 
@@ -29,6 +37,11 @@ extract(shortcode_atts(array(
 	'image_loading' => 'normal',
 	'box_alignment' => 'left',
 	'border_radius' => 'default',
+	'hover_desc_bg_animation' => 'long_zoom',
+	'parallax_hover_box_alignment' => 'middle',
+	'parallax_hover_box_overlay' => '',
+	'parallax_hover_box_overlay_opacity' => '0.6',
+	'parallax_hover_box_overlay_opacity_hover' => '0.2',
 	'delay' => ''
 	
 ), $atts));
@@ -233,7 +246,15 @@ if( !empty($icon) ) {
 		$delay = intval($delay);
 	}
 	
+	// Dynamic style classes.
+	if( function_exists('nectar_el_dynamic_classnames') ) {
+		$dynamic_el_styles = nectar_el_dynamic_classnames('nectar_fancy_box', $atts);
+	} else {
+		$dynamic_el_styles = '';
+	}
 	
+
+	// Main Output.
 	if( $box_style === 'parallax_hover' ) {
 		
 		if(!preg_match('/^\d+$/',$image_url)){
@@ -242,7 +263,7 @@ if( !empty($icon) ) {
 			$parallax_bg_img = $bg_image_src[0];
 		}
 		
-		$output = '<div class="nectar-fancy-box style-5 '.$using_img_class.' '.$css_class.'" data-style="'. esc_attr($box_style) .'" data-border-radius="'. esc_attr($border_radius) .'" data-animation="'.strtolower(esc_attr($parsed_animation)).'" data-delay="'.esc_attr($delay).'" data-color="'.strtolower(esc_attr($color)).'">';
+		$output = '<div class="nectar-fancy-box style-5 '.$using_img_class.' '.$css_class.esc_attr($dynamic_el_styles).'" data-align="'.esc_attr($parallax_hover_box_alignment).'" data-overlay-opacity="'.esc_attr($parallax_hover_box_overlay_opacity).'" data-overlay-opacity-hover="'.esc_attr($parallax_hover_box_overlay_opacity_hover).'" data-style="'. esc_attr($box_style) .'" data-border-radius="'. esc_attr($border_radius) .'" data-animation="'.strtolower(esc_attr($parsed_animation)).'" data-delay="'.esc_attr($delay).'" data-color="'.strtolower(esc_attr($color)).'">';
 		
 		$output .= $box_link;
 		$output .= '<div class="parallaxImg">';
@@ -259,13 +280,13 @@ if( !empty($icon) ) {
 			$hover_only_content = '<div class="hover-content">' . $hover_content . '</div>';
 		}
 		
-		$output = '<div class="nectar-fancy-box '.$using_img_class.' '.$css_class.'" style="min-height: '.esc_attr($min_height).'px" data-style="'. esc_attr($box_style) .'" data-border-radius="'. esc_attr($border_radius) .'" data-animation="'.strtolower(esc_attr($parsed_animation)).'" data-border="'.esc_attr($enable_border).'" data-delay="'.esc_attr($delay).'" data-alignment="'.esc_attr($box_alignment).'" data-color="'.strtolower($hover_color).'" '.$style2.'>';
+		$output = '<div class="nectar-fancy-box '.$using_img_class.' '.$css_class.esc_attr($dynamic_el_styles).'" style="min-height: '.esc_attr($min_height).'px" data-style="'. esc_attr($box_style) .'" data-border-radius="'. esc_attr($border_radius) .'" data-animation="'.strtolower(esc_attr($parsed_animation)).'" data-bg-animation="'.esc_attr($hover_desc_bg_animation).'" data-border="'.esc_attr($enable_border).'" data-delay="'.esc_attr($delay).'" data-alignment="'.esc_attr($box_alignment).'" data-color="'.strtolower($hover_color).'" '.$style2.'>';
 		$output .=  '<div class="box-bg" '.$style.'></div> <div class="inner"><div class="heading-wrap">' . $icon_markup .$extra_wrap_open . wp_kses_post($content) . '</div>' . wp_kses_post($hover_only_content) . $extra_wrap_close. '</div> '.$text_link.' '.$box_link.' </div>';
 		
 	}
 	else {
 		
-		$output = '<div class="nectar-fancy-box '.$using_img_class.' '.$css_class.'" data-style="'. esc_attr($box_style) .'" data-animation="'.strtolower(esc_attr($parsed_animation)).'" data-border-radius="'. esc_attr($border_radius) .'" data-border="'.esc_attr($enable_border).'" data-box-color-opacity="'.esc_attr($box_color_opacity).'" data-delay="'.esc_attr($delay).'" data-alignment="'.esc_attr($box_alignment).'" data-color="'.strtolower($color).'" '.$style2.'>';
+		$output = '<div class="nectar-fancy-box '.$using_img_class.' '.$css_class.esc_attr($dynamic_el_styles).'" data-style="'. esc_attr($box_style) .'" data-animation="'.strtolower(esc_attr($parsed_animation)).'" data-hover-o="'.esc_attr($color_box_hover_overlay_opacity).'" data-border-radius="'. esc_attr($border_radius) .'" data-border="'.esc_attr($enable_border).'" data-box-color-opacity="'.esc_attr($box_color_opacity).'" data-delay="'.esc_attr($delay).'" data-alignment="'.esc_attr($box_alignment).'" data-color="'.strtolower($color).'" '.$style2.'>';
 		$output .= $extra_wrap_open2 . '<div class="box-bg" '.$style.'></div> <div class="inner" style="min-height: '.esc_attr($min_height).'px">'.$extra_wrap_open . $icon_markup . wp_kses_post($content) . $extra_wrap_close. '</div> '.$text_link.' '.$box_link. $extra_wrap_close2 .' </div>';
 		
 	}

@@ -68,6 +68,15 @@ return array(
       "admin_label" => true,
       'description' => esc_html__('Select the post type you wish to display the categories from.', 'salient-core' ),
     ),
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Query", "salient-core" ),
+		 "param_name" => "group_header_1",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 
     array(
       "type" => "dropdown_multi",
       "heading" => esc_html__("Project Categories", "salient-core"),
@@ -103,14 +112,6 @@ return array(
 			"description" => esc_html__("Optionally enter a number e.g. \"2\" to offset your posts by.", "salient-core")
 		),
 		
-		
-		array(
-			"type" => 'checkbox',
-			"heading" => esc_html__("Enable Sortable", "salient-core"),
-			"param_name" => "enable_sortable",
-			"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
-		),
-    
     array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Order", "salient-core"),
@@ -173,7 +174,15 @@ return array(
 			'param_name' => 'button_color',
 			'description' => esc_html__( 'Choose a color from your','salient-core') . ' <a target="_blank" href="'. esc_url(admin_url()) .'?page=Salient&tab=6"> ' . esc_html__('globally defined color scheme','salient-core') . '</a>',
 		),
-
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Structure", "salient-core" ),
+		 "param_name" => "group_header_2",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
     array(
       'type' => 'dropdown',
       'heading' => esc_html__( 'Columns', 'salient-core' ),
@@ -193,6 +202,7 @@ return array(
       "heading" => esc_html__("Grid Item Spacing", "salient-core"),
       "param_name" => "grid_item_spacing",
       'save_always' => true,
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       "value" => array(
         esc_html__("None", "salient-core") => "none",
         "5px" => "5px",
@@ -207,6 +217,7 @@ return array(
       "type" => "dropdown",
       "heading" => esc_html__("Grid Item Height", "salient-core"),
       "param_name" => "grid_item_height",
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       'save_always' => true,
       "value" => array(
         "Default (30%)" => "30vh",
@@ -219,15 +230,46 @@ return array(
     ),
 		
 		
-    
+		array(
+			"type" => 'checkbox',
+			"heading" => esc_html__("Enable Sortable", "salient-core"),
+			"param_name" => "enable_sortable",
+			"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+		),
+		
+		array(
+      "type" => "dropdown",
+      "heading" => esc_html__("Sortable Filters Active Color", "salient-core"),
+      "param_name" => "sortable_color",
+			"dependency" => array('element' => "enable_sortable", 'value' => array('yes')),
+      'save_always' => true,
+      "value" => array(
+        esc_html__( "Default", "salient-core") => "default",
+				esc_html__( "Accent Color", "salient-core") => "accent-color",
+				esc_html__( "Extra Color 1", "salient-core") => "extra-color-1",
+				esc_html__( "Extra Color 2", "salient-core") => "extra-color-2",	
+				esc_html__( "Extra Color 3", "salient-core") => "extra-color-3",
+				esc_html__( "Color Gradient 1", "salient-core") => "extra-color-gradient-1",
+				esc_html__( "Color Gradient 2", "salient-core") => "extra-color-gradient-2"
+      ),
+    ),
+		
     array(
       "type" => 'checkbox',
       "heading" => esc_html__("Masonry Layout", "salient-core"),
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       "param_name" => "enable_masonry",
-      "description" => esc_html__("This will allow your portfolio items to display in a masonry layout as opposed to a fixed grid", "salient-core"),
+      "description" => esc_html__("This will allow your items to display in a masonry layout as opposed to a fixed grid", "salient-core"),
       "value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
     ),
-		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Grid Images", "salient-core" ),
+		 "param_name" => "group_header_3",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
 		array(
       "type" => "dropdown",
       "class" => "",
@@ -235,16 +277,26 @@ return array(
       "heading" => esc_html__("Image Size", "salient-core"),
       "param_name" => "image_size",
       "value" => array(
-        "Default (Large)" => "default",
-				"small" => "small",
+        "Default (Large)" => "large",
+				"Small" => "thumbnail",
+				"Small Landscape" => "portfolio-thumb",
 				"Medium" => "medium",
+				"Landscape" => "portfolio-thumb_large",
         "Large Featured" => "large_featured",
 				"Full" => 'full'
       ),
 			"description" => esc_html__("This option allows to you control what size image will load for each item in the grid. Useful to fine tune quality based on your specific use case.", "salient-core"),
-      'std' => 'default',
+      'std' => 'large',
     ),
 		
+    array(
+      "type" => 'checkbox',
+      "heading" => esc_html__("Lock Aspect Ratio to Image Size", "salient-core"),
+			"dependency" => array('element' => "grid_style", 'value' => array('content_under_image')),
+      "param_name" => "aspect_ratio_image_size",
+			"description" => esc_html__('Note: This will disable the "Masonry Layout" option.', "salient-core"),
+      "value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+    ),
 		array(
       "type" => "dropdown",
       "class" => "",
@@ -258,13 +310,55 @@ return array(
 			"description" => esc_html__("Determine whether to load all images on page load or to use a lazy load method for higher performance.", "salient-core"),
       'std' => 'default',
     ),
+		array(
+      "type" => "dropdown",
+      "class" => "",
+      'save_always' => true,
+      "heading" => esc_html__("Post animation", "salient-core"),
+      "param_name" => "animation",
+      "value" => array(
+        "None" => "none",
+				"Fade in from bottom" => "fade-in-from-bottom",
+      ),
+      'std' => 'none',
+    ),
 		
-    
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Grid Content", "salient-core" ),
+		 "param_name" => "group_header_4",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 
+		array(
+      "type" => "dropdown",
+      "class" => "",
+      'save_always' => true,
+      "heading" => esc_html__("Post Title Heading Tag", "salient-core"),
+      "param_name" => "heading_tag",
+      "value" => array(
+        "Default" => "default",
+				"Heading 2" => "h2",
+				"Heading 3" => "h3",
+				"Heading 4" => "h4",
+      ),
+      'std' => 'default',
+    ),
+		
+		array(
+			"type" => "textfield",
+			"heading" => esc_html__("Custom Post Title Font Size", "salient-core"),
+			"param_name" => "custom_font_size"
+		),
+		
 		array(
       "type" => 'checkbox',
       "heading" => esc_html__("Add Link Mouse Indicator", "salient-core"),
       "param_name" => "enable_indicator",
       "description" => esc_html__("This will add an indicator when hovering over each item ", "salient-core"),
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       "value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
     ),
 		
@@ -303,13 +397,44 @@ return array(
       "value" => "",
 			"dependency" => array('element' => "mouse_indicator_style", 'value' => 'default'),
     ),
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Advanced", "salient-core" ),
+		 "param_name" => "group_header_5",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 
+		array(
+			"type" => "textfield",
+			"heading" => esc_html__("CSS Class Name", "salient-core"),
+			"param_name" => "css_class_name",
+			"description" => esc_html__("Add in any extra CSS Classes that you wish to be applied to the Post Grid element.", "salient-core"),
+		),
+	
     
     array(
       "type" => 'checkbox',
       "heading" => esc_html__("Display Categories", "salient-core"),
       "param_name" => "display_categories",
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       "group" => esc_html__("Meta Data", "salient-core"),
       "value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+    ),
+		
+		array(
+      'type' => 'dropdown',
+      'heading' => esc_html__( 'Category Functionality', 'salient-core' ),
+      'param_name' => 'category_functionality',
+      'value' => array(
+        esc_html__('Clickable Links', 'salient-core') => 'default',
+        esc_html__('Static Text', 'salient-core') => 'static'
+      ),
+			"dependency" => array('element' => "display_categories", 'value' => 'yes'),
+      'save_always' => true,
+			"group" => esc_html__("Meta Data", "salient-core"),
     ),
     
     array(
@@ -323,12 +448,57 @@ return array(
     array(
       "type" => 'checkbox',
       "heading" => esc_html__("Display Excerpt", "salient-core"),
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       "param_name" => "display_excerpt",
       "group" => esc_html__("Meta Data", "salient-core"),
       "value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
     ),
   
-    
+		array(
+      'type' => 'dropdown',
+      'heading' => esc_html__( 'Grid Style', 'salient-core' ),
+      'param_name' => 'grid_style',
+      'value' => array(
+        esc_html__('Content Overlaid on Featured Image', 'salient-core') => 'content_overlaid',
+        esc_html__('Content Under Featured Image', 'salient-core') => 'content_under_image',
+        esc_html__('Featured Image Mouse Follow on Hover', 'salient-core') => 'mouse_follow_image',
+      ),
+      'save_always' => true,
+			"group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+    ),
+		
+		
+		array(
+			"type" => 'checkbox',
+			"heading" => esc_html__("Card Design", "salient-core"),
+			"param_name" => "card_design",
+			"dependency" => array('element' => "grid_style", 'value' => array('content_under_image')),
+			"group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+			'description' => esc_html__( 'Change the overall look of your grid items into cards.', 'salient-core'),
+			"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+		),
+		
+		array(
+      "type" => "colorpicker",
+      "class" => "",
+      "group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+      "heading" => "Card Item BG Color",
+      "param_name" => "card_bg_color",
+      "value" => "",
+			"dependency" => array('element' => "card_design", 'value' => 'yes')
+    ),
+		
+		array(
+      "type" => "colorpicker",
+      "class" => "",
+      "group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+      "heading" => "Card Item BG Color Hover",
+      "param_name" => "card_bg_color_hover",
+      "value" => "",
+			"dependency" => array('element' => "card_design", 'value' => 'yes')
+    ),
+		
+		
 		array(
       'type' => 'dropdown',
       'heading' => esc_html__( 'Text Content Layout', 'salient-core' ),
@@ -340,6 +510,7 @@ return array(
 				esc_html__('All Bottom Left With Shadow', 'salient-core') => 'all_bottom_left_shadow'
       ),
       'save_always' => true,
+			"dependency" => array('element' => "grid_style", 'value' => 'content_overlaid'),
 			"group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
       'description' => esc_html__( 'Select the layout for your text content.', 'salient-core')
     ),
@@ -351,6 +522,7 @@ return array(
       "heading" => "Color Overlay",
       "param_name" => "color_overlay",
       "value" => "",
+			"dependency" => array('element' => "grid_style", 'value' => 'content_overlaid'),
       "description" => esc_html__("Use this to set a BG color that will be overlaid on your grid items", "salient-core"),
     ),
     
@@ -361,6 +533,7 @@ return array(
       'save_always' => true,
       "heading" => esc_html__("Color Overlay Opacity", "salient-core"),
       "param_name" => "color_overlay_opacity",
+			"dependency" => array('element' => "grid_style", 'value' => 'content_overlaid'),
       "value" => array(
         "0" => "0",
         "0.1" => "0.1",
@@ -384,6 +557,7 @@ return array(
       'save_always' => true,
       "heading" => esc_html__("Color Overlay Hover Opacity", "salient-core"),
       "param_name" => "color_overlay_hover_opacity",
+			"dependency" => array('element' => "grid_style", 'value' => 'content_overlaid'),
       "value" => array(
         "0" => "0",
         "0.1" => "0.1",
@@ -401,6 +575,20 @@ return array(
     ),
     
     
+		array(
+      'type' => 'dropdown',
+      'heading' => esc_html__( 'Text Align', 'salient-core' ),
+      'param_name' => 'content_under_image_text_align',
+      'value' => array(
+        esc_html__('Left', 'salient-core') => 'left',
+        esc_html__('Center', 'salient-core') => 'center',
+        esc_html__('Right', 'salient-core') => 'right'
+      ),
+      'save_always' => true,
+			"dependency" => array('element' => "grid_style", 'value' => 'content_under_image'),
+			"group" => esc_html__("Grid Item Coloring/Style", "salient-core")
+    ),
+		
     array(
       "type" => "dropdown",
       "class" => "",
@@ -414,12 +602,23 @@ return array(
       ),
       'std' => 'light',
     ),
-
+		
+		array(
+			"type" => 'checkbox',
+			"group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+			"heading" => esc_html__("Post Title Contrast Over Image", "salient-core"),
+			"param_name" => "post_title_overlay",
+			"dependency" => array('element' => "grid_style", 'value' => 'mouse_follow_image'),
+			'description' => esc_html__( 'Will cause the post title to overlay on top of the featured image when hovered.', 'salient-core'),
+			"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+		),
+		
     array(
       "type" => "dropdown",
       "class" => "",
       "group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
       'save_always' => true,
+			"dependency" => array('element' => "grid_style", 'value' => 'content_overlaid'),
       "heading" => "Text Color Hover",
       "param_name" => "text_color_hover",
       "value" => array(
@@ -428,19 +627,65 @@ return array(
       ),
       'std' => 'light',
     ),
+		
+		array(
+			"type" => 'checkbox',
+			"group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+			"heading" => esc_html__("Opacity Hover Animation", "salient-core"),
+			"param_name" => "opacity_hover_animation",
+			"dependency" => array('element' => "grid_style", 'value' => 'mouse_follow_image'),
+			'description' => esc_html__( 'Will cause the post grid to dim and the hovered grid item to remain bright.', 'salient-core'),
+			"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+		),
+    
     
     array(
       "type" => 'dropdown',
       "heading" => esc_html__("Hover Effect", "salient-core"),
       "param_name" => "hover_effect",
       'save_always' => true,
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       "group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
       "value" => array(
         esc_html__("BG Zoom", "salient-core") => "zoom",
         esc_html__("Slow BG Zoom", "salient-core") => "slow_zoom",
+				esc_html__("None", "salient-core") => "none",
       )
     ),
     
+		array(
+      "type" => "dropdown",
+      "class" => "",
+      "group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+      'save_always' => true,
+			"dependency" => array('element' => "grid_style", 'value' => 'mouse_follow_image'),
+      "heading" => esc_html__("Image Alignment", "salient-core"),
+      "param_name" => "mouse_follow_image_alignment",
+      "value" => array(
+        "Middle on Cursor" => "middle",
+        "Top Left on Cursor" => "top_left",
+      ),
+      'std' => 'middle',
+    ),
+		
+		array(
+      "type" => "dropdown",
+      "heading" => esc_html__("Post Spacing", "salient-core"),
+      "param_name" => "mouse_follow_post_spacing",
+      'save_always' => true,
+			"group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
+			"dependency" => array('element' => "grid_style", 'value' => 'mouse_follow_image'),
+      "value" => array(
+        "5px" => "5px",
+        "10px" => "10px",
+        "15px" => "15px",
+        "25px" => "25px",
+				"35px" => "35px",
+				"45px" => "45px",
+      ),
+			'std' => '25px',
+    ),
+		
     array(
       "type" => "dropdown",
       "class" => "",
@@ -462,6 +707,7 @@ return array(
       "type" => 'checkbox',
       "heading" => esc_html__("Shadow on Hover", "salient-core"),
       "param_name" => "shadow_on_hover",
+			"dependency" => array('element' => "grid_style", 'value' => array('content_overlaid','content_under_image')),
       "group" => esc_html__("Grid Item Coloring/Style", "salient-core"),
       "description" => esc_html__("This will add a shadow effect on hover to your grid items", "salient-core"),
       "value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')

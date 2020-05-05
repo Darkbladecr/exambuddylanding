@@ -5,7 +5,7 @@
  * Description: Easily import the live demos of Salient into your own setup. Adds a "Demo Importer" tab into the Salient theme options panel. 
  * Author: ThemeNectar
  * Author URI: http://themenectar.com
- * Version: 1.1
+ * Version: 1.2
  * Text Domain: salient-demo-importer
  */
 
@@ -21,7 +21,7 @@ class Salient_Demo_Importer {
 	
 	static $instance = false;
 
-	public $plugin_version = '1.1';
+	public $plugin_version = '1.2';
 		
 	private function __construct() {
 		

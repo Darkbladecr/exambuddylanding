@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$nectar_options = get_nectar_theme_options();
 
 // Before content.
 add_action('nectar_hook_before_content', 'nectar_yoast_breadcrumbs');
@@ -26,6 +27,16 @@ add_action('nectar_hook_after_content', 'nectar_fullpage_markup_close');
 add_action('nectar_hook_before_header_nav', 'nectar_material_skin_ocm_wrap_open');
 add_action('nectar_hook_before_header_nav', 'nectar_page_trans_markup');
 
+
+// OCM fullscreen split.
+$side_widget_class = ( ! empty( $nectar_options['header-slide-out-widget-area-style'] ) ) ? $nectar_options['header-slide-out-widget-area-style'] : 'slide-out-from-right';
+if( 'fullscreen-split' === $side_widget_class ) {
+	add_action('nectar_hook_ocm_before_menu', 'nectar_fullscreen_split_ocm_nav_open');
+	add_action('nectar_hook_ocm_before_secondary_items', 'nectar_fullscreen_split_ocm_secondary_open');
+
+	add_action('nectar_hook_ocm_after_menu', 'nectar_fullscreen_split_ocm_nav_close');
+	add_action('nectar_hook_ocm_after_secondary_items', 'nectar_fullscreen_split_ocm_container_close');
+}
 
 // After WP Footer.
 add_action('nectar_hook_after_wp_footer', 'nectar_material_skin_ocm_wrap_close');
@@ -73,7 +84,40 @@ function nectar_fullscreen_blur_wrap_close() {
 }
 
 
+/**
+ * Add off canvas menu fullscreen split wrapping menu div.
+ *
+ * @since 11.5
+ */
+function nectar_fullscreen_split_ocm_nav_open() {
+	echo '<div class="container normal-container"><div class="left-side">';
+}
 
+/**
+ * Add off canvas menu fullscreen split wrapping menu div.
+ *
+ * @since 11.5
+ */
+function nectar_fullscreen_split_ocm_secondary_open() {
+	echo '<div class="right-side"><div class="right-side-inner">';
+}
+
+/**
+ * Add off canvas menu fullscreen split closing div.
+ *
+ * @since 11.5
+ */
+function nectar_fullscreen_split_ocm_nav_close() {
+	echo '</div>';
+}
+/**
+ * Add off canvas menu fullscreen split container closing div.
+ *
+ * @since 11.5
+ */
+function nectar_fullscreen_split_ocm_container_close() {
+	echo '</div></div></div>';
+}
 
 
 /**

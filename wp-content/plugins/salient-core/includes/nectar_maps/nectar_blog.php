@@ -29,6 +29,16 @@ return array(
 	"category" => esc_html__('Nectar Elements', 'salient-core'),
 	"description" => esc_html__('Display a Blog element', 'salient-core'),
 	"params" => array(
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Style", "salient-core" ),
+		 "param_name" => "group_header_1",
+		 "edit_field_class" => "first-field",
+		 "value" => ''
+	 ),
+	 
 		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Layout", "salient-core"),
@@ -97,15 +107,6 @@ return array(
 		),
 		
 		array(
-			"type" => "dropdown_multi",
-			"heading" => esc_html__("Blog Categories", "salient-core"),
-			"param_name" => "category",
-			"admin_label" => true,
-			"value" => $blog_options,
-			'save_always' => true,
-			"description" => esc_html__("Please select the categories you would like to display for your blog. You can select multiple categories too (ctrl + click on PC and command + click on Mac).", "salient-core")
-		),
-		array(
 			"type" => 'checkbox',
 			"heading" => esc_html__("Enable Sticky Sidebar", "salient-core"),
 			"param_name" => "enable_ss",
@@ -113,6 +114,36 @@ return array(
 			"value" => Array(esc_html__("Yes, please", "salient-core") => 'true'),
 			"dependency" => Array('element' => "layout", 'value' => array('std-blog-sidebar','masonry-blog-sidebar')),
 		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Load In Animation", "salient-core"),
+			"param_name" => "load_in_animation",
+			'save_always' => true,
+			"value" => array(
+				"None" => "none",
+				"Fade In" => "fade_in",
+				"Fade In From Bottom" => "fade_in_from_bottom",
+				"Perspective Fade In" => "perspective"
+			),
+			"description" => esc_html__("Please select the loading animation you would like ", "salient-core")
+		),
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Query", "salient-core" ),
+		 "param_name" => "group_header_2",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 array(
+		 "type" => "dropdown_multi",
+		 "heading" => esc_html__("Blog Categories", "salient-core"),
+		 "param_name" => "category",
+		 "admin_label" => true,
+		 "value" => $blog_options,
+		 'save_always' => true,
+		 "description" => esc_html__("Please select the categories you would like to display for your blog. You can select multiple categories too (ctrl + click on PC and command + click on Mac).", "salient-core")
+	 ),
 		array(
 			"type" => 'checkbox',
 			"heading" => esc_html__("Enable Pagination", "salient-core"),
@@ -145,19 +176,7 @@ return array(
 			"param_name" => "post_offset",
 			"description" => esc_html__("Will not be used when \"Enable Pagination\" is on. Optionally enter a number e.g. \"2\" to offset your posts by - useful for when you're using multiple styles of this element on the same page and would like them to no show duplicate posts.", "salient-core")
 		),
-		array(
-			"type" => "dropdown",
-			"heading" => esc_html__("Load In Animation", "salient-core"),
-			"param_name" => "load_in_animation",
-			'save_always' => true,
-			"value" => array(
-				"None" => "none",
-				"Fade In" => "fade_in",
-				"Fade In From Bottom" => "fade_in_from_bottom",
-				"Perspective Fade In" => "perspective"
-			),
-			"description" => esc_html__("Please select the loading animation you would like ", "salient-core")
-		),
+		
 		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Order", "salient-core"),
@@ -187,6 +206,14 @@ return array(
 			'save_always' => true,
 			"description" => esc_html__("Sort retrieved posts by parameter - defaults to date", "salient-core")
 		),
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Meta", "salient-core" ),
+		 "param_name" => "group_header_3",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
 		array(
 			"type" => 'checkbox',
 			"heading" => esc_html__("Remove Post Date", "salient-core"),

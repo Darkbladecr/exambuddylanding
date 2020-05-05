@@ -27,6 +27,7 @@ class NectarElAssets {
   public static $portfolio_content   = '';
   public static $woo_shop_content    = '';
   public static $woo_taxonmy_content = '';
+	public static $templatera_content  = array();
 	
 	/**
 	 * Constructor.
@@ -90,6 +91,38 @@ class NectarElAssets {
       }
       
     }
+		
+		
+		// Templatera.
+		preg_match_all( '/\[templatera(\s.*?)?\]/s', self::$post_content, $templatera_shortcode_match, PREG_SET_ORDER  );
+    
+    if( !empty($templatera_shortcode_match) ) {
+      
+      foreach( $templatera_shortcode_match as $shortcode ) {
+        
+        if( strpos($shortcode[0],'[') !== false && strpos($shortcode[0],']') !== false ) {
+          $shortcode_inner = substr($shortcode[0], 1, -1);
+        } else {
+          $shortcode_inner = $shortcode[0];
+        }
+        
+        $atts = shortcode_parse_atts( $shortcode_inner );
+        
+        if( isset($atts['id']) ) {
+          
+          $template_ID = (int) $atts['id'];
+          $templatera_content_query = get_post($template_ID);
+          
+          if( isset($templatera_content_query->post_content) && !empty($templatera_content_query->post_content) ) {
+            self::$templatera_content[] = $templatera_content_query->post_content;
+          }
+
+        }
+        
+      } // End Templatera Loop.
+
+    } // End found Templatera.
+		
     
     
   }
@@ -110,6 +143,15 @@ class NectarElAssets {
   			strpos( self::$woo_taxonmy_content, $string ) !== false ) {
   			return true;
   		} 
+			
+			// Templatera.
+			foreach( self::$templatera_content as $template_content ) {
+				
+				if( strpos( $template_content, $string ) !== false ) {
+					return true;
+				}
+				
+			}
   		
   	}
   

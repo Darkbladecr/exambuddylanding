@@ -31,7 +31,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_fontawesome",
-			"settings" => array( "iconsPerPage" => 4000),
+			"settings" => array( "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'emptyIcon' => false, 'value' => 'fontawesome'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -39,7 +39,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_iconsmind",
-			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'iconsmind'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -47,7 +47,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_linea",
-			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "icon_family", 'value' => 'linea'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -55,7 +55,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_linecons",
-			"settings" => array( 'type' => 'linecons', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linecons', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'linecons'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -63,7 +63,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_steadysets",
-			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'steadysets'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -133,6 +133,17 @@ return array(
 		),
 		array(
 			'type' => 'dropdown',
+			'heading' => __( 'Icon Coloring', 'salient-core' ),
+			'value' => array(
+				esc_html__('Global Color Scheme', 'salient-core' ) => "color_scheme",
+				esc_html__('Custom', 'salient-core' ) => "custom"
+			),
+			'std' => 'color_scheme',
+			'save_always' => true,
+			'param_name' => 'icon_color_type',
+		),
+		array(
+			'type' => 'dropdown',
 			'heading' => __( 'Icon Color', 'salient-core' ),
 			'value' => array(
 				esc_html__( "Accent Color", "salient-core") => "Accent-Color",
@@ -147,8 +158,20 @@ return array(
 			),
 			'save_always' => true,
 			'param_name' => 'icon_color',
+			"dependency" => array('element' => "icon_color_type", 'value' => array('color_scheme')),
 			'description' => esc_html__( 'Choose a color from your','salient-core') . ' <a target="_blank" href="'. esc_url(admin_url()) .'?page=Salient&tab=6"> ' . esc_html__('globally defined color scheme','salient-core') . '</a>',
 		),
+		
+		array(
+			"type" => "colorpicker",
+			"class" => "",
+			"heading" => "Icon Color",
+			"param_name" => "icon_color_custom",
+			"dependency" => array('element' => "icon_color_type", 'value' => array('custom')),
+			"value" => "",
+			"description" => esc_html__('Choose a custom color for your icon, outside of the global color scheme', 'salient-core'),	
+		),
+		
 		array(
 			"type" => "textfield",
 			"heading" => esc_html__("Link URL", "salient-core"),
@@ -184,33 +207,54 @@ return array(
 			'param_name' => 'icon_padding',
 		),
 		array(
-			"type" => "textfield",
+			"type" => "nectar_numerical",
 			"heading" => esc_html__("Margin", "salient-core") . "<span>" . esc_html__("Top", "salient-core") . "</span>",
 			"param_name" => "margin_top",
-			"edit_field_class" => "col-md-2",
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_1",
+			"placeholder" => esc_html__("Top",'salient-core'),
 			"description" => ''
 		),
 		array(
-			"type" => "textfield",
-			"heading" => "<span>" . esc_html__("Right", "salient-core") . "</span>",
-			"param_name" => "margin_right",
-			"edit_field_class" => "col-md-2",
-			"description" => ''
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+			'param_name' => 'constrain_group_1', 
+			'description' => '',
+			"edit_field_class" => "no-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
 		),
 		array(
-			"type" => "textfield",
+			"type" => "nectar_numerical",
 			"heading" => "<span>" . esc_html__("Bottom", "salient-core") . "</span>",
 			"param_name" => "margin_bottom",
-			"edit_field_class" => "col-md-2",
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_1",
+			"placeholder" => esc_html__("Bottom",'salient-core'),
 			"description" => ''
 		),
 		array(
-			"type" => "textfield",
+			"type" => "nectar_numerical",
 			"heading" => "<span>" . esc_html__("Left", "salient-core") . "</span>",
 			"param_name" => "margin_left",
-			"edit_field_class" => "col-md-2",
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_2",
+			"placeholder" => esc_html__("Left",'salient-core'),
 			"description" => ''
 		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+			'param_name' => 'constrain_group_2', 
+			'description' => '',
+			"edit_field_class" => "no-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span>" . esc_html__("Right", "salient-core") . "</span>",
+			"param_name" => "margin_right",
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_2",
+			"placeholder" => esc_html__("Right",'salient-core'),
+			"description" => ''
+		),
+	
 	)
 );
 

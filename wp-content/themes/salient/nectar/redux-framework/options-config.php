@@ -188,7 +188,7 @@
                 continue;   
             } 
             $extension_class = 'ReduxFramework_Extension_' . $folder;
-            if( !class_exists( $extension_class ) ) {
+            if( !class_exists( $extension_class ) && 'wbc_importer' !== $folder ) {
                 // In case you wanted override your override, hah.
                 $class_file = $path . $folder . '/extension_' . $folder . '.php';
                 $class_file = apply_filters( 'redux/extension/'.$ReduxFramework->args['opt_name'].'/'.$folder, $class_file );
@@ -208,7 +208,29 @@
     // Write dynamic css.
     add_action ('redux/options/salient_redux/saved', 'nectar_generate_options_css');
 
-
+    
+    // Allow child theme to disable sections from loading outside theme options 
+    if( !function_exists('salient_load_theme_options_globally') ) {
+      function salient_load_theme_options_globally() {
+        return true;
+      }
+    }
+    
+    $salient_globally_load_redux      = salient_load_theme_options_globally();
+    $salient_globally_load_redux_bool = ( false === $salient_globally_load_redux ) ? false : true;
+    
+    if ( false === $salient_globally_load_redux_bool && is_admin() ) {
+      
+      if( isset($_GET['page']) && 
+      $_GET['page'] === sanitize_html_class($theme->get( 'Name' )) ) {
+        
+      } else {
+        return;
+      }
+      
+    } 
+    
+    
     /*
      *
      * START SECTIONS
@@ -433,21 +455,17 @@
            'desc' => '',
            'default' => '0' 
          ),
+         
          array(
-           'id' => 'disable-mobile-parallax',
-           'type' => 'switch',
-           'title' => esc_html__('Disable Parallax Backgrounds On Mobile Devices', 'salient'), 
-           'subtitle' => esc_html__('This will remove the parallax scrolling effect from your row backgrounds/page headers that use the option.', 'salient'),
-           'desc' => '',
-           'default' => '0' 
-         ),
-         array(
-           'id' => 'disable-mobile-video-bgs',
-           'type' => 'switch',
-           'title' => esc_html__('Disable Video Backgrounds On Mobile Devices', 'salient'), 
-           'subtitle' => esc_html__('This will remove all self hosted video backgrounds from your rows/page headers that use them on mobile devices and cause the supplied preview image to be shown instead.', 'salient'),
-           'desc' => '',
-           'default' => '0' 
+           'id' => 'column_animation_mobile', 
+           'type' => 'select', 
+           'title' => esc_html__('Page Builder Element Animations On Mobile Devices', 'salient'),
+           'subtitle' => esc_html__('Determine whether or not to run page builder element animations on mobile devices.', 'salient'), 
+           'options' => array(
+             'disable' => 'Disable',
+             'enable' => 'Enable',
+           ),
+           'default' => 'disable' 
          ),
          array(
            'id' => 'column_animation_easing', 
@@ -497,6 +515,22 @@
            'subtitle' => esc_html__('Enter the time in milliseconds e.g. "400" - default is "650"', 'salient'),
            'desc' => '',
            'default' => '750'
+         ),
+         array(
+           'id' => 'disable-mobile-parallax',
+           'type' => 'switch',
+           'title' => esc_html__('Disable Parallax Backgrounds On Mobile Devices', 'salient'), 
+           'subtitle' => esc_html__('This will remove the parallax scrolling effect from your row backgrounds/page headers that use the option.', 'salient'),
+           'desc' => '',
+           'default' => '0' 
+         ),
+         array(
+           'id' => 'disable-mobile-video-bgs',
+           'type' => 'switch',
+           'title' => esc_html__('Disable Video Backgrounds On Mobile Devices', 'salient'), 
+           'subtitle' => esc_html__('This will remove all self hosted video backgrounds from your rows/page headers that use them on mobile devices and cause the supplied preview image to be shown instead.', 'salient'),
+           'desc' => '',
+           'default' => '0' 
          ),
        )
      ) );
@@ -933,15 +967,33 @@
          ),
          
          array(
+           'id'       => 'bold_font_family',
+           'type'     => 'typography',
+           'title'    => esc_html__( 'Bold', 'salient' ),
+           'subtitle' => esc_html__( 'Specify the bold text font & weight. (Other properties will inherit from the body font)', 'salient' ),
+           'google'   => true,
+           'all_styles'  => false,
+           'font-size' => false,
+           'subsets' => false,
+           'line-height' => false,
+           'text-transform' => false,
+           'letter-spacing' => false,
+           'all_styles'  => false,
+           'fonts' =>  $nectar_std_fonts,
+           'default'  => array()
+         ),
+         
+         array(
            'id'       => 'label_font_family',
            'type'     => 'typography',
-           'title'    => esc_html__( 'Form Labels', 'salient' ),
-           'subtitle' => esc_html__( 'Specify the Form Label properties. When using the "Material" theme skin, sidebar links will inherit this as well.', 'salient' ),
+           'title'    => esc_html__( 'Form and Category Labels', 'salient' ),
+           'subtitle' => esc_html__( 'Specify html Label properties. When using the "Material" theme skin, sidebar links will inherit this as well.', 'salient' ),
            'google'   => true,
            'all_styles'  => false,
            'fonts' =>  $nectar_std_fonts,
            'default'  => array()
          ),
+         
        )
      ) );
      
@@ -950,6 +1002,28 @@
        'id'               => 'typography-nectar',
        'subsection'       => true,
        'fields'           => array(
+         
+         array(
+           'id'       => 'sidebar_footer_h_font_family',
+           'type'     => 'typography',
+           'title'    => esc_html__( 'Nectar Button', 'salient' ),
+           'subtitle' => esc_html__( 'Specify the font properties for Nectar Buttons.', 'salient' ),
+           'google'   => true,
+           'fonts' =>  $nectar_std_fonts,
+           'all_styles'  => false,
+           'default'  => array()
+         ),
+         
+         array(
+           'id'       => 'nectar_sidebar_footer_headers_font_family',
+           'type'     => 'typography',
+           'title'    => esc_html__( 'Sidebar/Footer Headers', 'salient' ),
+           'subtitle' => esc_html__( 'Specify the font properties for headers used in sidebars & the footer.', 'salient' ),
+           'google'   => true,
+           'fonts' =>  $nectar_std_fonts,
+           'all_styles'  => false,
+           'default'  => array()
+         ),
          
          array(
            'id'       => 'nectar_slider_heading_font_family',
@@ -982,17 +1056,6 @@
            'google'   => true,
            'all_styles'  => false,
            'fonts' =>  $nectar_std_fonts,
-           'default'  => array()
-         ),
-         
-         array(
-           'id'       => 'sidebar_footer_h_font_family',
-           'type'     => 'typography',
-           'title'    => esc_html__( 'Sidebar, Carousel, Nectar Button & Footer Headers Font', 'salient' ),
-           'subtitle' => esc_html__( 'Specify the Sidebar, Carousel, Nectar Button & Footer Headers font properties.', 'salient' ),
-           'google'   => true,
-           'fonts' =>  $nectar_std_fonts,
-           'all_styles'  => false,
            'default'  => array()
          ),
          
@@ -1039,18 +1102,7 @@
            'all_styles'  => false,
            'default'  => array()
          ),
-         
-         array(
-           'id'       => 'nectar_sidebar_footer_headers_font_family',
-           'type'     => 'typography',
-           'title'    => esc_html__( 'Sidebar/Footer Headers', 'salient' ),
-           'subtitle' => esc_html__( 'Specify the font properties for headers used in sidebars & the footer.', 'salient' ),
-           'google'   => true,
-           'fonts' =>  $nectar_std_fonts,
-           'all_styles'  => false,
-           'default'  => array()
-         ),
-         
+
          array(
            'id'       => 'nectar_woo_shop_product_title_font_family',
            'type'     => 'typography',
@@ -1447,7 +1499,55 @@
          ),
          
          
+         array(
+           'id'   =>'responsive-heading-typography-divider-6',
+           'desc' => '',
+           'type' => 'divide',
+           'required' => array( 'use-responsive-heading-typography', '=', '1' )
+         ),
          
+         array(
+           'id'        => 'blockquote-small-desktop-font-size',
+           'type'      => 'slider',
+           'title'     => esc_html__('Testimonial/Blockquote Font Small Desktop', 'salient'),
+           'subtitle'  => '',
+           'desc'      => '',
+           "default"   => 100,
+           "min"       => 10,
+           "step"      => 5,
+           "max"       => 100,
+           'display_value' => 'text',
+           'required' => array( 'use-responsive-heading-typography', '=', '1' )
+         ),
+         
+         array(
+           'id'        => 'blockquote-tablet-font-size',
+           'type'      => 'slider',
+           'title'     => esc_html__('Testimonial/Blockquote Font Tablet', 'salient'),
+           'subtitle'  => '',
+           'desc'      => '',
+           "default"   => 100,
+           "min"       => 10,
+           "step"      => 5,
+           "max"       => 100,
+           'display_value' => 'text',
+           'required' => array( 'use-responsive-heading-typography', '=', '1' )
+         ),
+         
+         array(
+           'id'        => 'blockquote-phone-font-size',
+           'type'      => 'slider',
+           'title'     => esc_html__('Testimonial/Blockquote Font Phone', 'salient'),
+           'subtitle'  => '',
+           'desc'      => '',
+           "default"   => 100,
+           "min"       => 10,
+           "step"      => 5,
+           "max"       => 100,
+           'display_value' => 'text',
+           'required' => array( 'use-responsive-heading-typography', '=', '1' )
+         ),
+
          
        )
      ) );
@@ -1533,9 +1633,7 @@
            'desc' => '',
            'validate' => 'numeric'
          ),
-         
-         
-         
+
          array(
            'id' => 'header-remove-fixed',
            'type' => 'switch',
@@ -1844,7 +1942,20 @@
            'default' => '#ffffff'
          ),
          
-         
+         array(
+           'id' => 'header-button-styling', 
+           'type' => 'select', 
+           'title' => esc_html__('Header Button Link Style', 'salient'),
+           'subtitle' => esc_html__('This effects any header links which are set to use','salient') . ' <a target="_blank" href="http://themenectar.com/docs/salient/header-button-links/">' . esc_html('button styling.', 'salient') .'</a>',
+           'desc' => '',
+           'options' => array(
+             'default' => esc_html__('Default', 'salient'), 
+             'hover_scale' => esc_html__('Scale on Hover', 'salient'),
+             'shadow_hover_scale' => esc_html__('Button Shadow and Scale on Hover', 'salient')
+           ),
+           'default' => 'default'
+         ),
+
        )
      ) );
      
@@ -1885,6 +1996,16 @@
            'switch' => true,
            'default' => '0' 
          ),
+         array(
+           'id' => 'header-fullwidth-padding', 
+           'type' => 'text', 
+           'title' => esc_html__('Full Width Left/Right Padding', 'salient'),
+           'subtitle' => esc_html__('Don\'t include "px" in the string. e.g. 28', 'salient'),
+           'desc' => '',
+           'required' => array( 'header-fullwidth', '=', '1' ),
+           'validate' => 'numeric'
+         ),
+         
          
          array(
            'id' => 'header-disable-search',
@@ -1951,7 +2072,7 @@
          array(
            'id' => 'use-google-plus-icon-header',
            'type' => 'checkbox',
-           'title' => esc_html__('Use Google+ Icon', 'salient'), 
+           'title' => esc_html__('Use Google Icon', 'salient'), 
            'subtitle' => '',
            'desc' => '',
            'required' => array( 'enable_social_in_header', '=', '1' ),
@@ -2177,6 +2298,14 @@
            'type' => 'checkbox',
            'required' => array( 'enable_social_in_header', '=', '1' ),
            'title' => esc_html__('Use WhatsApp Icon', 'salient'), 
+           'subtitle' => '',
+           'desc' => ''
+         ),
+         array(
+           'id' => 'use-messenger-icon-header',
+           'type' => 'checkbox',
+           'required' => array( 'enable_social_in_header', '=', '1' ),
+           'title' => esc_html__('Use Messenger Icon', 'salient'), 
            'subtitle' => '',
            'desc' => ''
          ),
@@ -2542,6 +2671,7 @@
              'slide-out-from-right-hover' => esc_html__('Slide Out From Right Hover Triggered', 'salient'), 
              'fullscreen' => esc_html__('Fullscreen Cover Slide + Blur BG', 'salient'),
              'fullscreen-alt' => esc_html__('Fullscreen Cover Fade', 'salient'),
+             'fullscreen-split' => esc_html__('Fullscreen Cover Split', 'salient'),
              'simple' => esc_html__('Simple Dropdown', 'salient')
            ),
            'default' => 'slide-out-from-right',
@@ -2607,7 +2737,36 @@
            'required' => array(  array('header-slide-out-widget-area-style', '!=', 'simple') ),
            'default' => '0' 
          ),
-         
+         array(
+           'id' => 'header-slide-out-widget-area-icon-style', 
+           'type' => 'select', 
+           'title' => esc_html__('Off Canvas Icon Style', 'salient'),
+           'subtitle' => esc_html__('Please select your off canvas header icon style.', 'salient'),
+           'desc' => '',
+           'options' => array(
+             'default' => esc_html__('Default', 'salient'), 
+             'circular' => esc_html__('Circular', 'salient')
+           ),
+           'default' => 'default',
+           'required' => array(  array('header-menu-label', '!=', '1') )
+         ),
+         array(
+           'id' => 'header-slide-out-widget-area-menu-btn-bg-color',
+           'type' => 'color',
+           'title' => esc_html__('Off Canvas Navigation Menu Button BG Color', 'salient'),
+           'desc' => '',
+           'transparent' => false,
+           'subtitle' => esc_html__('Optionally define a background color for your off canvas navigation button within the header. Useful in combination with the "Permanent Transparent" navigation option.', 'salient'),
+           'default' => ''
+         ),
+         array(
+           'id' => 'header-slide-out-widget-area-menu-btn-color',
+           'type' => 'color',
+           'title' => esc_html__('Off Canvas Navigation Menu Button Color', 'salient'),
+           'desc' => '',
+           'transparent' => false,
+           'default' => ''
+         ),
          
        )
      ) );
@@ -2720,9 +2879,19 @@
            'required' => array( 'footer-custom-color', '=', '1' ),
            'title' => '', 
            'class' => 'five-columns always-visible',
-           'subtitle' => esc_html__('Footer Copyright Icon  Hover Color', 'salient'), 
+           'subtitle' => esc_html__('Footer Copyright Icon Hover Color', 'salient'), 
            'desc' => '',
            'default' => '#ffffff',
+           'transparent' => false
+         ),
+         array(
+           'id' => 'footer-copyright-border-color',
+           'type' => 'color',
+           'required' => array( 'footer-custom-color', '=', '1' ),
+           'title' => '', 
+           'subtitle' => esc_html__('Footer Copyright Top Border Color', 'salient'), 
+           'desc' => '',
+           'default' => '',
            'transparent' => false
          ),
          array(
@@ -2854,7 +3023,7 @@
          array(
            'id' => 'use-google-plus-icon',
            'type' => 'checkbox',
-           'title' => esc_html__('Use Google+ Icon', 'salient'), 
+           'title' => esc_html__('Use Google Icon', 'salient'), 
            'subtitle' => '',
            'desc' => ''
          ),
@@ -3051,6 +3220,13 @@
            'id' => 'use-whatsapp-icon',
            'type' => 'checkbox',
            'title' => esc_html__('Use WhatsApp Icon', 'salient'), 
+           'subtitle' => '',
+           'desc' => ''
+         ),
+         array(
+           'id' => 'use-messenger-icon',
+           'type' => 'checkbox',
+           'title' => esc_html__('Use Messenger Icon', 'salient'), 
            'subtitle' => '',
            'desc' => ''
          ),
@@ -3280,7 +3456,7 @@
          array(
            'id' => 'form-submit-btn-style', 
            'type' => 'select', 
-           'title' => esc_html__('Submit Button Style', 'salient'),
+           'title' => esc_html__('Form Submit Button Style', 'salient'),
            'subtitle' => esc_html__('Select your desired style which will be used for submit buttons throughout your site', 'salient'),
            'desc' => '',
            'options' => array(
@@ -3289,7 +3465,53 @@
              'see-through' => esc_html__('Nectar Btn See Through', 'salient')            
            ),
            'default' => 'regular'
-         )
+         ),
+         array(
+            'id'             => 'form-submit-spacing',
+            'type'           => 'spacing',
+            'mode'           => 'padding',
+            'units'          => array('em', 'px'),
+            'left'           => false,
+            'bottom'         => false,
+            'units_extended' => 'false',
+            'title'          => esc_html__('Form Submit Button Padding', 'salient'),
+            'subtitle'       => esc_html__('Fine-tune form submit button padding. If left blank, defaults to 15px for top/bottom and 20px for left/right.', 'salient'),
+            'desc'           => '',
+            'default'            => array(
+                'padding-top'     => '', 
+                'padding-right'   => '', 
+                'units'          => 'px', 
+            )
+        ),
+        array(
+          'id'        => 'form-input-font-size',
+          'type'      => 'slider',
+          'title'     => esc_html__('Form Input Field Text Size', 'salient'),
+          'subtitle'  => esc_html__('Alters the font size for form input field/textarea elements.', 'salient'),
+          'desc'      => '',
+          "default"   => 14,
+          "min"       => 14,
+          "step"      => 1,
+          "max"       => 30,
+          'display_value' => 'text'
+        ),
+        array(
+           'id'             => 'form-input-spacing',
+           'type'           => 'spacing',
+           'mode'           => 'padding',
+           'left'           => false,
+           'bottom'         => false,
+           'units'          => array('em', 'px'),
+           'units_extended' => 'false',
+           'title'          => esc_html__('Form Input Field Padding', 'salient'),
+           'subtitle'       => esc_html__('Fine-tune form input fields/textarea element padding. If left blank, defaults to 10px for all sides.', 'salient'),
+           'desc'           => '',
+           'default'            => array(
+               'padding-top'     => '', 
+               'padding-right'   => '', 
+               'units'          => 'px', 
+           )
+       ),
          
          
        )
@@ -3505,6 +3727,15 @@
                'after_project_2' => esc_html__('At Bottom W/ Featured Image', 'salient')
              ),
              'default' => 'after_project'
+           ),  
+           array(
+             'id' => 'portfolio_remove_single_header', 
+             'type' => 'switch',
+             'title' => esc_html__('Single Project Remove Default Header', 'salient'),
+             'subtitle' => esc_html__('This will deactivate the default portfolio header from displaying on your single project pages.', 'salient'),
+             'desc' => '',
+             'switch' => true,
+             'default' => '0' 
            ),  
            array(
              'id' => 'portfolio_loading_animation',
@@ -3762,6 +3993,64 @@
              ),
              'default' => 'default_minimal'
            ), 
+           
+           array(
+             'id' => 'default_minimal_overlay_color',
+             'type' => 'color',
+             'title' => esc_html__('Blog Header Overlay Color', 'salient'), 
+             'subtitle' => '', 
+             'desc' => '',
+             'default' => '#2d2d2d',
+             'required' => array( 'blog_header_type', '=', 'default_minimal' ),
+             'transparent' => false
+           ),
+           array(
+             'id'        => 'default_minimal_overlay_opacity',
+             'type'      => 'slider',
+             'required' => array( 'blog_header_type', '=', 'default_minimal' ),
+             'title'     => esc_html__('Blog Header Overlay Opacity', 'salient'),
+             'desc'      => '',
+             "default"   => 0.4,
+             "min"       => 0,
+             "step"      => 0.1,
+             "max"       => 1,
+             'resolution' => 0.1,
+             'display_value' => 'text'
+           ),
+           array(
+             'id' => 'default_minimal_text_color',
+             'type' => 'color',
+             'title' => esc_html__('Blog Header Text Color', 'salient'), 
+             'subtitle' => '', 
+             'desc' => '',
+             'default' => '#ffffff',
+             'required' => array( 'blog_header_type', '=', 'default_minimal' ),
+             'transparent' => false
+           ),
+           
+           array(
+             'id' => 'blog_header_sizing', 
+             'type' => 'select', 
+             'title' => esc_html__('Blog Header Sizing', 'salient'),
+             'desc' => esc_html__('Using a responsive sizing option will override the post height set on individual posts.', 'salient'),
+             'required' => array( 'blog_header_type', '!=', 'fullscreen' ),
+             'options' => array(
+               'default' => esc_html__('Height Set Per Post', 'salient'), 
+               'responsive' => esc_html__('Responsive Sizing', 'salient')
+             ),
+             'default' => 'default'
+           ), 
+           array(
+             'id' => 'blog_header_scroll_effect', 
+             'type' => 'select', 
+             'title' => esc_html__('Blog Header Scroll Effect', 'salient'),
+             'desc' => esc_html__('Globally define a scroll effect for your blog header.', 'salient'),
+             'options' => array(
+               'default' => esc_html__('None', 'salient'), 
+               'parallax' => esc_html__('Parallax', 'salient')
+             ),
+             'default' => 'default'
+           ), 
            array(
              'id' => 'blog_hide_sidebar',
              'type' => 'switch',
@@ -3769,6 +4058,20 @@
              'subtitle' => esc_html__('Using this will remove the sidebar from appearing on your single post page.', 'salient'),
              'desc' => '',
              'default' => '1' 
+           ), 
+           array(
+             'id' => 'blog_width', 
+             'type' => 'select', 
+             'title' => esc_html__('Blog Content Width', 'salient'),
+             'options' => array(
+               'default' => esc_html__('Default', 'salient'), 
+               '1000px' => esc_html__('1000px', 'salient'),
+               '900px' => esc_html__('900px', 'salient'),
+               '800px' => esc_html__('800px', 'salient'),
+               '700px' => esc_html__('700px', 'salient')
+             ),
+             'required' => array( 'blog_hide_sidebar', '=', '1' ),
+             'default' => 'default'
            ), 
            array(
              'id' => 'blog_enable_ss',
@@ -3825,7 +4128,7 @@
              'id' => 'blog_auto_excerpt',
              'type' => 'switch',
              'title' => esc_html__('Automatic Post Excerpts', 'salient'), 
-             'subtitle' => esc_html__('Using this will create automatic excerpts for your posts, placing a read more button after.', 'salient'),
+             'subtitle' => esc_html__('Using this will create automatic excerpts for your posts.', 'salient'),
              'desc' => '',
              'default' => '1' 
            ),  
@@ -4460,8 +4763,8 @@
            array(
              'id' => 'google-plus-url', 
              'type' => 'text', 
-             'title' => esc_html__('Google+ URL', 'salient'),
-             'subtitle' => esc_html__('Please enter in your Google+ URL.', 'salient'),
+             'title' => esc_html__('Google URL', 'salient'),
+             'subtitle' => esc_html__('Please enter in your Google URL.', 'salient'),
              'desc' => ''
            ),
            array(
@@ -4664,7 +4967,14 @@
              'id' => 'whatsapp-url', 
              'type' => 'text', 
              'title' => esc_html__('WhatsApp URL', 'salient'),
-             'subtitle' => esc_html__('Please enter in your Discord URL.', 'salient'),
+             'subtitle' => esc_html__('Please enter in your WhatsApp URL.', 'salient'),
+             'desc' => ''
+           ),
+           array(
+             'id' => 'messenger-url', 
+             'type' => 'text', 
+             'title' => esc_html__('Messenger URL', 'salient'),
+             'subtitle' => esc_html__('Please enter in your Messenger URL.', 'salient'),
              'desc' => ''
            ),
            array(
@@ -5058,78 +5368,6 @@
              'desc' => ''
            ),
            
-           
-           
-           array(
-             'id' => 'map-point-9',
-             'type' => 'switch',
-             'title' => esc_html__('Location #9', 'salient'), 
-             'subtitle' => esc_html__('Toggle location #9', 'salient'),
-             'desc' => '',
-             'default' => '0' 
-           ),
-           array(
-             'id' => 'latitude9',
-             'type' => 'text',
-             'required' => array( 'map-point-9', '=', '1' ),
-             'title' => esc_html__('Latitude', 'salient'), 
-             'subtitle' => esc_html__('Please enter the latitude for your ninth location.', 'salient'),
-             'desc' => '',
-             'validate' => 'numeric'
-           ),
-           array(
-             'id' => 'longitude9',
-             'type' => 'text',
-             'required' => array( 'map-point-9', '=', '1' ),
-             'title' => esc_html__('Longitude', 'salient'), 
-             'subtitle' => esc_html__('Please enter the longitude for your ninth location.', 'salient'),
-             'desc' => '',
-             'validate' => 'numeric'
-           ),
-           array(
-             'id' => 'map-info9',
-             'type' => 'textarea',
-             'required' => array( 'map-point-9', '=', '1' ),
-             'title' => esc_html__('Map Infowindow Text', 'salient'), 
-             'subtitle' => esc_html__('If you would like to display any text in an info window for your ninth location, please enter it here.', 'salient'),
-             'desc' => ''
-           ),
-           
-           
-           array(
-             'id' => 'map-point-10',
-             'type' => 'switch',
-             'title' => esc_html__('Location #10', 'salient'), 
-             'subtitle' => esc_html__('Toggle location #10', 'salient'),
-             'desc' => '',
-             'default' => '0' 
-           ),
-           array(
-             'id' => 'latitude10',
-             'type' => 'text',
-             'title' => esc_html__('Latitude', 'salient'), 
-             'subtitle' => esc_html__('Please enter the latitude for your tenth location.', 'salient'),
-             'desc' => '',
-             'required' => array( 'map-point-10', '=', '1' ),
-             'validate' => 'numeric'
-           ),
-           array(
-             'id' => 'longitude10',
-             'type' => 'text',
-             'required' => array( 'map-point-10', '=', '1' ),
-             'title' => esc_html__('Longitude', 'salient'), 
-             'subtitle' => esc_html__('Please enter the longitude for your tenth location.', 'salient'),
-             'desc' => '',
-             'validate' => 'numeric'
-           ),
-           array(
-             'id' => 'map-info10',
-             'required' => array( 'map-point-10', '=', '1' ),
-             'type' => 'textarea',
-             'title' => esc_html__('Map Infowindow Text', 'salient'), 
-             'subtitle' => esc_html__('If you would like to display any text in an info window for your tenth location, please enter it here.', 'salient'),
-             'desc' => ''
-           ),
            
            
            array(

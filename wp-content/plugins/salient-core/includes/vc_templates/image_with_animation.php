@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
   "animation" => 'Fade In',
   "delay" => '0', 
@@ -9,6 +14,14 @@ extract(shortcode_atts(array(
   'margin_right' => '', 
   'margin_bottom' => '', 
   'margin_left' => '', 
+	'margin_top_tablet' => '', 
+  'margin_right_tablet' => '', 
+  'margin_bottom_tablet' => '', 
+  'margin_left_tablet' => '', 
+	'margin_top_phone' => '', 
+  'margin_right_phone' => '', 
+  'margin_bottom_phone' => '', 
+  'margin_left_phone' => '', 
   'alignment' => 'left', 
   'border_radius' => '', 
   'img_link_target' => '_self', 
@@ -33,6 +46,8 @@ extract(shortcode_atts(array(
   
   if( preg_match('/^\d+$/',$image_url) ) {
     
+		$image_url = apply_filters('wpml_object_id', $image_url, 'attachment', TRUE);
+		
     $image_src = wp_get_attachment_image_src($image_url, 'full');
   
     if (function_exists('wp_get_attachment_image_srcset')) {
@@ -40,7 +55,7 @@ extract(shortcode_atts(array(
       $image_srcset_values = wp_get_attachment_image_srcset($image_url, 'full');
       if($image_srcset_values) {
         
-        if( 'lazy-load' === $image_loading ) {
+        if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
           $image_srcset = 'data-nectar-img-srcset="';
         } else {
           $image_srcset = 'srcset="';
@@ -69,7 +84,7 @@ extract(shortcode_atts(array(
       $alt_tag = $wp_img_alt_tag;
     }
     
-    $image_url = $image_src[0];
+    $image_url = ( isset($image_src[0]) ) ? $image_src[0] : '';
     
   }
   
@@ -131,7 +146,7 @@ extract(shortcode_atts(array(
   $image_attrs_escaped .= 'height="'.esc_attr($image_height).'" ';
   $image_attrs_escaped .= 'width="'.esc_attr($image_width).'" ';
   $image_attrs_escaped .= 'data-animation="'.esc_attr(strtolower($parsed_animation)).'" ';
-  if( 'lazy-load' === $image_loading && true === $has_dimension_data ) {
+  if( 'lazy-load' === $image_loading && true === $has_dimension_data && NectarLazyImages::activate_lazy() ) {
     $el_class .= ' nectar-lazy';
     $image_attrs_escaped .= 'data-nectar-img-src="'.esc_url($image_url).'" ';
   } else {
@@ -145,11 +160,18 @@ extract(shortcode_atts(array(
     $color_overlay_markup_escaped = '<div class="color-overlay" style="background-color: '.esc_attr($hover_overlay_color).';"></div>';
   }
   
+	// Dynamic style classes.
+	if( function_exists('nectar_el_dynamic_classnames') ) {
+		$dynamic_el_styles = nectar_el_dynamic_classnames('image_with_animation', $atts);
+	} else {
+		$dynamic_el_styles = '';
+	}
+	
   if( !empty($img_link) || !empty($img_link_large) ) {
     
     if( !empty($img_link) && empty($img_link_large) ) {
       // Link image to larger version.
-      echo '<div class="img-with-aniamtion-wrap '.esc_attr($alignment).'" '.$wrap_image_attrs_escaped.'>
+      echo '<div class="img-with-aniamtion-wrap '.esc_attr($alignment).$dynamic_el_styles.'" '.$wrap_image_attrs_escaped.'>
       <div class="inner">
         <div class="hover-wrap" data-hover-animation="'.esc_attr($hover_animation).'"> '.$color_overlay_markup_escaped.'
           <div class="hover-wrap-inner">
@@ -163,7 +185,7 @@ extract(shortcode_atts(array(
       
     } elseif(!empty($img_link_large)) {
       // Regular link image.
-      echo '<div class="img-with-aniamtion-wrap '.esc_attr($alignment).'" '.$wrap_image_attrs_escaped.'>
+      echo '<div class="img-with-aniamtion-wrap '.esc_attr($alignment).$dynamic_el_styles.'" '.$wrap_image_attrs_escaped.'>
       <div class="inner">
         <div class="hover-wrap" data-hover-animation="'.esc_attr($hover_animation).'"> '.$color_overlay_markup_escaped.'
           <div class="hover-wrap-inner">
@@ -178,7 +200,7 @@ extract(shortcode_atts(array(
     
   } else {
     // No link image.
-    echo '<div class="img-with-aniamtion-wrap '.esc_attr($alignment).'" '.$wrap_image_attrs_escaped.'>
+    echo '<div class="img-with-aniamtion-wrap '.esc_attr($alignment).$dynamic_el_styles.'" '.$wrap_image_attrs_escaped.'>
       <div class="inner">
         <div class="hover-wrap" data-hover-animation="'.esc_attr($hover_animation).'"> '.$color_overlay_markup_escaped.'
           <div class="hover-wrap-inner">

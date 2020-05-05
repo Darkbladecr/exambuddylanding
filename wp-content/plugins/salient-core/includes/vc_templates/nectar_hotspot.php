@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $top = $left = $position = '';
 extract(shortcode_atts(array(
 	'top' => '',

@@ -4,7 +4,7 @@
 *
 * @package Salient WordPress Theme
 * @subpackage Partials
-* @version 10.5
+* @version 11.5
 */
 
 // Exit if accessed directly
@@ -52,20 +52,23 @@ if ( $side_widget_class === 'fullscreen' || $side_widget_class === 'fullscreen-a
 // Check if ocm is enabled and the simple style is not selected.
 if ( $side_widget_area === '1' && $side_widget_class !== 'simple' ) {
 	
+	$ocm_class = ( $side_widget_class === 'fullscreen-split' ) ? $side_widget_class. ' hidden' : $side_widget_class;
+	
 	?>
 	
-	<div id="slide-out-widget-area-bg" class="<?php echo esc_attr( $side_widget_class ) . ' ' . esc_attr( $side_widget_overlay_opacity ); ?>">
+	<div id="slide-out-widget-area-bg" class="<?php echo esc_attr( $ocm_class ) . ' ' . esc_attr( $side_widget_overlay_opacity ); ?>">
 		<?php
 		if ( $side_widget_class === 'fullscreen-alt' ) {
 			echo '<div class="bg-inner"></div>';}
 			?>
 		</div>
 		
-		<div id="slide-out-widget-area" class="<?php echo esc_attr( $side_widget_class ); ?>" data-dropdown-func="<?php echo esc_attr( $dropdown_func ); ?>" data-back-txt="<?php echo esc_attr__( 'Back', 'salient' ); ?>">
+		<div id="slide-out-widget-area" class="<?php echo esc_attr( $ocm_class ); ?>" data-dropdown-func="<?php echo esc_attr( $dropdown_func ); ?>" data-back-txt="<?php echo esc_attr__( 'Back', 'salient' ); ?>">
 			
 			<?php
 			if ( $side_widget_class === 'fullscreen' || 
 			$side_widget_class === 'fullscreen-alt' || 
+			$side_widget_class === 'fullscreen-split' || 
 			( $theme_skin === 'material' && $side_widget_class === 'slide-out-from-right' ) || 
 			( $theme_skin === 'material' && $side_widget_class === 'slide-out-from-right-hover' ) ) {
 				
@@ -89,6 +92,8 @@ if ( $side_widget_area === '1' && $side_widget_class !== 'simple' ) {
 				
 				
 				<?php
+				
+				nectar_hook_ocm_before_menu();
 				
 				if ( $user_set_side_widget_area === 'off' || $prepend_top_nav_mobile === '1' && $has_main_menu === 'true' ) {
 					?>
@@ -201,6 +206,10 @@ if ( $side_widget_area === '1' && $side_widget_class !== 'simple' ) {
 					<?php
 				}
 				
+				nectar_hook_ocm_after_menu();
+				
+				nectar_hook_ocm_before_secondary_items();
+				
 				// Widget area.
 				if ( $side_widget_class != 'slide-out-from-right-hover' ) {
 					if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 'Off Canvas Menu' ) ) :
@@ -214,55 +223,28 @@ if ( $side_widget_area === '1' && $side_widget_class !== 'simple' ) {
 						endif;
 						
 					}
+					
+					// Bottom meta.
+					if( $side_widget_class === 'fullscreen-split' ) {
+						get_template_part( 'includes/partials/footer/off-canvas-navigation-bottom-meta' );
+					}
+					
+					nectar_hook_ocm_after_secondary_items();
+					
 					?>
 					
 				</div>
 				
 				<?php
-				
-				$using_social_or_bottomtext = ( ! empty( $nectar_options['header-slide-out-widget-area-social'] ) && $nectar_options['header-slide-out-widget-area-social'] === '1' || ! empty( $nectar_options['header-slide-out-widget-area-bottom-text'] ) ) ? true : false;
-				
-				echo '<div class="bottom-meta-wrap">';
-				
-				nectar_hook_ocm_bottom_meta();
-				
-				if ( $side_widget_class === 'slide-out-from-right-hover' ) {
-					if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 'Off Canvas Menu' ) ) :
-						elseif ( ! has_nav_menu( 'off_canvas_nav' ) && $user_set_side_widget_area != 'off' ) :
-							?>
-							
-							<div class="widget">			
-								
-							</div>
-							<?php
-						endif;
-						
+					
+					// Bottom meta.
+					if( $side_widget_class !== 'fullscreen-split' ) {
+						get_template_part( 'includes/partials/footer/off-canvas-navigation-bottom-meta' );
 					}
-					
-					global $using_secondary;
-					// Social icons.
-					if ( ! empty( $nectar_options['header-slide-out-widget-area-social'] ) && $nectar_options['header-slide-out-widget-area-social'] === '1' ) {
-						nectar_ocm_add_social();
-					} 
-					elseif ( ! empty( $nectar_options['enable_social_in_header'] ) && 
-					$nectar_options['enable_social_in_header'] === '1' && 
-					$using_secondary != 'header_with_secondary' ) {
-						
-						echo '<ul class="off-canvas-social-links mobile-only">';
-						nectar_header_social_icons( 'off-canvas' );
-						echo '</ul>';
-					}
-					
-					// Bottom text.
-					if ( ! empty( $nectar_options['header-slide-out-widget-area-bottom-text'] ) ) {
-						$desktop_social = ( ! empty( $nectar_options['enable_social_in_header'] ) && $nectar_options['enable_social_in_header'] === '1' ) ? 'false' : 'true';
-						echo '<p class="bottom-text" data-has-desktop-social="' . esc_attr( $desktop_social ) . '">' . wp_kses_post( $nectar_options['header-slide-out-widget-area-bottom-text'] ) . '</p>';
-					}
-					
-					echo '</div><!--/bottom-meta-wrap-->';
-					
+				
 					if ( $side_widget_class === 'fullscreen' || 
 					$side_widget_class === 'fullscreen-alt' || 
+					$side_widget_class === 'fullscreen-split' || 
 					( $theme_skin === 'material' && $side_widget_class === 'slide-out-from-right' ) || 
 					( $theme_skin === 'material' && $side_widget_class === 'slide-out-from-right-hover' ) ) {
 						echo '</div> <!--/inner-wrap-->';
@@ -270,4 +252,4 @@ if ( $side_widget_area === '1' && $side_widget_class !== 'simple' ) {
 					?>
 					
 				</div>
-			<?php }
+		<?php }

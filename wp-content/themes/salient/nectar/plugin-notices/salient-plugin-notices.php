@@ -101,5 +101,6 @@ function nectar_add_plugin_notice_admin_notice_script() {
 
 
 function nectar_dismiss_plugin_notice() {
-      update_option( 'nectar_dismiss_plugin_notice', 'true' );
+    update_option( 'nectar_dismiss_plugin_notice', 'true' );
+		wp_die();
 }

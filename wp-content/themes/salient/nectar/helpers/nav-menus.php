@@ -25,18 +25,22 @@ if ( function_exists( 'register_nav_menus' ) ) {
 
 		global $nectar_options;
 
-		$sideWidgetArea                = ( ! empty( $nectar_options['header-slide-out-widget-area'] ) ) ? $nectar_options['header-slide-out-widget-area'] : 'off';
+		$sideWidgetArea                = ( isset($nectar_options['header-slide-out-widget-area']) &&  ! empty( $nectar_options['header-slide-out-widget-area'] ) ) ? $nectar_options['header-slide-out-widget-area'] : 'off';
 		$usingPRCompatLayout           = false;
 		$usingTopLeftRightCompatLayout = false;
+		
+		if( isset( $nectar_options['header_format'] ) ) {
+			
+			if ( ! empty( $nectar_options['header_format'] ) && $nectar_options['header_format'] === 'menu-left-aligned' 
+			|| $nectar_options['header_format'] === 'centered-menu' 
+			|| $nectar_options['header_format'] === 'centered-logo-between-menu' ) {
+				$usingPRCompatLayout = true;
+			}
 
-		if ( ! empty( $nectar_options['header_format'] ) && $nectar_options['header_format'] === 'menu-left-aligned' 
-		|| $nectar_options['header_format'] === 'centered-menu' 
-		|| $nectar_options['header_format'] === 'centered-logo-between-menu' ) {
-			$usingPRCompatLayout = true;
-		}
-
-		if ( ! empty( $nectar_options['header_format'] ) && $nectar_options['header_format'] === 'centered-menu-bottom-bar' ) {
-			$usingTopLeftRightCompatLayout = true;
+			if ( ! empty( $nectar_options['header_format'] ) && $nectar_options['header_format'] === 'centered-menu-bottom-bar' ) {
+				$usingTopLeftRightCompatLayout = true;
+			}
+			
 		}
 
 		if ( $sideWidgetArea == '1' ) {

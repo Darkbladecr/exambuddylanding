@@ -43,12 +43,17 @@ class NectarPostGrid {
     $attributes['image_loading']               = 'normal';
     $attributes['post_type']                   = sanitize_text_field($_POST['settings']['post_type']); 
     $attributes['image_size']                  = sanitize_text_field($_POST['settings']['image_size']); 
+    $attributes['aspect_ratio_image_size']     = sanitize_text_field($_POST['settings']['aspect_ratio_image_size']); 
     $attributes['display_categories']          = sanitize_text_field($_POST['settings']['display_categories']); 
     $attributes['display_excerpt']             = sanitize_text_field($_POST['settings']['display_excerpt']); 
     $attributes['display_date']                = sanitize_text_field($_POST['settings']['display_date']);
     $attributes['color_overlay']               = sanitize_text_field($_POST['settings']['color_overlay']);  
     $attributes['color_overlay_opacity']       = sanitize_text_field($_POST['settings']['color_overlay_opacity']);  
     $attributes['color_overlay_hover_opacity'] = sanitize_text_field($_POST['settings']['color_overlay_hover_opacity']);  
+    $attributes['card_bg_color']               = sanitize_text_field($_POST['settings']['card_bg_color']);  
+    $attributes['grid_style']                  = sanitize_text_field($_POST['settings']['grid_style']);  
+    $attributes['post_title_overlay']          = sanitize_text_field($_POST['settings']['post_title_overlay']);  
+    $attributes['heading_tag']                 = sanitize_text_field($_POST['settings']['heading_tag']);  
     
     if( 'all' === $category || '-1' === $category ) {
       $category  = null;

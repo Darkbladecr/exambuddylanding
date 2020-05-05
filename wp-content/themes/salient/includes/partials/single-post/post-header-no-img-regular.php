@@ -77,22 +77,23 @@ if ( get_post_format() !== 'status' && get_post_format() !== 'aside' ) {
 			} 
 			?>
 			<div id="single-below-header" data-hide-on-mobile="<?php echo esc_attr($using_fixed_salient_social); ?>">
-			  <span class="meta-author vcard author"><span class="fn"><?php echo esc_html__( 'By', 'salient' ); ?> <?php the_author_posts_link(); ?></span></span>
-					<?php
-					$nectar_u_time          = get_the_time( 'U' );
-					$nectar_u_modified_time = get_the_modified_time( 'U' );
-					if( $nectar_u_modified_time >= $nectar_u_time + 86400 ) {
-					?>
-				  <span class="meta-date date published"><?php echo get_the_date(); ?></span>
-				  <span class="meta-date date updated rich-snippet-hidden"><?php echo get_the_modified_time( __( 'F jS, Y' , 'salient' ) ); ?></span>
-					<?php } else { ?>
-				  <span class="meta-date date updated"><?php echo get_the_date(); ?></span>
-				  <?php } 
-					if ( $blog_header_type != 'default_minimal' ) { ?>
-				  <span class="meta-category"><?php the_category( ', ' ); ?></span> 
-				<?php } else { ?>
-				  <span class="meta-comment-count"><a href="<?php comments_link(); ?>"> <?php comments_number( esc_html__( 'No Comments', 'salient' ), esc_html__( 'One Comment ', 'salient' ), esc_html__( '% Comments', 'salient' ) ); ?></a></span>
-				<?php } ?>
+				<?php echo '<span class="meta-author vcard author"><span class="fn">' . esc_html__('By', 'salient') . ' ' . get_the_author_posts_link() . '</span></span>';
+				
+				$nectar_u_time 					= get_the_time('U'); 
+				$nectar_u_modified_time = get_the_modified_time('U'); 
+				if( $nectar_u_modified_time >= $nectar_u_time + 86400 ) { 
+					echo '<span class="meta-date date published">' . get_the_date() . '</span>';
+					echo '<span class="meta-date date updated rich-snippet-hidden">' . get_the_modified_time(__( 'F jS, Y' , 'salient' )) . '</span>';
+				} else { 
+					echo '<span class="meta-date date updated">' . get_the_date() . '</span>';
+				}
+				
+				if( $blog_header_type != 'default_minimal') { 
+					echo '<span class="meta-category">'.get_the_category_list(', ').'</span>';
+				} else { 
+					echo '<span class="meta-comment-count"><a href="'.get_comments_link().'">'. get_comments_number_text( esc_html__('No Comments', 'salient'), esc_html__('One Comment ', 'salient'), esc_html__('% Comments', 'salient') ) . '</a></span>';
+				} 
+				?>
 			</div><!--/single-below-header-->
 		<?php } 
 		   

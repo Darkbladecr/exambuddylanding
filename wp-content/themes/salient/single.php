@@ -3,7 +3,7 @@
  * The template for displaying single posts.
  *
  * @package Salient WordPress Theme
- * @version 10.5
+ * @version 11.0
  */
 
 // Exit if accessed directly
@@ -75,15 +75,19 @@ if ( true === $fullscreen_header ) {
 			} else {
 				$std_minimal_class = '';
 			}
-
-			if ( 'std-blog-fullwidth' === $blog_type || '1' === $hide_sidebar ) {
-				// No sidebar.
-				echo '<div class="post-area col ' . $std_minimal_class . ' span_12 col_last">'; // WPCS: XSS ok.
-			} else {
-				// Sidebar.
-				echo '<div class="post-area col ' . $std_minimal_class . ' span_9">'; // WPCS: XSS ok.
-			}
 			
+			$single_post_area_col_class = 'span_9';
+			
+			// No sidebar.
+			if ( 'std-blog-fullwidth' === $blog_type || '1' === $hide_sidebar ) {
+				$single_post_area_col_class = 'span_12 col_last';
+			} 
+			
+			?>
+			
+			<div class="post-area col <?php echo esc_attr($std_minimal_class) . ' ' . esc_attr($single_post_area_col_class); ?>">
+			
+			<?php 
 			// Main content loop.
 			if ( have_posts() ) :
 				while ( have_posts() ) :
@@ -160,9 +164,9 @@ if ( true === $fullscreen_header ) {
 				<?php comments_template(); ?>
 			</div>   
 
-		</div>
+		</div><!--/row-->
 
-	</div><!--/container-->
+	</div><!--/container main-content-->
 
 </div><!--/container-wrap-->
 

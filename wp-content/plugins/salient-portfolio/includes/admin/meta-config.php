@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Create metabox markup
  *
@@ -45,7 +50,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 				switch( $field['type'] ){	
 					
 					case 'text': 
-						echo '<td><input type="text" name="nectar_meta['. $field['id'] .']" id="'. $field['id'] .'" value="'. ($meta ? $meta : $field['std']) .'" size="30" /></td>';
+						echo '<td><input type="text" name="nectar_meta['. $field['id'] .']" id="'. $field['id'] .'" value="'. esc_attr(($meta ? $meta : $field['std'])) .'" size="30" /></td>';
 					break;	
 					
 					case 'textarea':
@@ -104,7 +109,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 							true
 						);
 					
-						echo '<td><input type="text" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . ($meta ? $meta : $field['std']) . '" class=" popup-colorpicker" style="width: 70px;" data-default-color="' . ($meta ? $meta : $field['std']) . '"/></td>';
+						echo '<td><input type="text" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . esc_attr(($meta ? $meta : $field['std'])) . '" class=" popup-colorpicker" style="width: 70px;" data-default-color="' . esc_attr(($meta ? $meta : $field['std'])) . '"/></td>';
 					break;
 					
 					case 'media':
@@ -119,7 +124,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 					
 						$upload_meta = ($meta) ? $meta : $field['std'];
 					 
-						echo '<td><input type="text" class="display_text" name="nectar_meta[' . $field['id'] . ']" id="' . $field['id'] . '" value="' . $upload_meta . '" />';
+						echo '<td><input type="text" class="display_text" name="nectar_meta[' . $field['id'] . ']" id="' . $field['id'] . '" value="' . esc_attr($upload_meta) . '" />';
 						echo '<a href="#" data-update="Select File" data-title="Choose Your File" class="nectar-add-media-btn button-secondary' . $add_class . '" rel-id="' . $field['id'] . '">' . esc_html__('Add Media File', 'salient') . '</a>';
 						echo '<a href="#" class="nectar-remove-media-btn button-secondary' . $remove_class . '" rel-id="' . $field['id'] . '">' . esc_html__('Remove Media File', 'salient') . '</a></td>';
 					break;
@@ -350,8 +355,8 @@ if( !function_exists('nectar_create_meta_box') ) {
 						}
 						
 						echo '<div class="switch-options salient '.$activated_checkbox.'">';
-						echo '<label class="cb-enable '.$starting_enabled.'"><span>' . __("On", 'salient') . '</span></label>';
-						echo '<label class="cb-disable '.$starting_disabled.'"><span>' . __("Off", 'salient') . '</span></label>';
+						echo '<label class="cb-enable '.$starting_enabled.'"><span>' . esc_html__("On", 'salient') . '</span></label>';
+						echo '<label class="cb-disable '.$starting_disabled.'"><span>' . esc_html__("Off", 'salient') . '</span></label>';
 						echo '<input type="hidden" name="nectar_meta['. $field['id'] .']" value="off" />
 						<input type="checkbox" id="'. $field['id'] .'" name="nectar_meta['. $field['id'] .']" value="on"'. $val .' /> ';
 						echo '</div>';
@@ -438,8 +443,8 @@ if( !function_exists('nectar_create_meta_box') ) {
 						}
 						
 						echo '</div>';
-						echo '<a href="#" onclick="return false;" id="edit-gal" class="gallery-attachments button button-primary">' . __( 'Add/Edit Images', 'salient' ) . '</a> ';
-						echo '<a href="#" onclick="return false;" id="remove-gal" class="gallery-attachments button">' . __( 'Clear Images', 'salient' ) . '</a>';
+						echo '<a href="#" onclick="return false;" id="edit-gal" class="gallery-attachments button button-primary">' . esc_html__( 'Add/Edit Images', 'salient' ) . '</a> ';
+						echo '<a href="#" onclick="return false;" id="remove-gal" class="gallery-attachments button">' . esc_html__( 'Clear Images', 'salient' ) . '</a>';
 						echo '<input type="hidden" class="gallery_values " value="' . esc_attr( $meta ) . '" name="nectar_meta['. $field["id"] .']" />
 						</fieldset></td>';
 						

@@ -59,7 +59,7 @@ $nectar_post_class_additions = $masonry_item_sizing . ' masonry-blog-item';
           }
           
           // Lazy load.
-          if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] ) {
+          if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] && NectarLazyImages::activate_lazy() ) {
             
             // src.
             $img_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $img_size );

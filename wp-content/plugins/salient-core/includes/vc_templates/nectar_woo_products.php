@@ -1,5 +1,9 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 global $woocommerce_loop;
 

@@ -15,6 +15,14 @@ return array(
 	"params" => array(
 		
 		array(
+			"type" => "textfield",
+			"heading" => esc_html__("Text", "salient-core"),
+			"param_name" => "text",
+			"admin_label" => true,
+			"description" => esc_html__("The text for your button." , "salient-core")
+		),
+		
+		array(
 			'type' => 'dropdown',
 			'heading' => __( 'Size', 'salient-core' ),
 			'value' => array(
@@ -29,17 +37,68 @@ return array(
 			'description' => __( 'Select your button size.', 'salient-core' ),
 		),
 		array(
+			"type" => "nectar_numerical",
+			"heading" => esc_html__("Margin", "salient-core") . "<span>" . esc_html__("Top", "salient-core") . "</span>",
+			"param_name" => "margin_top",
+			"placeholder" => esc_html__("Top",'salient-core'),
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_1",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+			'param_name' => 'constrain_group_1', 
+			'description' => '',
+			"edit_field_class" => "no-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span>" . esc_html__("Bottom", "salient-core") . "</span>",
+			"param_name" => "margin_bottom",
+			"placeholder" => esc_html__("Bottom",'salient-core'),
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_1",
+			"description" => ''
+		),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span>" . esc_html__("Left", "salient-core") . "</span>",
+			"param_name" => "margin_left",
+			"placeholder" => esc_html__("Left",'salient-core'),
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_2",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+			'param_name' => 'constrain_group_2', 
+			'description' => '',
+			"edit_field_class" => "no-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span>" . esc_html__("Right", "salient-core") . "</span>",
+			"param_name" => "margin_right",
+			"placeholder" => esc_html__("Right",'salient-core'),
+			"edit_field_class" => "col-md-2 no-device-group constrain_group_2",
+			"description" => ''
+		),
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Link", "salient-core" ),
+		 "param_name" => "group_header_1",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 
+		array(
 			"type" => "textfield",
 			"heading" => esc_html__("Link URL", "salient-core"),
 			"param_name" => "url",
 			"description" => esc_html__("The link for your button." , "salient-core")
-		),
-		array(
-			"type" => "textfield",
-			"heading" => esc_html__("Text", "salient-core"),
-			"param_name" => "text",
-			"admin_label" => true,
-			"description" => esc_html__("The text for your button." , "salient-core")
 		),
 		array(
 			"type" => "checkbox",
@@ -49,6 +108,16 @@ return array(
 			"value" => Array(esc_html__("Yes", "salient-core") => 'true'),
 			"description" => ""
 		),
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Styling", "salient-core" ),
+		 "param_name" => "group_header_2",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 
 		array(
 			'type' => 'dropdown',
 			'heading' => __( 'Style', 'salient-core' ),
@@ -162,7 +231,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_fontawesome",
-			"settings" => array( "iconsPerPage" => 4000),
+			"settings" => array( "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'emptyIcon' => false, 'value' => 'fontawesome'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -170,7 +239,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_iconsmind",
-			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'iconsmind'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -178,7 +247,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_linecons",
-			"settings" => array( 'type' => 'linecons', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linecons', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'linecons'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -186,38 +255,28 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_steadysets",
-			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'steadysets'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
+		
+		
 		array(
-			"type" => "textfield",
-			"heading" => esc_html__("Margin", "salient-core") . "<span>" . esc_html__("Top", "salient-core") . "</span>",
-			"param_name" => "margin_top",
-			"edit_field_class" => "col-md-2",
-			"description" => ''
-		),
-		array(
-			"type" => "textfield",
-			"heading" => "<span>" . esc_html__("Right", "salient-core") . "</span>",
-			"param_name" => "margin_right",
-			"edit_field_class" => "col-md-2",
-			"description" => ''
-		),
-		array(
-			"type" => "textfield",
-			"heading" => "<span>" . esc_html__("Bottom", "salient-core") . "</span>",
-			"param_name" => "margin_bottom",
-			"edit_field_class" => "col-md-2",
-			"description" => ''
-		),
-		array(
-			"type" => "textfield",
-			"heading" => "<span>" . esc_html__("Left", "salient-core") . "</span>",
-			"param_name" => "margin_left",
-			"edit_field_class" => "col-md-2",
-			"description" => ''
-		),
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Advanced", "salient-core" ),
+		 "param_name" => "group_header_3",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 array(
+		 "type" => "checkbox",
+		 "class" => "",
+		 "heading" => esc_html__("Nofollow Link", "salient-core"),
+		 "param_name" => "nofollow",
+		 "value" => Array(esc_html__("Yes", "salient-core") => 'true'),
+		 "description" => ""
+	 ),
 		array(
 			"type" => "textfield",
 			"class" => "",

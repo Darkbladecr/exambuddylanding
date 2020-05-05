@@ -89,7 +89,17 @@ function nectar_register_js() {
 		wp_enqueue_script( 'nectar_priority' );
 		wp_enqueue_script( 'nectar-transit' );
 		wp_enqueue_script( 'nectar-waypoints' );
-		wp_enqueue_script( 'modernizer' );
+		
+		$salient_modernizr = false;
+		if( has_filter('salient_IE_compat_mode') ) {
+			$salient_modernizr = apply_filters('salient_IE_compat_mode', $salient_modernizr);
+			
+			if( true === $salient_modernizr ) {
+				wp_enqueue_script( 'modernizer' );
+			}
+			
+		}
+
 		wp_enqueue_script( 'imagesLoaded' );
 		wp_enqueue_script( 'hoverintent' );
 
@@ -331,7 +341,9 @@ function nectar_page_specific_js() {
 	// Single post sticky sidebar.
 	$enable_ss = ( ! empty( $nectar_options['blog_enable_ss'] ) ) ? $nectar_options['blog_enable_ss'] : 'false';
 
-	if ( ( $enable_ss == '1' && is_single() && $posttype === 'post' ) || NectarElAssets::locate(array('[vc_widget_sidebar')) ) {
+	if ( ( $enable_ss == '1' && is_single() && $posttype === 'post' ) || 
+				NectarElAssets::locate(array('[vc_widget_sidebar')) || 
+				NectarElAssets::locate( array('style="vertical_scrolling"')) ) {
 		  wp_enqueue_script( 'stickykit' );
 	}
 

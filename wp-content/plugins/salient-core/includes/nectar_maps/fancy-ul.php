@@ -914,6 +914,7 @@ return array(
 			 "10px" => "10px",
 			 "15px" => "15px",
 			 "20px" => "20px",
+			 "25px" => "25px",
 		   ),
 		  "description" => esc_html__("Please select alignment you desire", "salient-core")
 		),

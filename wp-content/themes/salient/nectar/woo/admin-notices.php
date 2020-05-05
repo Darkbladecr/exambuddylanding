@@ -34,6 +34,8 @@ function nectar_add_woo_admin_notice_script() {
 }
 
 add_action( 'wp_ajax_nectar_dismiss_older_woo_templates_notice', 'nectar_dismiss_older_woo_templates_notice' );
+
 function nectar_dismiss_older_woo_templates_notice() {
-      update_option( 'nectar_dismiss_older_woo_templates_notice', 'true' );
+    update_option( 'nectar_dismiss_older_woo_templates_notice', 'true' );
+    wp_die();
 }

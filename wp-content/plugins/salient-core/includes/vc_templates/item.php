@@ -1,5 +1,9 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( isset($_GET['vc_editable']) ) {
 	$nectar_using_VC_front_end_editor = sanitize_text_field($_GET['vc_editable']);

@@ -75,7 +75,554 @@
 	<wp:term><wp:term_id>35</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug>main-nav</wp:term_slug><wp:term_name><![CDATA[Main Nav]]></wp:term_name></wp:term>
 
 	<generator>http://wordpress.org/?v=4.1.7</generator>
-
+	
+	<item>
+		<title>filipe-de-rodrigues-Q9vWGuHsxAw-unsplash</title>
+		<link>http://themenectar.com/demo/salient-agency/filipe-de-rodrigues-q9vwguhsxaw-unsplash/</link>
+		<pubDate>Mon, 23 Mar 2020 17:49:44 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/filipe-de-rodrigues-Q9vWGuHsxAw-unsplash.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5822</wp:post_id>
+		<wp:post_date><![CDATA[2020-03-23 17:49:44]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2020-03-23 17:49:44]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[filipe-de-rodrigues-q9vwguhsxaw-unsplash]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/filipe-de-rodrigues-Q9vWGuHsxAw-unsplash.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2020/03/filipe-de-rodrigues-Q9vWGuHsxAw-unsplash.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:700;s:6:"height";i:1008;s:4:"file";s:52:"2020/03/filipe-de-rodrigues-Q9vWGuHsxAw-unsplash.jpg";s:5:"sizes";a:16:{s:9:"thumbnail";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-208x300.jpg";s:5:"width";i:208;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-700x604.jpg";s:5:"width";i:700;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-700x500.jpg";s:5:"width";i:700;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:53:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-500x1000.jpg";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:53:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-700x1000.jpg";s:5:"width";i:700;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-700x600.jpg";s:5:"width";i:700;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-700x770.jpg";s:5:"width";i:700;s:6:"height";i:770;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:52:"filipe-de-rodrigues-Q9vWGuHsxAw-unsplash-700x800.jpg";s:5:"width";i:700;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>gijs-coolen-f23AJZbIkc0-unsplash</title>
+		<link>http://themenectar.com/demo/salient-agency/gijs-coolen-f23ajzbikc0-unsplash/</link>
+		<pubDate>Mon, 23 Mar 2020 17:49:46 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/gijs-coolen-f23AJZbIkc0-unsplash.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5823</wp:post_id>
+		<wp:post_date><![CDATA[2020-03-23 17:49:46]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2020-03-23 17:49:46]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[gijs-coolen-f23ajzbikc0-unsplash]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/gijs-coolen-f23AJZbIkc0-unsplash.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2020/03/gijs-coolen-f23AJZbIkc0-unsplash.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:600;s:6:"height";i:601;s:4:"file";s:44:"2020/03/gijs-coolen-f23AJZbIkc0-unsplash.jpg";s:5:"sizes";a:12:{s:9:"thumbnail";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-600x500.jpg";s:5:"width";i:600;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-600x335.jpg";s:5:"width";i:600;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-500x601.jpg";s:5:"width";i:500;s:6:"height";i:601;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:44:"gijs-coolen-f23AJZbIkc0-unsplash-600x600.jpg";s:5:"width";i:600;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>john-towner-JgOeRuGD_Y4-unsplash</title>
+		<link>http://themenectar.com/demo/salient-agency/john-towner-jgoerugd_y4-unsplash/</link>
+		<pubDate>Mon, 23 Mar 2020 17:49:47 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/john-towner-JgOeRuGD_Y4-unsplash.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5873</wp:post_id>
+		<wp:post_date><![CDATA[2020-03-23 17:49:47]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2020-03-23 17:49:47]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[john-towner-jgoerugd_y4-unsplash]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/john-towner-JgOeRuGD_Y4-unsplash.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2020/03/john-towner-JgOeRuGD_Y4-unsplash.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:800;s:6:"height";i:534;s:4:"file";s:44:"2020/03/john-towner-JgOeRuGD_Y4-unsplash.jpg";s:5:"sizes";a:13:{s:9:"thumbnail";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-768x513.jpg";s:5:"width";i:768;s:6:"height";i:513;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-800x500.jpg";s:5:"width";i:800;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-500x534.jpg";s:5:"width";i:500;s:6:"height";i:534;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:44:"john-towner-JgOeRuGD_Y4-unsplash-800x534.jpg";s:5:"width";i:800;s:6:"height";i:534;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>levi-guzman-PKVRdAODx0E-unsplash</title>
+		<link>http://themenectar.com/demo/salient-agency/levi-guzman-pkvrdaodx0e-unsplash/</link>
+		<pubDate>Mon, 23 Mar 2020 17:49:49 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/levi-guzman-PKVRdAODx0E-unsplash.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5833</wp:post_id>
+		<wp:post_date><![CDATA[2020-03-23 17:49:49]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2020-03-23 17:49:49]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[levi-guzman-pkvrdaodx0e-unsplash]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/levi-guzman-PKVRdAODx0E-unsplash.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2020/03/levi-guzman-PKVRdAODx0E-unsplash.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:800;s:6:"height";i:533;s:4:"file";s:44:"2020/03/levi-guzman-PKVRdAODx0E-unsplash.jpg";s:5:"sizes";a:13:{s:9:"thumbnail";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-800x500.jpg";s:5:"width";i:800;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-500x533.jpg";s:5:"width";i:500;s:6:"height";i:533;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:44:"levi-guzman-PKVRdAODx0E-unsplash-800x533.jpg";s:5:"width";i:800;s:6:"height";i:533;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>pawel-czerwinski-QY5U8JD3-tk-unsplash</title>
+		<link>http://themenectar.com/demo/salient-agency/pawel-czerwinski-qy5u8jd3-tk-unsplash/</link>
+		<pubDate>Mon, 23 Mar 2020 17:49:50 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/pawel-czerwinski-QY5U8JD3-tk-unsplash.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5879</wp:post_id>
+		<wp:post_date><![CDATA[2020-03-23 17:49:50]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2020-03-23 17:49:50]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[pawel-czerwinski-qy5u8jd3-tk-unsplash]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/pawel-czerwinski-QY5U8JD3-tk-unsplash.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2020/03/pawel-czerwinski-QY5U8JD3-tk-unsplash.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1000;s:6:"height";i:666;s:4:"file";s:49:"2020/03/pawel-czerwinski-QY5U8JD3-tk-unsplash.jpg";s:5:"sizes";a:16:{s:9:"thumbnail";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-768x511.jpg";s:5:"width";i:768;s:6:"height";i:511;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-900x604.jpg";s:5:"width";i:900;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:50:"pawel-czerwinski-QY5U8JD3-tk-unsplash-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-500x666.jpg";s:5:"width";i:500;s:6:"height";i:666;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:50:"pawel-czerwinski-QY5U8JD3-tk-unsplash-1000x666.jpg";s:5:"width";i:1000;s:6:"height";i:666;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:49:"pawel-czerwinski-QY5U8JD3-tk-unsplash-800x666.jpg";s:5:"width";i:800;s:6:"height";i:666;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>scott-webb-KpuWtiszFQw-unsplash</title>
+		<link>http://themenectar.com/demo/salient-agency/scott-webb-kpuwtiszfqw-unsplash/</link>
+		<pubDate>Mon, 23 Mar 2020 17:49:53 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/scott-webb-KpuWtiszFQw-unsplash.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5880</wp:post_id>
+		<wp:post_date><![CDATA[2020-03-23 17:49:53]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2020-03-23 17:49:53]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[scott-webb-kpuwtiszfqw-unsplash]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2020/03/scott-webb-KpuWtiszFQw-unsplash.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2020/03/scott-webb-KpuWtiszFQw-unsplash.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:700;s:6:"height";i:1050;s:4:"file";s:43:"2020/03/scott-webb-KpuWtiszFQw-unsplash.jpg";s:5:"sizes";a:17:{s:9:"thumbnail";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-200x300.jpg";s:5:"width";i:200;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:44:"scott-webb-KpuWtiszFQw-unsplash-683x1024.jpg";s:5:"width";i:683;s:6:"height";i:1024;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-700x604.jpg";s:5:"width";i:700;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-700x500.jpg";s:5:"width";i:700;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:44:"scott-webb-KpuWtiszFQw-unsplash-500x1000.jpg";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:44:"scott-webb-KpuWtiszFQw-unsplash-700x1000.jpg";s:5:"width";i:700;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-700x600.jpg";s:5:"width";i:700;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-700x770.jpg";s:5:"width";i:700;s:6:"height";i:770;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:43:"scott-webb-KpuWtiszFQw-unsplash-700x800.jpg";s:5:"width";i:700;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	
+	
+	
+	
+	<item>
+		<title>This Is Salient</title>
+		<link>http://themenectar.com/demo/salient-agency/home-particles/salient-big1/</link>
+		<pubDate>Thu, 30 Jul 2015 13:43:22 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2015/07/salient-big1.png</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[<i>It's</i> time for something new]]></excerpt:encoded>
+		<wp:post_id>5568</wp:post_id>
+		<wp:post_date><![CDATA[2015-07-30 13:43:22]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-07-30 13:43:22]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[salient-big1]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>5563</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2015/07/salient-big1.png]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2015/07/salient-big1.png]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1316;s:6:"height";i:895;s:4:"file";s:24:"2015/07/salient-big1.png";s:5:"sizes";a:11:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"salient-big1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:24:"salient-big1-300x204.png";s:5:"width";i:300;s:6:"height";i:204;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:25:"salient-big1-1024x696.png";s:5:"width";i:1024;s:6:"height";i:696;s:9:"mime-type";s:9:"image/png";}s:11:"blog-widget";a:4:{s:4:"file";s:22:"salient-big1-50x50.png";s:5:"width";i:50;s:6:"height";i:50;s:9:"mime-type";s:9:"image/png";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:24:"salient-big1-600x403.png";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:9:"image/png";}s:16:"portfolio-widget";a:4:{s:4:"file";s:24:"salient-big1-100x100.png";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:9:"image/png";}s:4:"wide";a:4:{s:4:"file";s:25:"salient-big1-1000x500.png";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:9:"image/png";}s:7:"regular";a:4:{s:4:"file";s:24:"salient-big1-500x500.png";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:9:"image/png";}s:4:"tall";a:4:{s:4:"file";s:24:"salient-big1-500x895.png";s:5:"width";i:500;s:6:"height";i:895;s:9:"mime-type";s:9:"image/png";}s:9:"wide_tall";a:4:{s:4:"file";s:25:"salient-big1-1000x895.png";s:5:"width";i:1000;s:6:"height";i:895;s:9:"mime-type";s:9:"image/png";}s:14:"large_featured";a:4:{s:4:"file";s:25:"salient-big1-1316x700.png";s:5:"width";i:1316;s:6:"height";i:700;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:11:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_image_gal_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_bg_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#28242b]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#a65bf4]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_color_mapping]]></wp:meta_key>
+			<wp:meta_value><![CDATA[solid]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_color_alpha]]></wp:meta_key>
+			<wp:meta_value><![CDATA[original]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_density]]></wp:meta_key>
+			<wp:meta_value><![CDATA[medium]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_max_particle_size]]></wp:meta_key>
+			<wp:meta_value><![CDATA[3]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>The Diamond</title>
+		<link>http://themenectar.com/demo/salient-agency/home-particles/diamond/</link>
+		<pubDate>Thu, 30 Jul 2015 13:17:03 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/wp-content/uploads/2015/07/diamond.png</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[<i>Oh Yeah,</i> look at that sweet rock]]></excerpt:encoded>
+		<wp:post_id>5565</wp:post_id>
+		<wp:post_date><![CDATA[2015-07-30 13:17:03]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-07-30 13:17:03]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[diamond]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>5563</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-agency/wp-content/uploads/2015/07/diamond.png]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2015/07/diamond.png]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1875;s:6:"height";i:1782;s:4:"file";s:19:"2015/07/diamond.png";s:5:"sizes";a:11:{s:9:"thumbnail";a:4:{s:4:"file";s:19:"diamond-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:19:"diamond-300x285.png";s:5:"width";i:300;s:6:"height";i:285;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:20:"diamond-1024x973.png";s:5:"width";i:1024;s:6:"height";i:973;s:9:"mime-type";s:9:"image/png";}s:11:"blog-widget";a:4:{s:4:"file";s:17:"diamond-50x50.png";s:5:"width";i:50;s:6:"height";i:50;s:9:"mime-type";s:9:"image/png";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:19:"diamond-600x403.png";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:9:"image/png";}s:16:"portfolio-widget";a:4:{s:4:"file";s:19:"diamond-100x100.png";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:9:"image/png";}s:4:"wide";a:4:{s:4:"file";s:20:"diamond-1000x500.png";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:9:"image/png";}s:7:"regular";a:4:{s:4:"file";s:19:"diamond-500x500.png";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:9:"image/png";}s:4:"tall";a:4:{s:4:"file";s:20:"diamond-500x1000.png";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:9:"image/png";}s:9:"wide_tall";a:4:{s:4:"file";s:21:"diamond-1000x1000.png";s:5:"width";i:1000;s:6:"height";i:1000;s:9:"mime-type";s:9:"image/png";}s:14:"large_featured";a:4:{s:4:"file";s:20:"diamond-1700x700.png";s:5:"width";i:1700;s:6:"height";i:700;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:11:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_image_gal_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_bg_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#fd0025]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_color]]></wp:meta_key>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_color_mapping]]></wp:meta_key>
+			<wp:meta_value><![CDATA[solid]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_color_alpha]]></wp:meta_key>
+			<wp:meta_value><![CDATA[original]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_shape_density]]></wp:meta_key>
+			<wp:meta_value><![CDATA[medium]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[nectar_particle_max_particle_size]]></wp:meta_key>
+			<wp:meta_value><![CDATA[3]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>jens-johnsson-121803</title>
+		<link>http://themenectar.com/demo/salient-blog-ultimate/jens-johnsson-121803-2/</link>
+		<pubDate>Fri, 01 Sep 2017 19:43:00 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/jens-johnsson-121803.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5725</wp:post_id>
+		<wp:post_date><![CDATA[2017-09-01 19:43:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-09-01 19:43:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[jens-johnsson-121803-2]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/jens-johnsson-121803.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2014/07/jens-johnsson-121803.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1650;s:6:"height";i:1100;s:4:"file";s:32:"2014/07/jens-johnsson-121803.jpg";s:5:"sizes";a:17:{s:9:"thumbnail";a:4:{s:4:"file";s:32:"jens-johnsson-121803-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:32:"jens-johnsson-121803-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:32:"jens-johnsson-121803-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:33:"jens-johnsson-121803-1024x683.jpg";s:5:"width";i:1024;s:6:"height";i:683;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:32:"jens-johnsson-121803-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:32:"jens-johnsson-121803-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:32:"jens-johnsson-121803-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:32:"jens-johnsson-121803-200x200.jpg";s:5:"width";i:200;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:33:"jens-johnsson-121803-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:32:"jens-johnsson-121803-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:32:"jens-johnsson-121803-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:32:"jens-johnsson-121803-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:33:"jens-johnsson-121803-500x1000.jpg";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:34:"jens-johnsson-121803-1000x1000.jpg";s:5:"width";i:1000;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:32:"jens-johnsson-121803-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:33:"jens-johnsson-121803-1650x700.jpg";s:5:"width";i:1650;s:6:"height";i:700;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:32:"jens-johnsson-121803-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>priscilla-du-preez-341138</title>
+		<link>http://themenectar.com/demo/salient-blog-ultimate/priscilla-du-preez-341138-2/</link>
+		<pubDate>Fri, 01 Sep 2017 19:43:12 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/priscilla-du-preez-341138-1.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5730</wp:post_id>
+		<wp:post_date><![CDATA[2017-09-01 19:43:12]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-09-01 19:43:12]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[priscilla-du-preez-341138-2]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/priscilla-du-preez-341138-1.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2014/07/priscilla-du-preez-341138-1.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1800;s:6:"height";i:1051;s:4:"file";s:39:"2014/07/priscilla-du-preez-341138-1.jpg";s:5:"sizes";a:17:{s:9:"thumbnail";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-300x175.jpg";s:5:"width";i:300;s:6:"height";i:175;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-768x448.jpg";s:5:"width";i:768;s:6:"height";i:448;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:40:"priscilla-du-preez-341138-1-1024x598.jpg";s:5:"width";i:1024;s:6:"height";i:598;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-200x200.jpg";s:5:"width";i:200;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:40:"priscilla-du-preez-341138-1-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:40:"priscilla-du-preez-341138-1-500x1000.jpg";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:41:"priscilla-du-preez-341138-1-1000x1000.jpg";s:5:"width";i:1000;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:40:"priscilla-du-preez-341138-1-1700x700.jpg";s:5:"width";i:1700;s:6:"height";i:700;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:39:"priscilla-du-preez-341138-1-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>levi-bare-290789</title>
+		<link>http://themenectar.com/demo/salient-blog-ultimate/levi-bare-290789/</link>
+		<pubDate>Sat, 02 Sep 2017 02:01:01 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2017/09/levi-bare-290789.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5734</wp:post_id>
+		<wp:post_date><![CDATA[2017-09-02 02:01:01]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-09-02 02:01:01]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[levi-bare-290789]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2017/09/levi-bare-290789.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2017/09/levi-bare-290789.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1700;s:6:"height";i:1133;s:4:"file";s:28:"2017/09/levi-bare-290789.jpg";s:5:"sizes";a:17:{s:9:"thumbnail";a:4:{s:4:"file";s:28:"levi-bare-290789-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:28:"levi-bare-290789-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:28:"levi-bare-290789-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:29:"levi-bare-290789-1024x682.jpg";s:5:"width";i:1024;s:6:"height";i:682;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:28:"levi-bare-290789-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:28:"levi-bare-290789-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:28:"levi-bare-290789-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:28:"levi-bare-290789-200x200.jpg";s:5:"width";i:200;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:29:"levi-bare-290789-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:28:"levi-bare-290789-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:28:"levi-bare-290789-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:28:"levi-bare-290789-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:29:"levi-bare-290789-500x1000.jpg";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:30:"levi-bare-290789-1000x1000.jpg";s:5:"width";i:1000;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:28:"levi-bare-290789-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:29:"levi-bare-290789-1700x700.jpg";s:5:"width";i:1700;s:6:"height";i:700;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:28:"levi-bare-290789-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>jelly</title>
+		<link>http://themenectar.com/demo/salient-blog-ultimate/jelly/</link>
+		<pubDate>Sat, 02 Sep 2017 03:54:26 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2013/03/jelly.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5760</wp:post_id>
+		<wp:post_date><![CDATA[2017-09-02 03:54:26]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-09-02 03:54:26]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[jelly]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2013/03/jelly.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2013/03/jelly.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1800;s:6:"height";i:1139;s:4:"file";s:17:"2013/03/jelly.jpg";s:5:"sizes";a:17:{s:9:"thumbnail";a:4:{s:4:"file";s:17:"jelly-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:17:"jelly-300x190.jpg";s:5:"width";i:300;s:6:"height";i:190;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:17:"jelly-768x486.jpg";s:5:"width";i:768;s:6:"height";i:486;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:18:"jelly-1024x648.jpg";s:5:"width";i:1024;s:6:"height";i:648;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:17:"jelly-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:17:"jelly-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:17:"jelly-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:17:"jelly-200x200.jpg";s:5:"width";i:200;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:18:"jelly-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:17:"jelly-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:17:"jelly-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:17:"jelly-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:18:"jelly-500x1000.jpg";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:19:"jelly-1000x1000.jpg";s:5:"width";i:1000;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:17:"jelly-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:18:"jelly-1700x700.jpg";s:5:"width";i:1700;s:6:"height";i:700;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:17:"jelly-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	
+	<item>
+		<title>angel-jimenez-168185</title>
+		<link>http://themenectar.com/demo/salient-blog-ultimate/index.php/2017/07/15/doing-a-cross-country-road-trip/angel-jimenez-168185/</link>
+		<pubDate>Tue, 05 Sep 2017 17:57:48 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/angel-jimenez-168185.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5768</wp:post_id>
+		<wp:post_date><![CDATA[2017-09-05 17:57:48]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-09-05 17:57:48]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[angel-jimenez-168185]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>220</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/angel-jimenez-168185.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2014/07/angel-jimenez-168185.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1600;s:6:"height";i:902;s:4:"file";s:32:"2014/07/angel-jimenez-168185.jpg";s:5:"sizes";a:17:{s:9:"thumbnail";a:4:{s:4:"file";s:32:"angel-jimenez-168185-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:32:"angel-jimenez-168185-300x169.jpg";s:5:"width";i:300;s:6:"height";i:169;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:32:"angel-jimenez-168185-768x433.jpg";s:5:"width";i:768;s:6:"height";i:433;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:33:"angel-jimenez-168185-1024x577.jpg";s:5:"width";i:1024;s:6:"height";i:577;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:32:"angel-jimenez-168185-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:32:"angel-jimenez-168185-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:32:"angel-jimenez-168185-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:32:"angel-jimenez-168185-200x200.jpg";s:5:"width";i:200;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:33:"angel-jimenez-168185-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:32:"angel-jimenez-168185-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:32:"angel-jimenez-168185-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:32:"angel-jimenez-168185-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:32:"angel-jimenez-168185-500x902.jpg";s:5:"width";i:500;s:6:"height";i:902;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:33:"angel-jimenez-168185-1000x902.jpg";s:5:"width";i:1000;s:6:"height";i:902;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:32:"angel-jimenez-168185-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:33:"angel-jimenez-168185-1600x700.jpg";s:5:"width";i:1600;s:6:"height";i:700;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:32:"angel-jimenez-168185-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	
+	<item>
+		<title>brooke-cagle-274627</title>
+		<link>http://themenectar.com/demo/salient-blog-ultimate/brooke-cagle-274627/</link>
+		<pubDate>Fri, 01 Sep 2017 15:11:56 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2017/09/brooke-cagle-274627.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5699</wp:post_id>
+		<wp:post_date><![CDATA[2017-09-01 15:11:56]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-09-01 15:11:56]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[brooke-cagle-274627]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2017/09/brooke-cagle-274627.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2017/09/brooke-cagle-274627.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1000;s:6:"height";i:667;s:4:"file";s:31:"2017/09/brooke-cagle-274627.jpg";s:5:"sizes";a:15:{s:9:"thumbnail";a:4:{s:4:"file";s:31:"brooke-cagle-274627-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:31:"brooke-cagle-274627-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:31:"brooke-cagle-274627-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:31:"brooke-cagle-274627-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:31:"brooke-cagle-274627-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:31:"brooke-cagle-274627-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:31:"brooke-cagle-274627-200x200.jpg";s:5:"width";i:200;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:32:"brooke-cagle-274627-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:31:"brooke-cagle-274627-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:31:"brooke-cagle-274627-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:31:"brooke-cagle-274627-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:31:"brooke-cagle-274627-500x667.jpg";s:5:"width";i:500;s:6:"height";i:667;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:32:"brooke-cagle-274627-1000x667.jpg";s:5:"width";i:1000;s:6:"height";i:667;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:31:"brooke-cagle-274627-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:31:"brooke-cagle-274627-800x667.jpg";s:5:"width";i:800;s:6:"height";i:667;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	<item>
+		<title>felix-russell-saw-251617</title>
+		<link>http://themenectar.com/demo/salient-blog-ultimate/felix-russell-saw-251617-2/</link>
+		<pubDate>Fri, 01 Sep 2017 19:41:49 +0000</pubDate>
+		<dc:creator><![CDATA[themenectar]]></dc:creator>
+		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/felix-russell-saw-251617.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5717</wp:post_id>
+		<wp:post_date><![CDATA[2017-09-01 19:41:49]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-09-01 19:41:49]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[felix-russell-saw-251617-2]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-blog-ultimate/wp-content/uploads/2014/07/felix-russell-saw-251617.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2014/07/felix-russell-saw-251617.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:467;s:6:"height";i:700;s:4:"file";s:36:"2014/07/felix-russell-saw-251617.jpg";s:5:"sizes";a:12:{s:9:"thumbnail";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-200x300.jpg";s:5:"width";i:200;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-467x403.jpg";s:5:"width";i:467;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-200x200.jpg";s:5:"width";i:200;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-467x500.jpg";s:5:"width";i:467;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-467x335.jpg";s:5:"width";i:467;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-467x500.jpg";s:5:"width";i:467;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-467x600.jpg";s:5:"width";i:467;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:36:"felix-russell-saw-251617-467x700.jpg";s:5:"width";i:467;s:6:"height";i:700;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	
+	
+	
+	
+	
+	
 	<item>
 		<title>Home</title>
 		<link>http://localhost/wordpress-3-6/?p=5649</link>
@@ -2316,7 +2863,7 @@
 <h4 style="text-align: left;"><span style="color: #933ded;">Theme Users</span></h4>
 <p style="text-align: left;">It takes a lot to be one of the most trusted themes on the market. Read more below why users keep coming back over and over again.</p>
 
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/2"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_content" bg_position="center center" bg_repeat="no-repeat" parallax_bg_speed="fast" scene_position="center" text_color="light" text_align="center" bg_image="5259" parallax_bg="true" bg_color="#4e475c"][vc_column width="1/4" animation="none" column_padding="padding-4-percent" column_padding_position="all" background_color_opacity="1" centered_text="true" background_color_hover="#0a0a0a" background_hover_color_opacity="0.2"][divider line_type="No Line" custom_height="75"][vc_column_text][icon color="Accent-Color" animation_speed="Slow" icon_size="60" animation_delay="" image="basic_heart.svg"]
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/2"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_content" bg_position="center center" bg_repeat="no-repeat" parallax_bg_speed="fast" scene_position="center" text_color="light" text_align="center" bg_image="https://source.unsplash.com/1200x800/daily/?mountains" parallax_bg="true" bg_color="#4e475c" color_overlay="#3a3247" overlay_strength="0.95" ][vc_column width="1/4" animation="none" column_padding="padding-4-percent" column_padding_position="all" background_color_opacity="1" centered_text="true" background_color_hover="#0a0a0a" background_hover_color_opacity="0.2"][divider line_type="No Line" custom_height="75"][vc_column_text][icon color="Accent-Color" animation_speed="Slow" icon_size="60" animation_delay="" image="basic_heart.svg"]
 <h4>Unique Design</h4>
 [/vc_column_text][divider line_type="No Line" custom_height="15"][vc_column_text] Take full control of the power Salient has to offer with our new exciting page builder. You’ll be grinning in delight when you see just how easy it is to create stunning layouts with little effort.[/vc_column_text][divider line_type="No Line" custom_height="75"][/vc_column][vc_column width="1/4" animation="none" column_padding="padding-4-percent" column_padding_position="all" background_color_opacity="1" delay="400" background_color_hover="#0a0a0a" background_hover_color_opacity="0.2"][divider line_type="No Line" custom_height="75"][vc_column_text][icon color="Accent-Color" animation_speed="Slow" icon_size="60" animation_delay="" image="basic_mouse.svg"]
 <h4>Page Builder</h4>
@@ -2356,7 +2903,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -2472,7 +3019,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -2832,8 +3379,8 @@
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Sunflower</title>
-		<link>http://localhost/wordpress-3-6/?portfolio=sunflower</link>
+		<title>Yellow Beauty</title>
+		<link>http://localhost/wordpress-3-6/?portfolio=yellow-beauty</link>
 		<pubDate>Mon, 20 Jul 2015 21:55:48 +0000</pubDate>
 		<dc:creator><![CDATA[themenectar]]></dc:creator>
 		<guid isPermaLink="false">http://localhost/premium_theme_1/?post_type=portfolio&#038;p=5055</guid>
@@ -2845,7 +3392,7 @@
 		<wp:post_date_gmt>2015-07-20 21:55:48</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
 		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>sunflower</wp:post_name>
+		<wp:post_name>yellow-beauty</wp:post_name>
 		<wp:status>publish</wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>7</wp:menu_order>
@@ -2912,7 +3459,7 @@ I am text block. Click edit button to change this text. Lorem ipsum dolor sit am
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_portfolio_item_masonry_content_pos</wp:meta_key>
-			<wp:meta_value><![CDATA[top]]></wp:meta_value>
+			<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_external_project_url</wp:meta_key>
@@ -2932,11 +3479,11 @@ I am text block. Click edit button to change this text. Lorem ipsum dolor sit am
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#04000a]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_subtitle_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#0e8adf]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_header_bg</wp:meta_key>
@@ -3044,7 +3591,7 @@ I am text block. Click edit button to change this text. Lorem ipsum dolor sit am
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_portfolio_item_masonry_content_pos</wp:meta_key>
-			<wp:meta_value><![CDATA[top]]></wp:meta_value>
+			<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_external_project_url</wp:meta_key>
@@ -3064,11 +3611,11 @@ I am text block. Click edit button to change this text. Lorem ipsum dolor sit am
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#04000a]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_subtitle_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#0e8adf]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_header_bg</wp:meta_key>
@@ -3117,6 +3664,10 @@ I am text block. Click edit button to change this text. Lorem ipsum dolor sit am
 		<wp:postmeta>
 			<wp:meta_key>_nectar_love</wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5880]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -3383,6 +3934,10 @@ Maximus justo vulputate vitae. Nulla ipsum leo, commodo sit amet congue sed, por
 			<wp:meta_key>_nectar_love</wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5822]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Dark Water</title>
@@ -3497,7 +4052,7 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_subtitle_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#b5e2ef]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_header_bg</wp:meta_key>
@@ -3517,7 +4072,7 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#b5e2ef]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_disable_transparent_header</wp:meta_key>
@@ -3640,7 +4195,7 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_subtitle_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#b5e2ef]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#ffffff]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_header_bg</wp:meta_key>
@@ -3696,6 +4251,10 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
     max-width: none!important;
     width: 100%!important;
 }]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5823]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -3980,6 +4539,10 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 			<wp:meta_key>_nectar_love</wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5879]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Custom Content Item</title>
@@ -4036,7 +4599,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 			<wp:meta_value><![CDATA[<h5>Custom Content</h5>
 <h3>How's This</h3>
 <h3>For Exciting</h3> <br/>
-[button color="see-through-3" hover_text_color_override="#fff" image="default-arrow" size="medium" url="#reasons" text="Learn More" color_override="#f8c700" hover_color_override="#f8c700"]]]></wp:meta_value>
+[button color="accent-color" hover_text_color_override="#fff" image="default-arrow" size="medium" url="#reasons" text="Learn More" color_override="#000000" hover_color_override="#000000"]]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_portfolio_custom_thumbnail</wp:meta_key>
@@ -4151,7 +4714,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 			<wp:meta_value><![CDATA[<h5>Custom Content</h5>
 <h3>How's This</h3>
 <h3>For Exciting</h3> <br/>
-[button color="see-through-3" hover_text_color_override="#fff" image="default-arrow" size="medium" url="#reasons" text="Learn More" color_override="#f8c700" hover_color_override="#f8c700"]]]></wp:meta_value>
+[button color="accent-color" hover_text_color_override="#fff" image="default-arrow" size="medium" url="#reasons" text="Learn More" color_override="#000000" hover_color_override="#000000"]]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_portfolio_custom_thumbnail</wp:meta_key>
@@ -4236,6 +4799,10 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		<wp:postmeta>
 			<wp:meta_key>_nectar_video_embed</wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5873]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -4324,7 +4891,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_accent_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#b5e2ef]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#a65bf4]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
@@ -4437,7 +5004,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_accent_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#b5e2ef]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#a65bf4]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
@@ -4584,7 +5151,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#3a6ee8]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#c0f4e0]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_subtitle_color</wp:meta_key>
@@ -4704,7 +5271,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#3a6ee8]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#c0f4e0]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_subtitle_color</wp:meta_key>
@@ -4761,6 +5328,10 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		<wp:postmeta>
 			<wp:meta_key>_nectar_love</wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5833]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -4850,7 +5421,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_accent_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#3a6ee8]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#789f9a]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
@@ -4968,7 +5539,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_accent_color</wp:meta_key>
-			<wp:meta_value><![CDATA[#3a6ee8]]></wp:meta_value>
+			<wp:meta_value><![CDATA[#789f9a]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_project_title_color</wp:meta_key>
@@ -5043,7 +5614,7 @@ All Day, Everyday</h1>
 <h2>Simple <i>&amp;</i> Memorable Is The Motto We Live By</h2>
 [/vc_column_text][divider line_type="No Line" custom_height="30"][vc_column_text]Donec ac laoreet velit. Quisque diam ex, faucibus sed tortor a, dignissim consequat risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum viverra, eros nec luctus facilisis, nisi nisl tempus purus, vitae congue enim mi pulvinar orci.
 
-Nulla pretium sagittis efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis aliquet blandit. Mauris a neque consequat, ultricies lacus non, pulvinar risus.[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][vc_column width="1/2" animation="none" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="0.2" background_hover_color_opacity="1" background_image="5275" background_color="#303030"][/vc_column][/vc_row][vc_row type="full_width_content" bg_position="left top" bg_repeat="no-repeat" parallax_bg_speed="slow" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left"][vc_column width="1/3" animation="none" column_padding="padding-7-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" background_color_hover="#f9f9f9"][vc_row_inner][vc_column_inner width="1/1" enable_animation="true" animation="fade-in-from-bottom" column_padding="no-extra-padding" column_padding_position="all"][vc_column_text]<span style="color: #000000;"><i>Item No.</i></span>[/vc_column_text][divider line_type="No Line" custom_height="10"][vc_column_text]
+Nulla pretium sagittis efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis aliquet blandit. Mauris a neque consequat, ultricies lacus non, pulvinar risus.[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][vc_column width="1/2" animation="none" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="0.2" background_hover_color_opacity="1" background_image="https://source.unsplash.com/600x1000/daily/?smile" background_color="#303030"][/vc_column][/vc_row][vc_row type="full_width_content" bg_position="left top" bg_repeat="no-repeat" parallax_bg_speed="slow" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left"][vc_column width="1/3" animation="none" column_padding="padding-7-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" background_color_hover="#f9f9f9"][vc_row_inner][vc_column_inner width="1/1" enable_animation="true" animation="fade-in-from-bottom" column_padding="no-extra-padding" column_padding_position="all"][vc_column_text]<span style="color: #000000;"><i>Item No.</i></span>[/vc_column_text][divider line_type="No Line" custom_height="10"][vc_column_text]
 <h3><span style="color: #e4e4e4;">01.</span> Research</h3>
 Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae blandit molestie. Nam aliquet dui neque, eget tincidunt sem accumsan et. Suspendisse egestas, turpis eu pellentesque aliquam.[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][vc_column width="1/3" animation="none" column_padding="padding-7-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" background_color_hover="#f9f9f9"][vc_row_inner][vc_column_inner width="1/1" enable_animation="true" animation="fade-in-from-bottom" delay="200" column_padding="no-extra-padding" column_padding_position="all"][vc_column_text]<span style="color: #000000;"><i>Item No.</i></span>[/vc_column_text][divider line_type="No Line" custom_height="10"][vc_column_text]
 <h3><span style="color: #e4e4e4;">02.</span> Design</h3>
@@ -5087,7 +5658,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5207,7 +5778,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5317,7 +5888,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		<dc:creator><![CDATA[themenectar]]></dc:creator>
 		<guid isPermaLink="false">http://themenectar.com/demo/salient-agency/?page_id=5286</guid>
 		<description></description>
-		<content:encoded><![CDATA[[vc_row type="full_width_content" vertically_center_columns="true" bg_position="left top" bg_repeat="no-repeat" parallax_bg_speed="slow" bg_color="#a65bf4" scene_position="center" text_color="light" text_align="left"][vc_column width="1/2" animation="none" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="0.3" background_hover_color_opacity="1" background_image="5300" background_color="#262626"][/vc_column][vc_column width="1/2" animation="none" column_padding="padding-7-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1"][vc_column_text]
+		<content:encoded><![CDATA[[vc_row type="full_width_content" vertically_center_columns="true" bg_position="left top" bg_repeat="no-repeat" parallax_bg_speed="slow" bg_color="#a65bf4" scene_position="center" text_color="light" text_align="left"][vc_column width="1/2" animation="none" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="0.3" background_hover_color_opacity="1" background_image="https://source.unsplash.com/600x1000/daily/?smile" background_color="#262626"][/vc_column][vc_column width="1/2" animation="none" column_padding="padding-7-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1"][vc_column_text]
 <h1>Eric Jördis</h1>
 [/vc_column_text][divider line_type="No Line" custom_height="20"][vc_column_text]
 <h2>"Aliquam" erat volutpat. Phasellus tortor velit, ornare at ullamcorper at, ultrices et diam at nunc.</h2>
@@ -5369,7 +5940,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5489,7 +6060,7 @@ Quisque molestie elementum quam molestie malesuada. In sagittis urna vitae bland
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5646,7 +6217,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5766,7 +6337,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5908,7 +6479,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6024,7 +6595,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6137,7 +6708,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 <h4 style="text-align: left;"><span style="color: #933ded;">Theme Users</span></h4>
 <p style="text-align: left;">It takes a lot to be one of the most trusted themes on the market. Read more below why users keep coming back over and over again.</p>
 
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/2"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_content" bg_position="center center" bg_repeat="no-repeat" parallax_bg_speed="fast" scene_position="center" text_color="light" text_align="center" bg_image="5259" parallax_bg="true" bg_color="#4e465b"][vc_column width="1/4" animation="none" column_padding="padding-4-percent" column_padding_position="all" background_color_opacity="1" centered_text="true" background_color_hover="#0a0a0a" background_hover_color_opacity="0.2"][divider line_type="No Line" custom_height="75"][vc_column_text][icon color="Accent-Color" animation_speed="Slow" icon_size="60" animation_delay="" image="basic_heart.svg"]
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/2"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_content" bg_position="center center" bg_repeat="no-repeat" parallax_bg_speed="fast" scene_position="center" text_color="light" text_align="center" bg_image="https://source.unsplash.com/1200x800/daily/?mountains" parallax_bg="true" bg_color="#4e465b" color_overlay="#3a3247" overlay_strength="0.95"][vc_column width="1/4" animation="none" column_padding="padding-4-percent" column_padding_position="all" background_color_opacity="1" centered_text="true" background_color_hover="#0a0a0a" background_hover_color_opacity="0.2"][divider line_type="No Line" custom_height="75"][vc_column_text][icon color="Accent-Color" animation_speed="Slow" icon_size="60" animation_delay="" image="basic_heart.svg"]
 <h4>Unique Design</h4>
 [/vc_column_text][divider line_type="No Line" custom_height="15"][vc_column_text] Take full control of the power Salient has to offer with our new exciting page builder. You’ll be grinning in delight when you see just how easy it is to create stunning layouts with little effort.[/vc_column_text][divider line_type="No Line" custom_height="75"][/vc_column][vc_column width="1/4" animation="none" column_padding="padding-4-percent" column_padding_position="all" background_color_opacity="1" delay="400" background_color_hover="#0a0a0a" background_hover_color_opacity="0.2"][divider line_type="No Line" custom_height="75"][vc_column_text][icon color="Accent-Color" animation_speed="Slow" icon_size="60" animation_delay="" image="basic_mouse.svg"]
 <h4>Page Builder</h4>
@@ -6185,19 +6756,19 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
 			<wp:meta_value><![CDATA[off]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_nectar_slider_bg_type</wp:meta_key>
+			<wp:meta_key><![CDATA[_nectar_slider_bg_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[particle_bg]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_nectar_canvas_shapes</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
+			<wp:meta_key><![CDATA[_nectar_canvas_shapes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5568,5565]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_media_upload_webm</wp:meta_key>
@@ -6305,19 +6876,19 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
 			<wp:meta_value><![CDATA[off]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_nectar_slider_bg_type</wp:meta_key>
+			<wp:meta_key><![CDATA[_nectar_slider_bg_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[particle_bg]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>_nectar_canvas_shapes</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
+			<wp:meta_key><![CDATA[_nectar_canvas_shapes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5568,5565]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_nectar_media_upload_webm</wp:meta_key>
@@ -6447,7 +7018,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6563,7 +7134,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6701,7 +7272,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6817,7 +7388,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6990,7 +7561,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7106,7 +7677,7 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7681,6 +8252,10 @@ E: hello@themenectar.com[/vc_column_text][/vc_column][/vc_row]]]></content:encod
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
 			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5734]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Video Post</title>
@@ -7919,6 +8494,10 @@ Etiam consequat, lacus nec laoreet auctor, ligula urna cursus felis, consectetur
 			<wp:meta_key>_wp_old_slug</wp:meta_key>
 			<wp:meta_value><![CDATA[self-hosted-video]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5730]]></wp:meta_value>
+		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>16</wp:comment_id>
 			<wp:comment_author><![CDATA[ThemeNectar]]></wp:comment_author>
@@ -7934,237 +8513,7 @@ Etiam consequat, lacus nec laoreet auctor, ligula urna cursus felis, consectetur
 			<wp:comment_user_id>1</wp:comment_user_id>
 		</wp:comment>
 	</item>
-	<item>
-		<title>Ink In Water</title>
-		<link>http://localhost/wordpress-3-6/?p=108</link>
-		<pubDate>Thu, 10 Jan 2013 17:19:25 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=108</guid>
-		<description></description>
-		<content:encoded><![CDATA[Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci. Donec at blandit augue, nec tristique ligula. Donec euismod nulla at erat fringilla, a porttitor lorem condimentum. Aliquam ut interdum libero, at pharetra orci. Quisque fermentum, felis ut gravida ornare, eros neque egestas dui, quis sollicitudin sem sem non ante. Fusce metus lorem, scelerisque ut diam non, vehicula dapibus sapien. Sed sagittis, ante at ornare pellentesque, sem justo consequat enim, quis adipiscing quam enim ac velit. Vestibulum condimentum tempus sapien eu porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque interdum odio vel consectetur dignissim. Fusce eget tristique nulla. Duis at purus ut est cursus imperdiet. Sed condimentum massa in enim cursus, sed mattis elit malesuada. Nunc tincidunt magna sit amet metus sagittis tempor. Maecenas lacinia condimentum ultricies. Sed et lacus nec augue venenatis interdum. Fusce sit amet luctus augue. Aenean scelerisque porttitor ultrices. Nulla dui tellus, egestas sit amet posuere sit amet, dictum tristique mauris. Praesent sed elementum mauris. Nullam et enim eget nisl eleifend auctor lobortis et dui. Curabitur at malesuada magna. Nunc nec tincidunt mauris, vitae tincidunt enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante leo, bibendum at metus in, dignissim sodales nisi. Curabitur id augue iaculis, elementum diam eget, ultrices massa. Fusce eleifend tincidunt neque, a porta nibh faucibus non.]]></content:encoded>
-		<excerpt:encoded><![CDATA[Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci.]]></excerpt:encoded>
-		<wp:post_id>108</wp:post_id>
-		<wp:post_date>2013-01-10 17:19:25</wp:post_date>
-		<wp:post_date_gmt>2013-01-10 17:19:25</wp:post_date_gmt>
-		<wp:comment_status>open</wp:comment_status>
-		<wp:ping_status>open</wp:ping_status>
-		<wp:post_name>ink-in-water</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>12</wp:menu_order>
-		<wp:post_type>post</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="quotes"><![CDATA[Quotes]]></category>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[89]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_height</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_opengraph-description</wp:meta_key>
-			<wp:meta_value><![CDATA[Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci. Donec at blandit augue, nec tristique ligula. Donec euismod nulla at erat fringilla.]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_opengraph-image</wp:meta_key>
-			<wp:meta_value><![CDATA[http://themenectar.com/demo/salient-blog/wp-content/uploads/2013/01/Comp-1-0000119.png]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[quisque-sit-amet-sapien-et-lacus]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[large_featured]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[quisque-sit-amet]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[89]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_height</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_opengraph-description</wp:meta_key>
-			<wp:meta_value><![CDATA[Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci. Donec at blandit augue, nec tristique ligula. Donec euismod nulla at erat fringilla.]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_opengraph-image</wp:meta_key>
-			<wp:meta_value><![CDATA[http://themenectar.com/demo/salient-blog/wp-content/uploads/2013/01/Comp-1-0000119.png]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[quisque-sit-amet-sapien-et-lacus]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[large_featured]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[quisque-sit-amet]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
+	
 	<item>
 		<title>The Field</title>
 		<link>http://localhost/wordpress-3-6/?p=110</link>
@@ -8325,7 +8674,7 @@ background-color: #000000;
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
+			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
@@ -8425,7 +8774,11 @@ background-color: #000000;
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
+			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5768]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>52</wp:comment_id>
@@ -8455,297 +8808,6 @@ background-color: #000000;
 			<wp:comment_parent>52</wp:comment_parent>
 			<wp:comment_user_id>1</wp:comment_user_id>
 		</wp:comment>
-	</item>
-	<item>
-		<title>Velit Porttito</title>
-		<link>http://localhost/wordpress-3-6/?p=1239</link>
-		<pubDate>Fri, 11 Jan 2013 04:31:39 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=1239</guid>
-		<description></description>
-		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et consectetur erat, ac iaculis lectus. Vestibulum porta leo vel dignissim imperdiet. Ut consectetur nisi eros, sed consectetur magna egestas id. Vivamus tincidunt faucibus ante, vel rhoncus sapien egestas nec. Nulla ultrices, dolor et dignissim adipiscing, tellus diam tempus mi, vitae egestas purus ligula eget risus. Cras scelerisque augue sapien, vitae lacinia sapien rhoncus vitae. Aliquam quis enim in nulla ullamcorper consequat. Vivamus sollicitudin tortor augue, sed fringilla neque commodo eu. Vestibulum hendrerit massa a nulla gravida ullamcorper. Vestibulum sodales magna nec lorem feugiat, ac interdum justo gravida. Duis et iaculis enim. Aenean aliquet interdum mi, sit amet dapibus est porttitor in. In eget dolor egestas, commodo ante eget, lacinia dui. Praesent at tristique erat. Proin luctus tortor et lectus gravida varius.
-
-Cras rhoncus metus quis diam malesuada vulputate. Duis euismod lectus id varius interdum. Etiam quis tincidunt mi. Praesent aliquam purus at purus blandit auctor. Etiam pharetra tellus sem, in laoreet turpis euismod sed. Ut massa lectus, volutpat non convallis ut, hendrerit quis dui. In nec lacinia sapien. Proin placerat tincidunt orci, scelerisque imperdiet ante laoreet et. Fusce porta ante eget tortor sagittis ultrices. In consectetur fringilla urna, non fringilla elit consequat at. Nam vel porta lectus. Donec condimentum hendrerit erat, gravida feugiat dolor accumsan vehicula. Sed vel laoreet elit.
-
-Mauris lacinia velit augue, vel pellentesque sem ultrices ut. Curabitur lobortis leo ultrices velit interdum, sed placerat urna mollis. Curabitur ullamcorper odio et sapien pharetra, non adipiscing magna faucibus. Vestibulum bibendum a magna vel eleifend. Etiam malesuada commodo tortor eu convallis. Nunc enim nisi, porta et dolor nec, porttitor tempor leo. Sed eu rhoncus risus. Aenean eu luctus lectus, vitae semper leo. Sed porta, nunc sit amet scelerisque fermentum, lacus enim elementum tortor, sed molestie nulla diam a leo. Vestibulum iaculis dolor ligula, gravida rhoncus odio sollicitudin eu. Nunc ultrices nunc ut odio feugiat fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dolor augue, suscipit eu dui quis, commodo tincidunt turpis. Nulla facilisi. Proin aliquet rhoncus ipsum eget convallis. Aliquam pretium vestibulum viverra.]]></content:encoded>
-		<excerpt:encoded><![CDATA[Quisque porta ipsum quis neque elementum lacinia. Pellentesque ut risus rutrum, tristique lacus nec, mollis risus. Vestibulum mollis erat arcu, eu vehicula purus consequat nec.  Maecenas nunc odio, pulvinar id vulputate nec, porttitor at quam. Suspendisse vulputate diam eu leo bibendum feugiat.]]></excerpt:encoded>
-		<wp:post_id>1239</wp:post_id>
-		<wp:post_date>2013-01-11 04:31:39</wp:post_date>
-		<wp:post_date_gmt>2013-01-11 04:31:39</wp:post_date_gmt>
-		<wp:comment_status>open</wp:comment_status>
-		<wp:ping_status>open</wp:ping_status>
-		<wp:post_name>velit-feugiat-porttito</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>11</wp:menu_order>
-		<wp:post_type>post</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="fashion"><![CDATA[Fashion]]></category>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[52]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[52]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_height</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[52]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[52]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_height</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
-		</wp:postmeta>
 	</item>
 	<item>
 		<title>Basically Salient is beauitful from all around</title>
@@ -9050,6 +9112,10 @@ Nunc ipsum orci, consectetur in euismod id, adipiscing nec libero. Vivamus sed n
 		<wp:postmeta>
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
 			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5725]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>232</wp:comment_id>
@@ -9644,521 +9710,9 @@ Quisque at dolor venenatis justo fringilla dignissim ut id eros. Quisque non eli
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
 			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
 		</wp:postmeta>
-	</item>
-	<item>
-		<title>Interdum</title>
-		<link>http://localhost/wordpress-3-6/?p=2329</link>
-		<pubDate>Wed, 23 Jan 2013 18:06:42 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=144</guid>
-		<description></description>
-		<content:encoded><![CDATA[Quisque at dolor venenatis justo fringilla dignissim ut id eros. Quisque non elit id purus feugiat vestibulum. Phasellus eget sodales neque. <!--more--> Morbi eget odio nec justo consequat gravida. Phasellus dolor nisl, venenatis eget euismod et, dapibus et purus. Maecenas interdum nisi a dolor facilisis eu laoreet mi facilisis. Mauris pharetra interdum lorem eu venenatis. Praesent est diam, fringilla in hendrerit vel, ullamcorper et mauris.
-
-Mauris vel tortor accumsan, faucibus orci non, varius turpis. Aenean ac eros libero. Quisque quis sapien in ante scelerisque volutpat. Cras et libero iaculis, consequat nisi nec, tristique metus. Praesent eu odio in velit maximus accumsan vitae id lectus. Aenean ullamcorper vitae tortor vitae blandit. Nullam placerat eleifend metus, at tempus lacus suscipit non. Praesent in nunc sit amet orci dignissim mollis. Pellentesque elementum lacinia urna, sit amet scelerisque libero blandit vel. Aliquam erat volutpat. Praesent vel nunc orci. Suspendisse quis mauris sed ipsum lobortis semper id nec diam. Donec a porta nibh. Vivamus nibh metus, facilisis ut maximus eget, lobortis at erat. Nulla luctus nec eros ac vehicula. Nullam scelerisque laoreet lorem a sodales.
-
-Integer convallis, odio ut rutrum euismod, mi purus pulvinar justo, quis mollis metus metus vitae nibh. Proin eget tincidunt arcu. Donec ante mi, elementum non adipiscing vitae, pharetra quis mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur eget nibh non odio iaculis posuere. Sed ante tortor, pharetra vitae iaculis id, sodales ac tellus. Ut viverra, nulla et adipiscing condimentum, libero nisi condimentum tellus, vel pharetra neque ligula sit amet mi. Sed rutrum consectetur purus ac tincidunt.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>2329</wp:post_id>
-		<wp:post_date>2013-01-23 18:06:42</wp:post_date>
-		<wp:post_date_gmt>2013-01-23 18:06:42</wp:post_date_gmt>
-		<wp:comment_status>open</wp:comment_status>
-		<wp:ping_status>open</wp:ping_status>
-		<wp:post_name>mauris-pharetra-interdum-lorem-2</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>13</wp:menu_order>
-		<wp:post_type>post</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
 		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[84]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[84]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_height</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[84]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[84]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_height</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Ownage In The Mountains</title>
-		<link>http://localhost/wordpress-3-6/?p=2671</link>
-		<pubDate>Tue, 15 Jan 2013 06:23:38 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog/?p=2671</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row][vc_column][vc_column_text]Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci. Donec at blandit augue, nec tristique ligula. Donec euismod nulla at erat fringilla, a porttitor lorem condimentum. Aliquam ut interdum libero, at pharetra orci. Quisque fermentum, felis ut gravida ornare, eros neque egestas dui, quis sollicitudin sem sem non ante. Fusce metus lorem, scelerisque ut diam non, vehicula dapibus sapien. Sed sagittis, ante at ornare pellentesque, sem justo consequat enim, quis adipiscing quam enim ac velit. Vestibulum condimentum tempus sapien eu porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque interdum odio vel consectetur dignissim. Fusce eget tristique nulla.
-
-Duis at purus ut est cursus imperdiet. Sed condimentum massa in enim cursus, sed mattis elit malesuada. Nunc tincidunt magna sit amet metus sagittis tempor. Maecenas lacinia condimentum ultricies. Sed et lacus nec augue venenatis interdum. Fusce sit amet luctus augue. Aenean scelerisque porttitor ultrices. Nulla dui tellus, egestas sit amet posuere sit amet, dictum tristique mauris. Praesent sed elementum mauris. Nullam et enim eget nisl eleifend auctor lobortis et dui. Curabitur at malesuada magna. Nunc nec tincidunt mauris, vitae tincidunt enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante leo, bibendum at metus in, dignissim sodales nisi. Curabitur id augue iaculis, elementum diam eget, ultrices massa. Fusce eleifend tincidunt neque, a porta nibh faucibus non.[/vc_column_text][/vc_column][/vc_row][vc_row][vc_column][vc_column_text]Mauris vel tortor accumsan, faucibus orci non, varius turpis. Aenean ac eros libero. Quisque quis sapien in ante scelerisque volutpat. Cras et libero iaculis, consequat nisi nec, tristique metus. Praesent eu odio in velit maximus accumsan vitae id lectus. Aenean ullamcorper vitae tortor vitae blandit. Nullam placerat eleifend metus, at tempus lacus suscipit non. Praesent in nunc sit amet orci dignissim mollis. Pellentesque elementum lacinia urna, sit amet scelerisque libero blandit vel. Aliquam erat volutpat. Praesent vel nunc orci. Suspendisse quis mauris sed ipsum lobortis semper id nec diam. Donec a porta nibh. Vivamus nibh metus, facilisis ut maximus eget, lobortis at erat. Nulla luctus nec eros ac vehicula. Nullam scelerisque laoreet lorem a sodales.[/vc_column_text][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[Sed condimentum massa in enim cursus, sed mattis elit malesuada. Lorem sapien acveh icula vestibulum, arcu magna aliquet velit. Nunc elementum mattis diam eu aliquam. Phasellus augue nulla, venenatis non hendrerit ac, volutpat sit amet sem. Donec eleifend nulla]]></excerpt:encoded>
-		<wp:post_id>2671</wp:post_id>
-		<wp:post_date>2013-01-15 06:23:38</wp:post_date>
-		<wp:post_date_gmt>2013-01-15 06:23:38</wp:post_date_gmt>
-		<wp:comment_status>open</wp:comment_status>
-		<wp:ping_status>open</wp:ping_status>
-		<wp:post_name>ownage-in-the-mountains</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>2</wp:menu_order>
-		<wp:post_type>post</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[the-ledge]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[a-night-in-the-mountains]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_opengraph-image</wp:meta_key>
-			<wp:meta_value><![CDATA[http://themenectar.com/demo/salient-blog/wp-content/uploads/2014/07/sky.jpg]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_google-plus-description</wp:meta_key>
-			<wp:meta_value><![CDATA[Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci. Donec at blandit augue, nec tristique ligula.]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[ownage]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_status</wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wpb_vc_js_interface_version</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_gallery_slider</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_quote</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_link</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_m4v</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_ogv</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_poster</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_video_embed</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_mp3</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_audio_ogg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_parallax</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bg_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_font_color</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_overlay</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_header_bottom_shadow</wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_disable_transparent_header</wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[the-ledge]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[a-night-in-the-mountains]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_nectar_love</wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_opengraph-image</wp:meta_key>
-			<wp:meta_value><![CDATA[http://themenectar.com/demo/salient-blog/wp-content/uploads/2014/07/sky.jpg]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_yoast_wpseo_google-plus-description</wp:meta_key>
-			<wp:meta_value><![CDATA[Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci. Donec at blandit augue, nec tristique ligula.]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_wp_old_slug</wp:meta_key>
-			<wp:meta_value><![CDATA[ownage]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5699]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -10355,6 +9909,10 @@ Duis at purus ut est cursus imperdiet. Sed condimentum massa in enim cursus, sed
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
 			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5717]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Portit mollis vitae</title>
@@ -10520,7 +10078,7 @@ Nunc ipsum orci, consectetur in euismod id, adipiscing nec libero. Vivamus sed n
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
+			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_wp_old_slug</wp:meta_key>
@@ -10664,11 +10222,15 @@ Nunc ipsum orci, consectetur in euismod id, adipiscing nec libero. Vivamus sed n
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_post_item_masonry_sizing</wp:meta_key>
-			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
+			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_wp_old_slug</wp:meta_key>
 			<wp:meta_value><![CDATA[porttitor-porttitor-mollis-vitae-placerat-2-2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5760]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>334</wp:comment_id>

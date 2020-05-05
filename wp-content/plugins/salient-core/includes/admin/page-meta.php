@@ -1,8 +1,14 @@
 <?php 
 
-add_action('add_meta_boxes_page', 'nectar_metabox_salient_headers_page');
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-function nectar_metabox_salient_headers_page() {
+
+add_action('add_meta_boxes', 'nectar_metabox_salient_headers_page');
+
+function nectar_metabox_salient_headers_page($post_type) {
   
   
   if( defined( 'NECTAR_THEME_NAME' ) ) {
@@ -17,16 +23,20 @@ function nectar_metabox_salient_headers_page() {
     nectar_create_meta_box( $post, $meta_box["args"] );
   }
   
-  
-  
+
   /**
    * Header navigation transparency.
    */
+	 $header_nav_trans_post_types = array('page');
+	 if( has_filter('nectar_metabox_post_types_navigation_transparency') ) {
+		 $header_nav_trans_post_types = apply_filters('nectar_metabox_post_types_navigation_transparency', $header_nav_trans_post_types);
+	 }
+	 
    $meta_box = array(
      'id' => 'nectar-metabox-header-nav-transparency',
      'title' => esc_html__('Navigation Transparency', 'salient-core'),
      'description' => esc_html__('Configure the header navigation transparency.', 'salient-core'),
-     'post_type' => 'page',
+     'post_type' => $header_nav_trans_post_types,
      'context' => 'normal',
      'priority' => 'high',
      'fields' => array(
@@ -65,11 +75,16 @@ function nectar_metabox_salient_headers_page() {
   /**
    * Page full screen rows.
    */
+	 $page_full_screen_rows_post_types = array('page');
+	 if( has_filter('nectar_metabox_post_types_fullscreen_rows') ) {
+		 $page_full_screen_rows_post_types = apply_filters('nectar_metabox_post_types_fullscreen_rows', $page_full_screen_rows_post_types);
+	 }
+	 
    $meta_box = array(
      'id' => 'nectar-metabox-fullscreen-rows',
      'title' => esc_html__('Page Full Screen Rows', 'salient-core'),
      'description' => esc_html__('Configure your page full screen rows.', 'salient-core'),
-     'post_type' => 'page',
+     'post_type' => $page_full_screen_rows_post_types,
      'context' => 'normal',
      'priority' => 'high',
      'fields' => array(
@@ -196,11 +211,17 @@ function nectar_metabox_salient_headers_page() {
   /**
    * Page Header Settings
    */
+	 
+	 $page_header_post_types = array('page');
+	 if( has_filter('nectar_metabox_post_types_page_header') ) {
+		 $page_header_post_types = apply_filters('nectar_metabox_post_types_page_header', $page_header_post_types);
+	 }
+	 
    $meta_box = array(
      'id' => 'nectar-metabox-page-header',
      'title' => esc_html__('Page Header Settings', 'salient-core'),
      'description' => esc_html__('Here you can configure how your page header will appear. For a full width background image behind your header text, simply upload the image below. To have a standard header just fill out the fields below and don\'t upload an image.', 'salient-core'),
-     'post_type' => 'page',
+     'post_type' => $page_header_post_types,
      'context' => 'normal',
      'priority' => 'high',
      'fields' => array(

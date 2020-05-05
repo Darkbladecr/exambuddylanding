@@ -13,27 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-add_filter( 'the_password_form', 'nectar_custom_password_form' );
-
-/**
- * Password form markup modification.
- *
- * @since 3.0
- */
-function nectar_custom_password_form() {
-	
-	global $post;
-	
-	$post   = get_post( $post );
-	$label  = 'pwbox-' . ( empty( $post->ID ) ? rand() : $post->ID );
-	$output = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
-	<p>' . esc_html__( 'This content is password protected. To view it please enter your password below:', 'salient' ) . '</p>
-	<p><label for="' . esc_attr($label) . '">' . esc_html__( 'Password:', 'salient' ) . ' </label>  <input name="post_password" id="' . esc_attr($label) . '" type="password" size="20" /><input type="submit" name="Submit" value="' . esc_attr__( 'Submit', 'salient' ) . '" /></p></form>';
-	return $output;
-	
-}
-
-
 
 /**
  * @deprecated since 10.5

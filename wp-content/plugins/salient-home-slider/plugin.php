@@ -5,7 +5,7 @@
  * Description: The original featured content slider for Salient. (Deprecated for the more powerful Salient Nectar Slider)
  * Author: ThemeNectar
  * Author URI: http://themenectar.com
- * Version: 1.1
+ * Version: 1.2
  * Text Domain: salient-home-slider
  */
 
@@ -28,7 +28,7 @@ class Salient_Home_Slider {
 	
 	static $instance = false;
 	
-	public $plugin_version = '1.1';
+	public $plugin_version = '1.2';
 		
 	private function __construct() {
 		

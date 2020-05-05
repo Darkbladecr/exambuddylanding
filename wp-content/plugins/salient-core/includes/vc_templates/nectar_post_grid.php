@@ -1,4 +1,10 @@
 <?php 
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract( shortcode_atts( array(
 	'post_type' => 'post',
 	'portfolio_category' 	=> 'all',
@@ -10,14 +16,17 @@ extract( shortcode_atts( array(
   'posts_per_page' => '-1',
   'post_offset' => '0',
 	'enable_sortable' => '',
+	'sortable_color' => 'default',
 	'pagination' => 'none',
   'display_categories' => '0',
   'display_date' => '0',
   'display_excerpt' => '0',
+	'category_functionality' => 'default',
   'grid_item_height' => '30vh',
   'grid_item_spacing' => '10px',
   'columns' => '4',
   'enable_masonry' => '',
+	'aspect_ratio_image_size' => '',
 	'image_size' => 'large',
 	'image_loading' => 'normal',
 	'button_color' => 'black',
@@ -31,23 +40,45 @@ extract( shortcode_atts( array(
 	'mouse_indicator_style' => 'default',
 	'mouse_indicator_color' => '#000',
 	'mouse_indicator_text' => 'view',
-  'hover_effect' => 'zoom',
+  'hover_effect' => '',
   'border_radius' => 'none',
-  'text_style' => 'default'
+  'text_style' => 'default',
+	'grid_style' => 'content_overlaid',
+	'opacity_hover_animation' => '',
+	'post_title_overlay' => '',
+	'mouse_follow_image_alignment' => '',
+	'mouse_follow_post_spacing' => '25px',
+	'heading_tag' => 'default',
+	'animation' => 'none',
+	'custom_font_size' => '',
+	'content_under_image_text_align' => 'left',
+	'card_design' => '',
+	'card_bg_color' => '',
+	'card_bg_color_hover' => '',
+	'css_class_name' => ''
 ), $atts ) );
 
 
-// Certain items need to be stored in JSON when using sortable.
+if( 'yes' !== $card_design ) {
+	$card_bg_color = '';
+}
+
+// Certain items need to be stored in JSON when using sortable/load more.
 $el_settings = array(
 	'post_type' => esc_attr($post_type),
 	'pagination' => esc_attr($pagination),
 	'image_size' => esc_attr($image_size),
+	'aspect_ratio_image_size' => esc_attr($aspect_ratio_image_size),
 	'display_categories' => esc_attr($display_categories),
 	'display_excerpt' => esc_attr($display_excerpt),
 	'display_date' => esc_attr($display_date),
 	'color_overlay' => esc_attr($color_overlay),
 	'color_overlay_opacity' => esc_attr($color_overlay_opacity),
-	'color_overlay_hover_opacity' => esc_attr($color_overlay_hover_opacity)
+	'color_overlay_hover_opacity' => esc_attr($color_overlay_hover_opacity),
+	'card_bg_color' => esc_attr($card_bg_color),
+	'grid_style' => esc_attr($grid_style),
+	'post_title_overlay' => esc_attr($post_title_overlay),
+	'heading_tag' => esc_attr($heading_tag),
 );
 
 $el_query = array(
@@ -58,7 +89,15 @@ $el_query = array(
 	'offset' => esc_attr($post_offset)
 ); 
 
-echo "<div class='nectar-post-grid-wrap' data-el-settings='".json_encode($el_settings)."' data-query='".json_encode($el_query)."' data-load-more-color='". esc_attr($button_color) ."' data-load-more-text='".esc_html__("Load More", "salient-core") ."'>";
+$css_class_arr = array('nectar-post-grid-wrap');
+
+if( !empty($css_class_name) ) {
+	array_push($css_class_arr, $css_class_name);
+}
+
+$el_css_class = implode(" ", $css_class_arr);
+
+echo "<div class='".esc_attr($el_css_class)."' data-el-settings='".json_encode($el_settings)."' data-style='".esc_attr($grid_style)."' data-query='".json_encode($el_query)."' data-load-more-color='". esc_attr($button_color) ."' data-load-more-text='".esc_html__("Load More", "salient-core") ."'>";
 
 // Sortable filters.
 $cat_links_escaped = '';
@@ -105,7 +144,9 @@ if( 'post' === $post_type ) {
 } else if( 'portfolio' === $post_type && !empty($portfolio_category) ) {
 	
 	$selected_cats_arr = explode(",", $portfolio_category);
-	$project_cat_list  = get_terms('project-type');
+	$project_cat_list  = get_terms( array(
+	    'taxonomy' => 'project-type'
+	) );
 	
 	if( in_array('all', $selected_cats_arr) ) {
 		
@@ -124,10 +165,12 @@ if( 'post' === $post_type ) {
 		}
 	}
 	
-	foreach ($project_cat_list as $type) {
+	if( !is_wp_error($project_cat_list) ) { 
+		foreach ($project_cat_list as $type) {
 
-		if( in_array($type->slug, $selected_cats_arr) || true === $show_all_cats ) {
-  		$cat_links_escaped .= '<a href="#" data-filter="'.esc_attr($type->slug).'" data-total-count="'.esc_attr(nectar_post_grid_get_category_total($type->slug, 'portfolio')).'">'. esc_attr($type->name) .'</a>';
+			if( in_array($type->slug, $selected_cats_arr) || true === $show_all_cats ) {
+	  		$cat_links_escaped .= '<a href="#" data-filter="'.esc_attr($type->slug).'" data-total-count="'.esc_attr(nectar_post_grid_get_category_total($type->slug, 'portfolio')).'">'. esc_attr($type->name) .'</a>';
+			}
 		}
 	}
 
@@ -135,7 +178,7 @@ if( 'post' === $post_type ) {
 
 // Sortable filter output.
 if( !empty($cat_links_escaped) ) {
-	echo '<div class="nectar-post-grid-filters" data-sortable="'.esc_attr($enable_sortable).'"><h4>'.esc_html__('Filter','salient').'</h4><div>'.$cat_links_escaped.'</div></div>';
+	echo '<div class="nectar-post-grid-filters" data-active-color="'.esc_attr($sortable_color).'" data-animation="'.esc_attr($animation).'" data-sortable="'.esc_attr($enable_sortable).'"><h4>'.esc_html__('Filter','salient').'</h4><div>'.$cat_links_escaped.'</div></div>';
 }
 	
 
@@ -145,6 +188,16 @@ if( 'view' === $mouse_indicator_text ) {
 	$indicator_text = esc_html__('View','salient-core');
 } else {
 	$indicator_text = esc_html__('Read','salient-core');
+}
+
+if( 'content_overlaid' !== $grid_style ) {
+	$text_color_hover = $text_color;
+}
+if( 'mouse_follow_image' === $grid_style ) {
+	$grid_item_spacing = 'none';
+}
+if( 'yes' === $aspect_ratio_image_size && 'content_under_image' === $grid_style) {
+	$enable_masonry = 'false';
 }
 
 // Grid output.
@@ -162,9 +215,31 @@ $data_attrs_escaped .= 'data-text-layout="'.esc_attr($text_content_layout).'" ';
 $data_attrs_escaped .= 'data-text-color="'.esc_attr($text_color).'" ';
 $data_attrs_escaped .= 'data-text-hover-color="'.esc_attr($text_color_hover).'" ';
 $data_attrs_escaped .= 'data-shadow-hover="'.esc_attr($shadow_on_hover).'" ';
-$data_attrs_escaped .= 'data-masonry="'.esc_attr($enable_masonry).'"';
+$data_attrs_escaped .= 'data-masonry="'.esc_attr($enable_masonry).'" ';
+$data_attrs_escaped .= 'data-animation="'.esc_attr($animation).'" ';
+$data_attrs_escaped .= 'data-cat-click="'.esc_attr($category_functionality).'"';
 
-echo '<div class="nectar-post-grid" '.$data_attrs_escaped.'>';
+if( 'content_under_image' === $grid_style) {
+	$data_attrs_escaped .= ' data-lock-aspect="'.esc_attr($aspect_ratio_image_size).'" ';
+	$data_attrs_escaped .= ' data-text-align="'.esc_attr($content_under_image_text_align).'" ';
+	$data_attrs_escaped .= 'data-card="'.esc_attr($card_design).'"';
+}
+
+if( 'mouse_follow_image' === $grid_style) {
+	$data_attrs_escaped .= ' data-opacity-hover="'. esc_attr($opacity_hover_animation).'" ';
+	$data_attrs_escaped .= 'data-post-title-overlay="'. esc_attr($post_title_overlay).'" ';
+	$data_attrs_escaped .= 'data-mouse-follow-image-alignment="'. esc_attr($mouse_follow_image_alignment).'" ';
+	$data_attrs_escaped .= 'data-mouse_follow_post_spacing="'. esc_attr($mouse_follow_post_spacing).'"';
+}
+
+// Dynamic style classes.
+if( function_exists('nectar_el_dynamic_classnames') ) {
+	$dynamic_el_styles = nectar_el_dynamic_classnames('nectar_post_grid', $atts);
+} else {
+	$dynamic_el_styles = '';
+}
+
+echo '<div class="nectar-post-grid'.$dynamic_el_styles.'" '.$data_attrs_escaped.'>';
 
 // Posts.
 if( 'post' === $post_type ) {
@@ -206,11 +281,16 @@ else if( 'portfolio' === $post_type ) {
 	$portfolio_arr = array(
 		'posts_per_page' => $posts_per_page,
 		'post_type'      => 'portfolio',
+		'post_status'    => 'publish',
 		'order'          => $order,
     'orderby'        => $orderby,
 		'project-type'   => $portfolio_category,
 		'offset'         => $post_offset,
 	);
+	
+	if( has_filter('salient_el_post_grid_portfolio_query') ) {
+		$portfolio_arr = apply_filters('salient_el_post_grid_portfolio_query', $portfolio_arr);
+	}
 	
 	$nectar_portfolio_el_query = new WP_Query( $portfolio_arr );
         

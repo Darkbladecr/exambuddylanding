@@ -75,7 +75,7 @@ return array(
 			"heading" => esc_html__("Icon Above Title", "salient-core"),
 			"param_name" => "icon_fontawesome",
 			"group" => esc_html__('Front Side', 'salient-core'),
-			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "icon_family", 'value' => 'fontawesome'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -84,7 +84,7 @@ return array(
 			"heading" => esc_html__("Icon", "js_composer"),
 			"param_name" => "icon_iconsmind",
 			"group" => esc_html__('Front Side', 'salient-core'),
-			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'iconsmind'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -93,7 +93,7 @@ return array(
 			"heading" => esc_html__("Icon Above Title", "js_composer"),
 			"param_name" => "icon_linea",
 			"group" => esc_html__('Front Side', 'salient-core'),
-			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "icon_family", 'value' => 'linea'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -102,7 +102,7 @@ return array(
 			"heading" => esc_html__("Icon", "js_composer"),
 			"param_name" => "icon_steadysets",
 			"group" => esc_html__('Front Side', 'salient-core'),
-			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'steadysets'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),

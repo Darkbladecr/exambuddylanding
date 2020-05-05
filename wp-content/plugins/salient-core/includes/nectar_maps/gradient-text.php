@@ -60,34 +60,54 @@ return array(
 				"description" => esc_html__("The text that will display with gradient coloring", "salient-core")
 			),
 			array(
-				"type" => "textfield",
+				"type" => "nectar_numerical",
 				"heading" => esc_html__("Margin", "salient-core") . "<span>" . esc_html__("Top", "salient-core") . "</span>",
 				"param_name" => "margin_top",
-				"edit_field_class" => "col-md-2",
-				"description" => esc_html__("." , "salient-core")
-			),
-			array(
-				"type" => "textfield",
-				"heading" => "<span>" . esc_html__("Right", "salient-core") . "</span>",
-				"param_name" => "margin_right",
-				"edit_field_class" => "col-md-2",
+				"placeholder" => esc_html__("Top",'salient-core'),
+				"edit_field_class" => "col-md-2 no-device-group constrain_group_1",
 				"description" => ''
 			),
 			array(
-				"type" => "textfield",
+				'type' => 'checkbox',
+				'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+				'param_name' => 'constrain_group_1', 
+				'description' => '',
+				"edit_field_class" => "constrain-icon no-device-group",
+				'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+			),
+			array(
+				"type" => "nectar_numerical",
 				"heading" => "<span>" . esc_html__("Bottom", "salient-core") . "</span>",
 				"param_name" => "margin_bottom",
-				"edit_field_class" => "col-md-2",
-				"description" => ''
-			),
-			array(
-				"type" => "textfield",
-				"heading" => "<span>" . esc_html__("Left", "salient-core") . "</span>",
-				"param_name" => "margin_left",
-				"edit_field_class" => "col-md-2",
+				"placeholder" => esc_html__("Bottom",'salient-core'),
+				"edit_field_class" => "col-md-2 no-device-group constrain_group_1",
 				"description" => ''
 			),
 			
+			array(
+				"type" => "nectar_numerical",
+				"heading" => "<span>" . esc_html__("Left", "salient-core") . "</span>",
+				"param_name" => "margin_left",
+				"placeholder" => esc_html__("Left",'salient-core'),
+				"edit_field_class" => "col-md-2 no-device-group constrain_group_2",
+				"description" => ''
+			),
+			array(
+				'type' => 'checkbox',
+				'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+				'param_name' => 'constrain_group_2', 
+				'description' => '',
+				"edit_field_class" => "constrain-icon no-device-group",
+				'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+			),
+			array(
+				"type" => "nectar_numerical",
+				"heading" => "<span>" . esc_html__("Right", "salient-core") . "</span>",
+				"param_name" => "margin_right",
+				"placeholder" => esc_html__("Right",'salient-core'),
+				"edit_field_class" => "col-md-2 no-device-group constrain_group_2",
+				"description" => ''
+			),
 		)
 	);
 	?>

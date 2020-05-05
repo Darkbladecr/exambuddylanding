@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Create metabox markup
  *
@@ -45,7 +50,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 				switch( $field['type'] ){	
 					
 					case 'text': 
-						echo '<td><input type="text" name="nectar_meta['. $field['id'] .']" id="'. $field['id'] .'" value="'. ($meta ? $meta : $field['std']) .'" size="30" /></td>';
+						echo '<td><input type="text" name="nectar_meta['. $field['id'] .']" id="'. $field['id'] .'" value="'. esc_attr(($meta ? $meta : $field['std'])) .'" size="30" /></td>';
 					break;	
 					
 					case 'textarea':
@@ -106,7 +111,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 							true
 						);
 					
-						echo '<td><input type="text" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . ($meta ? $meta : $field['std']) . '" class=" popup-colorpicker" style="width: 70px;" data-default-color="' . ($meta ? $meta : $field['std']) . '"/></td>';
+						echo '<td><input type="text" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . esc_attr(($meta ? $meta : $field['std'])) . '" class=" popup-colorpicker" style="width: 70px;" data-default-color="' . esc_attr(($meta ? $meta : $field['std'])) . '"/></td>';
 					break;
 					
 					case 'media':
@@ -122,7 +127,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 					
 						$upload_meta = ($meta) ? $meta : $field['std'];
 					 
-						echo '<td><input type="text" class="display_text" name="nectar_meta[' . $field['id'] . ']" id="' . $field['id'] . '" value="' . $upload_meta . '" />';
+						echo '<td><input type="text" class="display_text" name="nectar_meta[' . $field['id'] . ']" id="' . $field['id'] . '" value="' . esc_attr($upload_meta) . '" />';
 						echo '<a href="#" data-update="Select File" data-title="Choose Your File" class="nectar-add-media-btn button-secondary' . $add_class . '" rel-id="' . $field['id'] . '">' . esc_html__('Add Media File', 'salient') . '</a>';
 						echo '<a href="#" class="nectar-remove-media-btn button-secondary' . $remove_class . '" rel-id="' . $field['id'] . '">' . esc_html__('Remove Media File', 'salient') . '</a></td>';
 						

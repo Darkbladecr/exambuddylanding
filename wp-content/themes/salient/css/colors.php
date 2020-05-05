@@ -63,7 +63,8 @@ body.material #footer-outer .widget:not(.nectar_popular_posts_widget):not(.recen
 #header-outer #mobile-menu ul li a:hover,
 #header-outer #mobile-menu ul li a:focus,
 #header-outer #mobile-menu ul li a:hover .sf-sub-indicator i,
-#header-outer #mobile-menu ul li a:focus .sf-sub-indicator i
+#header-outer #mobile-menu ul li a:focus .sf-sub-indicator i,
+.wpcf7-form .wpcf7-not-valid-tip
 { 
 	color: '. esc_attr($nectar_options["accent-color"]) .'; 
 }
@@ -115,8 +116,6 @@ body #header-secondary-outer #social a:focus i,
 .comment-list .comment-meta a:hover, 
 .comment-list .comment-meta a:focus, 
 .result .title a, 
-.wpcf7-form p span, 
-.wpcf7-form .wpcf7-not-valid-tip, 
 .circle-border, 
 .home .blog-recent:not([data-style="list_featured_first_row"]) .col .post-header a:hover,
 .home .blog-recent .col .post-header h3 a, 
@@ -223,6 +222,9 @@ echo '
 .tabbed[data-style*="minimal"] > ul li a:after, 
 .tabbed[data-style="minimal_alt"] .magic-line, 
 .tabbed[data-style*="material"][data-color-scheme="accent-color"] ul:after,
+.nectar-scrolling-tabs[data-color-scheme="accent-color"] .scrolling-tab-nav .line,
+.wpb_row .nectar-post-grid-filters[data-active-color="accent-color"] a:after,
+#ajax-content-wrap [data-stored-style="vs"] .tabbed[data-color-scheme="accent-color"] .wpb_tabs_nav li a:before,
 .testimonial_slider[data-style="multiple_visible"][data-color*="accent-color"] .flickity-page-dots .dot.is-selected:before, 
 .testimonial_slider[data-style="multiple_visible"][data-color*="accent-color"] blockquote.is-selected p,
 .nectar_video_lightbox.nectar-button[data-color="default-accent-color"],
@@ -247,6 +249,8 @@ div[data-style="minimal"] .toggle:hover h3 i:after,
 div[data-style="minimal"] .toggle.open h3 i:before, 
 div[data-style="minimal"] .toggle:hover h3 i:before,
 div[data-style="minimal_small"] .toggle.accent-color > h3:after,
+.main-content .widget_calendar caption,
+#footer-outer .widget_calendar caption,
 .post .more-link span:hover,
 .post.format-quote .post-content .quote-inner, 
 .post.format-link .post-content .link-inner,
@@ -264,9 +268,11 @@ body[data-form-submit="regular"] .container-wrap .span_12.light button[type=subm
 .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active,
 #slide-out-widget-area, 
 #slide-out-widget-area-bg.fullscreen, 
+#slide-out-widget-area-bg.fullscreen-split, 
 #slide-out-widget-area-bg.fullscreen-alt .bg-inner,
 body.material #slide-out-widget-area-bg.slide-out-from-right,
-.widget .material .widget .tagcloud a:before { 
+.widget .material .widget .tagcloud a:before,
+.nectar-hor-list-item[data-hover-effect="full_border"][data-color="accent-color"] .nectar-list-item-btn:hover { 
 	background-color:'.esc_attr($nectar_options["accent-color"]).'; 
 }
 	
@@ -479,7 +485,8 @@ body[data-form-style="minimal"] input[type=date]:focus,
 .single #single-meta div a:hover,
 .single #single-meta div a:focus,
 .single .fullscreen-blog-header #single-below-header > span a:hover,
-.blog-title #single-meta .nectar-social.hover > div a:hover {
+.blog-title #single-meta .nectar-social.hover > div a:hover,
+.nectar-hor-list-item[data-hover-effect="full_border"][data-color="accent-color"]:hover {
 	border-color:'.esc_attr($nectar_options["accent-color"]).';
 }
 
@@ -533,7 +540,7 @@ body.material[data-button-style^="rounded"] .nectar-button.see-through.accent-co
 	box-shadow: '.esc_attr($nectar_options["accent-color"]).' 0px 8px 15px; opacity: 0.24; 
 }
 
-.nectar-fancy-box[data-style="color_box_hover"][data-color="accent-color"]:hover:before { 
+.nectar-fancy-box[data-style="color_box_hover"][data-color="accent-color"]:before { 
 	box-shadow: 0 30px 90px '.esc_attr($nectar_options["accent-color"]).'; 
 } 
 
@@ -541,7 +548,7 @@ body.material[data-button-style^="rounded"] .nectar-button.see-through.accent-co
   background: linear-gradient(to bottom, rgba(0,0,0,0), '.esc_attr($nectar_options["accent-color"]).' 100%);
 }
 
-#footer-outer[data-link-hover="underline"][data-custom-color="false"] ul:not([class*="nectar_blog_posts"]) a:not(.tag-cloud-link):not(.nectar-button),
+#footer-outer[data-link-hover="underline"][data-custom-color="false"] #footer-widgets ul:not([class*="nectar_blog_posts"]) a:not(.tag-cloud-link):not(.nectar-button),
 #footer-outer[data-link-hover="underline"] #footer-widgets .textwidget a:not(.nectar-button) {
   background-image: linear-gradient(to right, '.esc_attr($nectar_options["accent-color"]).' 0%, '.esc_attr($nectar_options["accent-color"]).' 100%);
 }
@@ -750,6 +757,9 @@ foreach( $nectar_extra_accent_colors as $selector => $color ){
 		.tabbed[data-color-scheme="'.$selector.'"][data-style="minimal_alt"] .magic-line, 
 		.tabbed[data-style*="material"][data-color-scheme="'.$selector.'"] ul:after, 
 		.tabbed[data-style*="material"][data-color-scheme="'.$selector.'"] ul li .active-tab,
+    .nectar-scrolling-tabs[data-color-scheme="'.$selector.'"] .scrolling-tab-nav .line,
+    .wpb_row .nectar-post-grid-filters[data-active-color="'.$selector.'"] a:after,
+    #ajax-content-wrap [data-stored-style="vs"] .tabbed[data-color-scheme="'.$selector.'"] .wpb_tabs_nav li a:before,
 		.testimonial_slider[data-style="multiple_visible"][data-color*="'.$selector.'"] .flickity-page-dots .dot.is-selected:before,
 		.testimonial_slider[data-style="multiple_visible"][data-color*="'.$selector.'"] blockquote.is-selected p,
 		.nectar-button.nectar_video_lightbox[data-color="default-'.$selector.'"], 
@@ -772,7 +782,8 @@ foreach( $nectar_extra_accent_colors as $selector => $color ){
 		div[data-style="minimal"] .toggle.open.'.$selector.' i:before, 
 		div[data-style="minimal"] .toggle.'.$selector.':hover i:before, 
 		div[data-style="minimal_small"] .toggle.'.$selector.' > h3:after,
-		.toggle.open.'.$selector.' h3 a {
+		.toggle.open.'.$selector.' h3 a,
+    .nectar-hor-list-item[data-hover-effect="full_border"][data-color="'.$selector.'"] .nectar-list-item-btn:hover {
 			background-color: '. esc_attr($color) .';
 		}
 		
@@ -836,7 +847,7 @@ foreach( $nectar_extra_accent_colors as $selector => $color ){
 			 box-shadow: 0px 18px 50px  '. esc_attr($color) .'; 
 		 }
 		
-		.nectar-fancy-box[data-style="color_box_hover"][data-color="'.$selector.'"]:hover:before { 
+		.nectar-fancy-box[data-style="color_box_hover"][data-color="'.$selector.'"]:before { 
 			box-shadow: 0 30px 90px '. esc_attr($color) .'; 
 		} 
     .nectar-fancy-box[data-style="hover_desc"][data-color="'.$selector.'"]:before {
@@ -853,7 +864,8 @@ foreach( $nectar_extra_accent_colors as $selector => $color ){
 		.nectar_icon_wrap[data-style="border-animation"][data-color="'.$selector.'"][data-draw="true"]:hover .nectar_icon,
 		.span_12.dark .nectar_video_lightbox.play_button_with_text[data-color="'.$selector.'"] .play:before, 
 		.span_12.dark .nectar_video_lightbox.play_button_with_text[data-color="'.$selector.'"] .play:after,
-		.tabbed[data-color-scheme="'.$selector.'"][data-style="default"] li:not(.cta-button) .active-tab { 
+		.tabbed[data-color-scheme="'.$selector.'"][data-style="default"] li:not(.cta-button) .active-tab,
+    .nectar-hor-list-item[data-hover-effect="full_border"][data-color="'.$selector.'"]:hover { 
 			border-color:'. esc_attr($color) .'; 
 		}
 		
@@ -904,11 +916,18 @@ foreach( $nectar_gradient_colors as $selector => $color_grad ){
 		.nectar-progress-bar .'.$selector.',
 		.tabbed[data-style*="minimal"][data-color-scheme="'.$selector.'"] >ul li a:after,
 		.tabbed[data-style="minimal_alt"][data-color-scheme="'.$selector.'"] .magic-line,
+    .wpb_row .nectar-post-grid-filters[data-active-color="'.$selector.'"] a:after,
 		.nectar-recent-posts-single_featured.multiple_featured .controls[data-color="'.$selector.'"] li:after, 
 		.nectar-fancy-box[data-style="default"][data-color="'.$selector.'"]:after {
 			background: '.esc_attr($accent_gradient_from).'; 
 		  background: linear-gradient(to right, '.esc_attr($accent_gradient_from).', '.esc_attr($accent_gradient_to).'); 
 		}
+    
+    .nectar-scrolling-tabs[data-color-scheme="'.$selector.'"] .scrolling-tab-nav .line,
+    #ajax-content-wrap [data-stored-style="vs"] .tabbed[data-color-scheme="'.$selector.'"] .wpb_tabs_nav li a:before {
+      background: '.esc_attr($accent_gradient_from).'; 
+		  background: linear-gradient(to bottom, '.esc_attr($accent_gradient_from).', '.esc_attr($accent_gradient_to).'); 
+    }
 		
 		.icon-normal.'.$selector.', 
 		body [class^="icon-"].icon-3x.alt-style.'.$selector.',
@@ -947,7 +966,7 @@ foreach( $nectar_gradient_colors as $selector => $color_grad ){
 			box-shadow: 0px 18px 50px '.esc_attr($accent_gradient_to).'; 
 		}
 		
-		.nectar-fancy-box[data-style="color_box_hover"][data-color="'.$selector.'"]:hover:before { 
+		.nectar-fancy-box[data-style="color_box_hover"][data-color="'.$selector.'"]:before { 
 			box-shadow: 0px 30px 90px '.esc_attr($accent_gradient_to).'; 
 		}
     
@@ -1141,12 +1160,15 @@ if( !empty($nectar_options['header-color']) && $nectar_options['header-color'] =
 		body.ascend #search-outer #search #close a span,
 		body.ascend #search-outer #search input[type="text"],
 		.material #search-outer #search .span_12 span,
-		.material #header-outer #search-outer input::-webkit-input-placeholder,
-    body[data-header-format="left-header"].material #search-outer input::-webkit-input-placeholder,
 		#header-outer #mobile-menu ul li a,
 		#header-outer #mobile-menu .below-menu-items-wrap p { 
 			color:'.esc_attr($nectar_options['header-font-color']).'!important; 
-		}';
+		}
+    
+    .material #header-outer #search-outer input::-webkit-input-placeholder,
+    body[data-header-format="left-header"].material #search-outer input::-webkit-input-placeholder {
+      color:'.esc_attr($nectar_options['header-font-color']).'!important; 
+    }';
 
 		
 		echo '
@@ -1456,6 +1478,7 @@ if( !empty($nectar_options['header-color']) && $nectar_options['header-color'] =
 		echo '
 		#slide-out-widget-area:not(.fullscreen-alt):not(.fullscreen), 
 		#slide-out-widget-area-bg.fullscreen, 
+    #slide-out-widget-area-bg.fullscreen-split, 
 		#slide-out-widget-area-bg.fullscreen-alt .bg-inner, 
 		body.material #slide-out-widget-area-bg.slide-out-from-right { 
 			background-color:'.esc_attr($nectar_options['header-slide-out-widget-area-background-color']).'; 
@@ -1467,6 +1490,7 @@ if( !empty($nectar_options['header-color']) && $nectar_options['header-color'] =
 			body:not(.material) #slide-out-widget-area.slide-out-from-right, 
 			#slide-out-widget-area.slide-out-from-right-hover, 
 			#slide-out-widget-area-bg.fullscreen, 
+      #slide-out-widget-area-bg.fullscreen-split, 
 			#slide-out-widget-area-bg.fullscreen-alt .bg-inner, 
 			body.material #slide-out-widget-area-bg.slide-out-from-right { 
 				background: linear-gradient(145deg, '.esc_attr($nectar_options['header-slide-out-widget-area-background-color']).', '.esc_attr($nectar_options['header-slide-out-widget-area-background-color-2']).'); 
@@ -1483,6 +1507,8 @@ if( !empty($nectar_options['header-color']) && $nectar_options['header-color'] =
 		#slide-out-widget-area a, 
     #slide-out-widget-area.fullscreen-alt .inner .widget.widget_nav_menu li a, 
     #slide-out-widget-area.fullscreen-alt .inner .off-canvas-menu-container li a,
+    #slide-out-widget-area.fullscreen-split .inner .widget.widget_nav_menu li a, 
+    #slide-out-widget-area.fullscreen-split .inner .off-canvas-menu-container li a,
     #slide-out-widget-area.fullscreen .menuwrapper li a,
 		body #slide-out-widget-area.slide-out-from-right-hover .inner .off-canvas-menu-container li a,
 		body #slide-out-widget-area .slide_out_area_close .icon-default-style[class^="icon-"] { 
@@ -1491,7 +1517,8 @@ if( !empty($nectar_options['header-color']) && $nectar_options['header-color'] =
 		
 		echo '
 		#slide-out-widget-area .tagcloud a, 
-		body.material #slide-out-widget-area[class*="slide-out-from-right"] .off-canvas-menu-container li a:after { 
+		body.material #slide-out-widget-area[class*="slide-out-from-right"] .off-canvas-menu-container li a:after,
+    #slide-out-widget-area.fullscreen-split .inner .off-canvas-menu-container li a:after { 
 			border-color: '.esc_attr($nectar_options['header-slide-out-widget-area-color']).'; 
 		}';
 		
@@ -1520,6 +1547,8 @@ if( !empty($nectar_options['header-color']) && $nectar_options['header-color'] =
 	if( !empty($nectar_options['header-slide-out-widget-area-hover-color']) ) {
 		echo '
 		body #slide-out-widget-area.fullscreen a:hover, 
+    body #slide-out-widget-area.fullscreen-split a:hover, 
+    #slide-out-widget-area.fullscreen-split .off-canvas-menu-container .current-menu-item > a, 
 		#slide-out-widget-area.slide-out-from-right-hover a:hover,
 		body.material #slide-out-widget-area.slide-out-from-right .off-canvas-social-links a i:after, 
 		body #slide-out-widget-area.slide-out-from-right a:hover, 
@@ -1531,9 +1560,14 @@ if( !empty($nectar_options['header-color']) && $nectar_options['header-color'] =
 			color:'.esc_attr($nectar_options['header-slide-out-widget-area-hover-color']).'!important; 
 		}  
 		body.material #slide-out-widget-area[class*="slide-out-from-right"] .off-canvas-menu-container li a:after,
+    #slide-out-widget-area.fullscreen-split .inner .off-canvas-menu-container li a:after,
 		#slide-out-widget-area .tagcloud a:hover { 
 			border-color: '.esc_attr($nectar_options['header-slide-out-widget-area-hover-color']).'; 
-		} ';
+		} 
+    #slide-out-widget-area.fullscreen-split .widget ul:not([class*="nectar_blog_posts"]) li > a:not(.tag-cloud-link):not(.nectar-button),
+    #slide-out-widget-area.fullscreen-split .textwidget a:not(.nectar-button) {
+      background-image: linear-gradient(to right, '.esc_attr($nectar_options['header-slide-out-widget-area-hover-color']).' 0%, '.esc_attr($nectar_options['header-slide-out-widget-area-hover-color']).' 100%);
+    }';
 		
 	
 	}
@@ -1635,10 +1669,19 @@ if( !empty($nectar_options['footer-custom-color']) && $nectar_options['footer-cu
 
 	// Copyright border line.
 	if( !empty($nectar_options['footer-copyright-line']) && $nectar_options['footer-copyright-line'] === '1' ) {
-		echo '
-		#ajax-content-wrap #footer-outer #copyright { 
-			border-top: 1px solid rgba(255,255,255,0.18); 
-		}';
+    
+    if( isset($nectar_options['footer-copyright-border-color']) && !empty($nectar_options['footer-copyright-border-color']) ) {
+      echo '
+  		#ajax-content-wrap #footer-outer #copyright { 
+  			border-top: 1px solid '.esc_attr($nectar_options['footer-copyright-border-color']).'; 
+  		}';
+    } else {
+      echo '
+  		#ajax-content-wrap #footer-outer #copyright { 
+  			border-top: 1px solid rgba(255,255,255,0.18); 
+  		}';
+    }
+		
 	}
 }
 
@@ -1671,6 +1714,23 @@ if( $slide_out_widget_overlay === 'dark' ) {
 		background-color: rgba(0,0,0,0.4); 
 	}';
 }
+
+// Blog header.
+$blog_header_type = (!empty($nectar_options['blog_header_type'])) ? $nectar_options['blog_header_type'] : 'default_minimal'; 
+
+if( 'default_minimal' === $blog_header_type ) {
+  
+  $blog_header_color   = (!empty($nectar_options['default_minimal_overlay_color'])) ? $nectar_options['default_minimal_overlay_color'] : '#2d2d2d';
+  $blog_header_overlay = (!empty($nectar_options['default_minimal_overlay_opacity'])) ? $nectar_options['default_minimal_overlay_opacity'] : '0.4';
+
+   echo '.single-post #page-header-bg[data-post-hs="default_minimal"] .page-header-bg-image:after { 
+     background-color: '.esc_attr($blog_header_color).';
+     opacity: '.esc_attr($blog_header_overlay).'; 
+   }
+   .single-post #page-header-bg[data-post-hs="default_minimal"] { background-color: '.esc_attr($blog_header_color).'; }';
+
+}
+
 
 // Blog categories.
 $theme_skin   = (!empty($nectar_options['theme-skin'])) ? $nectar_options['theme-skin'] : 'default';
@@ -1728,22 +1788,6 @@ if( 'classic_enhanced' === $masonry_type || 'material' === $theme_skin ) {
 	}
 }
 
-
-
-// Page full screen rows.
-global $post;
-$page_full_screen_rows_bg_color  = (isset($post->ID)) ? get_post_meta($post->ID, '_nectar_full_screen_rows_overall_bg_color', true) : '#333333';
-$page_full_screen_rows_animation = (isset($post->ID)) ? get_post_meta($post->ID, '_nectar_full_screen_rows_animation', true) : '';
-
-echo '#nectar_fullscreen_rows { 
-	background-color: '.esc_attr($page_full_screen_rows_bg_color).'; 
-}';
-
-if( 'parallax' === $page_full_screen_rows_animation ) {
-	echo '#nectar_fullscreen_rows > .wpb_row .full-page-inner-wrap { 
-		background-color: '.esc_attr($page_full_screen_rows_bg_color).'; 
-	}';
-}
 
 
 ?>

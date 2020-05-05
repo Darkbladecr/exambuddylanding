@@ -114,6 +114,10 @@ $nectar_body_tablet        = ( !empty($nectar_options['body-tablet-font-size']) 
 $nectar_body_phone         = ( !empty($nectar_options['body-phone-font-size']) && $using_custom_responsive_sizing) ? intval($nectar_options['body-phone-font-size'])/100 : 1;
 $nectar_body_default_size  = 14;
 
+$nectar_blockquote_small_desktop = ( !empty($nectar_options['blockquote-small-desktop-font-size']) && $using_custom_responsive_sizing) ? intval($nectar_options['blockquote-small-desktop-font-size'])/100 : 1;
+$nectar_blockquote_tablet        = ( !empty($nectar_options['blockquote-tablet-font-size']) && $using_custom_responsive_sizing) ? intval($nectar_options['blockquote-tablet-font-size'])/100 : 1;
+$nectar_blockquote_phone         = ( !empty($nectar_options['blockquote-phone-font-size']) && $using_custom_responsive_sizing) ? intval($nectar_options['blockquote-phone-font-size'])/100 : 1;
+$nectar_blockquote_default_size  = 22;
 
 	/*-------------------------------------------------------------------------*/
 	/*	Body Font
@@ -240,7 +244,7 @@ $nectar_body_default_size  = 14;
 
 		  if( $nectar_options['navigation_font_size'] != '-' ) {
 					
-		    	echo '#top nav > ul > li[class*="button_solid_color"] > a:before, #header-outer.transparent #top nav > ul > li[class*="button_solid_color"] > a:before { 
+		    	echo '#top nav > ul > li[class*="button_solid_color"] > a:before, #header-outer.transparent #top nav > ul > li[class*="button_solid_color"] > a:before, #header-outer #top .slide-out-widget-area-toggle[data-custom-color="true"] a:before { 
 		    		height: ' . floor((intval(substr($nectar_options['navigation_font_size'],0,-2)) *1.4)+ 5)  .'px; 
 		    	}';
 
@@ -327,7 +331,12 @@ $nectar_body_default_size  = 14;
 				}
 			}
 			@media only screen and (max-width: 999px) and (min-width: 690px) {
-				body .row .col.section-title h1, body h1, html body .row .col.section-title.span_12 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2 {
+				body .row .col.section-title h1, 
+        body h1, 
+        html body .row .col.section-title.span_12 h1, 
+        #page-header-bg .span_6 h1,
+        #page-header-bg.fullscreen-header .span_6 h1,
+        .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2 {
 					font-size: <?php echo esc_html( $defined_font_size*$nectar_h1_tablet ) . 'px'; ?>;
 					line-height: <?php echo esc_html( $defined_line_height*$nectar_h1_tablet ) . 'px'; ?>;
 				}
@@ -343,7 +352,13 @@ $nectar_body_default_size  = 14;
 				
 			}
 			@media only screen and (max-width: 690px) {
-				body .row .col.section-title h1, body h1, html body .row .col.section-title.span_12 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2 {
+				body .row .col.section-title h1, 
+        body h1, 
+        html body .row .col.section-title.span_12 h1, 
+        body.single.single-post .row .col.section-title.span_12 h1,
+        #page-header-bg .span_6 h1,
+        #page-header-bg.fullscreen-header .span_6 h1,
+        .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2 {
 					font-size: <?php echo esc_html( $defined_font_size*$nectar_h1_phone ) . 'px'; ?>;
 					line-height: <?php echo esc_html( $defined_line_height*$nectar_h1_phone ) . 'px'; ?>;
 				}
@@ -721,7 +736,37 @@ $nectar_body_default_size  = 14;
 		echo ' }'; ?>
 		
 		<?php } // attrs in use ?>		
+
+
+  <?php 
+	/*-------------------------------------------------------------------------*/
+	/*	Bold Font
+	/*-------------------------------------------------------------------------*/
+  
+  $nectar_bold_font_family = false;
+  if( isset($nectar_options['bold_font_family']['font-family']) && 
+      !empty($nectar_options['bold_font_family']['font-family']) ) {
+    $nectar_bold_font_family = $nectar_options['bold_font_family']['font-family'];
+  }
+  $nectar_bold_font_weight = false;
+  if( isset($nectar_options['bold_font_family']['font-weight']) && 
+      !empty($nectar_options['bold_font_family']['font-weight']) ) {
+    $nectar_bold_font_weight = $nectar_options['bold_font_family']['font-weight'];
+  }
+  
+	if( $nectar_bold_font_weight || $nectar_bold_font_family ) {
 		
+		echo 'body b, body strong, body .bold {'; 
+			if( $nectar_bold_font_family ) {
+        echo 'font-family: '.esc_attr($nectar_bold_font_family).';';
+      }	
+      if( $nectar_bold_font_weight ) {
+        echo 'font-weight: '.intval($nectar_bold_font_weight).';';
+      }	
+		echo '}'; 
+		
+		}  ?>		
+      	
 	<?php 
 	/*-------------------------------------------------------------------------*/
 	/*	Form Label Font
@@ -788,7 +833,8 @@ $nectar_body_default_size  = 14;
 		.woocommerce table.shop_table th, 
 		#header-outer .widget_shopping_cart .cart_list a, 
 		.woocommerce .yith-wcan-reset-navigation.button, 
-		.single-product .entry-summary p.stock.out-of-stock
+		.single-product .entry-summary p.stock.out-of-stock,
+    .nectar-post-grid .nectar-post-grid-item .content .meta-category a
 		{ '; 
 			
 			// Output font properties.
@@ -808,7 +854,10 @@ $nectar_body_default_size  = 14;
 
 	if( $nectar_options['portfolio_filters_font_family']['attrs_in_use'] ) {
 			
-		echo '.portfolio-filters-inline .container > ul a, .portfolio-filters > ul a, .portfolio-filters > a span, .nectar-post-grid-filters a, .nectar-post-grid-filters h4 { '; 	
+		echo '.portfolio-filters-inline .container > ul a, 
+    .portfolio-filters > ul a, 
+    .portfolio-filters > a span, 
+    .nectar-post-grid-filters a { '; 	
 			
 			// Output font properties.
 			nectar_output_font_props('portfolio_filters_font', $line_height, $nectar_options);
@@ -902,11 +951,11 @@ $nectar_body_default_size  = 14;
 			$the_line_height = nectar_font_line_height('page_heading_font', $line_height, $nectar_options);
 			
 			?>
-
+      
 			@media only screen and (min-width: 690px) and (max-width: 999px) {
-				#page-header-bg .span_6 h1, .overlaid-content h1 {
+				.overlaid-content h1 {
 					font-size: <?php if(!empty($nectar_options['page_heading_font_size']) && $nectar_options['page_heading_font_size'] != '-') echo intval($nectar_options['page_heading_font_size'])*0.7 . 'px!important' ?>;
-					line-height: <?php if(!empty($nectar_options['page_heading_font_size']) && $nectar_options['page_heading_font_size'] != '-') echo (intval($nectar_options['page_heading_font_size'])*0.7) +4 . 'px!important' ?>;
+					line-height: <?php if(!empty($nectar_options['page_heading_font_size']) && $nectar_options['page_heading_font_size'] != '-') echo (intval($nectar_options['page_heading_font_size'])*0.7) + 4 . 'px!important' ?>;
 				}
 			}
 
@@ -925,7 +974,7 @@ $nectar_body_default_size  = 14;
 			}
 
 			@media only screen and (max-width: 690px) {
-				#page-header-bg.fullscreen-header .span_6 h1, .overlaid-content h1 {
+				.overlaid-content h1 {
 					font-size: <?php if(!empty($nectar_options['page_heading_font_size']) && $nectar_options['page_heading_font_size'] != '-') echo intval($nectar_options['page_heading_font_size'])*0.45 . 'px!important' ?>;
 					line-height: <?php if($the_line_height) echo (intval($the_line_height)*0.45) . 'px!important' ?>;
 				}
@@ -1027,6 +1076,7 @@ $nectar_body_default_size  = 14;
 
 			@media only screen and (min-width: 690px) and (max-width: 999px) {
 				body #slide-out-widget-area.fullscreen .inner .off-canvas-menu-container li a,
+        #slide-out-widget-area.fullscreen-split .off-canvas-menu-container > ul > li > a,
 				body #slide-out-widget-area.fullscreen-alt .inner .off-canvas-menu-container li a  {
 					font-size: <?php if(!empty($nectar_options['off_canvas_nav_font_size']) && $nectar_options['off_canvas_nav_font_size'] != '-') echo intval($nectar_options['off_canvas_nav_font_size'])*0.9 . 'px!important' ?>;
 					line-height: <?php if($the_line_height) echo (intval($the_line_height)*0.9) . 'px!important' ?>;
@@ -1035,6 +1085,7 @@ $nectar_body_default_size  = 14;
 
 			@media only screen and (max-width: 690px) {
 				body #slide-out-widget-area.fullscreen .inner .off-canvas-menu-container li a,
+        #slide-out-widget-area.fullscreen-split .off-canvas-menu-container > ul > li > a,
 				body #slide-out-widget-area.fullscreen-alt .inner .off-canvas-menu-container li a {
 					font-size: <?php if(!empty($nectar_options['off_canvas_nav_font_size']) && $nectar_options['off_canvas_nav_font_size'] != '-') echo intval($nectar_options['off_canvas_nav_font_size'])*0.7 . 'px!important' ?>;
 					line-height: <?php if($the_line_height) echo (intval($the_line_height)*0.7) . 'px!important' ?>;
@@ -1217,9 +1268,56 @@ $nectar_body_default_size  = 14;
 				// Output font properties.
 				nectar_output_font_props('testimonial_font', $line_height, $nectar_options);
 				
-			echo ' }'; ?>
+			echo ' }'; 
+      
+      if( true === $using_custom_responsive_sizing ) {
+        
+        // Store calculated line height.
+    		$the_line_height = nectar_font_line_height('testimonial_font', $line_height, $nectar_options);
+        
+        $defined_font_size   = (!empty($nectar_options['testimonial_font_size']) && $nectar_options['testimonial_font_size'] != '-') ? intval($nectar_options['testimonial_font_size']) : $nectar_blockquote_default_size;
+    		$defined_line_height = (!empty($the_line_height)) ? intval($the_line_height) : $nectar_blockquote_default_size + 10;
 
-	<?php } // attrs in use ?>	
+    		?>
+    
+    		@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+    			blockquote, 
+          .testimonial_slider blockquote, 
+          .testimonial_slider blockquote span, 
+          .testimonial_slider[data-style="minimal"] blockquote,
+          .testimonial_slider[data-style="minimal"] blockquote span:not(.title) {
+    				font-size: <?php echo esc_html( $defined_font_size*$nectar_blockquote_small_desktop ) . 'px'; ?>;
+    				line-height: <?php echo esc_html( $defined_line_height*$nectar_blockquote_small_desktop ) . 'px'; ?>;
+    			}
+    		}
+    
+    		@media only screen and (max-width: 999px) and (min-width: 690px) {
+          blockquote, 
+          .testimonial_slider blockquote, 
+          .testimonial_slider blockquote span, 
+          .testimonial_slider[data-style="minimal"] blockquote,
+          .testimonial_slider[data-style="minimal"] blockquote span:not(.title) {
+    				font-size: <?php echo esc_html( $defined_font_size*$nectar_blockquote_tablet ) . 'px'; ?>;
+    				line-height: <?php echo esc_html( $defined_line_height*$nectar_blockquote_tablet ) . 'px'; ?>;
+    			}
+    		}
+    
+    		@media only screen and (max-width: 690px) {
+          blockquote, 
+          .testimonial_slider blockquote, 
+          .testimonial_slider blockquote span, 
+          .testimonial_slider[data-style="minimal"] blockquote,
+          .testimonial_slider[data-style="minimal"] blockquote span:not(.title) {
+    				font-size: <?php echo esc_html( $defined_font_size*$nectar_blockquote_phone ) . 'px'; ?>;
+    				line-height: <?php echo esc_html( $defined_line_height*$nectar_blockquote_phone ) . 'px'; ?>;
+    			}
+    		}
+
+	<?php 
+  
+    } // custom responsive sizing. 
+    
+} // attrs in use ?>	
 	
 	<?php 
 	/*-------------------------------------------------------------------------*/
@@ -1363,7 +1461,9 @@ $nectar_body_default_size  = 14;
       .woocommerce.add_to_cart_inline a.button.add_to_cart_button, 
       .woocommerce .classic .product-wrap .product-add-to-cart .button.product_type_grouped, 
       .woocommerce-page .woocommerce p.return-to-shop a.wc-backward, 
-      .yikes-easy-mc-form .yikes-easy-mc-submit-button { '; 
+      .yikes-easy-mc-form .yikes-easy-mc-submit-button,
+      .nectar-cta .nectar-button-type,
+      .nectar-post-grid-wrap .nectar-post-grid-filters h4 { '; 
 				
 				// Output font properties.
 				nectar_output_font_props('sidebar_footer_h_font', 'bypass', $nectar_options);

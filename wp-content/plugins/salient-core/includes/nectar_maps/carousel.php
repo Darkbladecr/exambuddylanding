@@ -56,7 +56,19 @@ return array(
 			"description" => esc_html__("Enter any text/content you would like to be shown prominently in your carousel", 'salient-core'),
 			"admin_label" => false
 		),
-		
+		array(
+			"type" => "dropdown",
+			"class" => "",
+			"heading" => esc_html__('Content Alignment','salient-core'),
+			'save_always' => true,
+			"param_name" => "flickity_fixed_content_alignment",
+			"value" => array(
+				esc_html__("Left (Default)", "salient-core") => "default",
+				esc_html__("Right", "salient-core") => "right",
+			),
+			"dependency" => array('element' => "flickity_formatting", 'value' => array('fixed_text_content_fullwidth')),
+			"description" => ''
+		),
 		array(
 			"type" => "textfield",
 			"heading" => esc_html__("CTA Button Text", 'salient-core'),
@@ -250,6 +262,14 @@ return array(
 		),
 		
 		array(
+				 "type" => 'checkbox',
+				 "heading" => esc_html__("Remove Bottom Indicator", "salient-core"),
+				 "param_name" => "flickity_touch_total_hide_indicator",
+				 "value" => Array(esc_html__("Yes, please", "salient-core") => 'true'),
+				 "dependency" => array('element' => "flickity_controls", 'value' => array('touch_total')),
+		 ),
+		
+		array(
 			"type" => "dropdown",
 			"holder" => "div",
 			"class" => "",
@@ -291,7 +311,6 @@ return array(
 			  'save_always' => true,
 			  "dependency" => array('element' => "flickity_formatting", 'value' => array('default')),
 		),
-		
 		
 		array(
 			"type" => "dropdown",
@@ -351,6 +370,22 @@ return array(
 			"dependency" => array('element' => "script", 'value' => array('owl_carousel','flickity')),
 			"description" => esc_html__("Please select your desired column padding " , 'salient-core')
 		),
+		array(
+				 "type" => 'checkbox',
+				 "heading" => esc_html__("Subtle Image Scale When Dragging", "salient-core"),
+				 "param_name" => "flickity_image_scale_on_drag",
+				 "description" => esc_html__("Will cause your carousel items to shrink slightly when dragging.", "salient-core"),
+				 "value" => Array(esc_html__("Yes, please", "salient-core") => 'true'),
+				 "dependency" => array('element' => "flickity_formatting", 'value' => array('default')),
+		 ),
+		 array(
+ 				 "type" => 'checkbox',
+ 				 "heading" => esc_html__("Adaptive Height", "salient-core"),
+ 				 "param_name" => "flickity_adaptive_height",
+ 				 "description" => esc_html__("Allows your carousel to change height when switching between items with varying height.", "salient-core"),
+ 				 "value" => Array(esc_html__("Yes, please", "salient-core") => 'true'),
+ 				 "dependency" => array('element' => "flickity_formatting", 'value' => array('default')),
+ 		 ),
 		array(
 			"type" => "textfield",
 			"heading" => esc_html__("Transition Scroll Speed", 'salient-core'),

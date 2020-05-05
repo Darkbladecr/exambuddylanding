@@ -72,7 +72,7 @@
  /**
   * Grab IDs from gallery shortcode
   *
-  * @since 5.0
+  * @since 1.0
   */
  if ( ! function_exists( 'nectar_grab_ids_from_gallery' ) ) {
  
@@ -141,3 +141,6 @@
  
  	}
  }
+ 
+ 
+ 

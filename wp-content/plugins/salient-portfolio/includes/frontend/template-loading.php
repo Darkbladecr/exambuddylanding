@@ -1,5 +1,9 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /* Single project template */
 add_filter( 'single_template', 'salient_set_portfolio_single_template' );

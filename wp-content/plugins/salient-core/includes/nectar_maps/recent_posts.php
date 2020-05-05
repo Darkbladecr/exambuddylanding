@@ -28,6 +28,14 @@ return array(
 	"description" => esc_html__('Display your recent blog posts', 'salient-core'),
 	"params" => array(
 		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Style & Structure", "salient-core" ),
+		 "param_name" => "group_header_1",
+		 "edit_field_class" => "first-field",
+		 "value" => ''
+	  ),
+		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Style", "salient-core"),
 			"param_name" => "style",
@@ -70,15 +78,6 @@ return array(
 			"description" => esc_html__("Don't include \"px\" in your string. e.g. 650", "salient-core")
 		),
 		array(
-			"type" => "dropdown_multi",
-			"heading" => esc_html__("Blog Categories", "salient-core"),
-			"param_name" => "category",
-			"admin_label" => true,
-			"value" => $blog_options,
-			'save_always' => true,
-			"description" => esc_html__("Please select the categories you would like to display in your recent posts. You can select multiple categories too (ctrl + click on PC and command + click on Mac).", "salient-core")
-		),
-		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Number Of Columns", "salient-core"),
 			"param_name" => "columns",
@@ -92,54 +91,6 @@ return array(
 			"dependency" => Array('element' => "style", 'value' => array('default','minimal','title_only','classic_enhanced', 'classic_enhanced_alt', 'list_featured_first_row', 'list_featured_first_row_tall', 'slider_multiple_visible')),
 			'save_always' => true,
 			"description" => esc_html__("Please select the number of posts you would like to display.", "salient-core")
-		),
-		array(
-			"type" => "textfield",
-			"heading" => esc_html__("Number Of Posts", "salient-core"),
-			"param_name" => "posts_per_page",
-			"dependency" => Array('element' => "style", 'value' => array('default','minimal','title_only','classic_enhanced', 'classic_enhanced_alt','slider', 'slider_multiple_visible', 'list_featured_first_row',  'list_featured_first_row_tall')),
-			"description" => esc_html__("How many posts would you like to display? Enter as a number example \"4\"", "salient-core")
-		),
-		array(
-			"type" => "dropdown",
-			"heading" => esc_html__("Number Of Posts", "salient-core"),
-			"param_name" => "multiple_large_featured_num",
-			"admin_label" => false,
-			"value" => array(
-				'4' => '4',
-				'3' => '3',
-				'2' => '2',
-			),
-			"dependency" => Array('element' => "style", 'value' => array('multiple_large_featured')),
-			'save_always' => true,
-			"description" => esc_html__("Please select the number of posts you would like to display.", "salient-core")
-		),
-		array(
-			"type" => "textfield",
-			"heading" => esc_html__("Post Offset", "salient-core"),
-			"param_name" => "post_offset",
-			"description" => esc_html__("Optionally enter a number e.g. \"2\" to offset your posts by - useful for when you're using multiple styles of this element on the same page and would like them to no show duplicate posts", "salient-core")
-		),
-		array(
-			"type" => "dropdown",
-			"heading" => esc_html__("Auto Rotate", "salient-core"),
-			"param_name" => "auto_rotate",
-			"admin_label" => true,
-			"value" => array(	
-				'No Auto Rotate' => 'none',
-				'11 Seconds' => '11000',
-				'10 Seconds' => '10000',
-				'9 Seconds' => '9000',
-				'8 Seconds' => '8000',
-				'7 Seconds' => '7000',
-				'6 Seconds' => '6000',
-				'5 Seconds' => '5000',
-				'4 Seconds' => '4000',
-				'3 Seconds' => '3000',
-			),
-			"dependency" => Array('element' => "style", 'value' => array('multiple_large_featured')),
-			'save_always' => true,
-			"description" => esc_html__("Please select your desired auto rotation timing here", "salient-core")
 		),
 		array(
 			"type" => "dropdown",
@@ -222,6 +173,52 @@ return array(
 			'save_always' => true,
 			"description" => esc_html__("Please select your desired BG overlay here.", "salient-core")
 		),
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Query", "salient-core" ),
+		 "param_name" => "group_header_2",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 array(
+		 "type" => "dropdown_multi",
+		 "heading" => esc_html__("Blog Categories", "salient-core"),
+		 "param_name" => "category",
+		 "admin_label" => true,
+		 "value" => $blog_options,
+		 'save_always' => true,
+		 "description" => esc_html__("Please select the categories you would like to display in your recent posts. You can select multiple categories too (ctrl + click on PC and command + click on Mac).", "salient-core")
+	 ),
+		array(
+			"type" => "textfield",
+			"heading" => esc_html__("Number Of Posts", "salient-core"),
+			"param_name" => "posts_per_page",
+			"dependency" => Array('element' => "style", 'value' => array('default','minimal','title_only','classic_enhanced', 'classic_enhanced_alt','slider', 'slider_multiple_visible', 'list_featured_first_row',  'list_featured_first_row_tall')),
+			"description" => esc_html__("How many posts would you like to display? Enter as a number example \"4\"", "salient-core")
+		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Number Of Posts", "salient-core"),
+			"param_name" => "multiple_large_featured_num",
+			"admin_label" => false,
+			"value" => array(
+				'4' => '4',
+				'3' => '3',
+				'2' => '2',
+			),
+			"dependency" => Array('element' => "style", 'value' => array('multiple_large_featured')),
+			'save_always' => true,
+			"description" => esc_html__("Please select the number of posts you would like to display.", "salient-core")
+		),
+		array(
+			"type" => "textfield",
+			"heading" => esc_html__("Post Offset", "salient-core"),
+			"param_name" => "post_offset",
+			"description" => esc_html__("Optionally enter a number e.g. \"2\" to offset your posts by - useful for when you're using multiple styles of this element on the same page and would like them to no show duplicate posts", "salient-core")
+		),
+		
 		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Order", "salient-core"),
@@ -250,6 +247,35 @@ return array(
 			),
 			'save_always' => true,
 			"description" => esc_html__("Sort retrieved posts by parameter - defaults to date", "salient-core")
+		),
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Functionality", "salient-core" ),
+		 "param_name" => "group_header_3",
+		 "edit_field_class" => "",
+		 "value" => ''
+	  ),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Auto Rotate", "salient-core"),
+			"param_name" => "auto_rotate",
+			"admin_label" => true,
+			"value" => array(	
+				'No Auto Rotate' => 'none',
+				'11 Seconds' => '11000',
+				'10 Seconds' => '10000',
+				'9 Seconds' => '9000',
+				'8 Seconds' => '8000',
+				'7 Seconds' => '7000',
+				'6 Seconds' => '6000',
+				'5 Seconds' => '5000',
+				'4 Seconds' => '4000',
+				'3 Seconds' => '3000',
+			),
+			"dependency" => Array('element' => "style", 'value' => array('multiple_large_featured')),
+			'save_always' => true,
+			"description" => esc_html__("Please select your desired auto rotation timing here", "salient-core")
 		),
 		array(
       "type" => "dropdown",

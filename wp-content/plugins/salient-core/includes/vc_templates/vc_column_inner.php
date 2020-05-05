@@ -1,4 +1,10 @@
 <?php
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $output = $el_class = $width = '';
 extract(shortcode_atts(array(
   'el_class' => '',
@@ -6,6 +12,7 @@ extract(shortcode_atts(array(
   'offset' => '',
   'css' => '',
   "boxed" => 'false', 
+	'zindex' => '',
   "centered_text" => 'false', 
   'enable_animation' => '',
   'animation' => '', 
@@ -19,6 +26,7 @@ extract(shortcode_atts(array(
   'background_hover_color_opacity' => '1',
   'background_color_opacity' => '1',
   'background_image' => '',
+	'background_image_position' => 'center center',
   'bg_image_animation' => 'none',
   'enable_bg_scale' => '',
   'column_link' => '',
@@ -76,7 +84,7 @@ if( !empty($background_color) ) {
 
 // Img bg.
 $image_bg_markup = null;
-$image_style     = null;
+$image_style     = '';
 
 if(!empty($background_image)) {
 	
@@ -87,10 +95,14 @@ if(!empty($background_image)) {
     } else {
 
     	$bg_image_src = wp_get_attachment_image_src($background_image, 'full');
-    	$image_style .= ' background-image: url(\''.esc_url($bg_image_src[0]) .'\'); ';
+			
+			if( isset($bg_image_src[0]) ) {
+				$image_style .= ' background-image: url(\''.esc_url($bg_image_src[0]) .'\'); ';
+			}
+    	
     }
     
-    $image_bg_markup = '<div class="column-image-bg-wrap" data-bg-animation="'.esc_attr($bg_image_animation).'"><div class="inner-wrap">';
+    $image_bg_markup = '<div class="column-image-bg-wrap" data-bg-pos="'.esc_attr($background_image_position).'" data-bg-animation="'.esc_attr($bg_image_animation).'"><div class="inner-wrap">';
     $image_bg_markup .= '<div class="column-image-bg" style="'.$image_style.'"></div>';
     $image_bg_markup .= '</div></div>';
 
@@ -112,19 +124,26 @@ if( !empty($top_margin) ) {
     if( strpos($top_margin,'%' ) !== false) {
         $style .= 'margin-top: '. esc_attr($top_margin) .'; ';
     } else {
-        $style .= 'margin-top: '. esc_attr($top_margin) .'px; ';
+        $style .= 'margin-top: '. intval($top_margin) .'px; ';
     }
 }
 
 if( !empty($bottom_margin) ) {
     if( strpos($bottom_margin,'%' ) !== false){
-        $style .= 'margin-bottom: '. esc_attr($bottom_margin) .'!important; ';
+        $style .= 'margin-bottom: '. esc_attr($bottom_margin) .'; ';
     } else {    
-        $style .= 'margin-bottom: '. esc_attr($bottom_margin) .'px!important; ';
+        $style .= 'margin-bottom: '. intval($bottom_margin) .'px; ';
     }
 }
 
-(empty($background_color) && empty($background_image) && empty($font_color) && empty($top_margin) && empty($bottom_margin) ) ? $style = null : $style .= '"';
+// Z-index
+if( isset($zindex) && !empty($zindex) ) {
+	$style .= 'z-index: '. intval($zindex) .'; ';
+}
+
+
+
+(empty($background_color) && empty($background_image) && empty($font_color) && empty($zindex) && empty($top_margin) && empty($bottom_margin) ) ? $style = null : $style .= '"';
 
 $using_bg = (!empty($background_image) || !empty($background_color)) ? 'data-using-bg="true"': null;
 
@@ -282,12 +301,14 @@ if( !empty($color_overlay) || !empty($color_overlay_2) ) {
 
 // Video bg.
 $video_markup = null;
+$video_image_src = '';
+
 if( $video_bg ) {
   
   // parse video image
-  if( strpos($video_image, "http://") !== false ) {
+  if( strpos($video_image, "http") !== false ) {
     $video_image_src = $video_image;
-  } else {
+  } else if( preg_match('/^\d+$/', $video_image) ) {
     $video_image_src = wp_get_attachment_image_src($video_image, 'full');
     $video_image_src = $video_image_src[0];
   }
@@ -317,13 +338,23 @@ $column_bg_color_html = (!empty($column_link)) ? '<a class="column-link" target=
 $css_class            = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $width . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
 
 $column_inner_data_attrs  = ' data-t-w-inherits="'. esc_attr($tablet_width_inherit) .'" ';
-$column_inner_data_attrs .= 'data-shadow="'.esc_attr($column_shadow).'" ';
-$column_inner_data_attrs .= 'data-border-radius="'.esc_attr($column_border_radius).'" ';
-$column_inner_data_attrs .= 'data-border-animation="'.esc_attr($enable_border_animation).'" ';
-$column_inner_data_attrs .= 'data-border-animation-delay="'.esc_attr($border_animation_delay).'" ';
-$column_inner_data_attrs .= 'data-border-width="'.esc_attr($column_border_width).'" ';
-$column_inner_data_attrs .= 'data-border-style="'.esc_attr($column_border_style).'" ';
-$column_inner_data_attrs .= 'data-border-color="'.esc_attr($column_border_color).'" ';
+
+if( !empty($column_shadow) && 'none' !== $column_shadow ) {
+	$column_inner_data_attrs .= 'data-shadow="'.esc_attr($column_shadow).'" ';
+}
+
+if( !empty($column_border_radius) && 'none' !== $column_border_radius ) {
+	$column_inner_data_attrs .= 'data-border-radius="'.esc_attr($column_border_radius).'" ';
+}
+
+if( 'none' !== $column_border_width ) { 
+	$column_inner_data_attrs .= 'data-border-animation="'.esc_attr($enable_border_animation).'" ';
+	$column_inner_data_attrs .= 'data-border-animation-delay="'.esc_attr($border_animation_delay).'" ';
+	$column_inner_data_attrs .= 'data-border-width="'.esc_attr($column_border_width).'" ';
+	$column_inner_data_attrs .= 'data-border-style="'.esc_attr($column_border_style).'" ';
+	$column_inner_data_attrs .= 'data-border-color="'.esc_attr($column_border_color).'" ';
+}
+
 $column_inner_data_attrs .= 'data-bg-cover="'.esc_attr($enable_bg_scale).'" ';
 if( !empty($color_overlay) || !empty($color_overlay_2) ) {
   $column_inner_data_attrs .= 'data-overlay-color="true" ';
@@ -344,9 +375,15 @@ $nectar_use_modern_grid = ( function_exists('nectar_use_flexbox_grid') && true =
 $col_bg_combined_output = $column_link_html . $border_html . $image_bg_markup . $video_markup;
 $col_bg_combined_output .= '<div class="column-bg-overlay-wrap" data-bg-animation="'.esc_attr($bg_image_animation).'"><div class="column-bg-overlay"'.$column_overlay_style.'></div>'.$column_overlay_layer_markup.'</div>';
 
+// Dynamic style classes.
+if( function_exists('nectar_el_dynamic_classnames') ) {
+	$dynamic_el_styles = nectar_el_dynamic_classnames('inner_column', $atts);
+} else {
+	$dynamic_el_styles = '';
+}
 
 // Output.
-$output .= "\n\t".'<div '.$style.' class="'.esc_attr($css_class).'" '.$using_custom_font_color.' '.$using_bg . $column_inner_data_attrs .'>';
+$output .= "\n\t".'<div '.$style.' class="'.esc_attr($css_class). $dynamic_el_styles .'" '.$using_custom_font_color.' '.$using_bg . $column_inner_data_attrs .'>';
 
 if( false === $nectar_use_modern_grid ) {
   $output .= $col_bg_combined_output;

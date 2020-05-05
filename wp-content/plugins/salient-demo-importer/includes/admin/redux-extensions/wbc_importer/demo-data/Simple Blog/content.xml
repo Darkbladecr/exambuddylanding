@@ -2483,7 +2483,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lacus massa. A
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -2582,7 +2582,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adi
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -2748,7 +2748,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, mi ut faci
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -2804,7 +2804,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, mi ut faci
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -2903,7 +2903,7 @@ your WooCommerce shop. They will also have access to view the contents of their 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -3015,7 +3015,7 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -4618,7 +4618,7 @@ Aliquam dictum pharetra pretium. Lorem ipsum dolor sit amet, consectetur adipisc
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -4720,7 +4720,7 @@ Aliquam dictum pharetra pretium. Lorem ipsum dolor sit amet, consectetur adipisc
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -4804,7 +4804,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adi
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -4886,7 +4886,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adi
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5004,7 +5004,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam, adipiscing 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5088,7 +5088,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam, adipiscing 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5186,7 +5186,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam, adipiscing 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5276,7 +5276,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam, adipiscing 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5366,7 +5366,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam, adipiscing 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5456,7 +5456,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam, adipiscing 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5553,7 +5553,7 @@ need and none of the extra bloat usually seen with such power.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5641,7 +5641,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5738,7 +5738,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5836,7 +5836,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -5930,7 +5930,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6016,7 +6016,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6102,7 +6102,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6188,7 +6188,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6271,7 +6271,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6357,7 +6357,7 @@ all without memorizing or knowing any shortcode parameters.</h4>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6585,7 +6585,7 @@ As a new WordPress user, you should go to <a href="http://localhost/wordpress-3-
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6679,7 +6679,7 @@ As a new WordPress user, you should go to <a href="http://localhost/wordpress-3-
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6769,7 +6769,7 @@ As a new WordPress user, you should go to <a href="http://localhost/wordpress-3-
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6855,7 +6855,7 @@ As a new WordPress user, you should go to <a href="http://localhost/wordpress-3-
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -6941,7 +6941,7 @@ As a new WordPress user, you should go to <a href="http://localhost/wordpress-3-
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7027,7 +7027,7 @@ As a new WordPress user, you should go to <a href="http://localhost/wordpress-3-
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7113,7 +7113,7 @@ As a new WordPress user, you should go to <a href="http://localhost/wordpress-3-
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7207,7 +7207,7 @@ Accusantium quam, ultri eget tempor id, aliquam eget nibh et. Maecen aliquam, ri
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7301,7 +7301,7 @@ Accusantium quam, ultri eget tempor id, aliquam eget nibh et. Maecen aliquam, ri
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7485,7 +7485,7 @@ Accusantium quam, ultri eget tempor id, aliquam eget nibh et. Maecen aliquam, ri
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7587,7 +7587,7 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7687,7 +7687,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adi
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7791,7 +7791,7 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>
@@ -7917,7 +7917,7 @@ Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>nectar-metabox-portfolio-display-sortable</wp:meta_key>

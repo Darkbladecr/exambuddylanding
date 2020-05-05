@@ -44,7 +44,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_fontawesome",
-			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "icon_family", 'value' => 'fontawesome'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -52,7 +52,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_iconsmind",
-			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'iconsmind'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -60,7 +60,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_linea",
-			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "icon_family", 'value' => 'linea'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -68,7 +68,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_steadysets",
-			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'steadysets'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),

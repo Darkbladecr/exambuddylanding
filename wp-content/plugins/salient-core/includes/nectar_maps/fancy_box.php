@@ -45,7 +45,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "js_composer"),
 			"param_name" => "icon_fontawesome",
-			"settings" => array( "iconsPerPage" => 4000),
+			"settings" => array( "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'emptyIcon' => false, 'value' => 'fontawesome'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -53,7 +53,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "js_composer"),
 			"param_name" => "icon_iconsmind",
-			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'iconsmind'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -61,7 +61,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "js_composer"),
 			"param_name" => "icon_linea",
-			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linea', "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "icon_family", 'value' => 'linea'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -69,7 +69,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "js_composer"),
 			"param_name" => "icon_linecons",
-			"settings" => array( 'type' => 'linecons', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linecons', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'linecons'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -77,7 +77,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "js_composer"),
 			"param_name" => "icon_steadysets",
-			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => false, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'steadysets'),
 			"description" => esc_html__("Select icon from library.", "js_composer")
 		),
@@ -136,11 +136,29 @@ return array(
 		),
 		array(
 			"type" => "textfield",
-			"heading" => esc_html__("Min Height", "salient-core"),
+			"heading" => '<span class="group-title">' . esc_html__("Minimum Height", "salient-core") . "</span>",
 			"param_name" => "min_height",
 			"admin_label" => false,
+			"edit_field_class" => "desktop fancybox-min-height-device-group",
 			"description" => esc_html__("Please enter the minimum height you would like for you box. Enter in number of pixels - Don't enter \"px\", default is \"300\"", "salient-core")
 		),
+		array(
+			"type" => "textfield",
+			"class" => "",
+			"heading" => '',
+			"param_name" => "min_height_tablet",
+			"edit_field_class" => "tablet fancybox-min-height-device-group",
+			"description" => '',
+		),
+		array(
+			"type" => "textfield",
+			"class" => "",
+			"heading" => '',
+			"param_name" => "min_height_phone",
+			"edit_field_class" => "phone fancybox-min-height-device-group",
+			"description" => '',
+		),
+		
 		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Box Color", "salient-core"),
@@ -158,6 +176,16 @@ return array(
 			'description' => __( 'Choose a color from your','salient-core') . ' <a target="_blank" href="'. esc_url(admin_url()) .'?page=Salient&tab=6"> ' . esc_html__('globally defined color scheme','salient-core') . '</a>',
 		),
 		array(
+			"type" => "colorpicker",
+			"class" => "",
+			"heading" => "Custom Box Color",
+			"param_name" => "color_custom",
+			"dependency" => array('element' => "box_style", 'value' => array('default','color_box_hover')),
+			"value" => "",
+			"description" => esc_html__('Optionally define a custom color outside of your global color scheme.', 'salient-core'),	
+		),
+		
+		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Hover Color", "salient-core"),
 			"param_name" => "hover_color",
@@ -170,6 +198,15 @@ return array(
 			'save_always' => true,
 			"dependency" => array('element' => "box_style", 'value' => array('hover_desc')),
 			'description' => __( 'Choose a color from your','salient-core') . ' <a target="_blank" href="'. esc_url(admin_url()) .'?page=Salient&tab=6"> ' . esc_html__('globally defined color scheme','salient-core') . '</a>',
+		),
+		array(
+			"type" => "colorpicker",
+			"class" => "",
+			"heading" => "Custom Hover Color",
+			"param_name" => "hover_color_custom",
+			"dependency" => array('element' => "box_style", 'value' => array('hover_desc')),
+			"value" => "",
+			"description" => esc_html__('Optionally define a custom color outside of your global color scheme.', 'salient-core'),	
 		),
 		array(
 			"type" => "colorpicker",
@@ -212,6 +249,25 @@ return array(
 		),
 		array(
 			"type" => "dropdown",
+			"heading" => esc_html__("Hover Overlay Opacity", "salient-core"),
+			"param_name" => "color_box_hover_overlay_opacity",
+			"value" => array(
+				"Default" => "default",
+				"0.9" => "0.9",
+				"0.8" => "0.8",
+				"0.7" => "0.7",
+				"0.6" => "0.6",
+				"0.5" => "0.5",
+				"0.4" => "0.4",
+				"0.3" => "0.3",
+				"0.2" => "0.2",
+				"0.1" => "0.1"
+			),
+			"dependency" => array('element' => "box_style", 'value' => array('color_box_hover')),
+			'save_always' => true,
+		),
+		array(
+			"type" => "dropdown",
 			"heading" => esc_html__("Content Alignment", "salient-core"),
 			"param_name" => "box_alignment",
 			"value" => array(
@@ -219,10 +275,76 @@ return array(
 				"Center" => "center",
 				"Right" => "right",
 			),
-			"dependency" => array('element' => "box_style", 'value' => array('color_box_basic','color_box_hover')),
+			"dependency" => array('element' => "box_style", 'value' => array('color_box_basic','color_box_hover','hover_desc')),
 			'save_always' => true,
 		),
 		
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Content Alignment", "salient-core"),
+			"param_name" => "parallax_hover_box_alignment",
+			"value" => array(
+				"Middle" => "middle",
+				"Top" => "top",
+				"Bottom" => "bottom",
+			),
+			"dependency" => array('element' => "box_style", 'value' => array('parallax_hover')),
+			'save_always' => true,
+		),
+		
+		array(
+			"type" => "colorpicker",
+			"class" => "",
+			"heading" => esc_html__("Overlay Color", "salient-core"),
+			"param_name" => "parallax_hover_box_overlay",
+			"value" => "",
+			"dependency" => array('element' => "box_style", 'value' => array('parallax_hover')),
+			"description" => esc_html__("If left blank this will default to dark grey.", "salient-core"),
+		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Overlay Color Opacity", "salient-core"),
+			"param_name" => "parallax_hover_box_overlay_opacity",
+			"value" => array(
+				"Default" => "0.6",
+				"1" => "1",
+				"0.9" => "0.9",
+				"0.8" => "0.8",
+				"0.7" => "0.7",
+				"0.6" => "0.6",
+				"0.5" => "0.5",
+				"0.4" => "0.4",
+				"0.3" => "0.3",
+				"0.2" => "0.2",
+				"0.1" => "0.1",
+				"0" => "0",
+			),
+			'std' => 'default',
+			"dependency" => array('element' => "box_style", 'value' => array('parallax_hover')),
+			'save_always' => true,
+		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Overlay Color Hover Opacity", "salient-core"),
+			"param_name" => "parallax_hover_box_overlay_opacity_hover",
+			"value" => array(
+				"Default" => "0.2",
+				"1" => "1",
+				"0.9" => "0.9",
+				"0.8" => "0.8",
+				"0.7" => "0.7",
+				"0.6" => "0.6",
+				"0.5" => "0.5",
+				"0.4" => "0.4",
+				"0.3" => "0.3",
+				"0.2" => "0.2",
+				"0.1" => "0.1",
+				"0" => "0",
+			),
+			'std' => 'default',
+			"dependency" => array('element' => "box_style", 'value' => array('parallax_hover')),
+			'save_always' => true,
+		),
 		array(
 			"type" => "checkbox",
 			"class" => "",
@@ -231,6 +353,19 @@ return array(
 			"value" => array("Enable Fancy Box Border?" => "true" ),
 			"param_name" => "enable_border",
 			"description" => esc_html__("This will add a minimal border to show the fancy box area before hovering", "salient-core"),
+		),
+		
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Background Hover Animation", "salient-core"),
+			"param_name" => "hover_desc_bg_animation",
+			"value" => array(
+				esc_html__( "Long Zoom", "salient-core") => "long_zoom",
+				esc_html__( "Short Zoom", "salient-core") => "short_zoom",
+				esc_html__( "None", "salient-core") => "none",
+			),
+			"dependency" => array('element' => "box_style", 'value' => array('hover_desc')),
+			'save_always' => true
 		),
 		
 		array(

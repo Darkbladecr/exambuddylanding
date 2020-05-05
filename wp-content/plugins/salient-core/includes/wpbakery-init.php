@@ -10,6 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if( !defined( 'NECTAR_THEME_NAME' ) && !class_exists('NectarLazyImages') ) {
+	require_once ( SALIENT_CORE_ROOT_DIR_PATH . 'includes/class-nectar-lazy.php' );
+}
 
 $nectar_using_VC_front_end_editor = (isset($_GET['vc_editable'])) ? sanitize_text_field($_GET['vc_editable']) : '';
 $nectar_using_VC_front_end_editor = ($nectar_using_VC_front_end_editor == 'true') ? true : false;
@@ -85,6 +88,8 @@ if ( class_exists( 'WPBakeryVisualComposerAbstract' ) && defined( 'SALIENT_VC_AC
 	/**
 	 * WPBakery Salient styles.
 	 *
+	 * Also enqueues Salient WPBalery js dependencies.
+	 *
 	 * @since 1.0
 	 */
 	if( !function_exists('nectar_vc_styles') ) { 
@@ -102,7 +107,16 @@ if ( class_exists( 'WPBakeryVisualComposerAbstract' ) && defined( 'SALIENT_VC_AC
 			wp_enqueue_style('linecon', get_template_directory_uri() . '/css/linecon.css');
 			wp_enqueue_style('linea', get_template_directory_uri() . '/css/fonts/svg/font/style.css');
 			wp_enqueue_style('iconsmind', get_template_directory_uri() . '/css/iconsmind.css');
-
+			
+			// Page Builder Deps.
+			wp_enqueue_script( 'nectar-page-builder-edit', SALIENT_CORE_PLUGIN_PATH.'/includes/admin/assets/js/nectar-element-edit.js', array(), $Salient_Core->plugin_version);
+			$translation_array = array(
+				'alphabetical' => __('Alphabetical', 'salient-core'),
+				'date'         => __('Date', 'salient-core'),
+				'sortby'       => __('Sort By', 'salient-core')
+			);
+			wp_localize_script( 'nectar-page-builder-edit', 'nectar_translations', $translation_array);
+			 
 		}
 	}
 	
@@ -127,7 +141,6 @@ if ( class_exists( 'WPBakeryVisualComposerAbstract' ) && defined( 'SALIENT_VC_AC
 		 
 		function nectar_vc_library_cat_list() {
 			return array(
-				esc_html__( 'New', 'salient-core' )            => 'new',
 				esc_html__( 'All', 'salient-core' )            => 'all',
 				esc_html__( 'About', 'salient-core' )          => 'about',
 				esc_html__( 'Blog', 'salient-core' )           => 'blog',

@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
 	'icon_family' => 'fontawesome',
 	'icon_fontawesome' => '',
@@ -8,6 +13,8 @@ extract(shortcode_atts(array(
 	'icon_iconsmind' => '',
 	'icon_steadysets' => '',
 	'icon_color' => 'accent-color',
+	'icon_color_type' => 'color_scheme',
+	'icon_color_custom' => '',
 	'icon_size' => '50',
 	'icon_style' => '',
 	'icon_border_thickness' => '2px',
@@ -46,7 +53,7 @@ switch($icon_family) {
 		break;
 }
 
-$icon_size_val = (!empty($icon_style) && $icon_style === 'border-basic' || !empty($icon_style) && $icon_style === 'border-animation' || !empty($icon_style) && $icon_style === 'soft-bg') ? intval($icon_size)*1.5 : intval($icon_size);
+$icon_size_val = (!empty($icon_style) && $icon_style === 'border-basic' || !empty($icon_style) && $icon_style === 'border-animation' || !empty($icon_style) && $icon_style === 'soft-bg' || !empty($icon_style) && $icon_style === 'shadow-bg') ? intval($icon_size)*1.5 : intval($icon_size);
 
 // Regular icon only grad extra space.
 if(!empty($icon_style) && $icon_style === 'default') {
@@ -174,8 +181,15 @@ if( !empty($url) ) {
 	$icon_link = null;
 }
 
+// Dynamic style classes.
+if( function_exists('nectar_el_dynamic_classnames') ) {
+	$dynamic_el_styles = nectar_el_dynamic_classnames('nectar_icon', $atts);
+} else {
+	$dynamic_el_styles = '';
+}
+
 echo '<div class="nectar_icon_wrap" data-style="'.esc_attr($icon_style).'" data-draw="'.esc_attr($enable_animation).'" data-border-thickness="'.esc_attr($icon_border_thickness).'" data-padding="'.esc_attr($icon_padding).'" data-color="'.esc_attr(strtolower($icon_color)).'" style="'.$margins.'" >
-		<div class="nectar_icon" '.$grad_dimensions.'>'. $icon_link. $icon_markup.'</div>
+		<div class="nectar_icon'.$dynamic_el_styles.'" '.$grad_dimensions.'>'. $icon_link. $icon_markup.'</div>
 	</div>';
 
 

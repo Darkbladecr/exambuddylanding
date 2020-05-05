@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
   "layout" => 'std-blog-sidebar',
   'blog_masonry_style' => 'inherit',

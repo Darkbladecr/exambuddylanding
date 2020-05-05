@@ -1,4 +1,10 @@
 <?php
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $text = $heading_tag = $color = '';
 extract(shortcode_atts(array(
 	'heading_tag' => 'h6',

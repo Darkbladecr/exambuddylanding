@@ -30,7 +30,8 @@ return array(
 				esc_html__("Minimal Alt", "salient-core") => "minimal_alt",
 				esc_html__("Minimal Flexible Width", "salient-core") => "minimal_flexible",
 				esc_html__("Vertical", "salient-core") => "vertical",
-				esc_html__("Vertical Material", "salient-core") => "vertical_modern"
+				esc_html__("Vertical Material", "salient-core") => "vertical_modern",
+				esc_html__("Vertical Sticky Scrolling", "salient-core") => "vertical_scrolling",
 			),
 			'save_always' => true,
 			"description" => esc_html__("Please select the style you desire for your tabbed element.", "salient-core")
@@ -83,6 +84,69 @@ return array(
 				esc_html__( "Color Gradient 2", "salient-core") => "extra-color-gradient-2"
 			)
 		),
+		
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Navigation Width", "salient-core"),
+			"param_name" => "vs_navigation_width",
+			"admin_label" => false,
+			"value" => array(
+				"Regular" => "regular",
+				"Wide" => "wide",
+				"Narrow" => "narrow"
+			),
+			'save_always' => true,
+			"dependency" => Array('element' => "style", 'value' => array('vertical_scrolling'))
+		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Navigation Item Spacing", "salient-core"),
+			"param_name" => "vs_navigation_spacing",
+			"admin_label" => false,
+			"value" => array(
+				"15px" => "15px",
+				"20px" => "20px",
+				"25px" => "25px",
+				"30px" => "30px",
+				"35px" => "35px",
+				"40px" => "40px",
+				"45px" => "45px",
+			),
+			'save_always' => true,
+			"dependency" => Array('element' => "style", 'value' => array('vertical_scrolling'))
+		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Tab Spacing", "salient-core"),
+			"param_name" => "vs_tab_spacing",
+			"admin_label" => false,
+			"value" => array(
+				"10%" => "10%",
+				"20%" => "20%",
+				"30%" => "30%",
+				"40%" => "40%",
+				"50%" => "50%",
+			),
+			'save_always' => true,
+			"dependency" => Array('element' => "style", 'value' => array('vertical_scrolling'))
+		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Tab Link Element", "salient-core"),
+			"param_name" => "vs_tab_tag",
+			"admin_label" => false,
+			"value" => array(
+				"Inherit from Body" => "p",
+				"Heading 6" => "h6",
+			  "Heading 5" => "h5",
+				"Heading 4" => "h4",
+				"Heading 3" => "h3",
+				"Heading 2" => "h2",
+			),
+			'save_always' => true,
+			"dependency" => Array('element' => "style", 'value' => array('vertical_scrolling'))
+		),
+		
 		array(
 			"type" => "textfield",
 			"heading" => esc_html__("Optional CTA button", "salient-core"),

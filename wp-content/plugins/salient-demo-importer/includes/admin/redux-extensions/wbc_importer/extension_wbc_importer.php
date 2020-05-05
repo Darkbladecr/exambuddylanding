@@ -39,7 +39,41 @@ if ( !class_exists( 'ReduxFramework_extension_wbc_importer' ) ) {
         public $active_import_id;
 
         public $active_import;
-
+        
+        // Nectar addition
+        public $demo_order = array(
+          'Wellness'              => 18,
+          'Nonprofit'             => 19,
+          'Business-3'            => 20,
+          'Corporate-3'           => 21,
+          'Freelance-Portfolio'   => 22,
+          'Ecommerce-Ultimate'    => 23,
+          'Ecommerce-Creative'    => 24,
+          'Dark-Blog'             => 25,
+          'Corporate-2'           => 26,
+          'Blog-Ultimate'         => 27,
+          'Corporate-Creative'    => 28,
+          'Blog-Magazine'         => 29,
+          'Business-2'            => 30,
+          'Company-Startup'       => 31,
+          'Fullscreen Portfolio Slider' => 32,
+          'Band'                  => 33,
+          'Minimal Portfolio'     => 34,
+          'Corporate'             => 35,
+          'Agency'                => 36,
+          'Restaurant'            => 37,
+          'Business'              => 38,
+          'Landing Service'       => 39,
+          'Photography'           => 40,
+          'Landing Product'       => 41,
+          'App'                   => 42,
+          'Simple Blog'           => 43,
+          'Old-School-Ecommerce'  => 44,
+          'One-Page'              => 45,
+          'Ascend'                => 46,
+          'Frostwave'              => 47,
+          'Old-School-All-Purpose' => 48,
+        );
 
         /**
          * Class Constructor
@@ -88,7 +122,7 @@ if ( !class_exists( 'ReduxFramework_extension_wbc_importer' ) ) {
             $this->getImports();
 
             $this->field_name = 'wbc_importer';
-
+            
             self::$instance = $this;
 
             add_filter( 'redux/' . $this->parent->args['opt_name'] . '/field/class/' . $this->field_name, array( &$this,
@@ -112,12 +146,15 @@ if ( !class_exists( 'ReduxFramework_extension_wbc_importer' ) ) {
             $wbc_progress = new Wbc_Importer_Progress( $this->parent );
         }
 
+
+        
         /**
          * Get the demo folders/files
          * Provided fallback where some host require FTP info
          *
          * @return array list of files for demos
          */
+        
         public function demoFiles() {
         
             $this->filesystem = $this->parent->filesystem->execute( 'object' );
@@ -183,6 +220,11 @@ if ( !class_exists( 'ReduxFramework_extension_wbc_importer' ) ) {
                             if ( array_key_exists( 'wbc-import-'.$x, $imported ) ) {
                                 $this->wbc_import_files['wbc-import-'.$x]['imported'] = 'imported';
                             }
+                        }
+                        
+                        //Nectar addition add in order
+                        if( isset( $this->demo_order[$this->wbc_import_files['wbc-import-'.$x]['directory']] ) ) {
+                          $this->wbc_import_files['wbc-import-'.$x]['order'] = $this->demo_order[$this->wbc_import_files['wbc-import-'.$x]['directory']];
                         }
 
                         foreach ( $import['files'] as $file ) {

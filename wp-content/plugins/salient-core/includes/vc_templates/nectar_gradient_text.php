@@ -1,5 +1,10 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $text = $heading_tag = $gradient_direction = $color = $margin_top = $margin_right = $margin_bottom = $margin_left = '';
 extract(shortcode_atts(array(
 	'heading_tag' => 'h1',

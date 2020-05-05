@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Portfolio shortcode.
  *
@@ -1068,8 +1073,7 @@ if( !function_exists('nectar_portfolio_processing') ) {
 										} ?>
 										
 										<div class="work-info-bg"></div>
-										<div class="work-info">
-											
+
 											<?php 
 											
 											//custom content
@@ -1111,7 +1115,7 @@ if( !function_exists('nectar_portfolio_processing') ) {
 												
 											} ?>
 											
-											
+											<div class="work-info">
 											<div class="vert-center">
 												<?php 
 												if(!empty($using_custom_content) && $using_custom_content === 'on') {

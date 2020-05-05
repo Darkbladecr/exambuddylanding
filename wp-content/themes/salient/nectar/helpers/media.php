@@ -377,7 +377,13 @@ if ( ! function_exists( 'nectar_options_img' ) ) {
 		// check if URL or ID is passed
 		if ( isset( $image_arr_or_str['id'] ) ) {
 			$image = wp_get_attachment_image_src( $image_arr_or_str['id'], 'full' );
-			return $image[0];
+			
+			if( isset($image[0]) ) {
+				return $image[0];
+			} else {
+				return '';
+			}
+			
 		} 
 		elseif ( isset( $image_arr_or_str['url'] ) ) {
 			return $image_arr_or_str['url'];

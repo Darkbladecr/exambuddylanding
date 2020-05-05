@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(
   array("title_labels" => 'false',  
   'category' => 'all', 
@@ -71,7 +76,7 @@ if( $style !== 'slider' &&
     ob_start(); 
     
     if( $title_labels === 'true' ) {
-      echo '<h2 class="uppercase recent-posts-title">'. wp_kses_post( $recent_posts_title_text ) .'<a href="'. esc_url( $posts_page_link ) .'" class="button"> / '. wp_kses_post( $recent_posts_link_text ) .'</a></h2>';
+      echo '<h2 class="uppercase recent-posts-title">'. wp_kses_post( $recent_posts_title_text ) .'<a href="'. $posts_page_link .'" class="button"> / '. wp_kses_post( $recent_posts_link_text ) .'</a></h2>';
     }
     
     $modded_style = $style;
@@ -293,7 +298,7 @@ if( $style !== 'slider' &&
 
               if( $style === 'list_featured_first_row_tall' && $r_post_count <= $columns ) {
                 
-                if( 'lazy-load' === $image_loading ) {
+                if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
             			$lazy_escaped_markup = 'data-nectar-img-src="'.get_the_post_thumbnail_url($post->ID, 'regular', array('title' => '')).'"';
             		} else {   
                   $lazy_escaped_markup = 'style="background-image: url('.get_the_post_thumbnail_url($post->ID, 'regular', array('title' => '')).');"';
@@ -302,7 +307,7 @@ if( $style !== 'slider' &&
                  echo'<a href="' . esc_url(get_permalink()) . '" class="'.esc_attr($list_featured_image_class).'"><span class="post-featured-img" '.$lazy_escaped_markup.'></span></a>'; 
               } else {
                 
-                if( 'lazy-load' === $image_loading ) {
+                if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
             			$lazy_escaped_markup = '<span class="img-thumbnail" data-nectar-img-src="'.get_the_post_thumbnail_url($post->ID, 'regular', array('title' => '')).'"></span>';
             		} else {   
                   $lazy_escaped_markup = get_the_post_thumbnail($post->ID, $list_featured_image_size, array('title' => ''));
@@ -499,7 +504,7 @@ else if( $style === 'single_large_featured' ) { //single_large_featured
           $featured_img = $image_src[0];
         }
         
-        if( 'lazy-load' === $image_loading ) {
+        if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
           $lazy_escaped_markup = 'data-nectar-img-src="'.esc_url( $featured_img ).'"';
         } else {
           $background_markup = 'background-image: url('.esc_url( $featured_img ).');';
@@ -641,10 +646,15 @@ else if( $style === 'multiple_large_featured' ) { //multiple_large_featured
         } elseif( has_post_thumbnail($post->ID) ) {
           $bg_image_id  = get_post_thumbnail_id($post->ID);
           $image_src    = wp_get_attachment_image_src($bg_image_id, 'full');
-          $featured_img = $image_src[0];
+					if( $image_src != false ) {
+						$featured_img = $image_src[0];
+					} else {
+						$featured_img = '';
+					}
+          
         }
         
-        if( 'lazy-load' === $image_loading ) {
+        if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
           $lazy_escaped_markup = 'data-nectar-img-src="'.esc_url( $featured_img ).'"';
         } else {
           $background_markup = 'background-image: url('.esc_url( $featured_img ).');';
@@ -788,7 +798,7 @@ else if( $style === 'slider_multiple_visible' ) { //slider multiple visible
           $featured_img = $image_src[0];
         }
         
-        if( 'lazy-load' === $image_loading ) {
+        if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
           $lazy_escaped_markup = 'data-nectar-img-src="'.esc_url( $featured_img ).'"';
         } else {
           $background_markup = 'background-image: url('.esc_url( $featured_img ).');';
@@ -937,7 +947,7 @@ else { //slider
           $featured_img = $image_src[0];
         }
         
-        if( 'lazy-load' === $image_loading ) {
+        if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
           $lazy_escaped_markup = 'data-nectar-img-src="'.esc_url( $featured_img ).'"';
         } else {
           $background_markup = 'background-image: url('.esc_url( $featured_img ).');';

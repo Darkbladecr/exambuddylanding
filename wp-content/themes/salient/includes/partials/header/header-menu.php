@@ -4,7 +4,7 @@
 *
 * @package Salient WordPress Theme
 * @subpackage Partials
-* @version 10.5
+* @version 11.5
 */
 
 // Exit if accessed directly
@@ -61,7 +61,7 @@ $nectar_options        = get_nectar_theme_options();
 					<nav class="right-side">
 						<ul class="buttons" data-user-set-ocm="<?php echo esc_attr( $nectar_header_options['user_set_side_widget_area'] ); ?>"><?php nectar_header_button_items(); ?></ul>
 						<?php if ( $nectar_header_options['side_widget_area'] === '1' || $nectar_header_options['side_widget_class'] === 'simple' ) { ?>
-							<div class="slide-out-widget-area-toggle mobile-icon <?php echo esc_attr( $nectar_header_options['side_widget_class'] ); ?>" data-icon-animation="simple-transform">
+							<div class="slide-out-widget-area-toggle mobile-icon <?php echo esc_attr( $nectar_header_options['side_widget_class'] ); ?>" data-custom-color="<?php echo esc_attr($nectar_header_options['ocm_menu_btn_color']); ?>" data-icon-animation="simple-transform">
 								<div> <a href="#sidewidgetarea" aria-label="<?php echo esc_attr__('Navigation Menu', 'salient'); ?>" aria-expanded="false" class="<?php echo 'closed' . esc_attr($menu_label_class); ?>">
 									<?php if( true === $menu_label ) { echo '<i class="label">' . esc_html__('Menu','salient') .'</i>'; } ?><span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span> </a> </div> 
 							</div>
@@ -98,7 +98,7 @@ $nectar_options        = get_nectar_theme_options();
 				
 				if ( $nectar_header_options['side_widget_area'] === '1' || $nectar_header_options['side_widget_class'] === 'simple' ) {
 					?>
-					<div class="slide-out-widget-area-toggle mobile-icon <?php echo esc_attr( $nectar_header_options['side_widget_class'] ); ?>" data-icon-animation="simple-transform">
+					<div class="slide-out-widget-area-toggle mobile-icon <?php echo esc_attr( $nectar_header_options['side_widget_class'] ); ?>" data-custom-color="<?php echo esc_attr($nectar_header_options['ocm_menu_btn_color']); ?>" data-icon-animation="simple-transform">
 						<div> <a href="#sidewidgetarea" aria-label="<?php echo esc_attr__('Navigation Menu', 'salient'); ?>" aria-expanded="false" class="<?php echo 'closed' . esc_attr($menu_label_class); ?>">
 							<?php if( true === $menu_label ) { echo '<i class="label">' . esc_html__('Menu','salient') .'</i>'; } ?><span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span>
 						</a></div> 

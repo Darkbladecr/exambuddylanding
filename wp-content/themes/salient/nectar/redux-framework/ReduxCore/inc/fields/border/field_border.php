@@ -149,7 +149,7 @@ if ( ! class_exists( 'ReduxFramework_border' ) ) {
                  * Bottom
                  * */
                 if ( $this->field['bottom'] === true ) {
-                    echo '<div class="field-border-input input-prepend"><span class="add-on"><i class="el el-arrow-down icon-large"></i></span><input type="text" class="redux-border-bottom redux-border-input mini ' . esc_attr($this->field['class']_ . '" placeholder="' . __( 'Bottom', 'redux-framework' ) . '" rel="' . esc_attr($this->field['id']) . '-bottom" value="' . esc_attr($this->value['bottom']) . '"></div>';
+                    echo '<div class="field-border-input input-prepend"><span class="add-on"><i class="el el-arrow-down icon-large"></i></span><input type="text" class="redux-border-bottom redux-border-input mini ' . esc_attr($this->field['class']) . '" placeholder="' . __( 'Bottom', 'redux-framework' ) . '" rel="' . esc_attr($this->field['id']) . '-bottom" value="' . esc_attr($this->value['bottom']) . '"></div>';
                 }
 
                 /**

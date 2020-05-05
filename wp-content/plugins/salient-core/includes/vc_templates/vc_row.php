@@ -1,5 +1,10 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
    extract(shortcode_atts(array(
 	  "type" => 'in_container',
 	  'bg_image'=> '', 
@@ -40,7 +45,19 @@
 	  'video_mute' => '',
 	  
 	  "top_padding" => "0", 
+		"top_padding_tablet" => "",
+		"top_padding_phone" => "",
 	  "bottom_padding" => "0",
+		"bottom_padding_phone" => "",
+		"bottom_padding_tablet" => "",
+		
+		'translate_x' => '',
+		'translate_x_tablet' => '',
+		'translate_x_phone' => '',
+    'translate_y' => '',
+		'translate_y_tablet' => '',
+		'translate_y_phone' => '',
+		
 	  'text_color' => 'dark',  
 	  'custom_text_color' => '',  
 	  'id' => '',
@@ -49,6 +66,10 @@
 	  'columns_placement' => 'middle',
     'column_margin' => 'default',
     
+		'column_direction' => 'default',
+		'column_direction_tablet' => 'default',
+		'column_direction_phone' => 'default',
+		
 	  'enable_gradient' => 'false',
 	  'color_overlay' => '',
 	  'color_overlay_2' => '',
@@ -60,7 +81,9 @@
 	  'full_screen_row_position' => 'middle',
 	  'disable_ken_burns' => '',
 	  'disable_element' => '',
-
+		
+		'row_border_radius' => 'none',
+		'row_border_radius_applies' => 'bg',
 	  'enable_shape_divider' => '',
 	  'shape_type' => '',
 	  'shape_divider_color' => '',
@@ -68,8 +91,6 @@
 	  'shape_divider_position' => '',
 	  'shape_divider_height' => '50',
 	  'shape_divider_height_mobile' => '50',
-    'translate_x' => '',
-    'translate_y' => '',
     'zindex' => ''
 
 	  ), 
@@ -145,7 +166,10 @@
 			} else {
 				$bg_image_src = wp_get_attachment_image_src($bg_image, 'full');
 				
-				$bg_props .= 'background-image: url('. esc_url($bg_image_src[0]) . '); ';
+				if( isset($bg_image_src[0]) ) {
+					$bg_props .= 'background-image: url('. esc_url($bg_image_src[0]) . '); ';
+				}
+				
 				$bg_props .= 'background-position: '. $bg_position .'; ';
 			}
 			
@@ -214,7 +238,7 @@
         $row_percent_padding_attr .= 'data-top-percent="'. esc_attr($top_padding) .'" ';
 				$style .= 'padding-top: calc(100vw * 0.'. $leading_zero . intval($top_padding) .'); ';
 			} else {
-				$style .= 'padding-top: '. esc_attr($top_padding) .'px; ';
+				$style .= 'padding-top: '. intval($top_padding) .'px; ';
 			}
 
 			if( strpos($bottom_padding,'%') !== false ) {
@@ -224,7 +248,7 @@
 				$style .= 'padding-bottom: calc(100vw * 0.'. $leading_zero . intval($bottom_padding) .'); ';
         
 			} else {	
-				$style .= 'padding-bottom: '. esc_attr($bottom_padding) .'px; ';
+				$style .= 'padding-bottom: '. intval($bottom_padding) .'px; ';
 			}
       
       // Transforms.
@@ -333,11 +357,28 @@
 		if( $page_full_screen_rows === 'on' && !empty($id) ) {
 			$fullscreen_anchor_id = 'data-fullscreen-anchor-id="'.$id.'"';
 		}
-    
-    
+		
+		$midnight_attr = 'data-midnight="'.esc_attr(strtolower($midnight_color)).'"'; 
+		
+		// Border radius
+		$border_radius_attrs = '';
+		if( !empty($row_border_radius) && 'none' != $row_border_radius ) {
+			$border_radius_attrs = ' data-br="'.esc_attr($row_border_radius).'" data-br-applies="'.esc_attr($row_border_radius_applies).'"';
+		}
+
+		
+		// Dynamic style classes.
+		if( function_exists('nectar_el_dynamic_classnames') ) {
+			$dynamic_el_styles = nectar_el_dynamic_classnames('row', $atts);
+		} else {
+			$dynamic_el_styles = '';
+		}
+
+    $bg_mobile_hidden = ( !empty($background_image_mobile_hidden) ) ? ' data-bg-mobile-hidden="'.esc_attr($background_image_mobile_hidden).'"' : '';
+		
     // Begin row output.
 	   echo'
-		<div id="'. esc_attr($row_id) .'" '.$fullscreen_anchor_id.' data-column-margin="'.esc_attr($column_margin).'" data-midnight="'.esc_attr(strtolower($midnight_color)).'" '.$row_percent_padding_attr.' data-bg-mobile-hidden="'.esc_attr($background_image_mobile_hidden).'" class="wpb_row vc_row-fluid vc_row '. $top_level_class . $main_class . $disable_class . $equal_height_class . $parallax_class . $vertically_center_class . ' '. $class . '" '.$using_custom_text_color.' style="'.$style.'">';
+		<div id="'. esc_attr($row_id) .'" '.$fullscreen_anchor_id. $border_radius_attrs .' data-column-margin="'.esc_attr($column_margin).'" '.$midnight_attr.' '.$row_percent_padding_attr. $bg_mobile_hidden. ' class="wpb_row vc_row-fluid vc_row '. $top_level_class . $main_class . $disable_class . $equal_height_class . $parallax_class . $vertically_center_class . ' '. $class . $dynamic_el_styles.'" '.$using_custom_text_color.' style="'.$style.'">';
 		
 		if( $page_full_screen_rows === 'on' ) {
       echo '<div class="full-page-inner-wrap-outer"><div class="full-page-inner-wrap" data-name="'.esc_attr($row_name).'" data-content-pos="'.esc_attr($full_screen_row_position).'"><div class="full-page-inner">';
@@ -529,9 +570,9 @@
 		if( $video_bg ) {
 
 			// Parse video image.
-			if( strpos($video_image, "http://") !== false ){
+			if( strpos($video_image, "http") !== false ){
 				$video_image_src = $video_image;
-			} else {
+			} else if( preg_match('/^\d+$/', $video_image) ) {
 				$video_image_src = wp_get_attachment_image_src($video_image, 'full');
 				$video_image_src = $video_image_src[0];
 			}
@@ -679,7 +720,7 @@
     if( $extra_container_div === true ) {
       echo '<div class="container">';
     }
-    echo '<div class="col span_12 '. esc_attr(strtolower($text_color)) .' '. esc_attr($text_align) .'">'. do_shortcode($content) .'</div></div>';
+    echo '<div class="row_col_wrap_12 col span_12 '. esc_attr(strtolower($text_color)) .' '. esc_attr($text_align) .'">'. do_shortcode($content) .'</div></div>';
     if($extra_container_div_closing === true) {
       echo '</div>';
     }

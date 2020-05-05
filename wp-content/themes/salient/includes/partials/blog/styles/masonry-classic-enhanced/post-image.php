@@ -27,7 +27,7 @@ $image_attrs = array(
 
 $nectar_post_format = get_post_format();
 
-if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] && 'portfolio-thumb' === $img_size ) {
+if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] && 'portfolio-thumb' === $img_size && NectarLazyImages::activate_lazy() ) {
   
   // src.
   $img_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $img_size );
@@ -51,7 +51,9 @@ if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_l
       get_template_part( 'includes/partials/blog/media/play-button' );
     }
   }
-  echo '<img class="nectar-lazy skip-lazy wp-post-image" alt="'.esc_attr($alt_tag).'" height="'.esc_attr($height).'" width="'.esc_attr($width).'" data-nectar-img-src="'.esc_attr($img_src[0]).'" data-nectar-img-srcset="'.esc_attr($img_srcset).'" sizes="'.esc_attr($image_attrs['sizes']).'" />';
+  if( has_post_thumbnail() ) { 
+    echo '<img class="nectar-lazy skip-lazy wp-post-image" alt="'.esc_attr($alt_tag).'" height="'.esc_attr($height).'" width="'.esc_attr($width).'" data-nectar-img-src="'.esc_attr($img_src[0]).'" data-nectar-img-srcset="'.esc_attr($img_srcset).'" sizes="'.esc_attr($image_attrs['sizes']).'" />';
+  }
   echo '</span></a>';
   
 } else {

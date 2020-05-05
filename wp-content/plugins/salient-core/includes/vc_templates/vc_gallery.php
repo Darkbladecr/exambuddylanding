@@ -1,4 +1,10 @@
 <?php
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $output = $title = $source = $type = $onclick = $custom_links = $img_size = $external_img_size = $custom_links_target = $images = $custom_srcs = $el_class = $interval = '';
 extract(shortcode_atts(array(
     'title' => '',
@@ -35,6 +41,7 @@ extract(shortcode_atts(array(
     'flickity_spacing' => '',
     'flickity_wrap_around' => 'wrap',
     'flickity_overflow' => 'hidden',
+		'flickity_image_scale_on_drag' => '',
     'item_spacing' => 'default',
     'load_in_animation' => 'none',
     'bullet_navigation_style' => 'see_through',
@@ -232,10 +239,10 @@ if ( $type === 'flexslider_style' ) {
     wp_add_inline_style('flickity_static_height-handle', $flickity_img_height_css);
 
     
-    $slides_wrap_start .= '<div class="nectar-flickity not-initialized '.$instance.'" data-overflow="'.esc_attr($flickity_overflow).'" data-wrap="'.esc_attr($flickity_wrap_around).'" data-spacing="'.esc_attr($flickity_spacing).'" data-shadow="'.esc_attr($flickity_box_shadow).'" data-autoplay="'.esc_attr($flickity_autoplay).'" data-autoplay-dur="'.esc_attr($flickity_autoplay_dur).'" data-free-scroll="'.esc_attr($flickity_free_scroll).'" data-controls="'.esc_attr($flickity_controls).'"><div class="flickity-viewport"> <div class="flickity-slider">';
+    $slides_wrap_start .= '<div class="nectar-flickity not-initialized '.$instance.'" data-drag-scale="'.esc_attr($flickity_image_scale_on_drag).'" data-overflow="'.esc_attr($flickity_overflow).'" data-wrap="'.esc_attr($flickity_wrap_around).'" data-spacing="'.esc_attr($flickity_spacing).'" data-shadow="'.esc_attr($flickity_box_shadow).'" data-autoplay="'.esc_attr($flickity_autoplay).'" data-autoplay-dur="'.esc_attr($flickity_autoplay_dur).'" data-free-scroll="'.esc_attr($flickity_free_scroll).'" data-controls="'.esc_attr($flickity_controls).'"><div class="flickity-viewport"> <div class="flickity-slider">';
   
   } else {
-  	$slides_wrap_start .= '<div class="nectar-flickity not-initialized" data-overflow="'.esc_attr($flickity_overflow).'" data-wrap="'.esc_attr($flickity_wrap_around).'" data-spacing="'.esc_attr($flickity_spacing).'" data-shadow="'.esc_attr($flickity_box_shadow).'" data-autoplay="'.esc_attr($flickity_autoplay).'" data-autoplay-dur="'.esc_attr($flickity_autoplay_dur).'" data-free-scroll="'.esc_attr($flickity_free_scroll).'" data-controls="'.esc_attr($flickity_controls).'" data-desktop-columns="'.esc_attr($flickity_desktop_columns).'" data-small-desktop-columns="'.esc_attr($flickity_small_desktop_columns).'" data-tablet-columns="'.esc_attr($flickity_tablet_columns).'"><div class="flickity-viewport"> <div class="flickity-slider">';
+  	$slides_wrap_start .= '<div class="nectar-flickity not-initialized" data-drag-scale="'.esc_attr($flickity_image_scale_on_drag).'" data-overflow="'.esc_attr($flickity_overflow).'" data-wrap="'.esc_attr($flickity_wrap_around).'" data-spacing="'.esc_attr($flickity_spacing).'" data-shadow="'.esc_attr($flickity_box_shadow).'" data-autoplay="'.esc_attr($flickity_autoplay).'" data-autoplay-dur="'.esc_attr($flickity_autoplay_dur).'" data-free-scroll="'.esc_attr($flickity_free_scroll).'" data-controls="'.esc_attr($flickity_controls).'" data-desktop-columns="'.esc_attr($flickity_desktop_columns).'" data-small-desktop-columns="'.esc_attr($flickity_small_desktop_columns).'" data-tablet-columns="'.esc_attr($flickity_tablet_columns).'"><div class="flickity-viewport"> <div class="flickity-slider">';
   }
 
 	$slides_wrap_end .= '</div></div></div>';
@@ -423,7 +430,7 @@ foreach ( $images as $attach_id ) {
 				break;
 		}
 		
-    if( 'lazy-load' === $image_loading ) {
+    if( 'lazy-load' === $image_loading && NectarLazyImages::activate_lazy() ) {
       $thumbnail = '<div class="swiper-slide" data-bg-alignment="center" data-color-scheme="light" data-x-pos="centered" data-y-pos="middle"><div class="image-bg" data-nectar-img-src="'. $img[0].'">  &nbsp; </div>';
     } else {
       $thumbnail = '<div class="swiper-slide" data-bg-alignment="center" data-color-scheme="light" data-x-pos="centered" data-y-pos="middle"><div class="image-bg" style="background-image: url('. $img[0].');">  &nbsp; </div>';
@@ -625,6 +632,12 @@ foreach ( $images as $attach_id ) {
                 
 								if( !empty($attachment_meta['masonry_image_sizing']) ) {
 									$masonry_item_sizing = $attachment_meta['masonry_image_sizing'];
+									
+									// No tall size in photography
+									if($masonry_sizing_type == 'photography' && $masonry_item_sizing == 'tall') {
+										$masonry_item_sizing = 'wide_tall';
+									}
+									
 								} else {
 									$masonry_item_sizing = 'regular';
 								}
@@ -643,6 +656,7 @@ foreach ( $images as $attach_id ) {
 							if($masonry_layout == 'true') {
 								if($masonry_sizing_type == 'photography' && !empty($masonry_item_sizing)) {
 									$masonry_item_sizing = $masonry_item_sizing.'_photography';
+	
                 }
 							}
 
@@ -880,7 +894,7 @@ foreach ( $images as $attach_id ) {
 								 
 								<?php
 								
-								echo wp_kses_post( $post_thumbnail['thumbnail'] ); ?>
+								echo $post_thumbnail['thumbnail']; ?>
 								
 								<div class="work-info-bg"></div>
 								<div class="work-info"> 
@@ -922,7 +936,7 @@ foreach ( $images as $attach_id ) {
 							<div class="work-item style-2">
 								
 								<?php
-								echo wp_kses_post( $post_thumbnail['thumbnail'] ); ?>
+								echo $post_thumbnail['thumbnail']; ?>
 			
 								<div class="work-info-bg"></div>
 								<div class="work-info">
@@ -966,7 +980,7 @@ foreach ( $images as $attach_id ) {
 							<div class="work-item style-3">
 								
 								<?php
-								echo wp_kses_post( $post_thumbnail['thumbnail'] );
+								echo $post_thumbnail['thumbnail'];
 
 								if($attach_id > 0) {
                   $attachment_meta = wp_get_attachment($attach_id);
@@ -1015,7 +1029,7 @@ foreach ( $images as $attach_id ) {
 							<div class="work-item style-4">
 								
 								<?php
-								echo wp_kses_post( $post_thumbnail['thumbnail'] ); ?>
+								echo $post_thumbnail['thumbnail']; ?>
 
 								<div class="work-info">
 
@@ -1056,7 +1070,7 @@ foreach ( $images as $attach_id ) {
 							<div class="work-item style-3-alt">
 								
 								<?php							
-								echo wp_kses_post( $post_thumbnail['thumbnail'] );
+								echo $post_thumbnail['thumbnail'];
 								if($attach_id > 0) $attachment_meta = wp_get_attachment($attach_id);
 								?>
 				
@@ -1101,7 +1115,7 @@ foreach ( $images as $attach_id ) {
 							<div class="work-item style-2">
 								
 								<?php
-								echo wp_kses_post( $post_thumbnail['thumbnail'] ); ?>
+								echo $post_thumbnail['thumbnail']; ?>
 			
 								<div class="work-info-bg"></div>
 								<div class="work-info">
@@ -1143,7 +1157,7 @@ foreach ( $images as $attach_id ) {
 							<div class="work-item style-2">
 								
 								<?php
-								echo wp_kses_post( $post_thumbnail['thumbnail'] ); ?>
+								echo $post_thumbnail['thumbnail']; ?>
 			
 								<div class="work-info-bg"></div>
 								<div class="work-info">

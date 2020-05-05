@@ -13,6 +13,21 @@
         
         // demo depends.
         var nectar_demo_depends = {
+          "Wellness" : {
+            "plugins": ['js_composer_salient','salient-core','salient-social','salient-widgets']
+          },
+          "Nonprofit" : {
+            "plugins": ['js_composer_salient','salient-core','salient-social','salient-widgets']
+          },
+          "Freelance-Portfolio" : {
+            "plugins": ['js_composer_salient','salient-core','salient-social','salient-widgets','salient-portfolio']
+          },
+          "Business-3" : {
+            "plugins": ['js_composer_salient','salient-core','salient-social','salient-widgets']
+          },
+          "Corporate-3" : {
+            "plugins": ['js_composer_salient','salient-core','salient-social','salient-widgets']
+          },
           "Agency" : {
             "plugins": ['js_composer_salient','salient-core','salient-portfolio','salient-social','salient-nectar-slider']
           },

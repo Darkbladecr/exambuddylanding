@@ -110,7 +110,7 @@ if ( 'false' === $disable_footer_copyright ) {
 		  <?php
 			if ( ! empty( $nectar_options['use-google-plus-icon'] ) && $nectar_options['use-google-plus-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['google-plus-url'] ); ?>"><i class="fa fa-google-plus"></i> </a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['google-plus-url'] ); ?>"><i class="fa fa-google"></i> </a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-instagram-icon'] ) && $nectar_options['use-instagram-icon'] === '1' ) {
 				?>
@@ -138,43 +138,43 @@ if ( 'false' === $disable_footer_copyright ) {
 		  <?php
 			if ( ! empty( $nectar_options['use-vine-icon'] ) && $nectar_options['use-vine-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['vine-url'] ); ?>"><i class="fa-vine"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['vine-url'] ); ?>"><i class="fa fa-vine"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-houzz-icon'] ) && $nectar_options['use-houzz-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['houzz-url'] ); ?>"><i class="fa-houzz"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['houzz-url'] ); ?>"><i class="fa fa-houzz"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-yelp-icon'] ) && $nectar_options['use-yelp-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['yelp-url'] ); ?>"><i class="fa-yelp"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['yelp-url'] ); ?>"><i class="fa fa-yelp"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-snapchat-icon'] ) && $nectar_options['use-snapchat-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['snapchat-url'] ); ?>"><i class="fa-snapchat"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['snapchat-url'] ); ?>"><i class="fa fa-snapchat"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-mixcloud-icon'] ) && $nectar_options['use-mixcloud-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['mixcloud-url'] ); ?>"><i class="fa-mixcloud"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['mixcloud-url'] ); ?>"><i class="fa fa-mixcloud"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-bandcamp-icon'] ) && $nectar_options['use-bandcamp-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['bandcamp-url'] ); ?>"><i class="fa-bandcamp"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['bandcamp-url'] ); ?>"><i class="fa fa-bandcamp"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-tripadvisor-icon'] ) && $nectar_options['use-tripadvisor-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['tripadvisor-url'] ); ?>"><i class="fa-tripadvisor"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['tripadvisor-url'] ); ?>"><i class="fa fa-tripadvisor"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-telegram-icon'] ) && $nectar_options['use-telegram-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['telegram-url'] ); ?>"><i class="fa-telegram"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['telegram-url'] ); ?>"><i class="fa fa-telegram"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-slack-icon'] ) && $nectar_options['use-slack-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['slack-url'] ); ?>"><i class="fa-slack"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['slack-url'] ); ?>"><i class="fa fa-slack"></i></a></li> <?php } ?>
 		  <?php
 			if ( ! empty( $nectar_options['use-medium-icon'] ) && $nectar_options['use-medium-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['medium-url'] ); ?>"><i class="fa-medium"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['medium-url'] ); ?>"><i class="fa fa-medium"></i></a></li> <?php } ?>
       <?php
  			if ( ! empty( $nectar_options['use-artstation-icon'] ) && $nectar_options['use-artstation-icon'] === '1' ) {
  				?>
@@ -186,15 +186,19 @@ if ( 'false' === $disable_footer_copyright ) {
      <?php
 			if ( ! empty( $nectar_options['use-whatsapp-icon'] ) && $nectar_options['use-whatsapp-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['whatsapp-url'] ); ?>"><i class="fa-whatsapp"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['whatsapp-url'] ); ?>"><i class="fa fa-whatsapp"></i></a></li> <?php } ?>
+     <?php
+     if ( ! empty( $nectar_options['use-messenger-icon'] ) && $nectar_options['use-messenger-icon'] === '1' ) {
+       ?>
+      <li><a target="_blank" href="<?php echo esc_url( $nectar_options['messenger-url'] ); ?>"><i class="icon-salient-facebook-messenger"></i></a></li> <?php } ?>
      <?php
 			if ( ! empty( $nectar_options['use-phone-icon'] ) && $nectar_options['use-phone-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['phone-url'] ); ?>"><i class="fa-phone"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['phone-url'] ); ?>"><i class="fa fa-phone"></i></a></li> <?php } ?>
      <?php
 			if ( ! empty( $nectar_options['use-email-icon'] ) && $nectar_options['use-email-icon'] === '1' ) {
 				?>
-			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['email-url'] ); ?>"><i class="fa-envelope"></i></a></li> <?php } ?>
+			 <li><a target="_blank" href="<?php echo esc_url( $nectar_options['email-url'] ); ?>"><i class="fa fa-envelope"></i></a></li> <?php } ?>
 		</ul>
 	  </div><!--/span_7-->
 

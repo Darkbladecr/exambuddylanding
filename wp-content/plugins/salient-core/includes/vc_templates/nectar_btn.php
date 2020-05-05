@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
 	"size" => 'small', 
 	"url" => '#', 
@@ -23,6 +28,7 @@ extract(shortcode_atts(array(
 	'margin_left' => '', 
 	'css_animation' => '', 
 	'el_class' => '', 
+	'nofollow' => '',
 	'button_id' => ''), $atts));
 
 
@@ -195,8 +201,14 @@ $target     = ($open_new_tab == 'true') ? 'target="_blank"' : null;
 		$color_or = 'data-color-override="false" ';	
 	}
 	
+	// Nofollow
+	$nofollow_attr = '';
+	if(!empty($nofollow) && 'true' === $nofollow) {
+		$nofollow_attr = ' rel="nofollow"';
+	}
+	
 	// Opening tag.	
-	$button_open_tag_escaped .= '<a class="nectar-button '. esc_attr($size) . esc_attr($style_color) . esc_attr($has_icon) . esc_attr($stnd_button).'" '.$button_ID_markup.' style="'. $margins . $starting_custom_color.'" '. $target;
+	$button_open_tag_escaped .= '<a class="nectar-button '. esc_attr($size) . esc_attr($style_color) . esc_attr($has_icon) . esc_attr($stnd_button).'" '.$button_ID_markup . $nofollow_attr.' style="'. $margins . $starting_custom_color.'" '. $target;
 	
 	$hover_color_override      = (!empty($hover_color_override)) ? ' data-hover-color-override="'. esc_attr($hover_color_override) .'"' : 'data-hover-color-override="false"';
 	$hover_text_color_override = (!empty($hover_text_color_override)) ? ' data-hover-text-color-override="'. esc_attr($hover_text_color_override) .'"' :  null;	
@@ -234,7 +246,7 @@ $target     = ($open_new_tab == 'true') ? 'target="_blank"' : null;
 		}
 		
 		echo '
-		<div class="nectar-3d-transparent-button" '.$button_ID_markup .' style="'.$margins.'" data-size="'.esc_attr($size).'">
+		<div class="nectar-3d-transparent-button" '.$button_ID_markup . $nofollow_attr . ' style="'.$margins.'" data-size="'.esc_attr($size).'">
 		  <a href="'. esc_url($url) .'" '. $target.' class="'.esc_attr($el_class).'"><span class="hidden-text">'.wp_kses_post($text).'</span>
 			<div class="inner-wrap">
 				<div class="front-3d">

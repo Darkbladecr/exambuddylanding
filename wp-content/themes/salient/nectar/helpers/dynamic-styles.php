@@ -93,7 +93,15 @@ if( !function_exists('nectar_output_font_props') ) {
 		
 		// Font Family.
 		if( $nectar_options[$typography_item] != '-' ) { 
-			echo 'font-family: ' . esc_attr($font_family) .'; '; 
+			
+			// Handle fonts with quotes.
+			
+			if( strrpos($font_family, '"') ) {
+				echo 'font-family: ' . htmlspecialchars($font_family, ENT_NOQUOTES) .'; '; 
+			} else {
+				echo 'font-family: ' . esc_attr($font_family) .'; '; 
+			}
+			
 		}
 		// Text Transform.
 		if( $nectar_options[$typography_item.'_transform'] != '-' ) { 
@@ -481,7 +489,11 @@ function nectar_dynamic_css_dir_writable() {
 
 
 /**
+ * Checks if users has updated the theme.
+ *
  * Automatically regenerates the external dynamic css upon updating theme.
+ * Refreshes the TGM plugin notice.
+ *
  * @since 10.5
  */
 add_action( 'shutdown', 'nectar_update_external_dynamic_css' );
@@ -537,6 +549,14 @@ if (!function_exists('nectar_page_specific_dynamic')) {
 			 $font_color = get_post_meta($post->ID, '_nectar_header_font_color', true);
 		 }
 		 
+		 // Default minimal blog header.
+		 $blog_header_type = (!empty($nectar_options['blog_header_type'])) ? $nectar_options['blog_header_type'] : 'default_minimal'; 
+		 $default_minimal_text_color = (!empty($nectar_options['default_minimal_text_color'])) ? $nectar_options['default_minimal_text_color'] : false;
+		 if( 'default_minimal' === $blog_header_type && is_singular('post') && false !== $default_minimal_text_color && empty($font_color) ) {
+			 $font_color = $default_minimal_text_color;
+		 }
+		 
+		 // Auto page header.
 		 $header_auto_title = (!empty($nectar_options['header-auto-title']) && $nectar_options['header-auto-title'] == '1') ? true : false;
 		 $page_header_title = get_post_meta($post->ID, '_nectar_header_title', true);
 		 
@@ -546,7 +566,7 @@ if (!function_exists('nectar_page_specific_dynamic')) {
 			 }
 		 }
  	 
- 		 if( !empty($font_color) && !is_search() ) {
+ 		 if( !empty($font_color) && !is_search() && !is_category() && !is_author() && !is_date() ) {
 			 
 			 echo '#page-header-bg h1, 
 			 #page-header-bg .subheader, 
@@ -564,6 +584,11 @@ if (!function_exists('nectar_page_specific_dynamic')) {
 				 color: '. esc_attr($font_color) .'!important; 
 			 } ';
 			 
+			 $font_color_no_hash = substr($font_color,1);
+		 	 $colorR = hexdec( substr( $font_color_no_hash, 0, 2 ) );
+			 $colorG = hexdec( substr( $font_color_no_hash, 2, 2 ) );
+			 $colorB = hexdec( substr( $font_color_no_hash, 4, 2 ) );
+			 
 			 echo 'body #page-header-bg .pinterest-share i, 
 			 body #page-header-bg .facebook-share i, 
 			 body #page-header-bg .linkedin-share i, 
@@ -572,16 +597,20 @@ if (!function_exists('nectar_page_specific_dynamic')) {
 		 	 body #page-header-bg .icon-salient-heart, 
 			 body #page-header-bg .icon-salient-heart-2 { 
 				 color: '. esc_attr($font_color) .'; 
-			 }';
+			 }
+			 #page-header-bg[data-post-hs="default_minimal"] .inner-wrap > a:not(:hover) {
+				 color: '. esc_attr($font_color) .'; 
+				 border-color: rgba('.$colorR.','.$colorG.','.$colorB.',0.4); 
+			 }
+			 .single #page-header-bg #single-below-header > span {
+				 border-color: rgba('.$colorR.','.$colorG.','.$colorB.',0.4); 
+			 }
+			 ';
 			 
 		 	 echo 'body .section-title #portfolio-nav a:hover i { 
 				 opacity: 0.75;
 			 }';
 
-		 	 $font_color_no_hash = substr($font_color,1);
-		 	 $colorR = hexdec( substr( $font_color_no_hash, 0, 2 ) );
-			 $colorG = hexdec( substr( $font_color_no_hash, 2, 2 ) );
-			 $colorB = hexdec( substr( $font_color_no_hash, 4, 2 ) );
 		 	 echo '.single #page-header-bg .blog-title #single-meta .nectar-social.hover > div a, 
 			 .single #page-header-bg .blog-title #single-meta > div a, 
 			 .single #page-header-bg .blog-title #single-meta ul .n-shortcode a,
@@ -1210,7 +1239,17 @@ if (!function_exists('nectar_page_specific_dynamic')) {
 			if( (!empty($nectar_options['transparent-header']) && $nectar_options['transparent-header'] === '1' && $activate_transparency) ) {
 
 				 $nectar_mobile_padding = ( $theme_skin === 'material' ) ? 10 : 25;
-
+				 
+				 // OCM background specific.
+				 $full_width_header = (!empty($nectar_options['header-fullwidth']) && $nectar_options['header-fullwidth'] === '1') ? true : false;
+				 $ocm_menu_btn_color_non_compatible = ( 'ascend' === $theme_skin && true === $full_width_header ) ? true : false;
+				 
+				 if( true !== $ocm_menu_btn_color_non_compatible &&
+			   isset($nectar_options['header-slide-out-widget-area-menu-btn-bg-color']) && 
+			   !empty( $nectar_options['header-slide-out-widget-area-menu-btn-bg-color'] ) ) {
+			     $nectar_mobile_padding = ( $theme_skin === 'material' ) ? 30 : 45;
+				 }
+				 
 				 echo '
 				 @media only screen and (max-width: 999px) {
 					 
@@ -1315,6 +1354,22 @@ if (!function_exists('nectar_page_specific_dynamic')) {
  		}
 		
 		
+		
+		// Page full screen rows.
+		global $post;
+		$page_full_screen_rows_bg_color  = (isset($post->ID)) ? get_post_meta($post->ID, '_nectar_full_screen_rows_overall_bg_color', true) : '#333333';
+		$page_full_screen_rows_animation = (isset($post->ID)) ? get_post_meta($post->ID, '_nectar_full_screen_rows_animation', true) : '';
+		
+		echo '#nectar_fullscreen_rows { 
+			background-color: '.esc_attr($page_full_screen_rows_bg_color).'; 
+		}';
+		
+		if( 'parallax' === $page_full_screen_rows_animation ) {
+			echo '#nectar_fullscreen_rows > .wpb_row .full-page-inner-wrap { 
+				background-color: '.esc_attr($page_full_screen_rows_bg_color).'; 
+			}';
+		}
+		
 
 		global $woocommerce;
 		// WooCommerce items.
@@ -1408,8 +1463,28 @@ if (!function_exists('nectar_page_specific_dynamic')) {
 				}
 			}
 		}
-
-
+		
+		
+		// Page builder element styles.
+		$portfolio_content = ( $post && isset($post->ID) ) ? get_post_meta( $post->ID, '_nectar_portfolio_extra_content', true ) : false;
+		
+		// Portfolio.
+		if( is_singular( 'portfolio' ) && $portfolio_content ) {
+			
+			echo NectarElDynamicStyles::generate_styles($portfolio_content);
+			
+		} 
+		// Everything else.
+		else if( $post && isset($post->post_content) && !is_archive() && !is_home() ) {
+			
+		  echo NectarElDynamicStyles::generate_styles($post->post_content);
+			
+		}
+		
+		
+		
+		
+		
 		$dynamic_css = ob_get_contents();
 		ob_end_clean();
 
@@ -1420,6 +1495,277 @@ if (!function_exists('nectar_page_specific_dynamic')) {
 
 
 
+/**
+* Determines the unit type classname px or percent
+*
+* @since 11.1
+*/
+if( !function_exists('nectar_el_custom_color_bool') ) {
+	
+	function nectar_el_custom_color_bool($param, $atts) {
+		
+		if(isset($atts[$param.'_type']) && 
+			!empty($atts[$param.'_type']) && 
+			'custom' === $atts[$param.'_type'] &&
+			isset($atts[$param.'_custom']) && 
+			!empty($atts[$param.'_custom']) ) {
+			return true;
+		}
+		return false;
+		
+	}
+	
+}
+
+
+/**
+* Determines the unit type classname px or percent
+*
+* @since 11.1
+*/
+if( !function_exists('nectar_el_padding_unit_type_class') ) {
+	
+	function nectar_el_percent_unit_type_class($str) {
+		
+		if( false !== strpos($str,'%') ) {
+			return str_replace('%','pct', $str);
+		} else if( false !== strpos($str,'vw') ) {
+			return intval($str) . 'vw';
+		} else if( false !== strpos($str,'vh') ) {
+			return intval($str) . 'vh';
+		} else if( 'auto' === $str ) {
+			return 'auto';
+		}
+		
+		return intval($str) . 'px';
+	}
+	
+ }
+
+/**
+ * Generate dynamic classnames for dynamic page builder element styles.
+ *
+ * @since 11.1
+ */
+ if( !function_exists('nectar_el_dynamic_classnames') ) {
+	 
+	 function nectar_el_dynamic_classnames( $el, $atts ) {
+		 
+		 $classnames = '';
+
+		 if( 'row' === $el || 'inner_row' === $el ) {
+			 
+			 $row_params = array('top_padding','bottom_padding','translate_x','translate_y','right_padding','left_padding');
+			 
+			 // inner specifc.
+			 if( 'inner_row' === $el ) { 
+				 if( isset($atts['min_width_desktop']) && strlen($atts['min_width_desktop']) > 0 ) {
+				   $classnames .= 'min_width_desktop_'. nectar_el_percent_unit_type_class(esc_attr($atts['min_width_desktop'])) . ' ';
+			   }
+				 $row_params[] = 'min_width';
+		   }
+			 
+			 // desktop specific.
+			if( isset($atts['right_padding_desktop']) && strlen($atts['right_padding_desktop']) > 0 ) {
+				$classnames .= 'right_padding_'. nectar_el_percent_unit_type_class(esc_attr($atts['right_padding_desktop'])) . ' ';
+			}
+			if( isset($atts['left_padding_desktop']) && strlen($atts['left_padding_desktop']) > 0 ) {
+				$classnames .= 'left_padding_'. nectar_el_percent_unit_type_class(esc_attr($atts['left_padding_desktop'])) . ' ';
+			}
+			
+			// column dir.
+			if( isset($atts['column_direction']) && 'reverse' === $atts['column_direction'] ) {
+				$classnames .= 'reverse_columns_desktop ';
+			}
+			if( isset($atts['column_direction_tablet']) && 'row_reverse' === $atts['column_direction_tablet'] ) {
+				$classnames .= 'reverse_columns_row_tablet ';
+			} else if( isset($atts['column_direction_tablet']) && 'column_reverse' === $atts['column_direction_tablet'] ) {
+				$classnames .= 'reverse_columns_column_tablet ';
+			}
+			
+			if( isset($atts['column_direction_phone']) && 'row_reverse' === $atts['column_direction_phone'] ) {
+				$classnames .= 'reverse_columns_row_phone ';
+			} else if( isset($atts['column_direction_phone']) && 'column_reverse' === $atts['column_direction_phone'] ) {
+				$classnames .= 'reverse_columns_column_phone ';
+			}
+			
+			 // loop.
+			 foreach( $row_params as $param ) {
+ 
+				 if( isset($atts[$param.'_tablet']) && strlen($atts[$param.'_tablet']) > 0 ) {
+					 $classnames .= $param.'_tablet_'. nectar_el_percent_unit_type_class(esc_attr($atts[$param.'_tablet'])) . ' ';
+				 }
+				 if( isset($atts[$param.'_phone']) && strlen($atts[$param.'_phone']) > 0 ) {
+					 $classnames .= $param.'_phone_'. nectar_el_percent_unit_type_class(esc_attr($atts[$param.'_phone'])) . ' ';
+				 }
+				 
+			 }
+			 
+			 
+		 } else if ( 'column' === $el || 'inner_column' === $el ) {
+			 
+			 $column_params = array('top_margin','bottom_margin','right_margin','left_margin','column_padding');
+			 
+			 // parent specifc.
+			 if( 'column' === $el ) { 
+				 if( isset($atts['max_width_desktop']) && strlen($atts['max_width_desktop']) > 0 ) {
+				   $classnames .= 'max_width_desktop_'. nectar_el_percent_unit_type_class(esc_attr($atts['max_width_desktop'])) . ' ';
+			   }
+				 $column_params[] = 'max_width';
+		   }
+			 
+			 // desktop specific.
+			 if( isset($atts['right_margin']) && strlen($atts['right_margin']) > 0 ) {
+				 $classnames .= 'right_margin_'. nectar_el_percent_unit_type_class(esc_attr($atts['right_margin'])) . ' ';
+			 }
+			 if( isset($atts['left_margin']) && strlen($atts['left_margin']) > 0 ) {
+				 $classnames .= 'left_margin_'. nectar_el_percent_unit_type_class(esc_attr($atts['left_margin'])) . ' ';
+			 }
+			 
+			 // loop.
+			 foreach( $column_params as $param ) {
+				 
+				 if( isset($atts[$param.'_tablet']) && strlen($atts[$param.'_tablet']) > 0 ) {
+					 
+					 if('column_padding' === $param) {
+						 $classnames .= esc_attr($atts[$param.'_tablet']) . '_tablet ';
+					 } else {
+						 $classnames .= $param.'_tablet_'. nectar_el_percent_unit_type_class(esc_attr($atts[$param.'_tablet'])) . ' ';
+					 }
+					 
+				 }
+				 if( isset($atts[$param.'_phone']) && strlen($atts[$param.'_phone']) > 0 ) {
+					 
+					 if('column_padding' === $param) {
+						$classnames .= esc_attr($atts[$param.'_phone']) . '_phone ';
+					 } else {
+						 $classnames .= $param.'_phone_'. nectar_el_percent_unit_type_class(esc_attr($atts[$param.'_phone'])) . ' ';
+					 }
+					 
+				 }
+				 
+			 }
+			 
+		 }
+		 
+		 else if( 'nectar_icon' === $el ) {
+			 
+			 // Custom color.
+			 if( isset($atts['icon_color_custom']) && true === nectar_el_custom_color_bool('icon_color', $atts) ) {
+				 $color = ltrim($atts['icon_color_custom'],'#');
+				 $classnames .= 'icon_color_custom_'. esc_attr($color) . ' ';
+			 }
+			 
+		 }
+		 
+		 else if( 'nectar_cta' === $el ) {
+			 
+			 // Custom color.
+			 if( isset($atts['button_color_hover']) && !empty($atts['button_color_hover']) ) {
+				 $color = ltrim($atts['button_color_hover'],'#');
+				 $classnames .= 'hover_color_'. esc_attr($color) . ' ';
+			 }
+			 
+		 }
+		 
+		 else if( 'nectar_highlighted_text' === $el || 'nectar_scrolling_text' === $el ) {
+			 
+			 // Custom size.
+			 if( isset($atts['custom_font_size']) ) {
+				 $classnames .= 'font_size_'. esc_attr($atts['custom_font_size']) . ' ';
+			 }
+			 if( isset($atts['custom_font_size_mobile']) ) {
+				 $classnames .= 'font_size_mobile_'. esc_attr($atts['custom_font_size_mobile']) . ' ';
+			 }
+		 }
+		 
+		 else if( 'divider' === $el ) {
+			 
+			 // Custom height.
+			 if( isset($atts['custom_height_tablet']) && strlen($atts['custom_height_tablet']) > 0 ) {
+				 $classnames .= 'height_tablet_'. nectar_el_percent_unit_type_class(esc_attr($atts['custom_height_tablet'])) . ' ';
+			 }
+			 if( isset($atts['custom_height_phone']) && strlen($atts['custom_height_phone']) > 0 ) {
+				 $classnames .= 'height_phone_'. nectar_el_percent_unit_type_class(esc_attr($atts['custom_height_phone'])) . ' ';
+			 }
+			 
+		 }
+		 
+		 else if( 'nectar_post_grid' === $el ) {
+			 // Custom font size.
+			 if( isset($atts['custom_font_size']) ) {
+				 $classnames .= 'font_size_'. esc_attr($atts['custom_font_size']) . ' ';
+			 }
+			 // Hover color.
+			 if( isset($atts['card_bg_color_hover']) ) {
+				 $color = ltrim($atts['card_bg_color_hover'],'#');
+				 $classnames .= 'card_hover_color_'. esc_attr($color) . ' ';
+			 }
+			 
+		 } 
+		 
+		 else if( 'nectar_fancy_box' === $el ) {
+			 
+			 // Min height.
+			 if( isset($atts['min_height_tablet']) && strlen($atts['min_height_tablet']) > 0 ) {
+				 $classnames .= 'min_height_tablet_'. nectar_el_percent_unit_type_class(esc_attr($atts['min_height_tablet'])) . ' ';
+			 }
+			 if( isset($atts['min_height_phone']) && strlen($atts['min_height_phone']) > 0 ) {
+				 $classnames .= 'min_height_phone_'. nectar_el_percent_unit_type_class(esc_attr($atts['min_height_phone'])) . ' ';
+			 }
+			 
+			 // Parallax hover.
+			 if( isset($atts['parallax_hover_box_overlay']) && !empty($atts['parallax_hover_box_overlay']) ) {
+				 
+				 $color = ltrim($atts['parallax_hover_box_overlay'],'#');
+				 
+				 $classnames .= 'overlay_'. esc_attr($color) . ' ';
+			 }
+			 // Hover description.
+			 if( isset($atts['hover_color_custom']) && !empty($atts['hover_color_custom']) ) {
+				 
+				 $color = ltrim($atts['hover_color_custom'],'#');
+				 
+				 $classnames .= 'hover_color_'. esc_attr($color) . ' ';
+			 }
+			 
+			 // Hover description.
+			 if( isset($atts['color_custom']) && !empty($atts['color_custom']) ) {
+				 
+				 $color = ltrim($atts['color_custom'],'#');
+				 
+				 $classnames .= 'box_color_'. esc_attr($color) . ' ';
+			 }
+			 
+		 } 
+		 
+		 else if ( 'image_with_animation' === $el ) {
+			 
+			 $image_params = array('margin_top','margin_right','margin_bottom','margin_left');
+			 
+			 foreach( $image_params as $param ) {
+ 
+				 if( isset($atts[$param.'_tablet']) && strlen($atts[$param.'_tablet']) > 0 ) {
+					 $classnames .= $param.'_tablet_'. nectar_el_percent_unit_type_class(esc_attr($atts[$param.'_tablet'])) . ' ';
+				 }
+				 if( isset($atts[$param.'_phone']) && strlen($atts[$param.'_phone']) > 0 ) {
+					 $classnames .= $param.'_phone_'. nectar_el_percent_unit_type_class(esc_attr($atts[$param.'_phone'])) . ' ';
+				 }
+				 
+			 }
+			 
+		 }
+		 
+		 if( !empty($classnames) ) {
+			 return ' ' . $classnames;
+		 }
+		 return $classnames;
+		 
+	 }
+	 
+ }
+ 
+ 
 
 
 /**

@@ -48,6 +48,7 @@ if ( !class_exists( 'ReduxFramework_wbc_importer' ) ) {
                 $this->extension_url = site_url( str_replace( trailingslashit( str_replace( '\\', '/', ABSPATH ) ), '', $this->extension_dir ) );
             }
         }
+        
 
         /**
          * Field Render Function.
@@ -186,7 +187,7 @@ if ( !class_exists( 'ReduxFramework_wbc_importer' ) ) {
             echo '<div class="theme-browser"><div class="themes">';
 
             if ( !empty( $this->field['wbc_demo_imports'] ) ) {
-
+                
                 foreach ( $this->field['wbc_demo_imports'] as $section => $imports ) {
 
                     if ( empty( $imports ) ) {
@@ -202,7 +203,7 @@ if ( !class_exists( 'ReduxFramework_wbc_importer' ) ) {
                         $extra_class = 'active imported';
                         $import_message = esc_html__( 'Demo Imported', 'salient-demo-importer' );
                     }
-                    echo '<div class="wrap-importer theme '.$extra_class.'" data-demo-id="'.esc_attr( $section ).'"  data-nonce="' . $nonce . '" id="' . $this->field['id'] . '-custom_imports">';
+                    echo '<div class="wrap-importer theme '.$extra_class.'" data-order="'.esc_attr($imports['order']).'" data-demo-id="'.esc_attr( $section ).'"  data-nonce="' . $nonce . '" id="' . $this->field['id'] . '-custom_imports">';
 
                     echo '<div class="theme-screenshot">';
 

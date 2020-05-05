@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $cascading_attrs = shortcode_atts(array(
   "image_1_url" => '',
   "image_1_bg_color" => "",
@@ -15,6 +20,7 @@ $cascading_attrs = shortcode_atts(array(
   "image_1_padding" => 'auto',
   "image_1_max_width_desktop" => '100%',
   "image_1_max_width_mobile" => '100%',
+	"image_1_image_width_mobile" => "default",
   "image_2_url" => '',
   "image_2_bg_color" => "",
   "image_2_offset_x_sign" => "+",
@@ -29,6 +35,7 @@ $cascading_attrs = shortcode_atts(array(
   "image_2_padding" => 'auto',
   "image_2_max_width_desktop" => '100%',
   "image_2_max_width_mobile" => '100%',
+	"image_2_image_width_mobile" => "default",
   "image_3_url" => '',
   "image_3_bg_color" => "",
   "image_3_offset_x_sign" => "+",
@@ -43,6 +50,7 @@ $cascading_attrs = shortcode_atts(array(
   "image_3_padding" => 'auto',
   "image_3_max_width_desktop" => '100%',
   "image_3_max_width_mobile" => '100%',
+	"image_3_image_width_mobile" => "default",
   "image_4_url" => '',
   "image_4_bg_color" => "",
   "image_4_offset_x_sign" => "+",
@@ -57,15 +65,19 @@ $cascading_attrs = shortcode_atts(array(
   "image_4_padding" => 'auto',
   "image_4_max_width_desktop" => '100%',
   "image_4_max_width_mobile" => '100%',
+	"image_4_image_width_mobile" => "default",
   "animation_timing" => '175',
   "border_radius" => 'none',
   "image_loading" => 'default',
   "parallax_scrolling" => '',
   "parallax_scrolling_intensity" => 'subtle',
+	'layer_1_parallax_scrolling' => 'no'
 ),
 $atts);
 
-echo '<div class="nectar_cascading_images" data-border-radius="'.esc_attr($cascading_attrs['border_radius']).'" data-parallax="'.esc_attr($cascading_attrs['parallax_scrolling']).'" data-parallax-intensity="'.esc_attr($cascading_attrs['parallax_scrolling_intensity']).'" data-animation-timing="'.esc_attr($cascading_attrs['animation_timing']).'">';
+$layer_1_parallax_scrolling_attr = ( 'yes' === $cascading_attrs['parallax_scrolling'] && isset($cascading_attrs['layer_1_parallax_scrolling']) ) ? ' data-layer-1-parallax="'.esc_html($cascading_attrs['layer_1_parallax_scrolling']).'"' : '';
+
+echo '<div class="nectar_cascading_images" data-border-radius="'.esc_attr($cascading_attrs['border_radius']).'" data-parallax="'.esc_attr($cascading_attrs['parallax_scrolling']).'" data-parallax-intensity="'.esc_attr($cascading_attrs['parallax_scrolling_intensity']).'"'.$layer_1_parallax_scrolling_attr.' data-animation-timing="'.esc_attr($cascading_attrs['animation_timing']).'">';
 
 // Find largest transform val.
 $transform_arr = array(0);
@@ -159,18 +171,24 @@ for( $i = 1; $i < 5; $i++ ){
         $image_srcset_values = wp_get_attachment_image_srcset($cascading_attrs['image_'.$i.'_url'], 'full');
         if($image_srcset_values) {
           
-          if( true === $has_dimension_data && isset($cascading_attrs['image_loading']) && 'lazy-load' === $cascading_attrs['image_loading']) {
+          if( true === $has_dimension_data && isset($cascading_attrs['image_loading']) && NectarLazyImages::activate_lazy() && 'lazy-load' === $cascading_attrs['image_loading']) {
             $image_srcset = 'data-nectar-img-srcset="';
           } else {
             $image_srcset = 'srcset="';
           }
 
           $image_srcset .= $image_srcset_values;
-
+					
+					$mobile_image_vw = '100';
+					
+					if( isset( $cascading_attrs['image_'.$i.'_image_width_mobile'] ) && 'default' !== $cascading_attrs['image_'.$i.'_image_width_mobile'] ) {
+						$mobile_image_vw = $cascading_attrs['image_'.$i.'_image_width_mobile'];
+					}
+					
           if($transform_arr > 20) {
-            $image_srcset .= '" sizes="(min-width: 1000px) 45vw, 100vw"';
+            $image_srcset .= '" sizes="(min-width: 1000px) 45vw, '.esc_attr($mobile_image_vw).'vw"';
           } else {
-            $image_srcset .= '" sizes="(min-width: 1000px) 55vw, 100vw"';
+            $image_srcset .= '" sizes="(min-width: 1000px) 55vw, '.esc_attr($mobile_image_vw).'vw"';
           }
           
         }
@@ -205,7 +223,7 @@ for( $i = 1; $i < 5; $i++ ){
   if(!empty($image_url)) {
 
     // Lazy load.
-    if( true === $has_dimension_data && isset($cascading_attrs['image_loading']) && 'lazy-load' === $cascading_attrs['image_loading'] ) {
+    if( true === $has_dimension_data && isset($cascading_attrs['image_loading']) && NectarLazyImages::activate_lazy() && 'lazy-load' === $cascading_attrs['image_loading'] ) {
       $img_el = '<img data-nectar-img-src="'.$image_url.'" '.$image_srcset.' height="'.esc_attr($image_height).'" width="'.esc_attr($image_width).'" class="skip-lazy nectar-lazy" alt="'.esc_attr($image_alt).'" />';
     } else {
       $img_el = '<img src="'.$image_url.'" '.$image_srcset.' class="skip-lazy" alt="'.esc_attr($image_alt).'" />';

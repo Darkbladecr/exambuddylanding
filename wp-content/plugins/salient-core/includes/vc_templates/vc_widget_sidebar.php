@@ -1,4 +1,10 @@
 <?php
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $output = $el_position = $title = $width = $el_class = $sidebar_id = '';
 extract(shortcode_atts(array(
     'el_position' => '',

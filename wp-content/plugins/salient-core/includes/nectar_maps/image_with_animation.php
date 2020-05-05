@@ -20,13 +20,14 @@ return array(
 			"description" => esc_html__("Select image from media library.", "salient-core")
 		),
 		array(
-			"type" => "dropdown",
-			"heading" => esc_html__("Image Alignment", "salient-core"),
-			'save_always' => true,
-			"param_name" => "alignment",
-			"value" => array(esc_html__("Align left", "salient-core") => "", esc_html__("Align right", "salient-core") => "right", esc_html__("Align center", "salient-core") => "center"),
-			"description" => esc_html__("Select image alignment.", "salient-core")
-		),
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Animation", "salient-core" ),
+		 "param_name" => "group_header_1",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+	 
 		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("CSS Animation", "salient-core"),
@@ -40,6 +41,10 @@ return array(
 				esc_html__("Grow In", "salient-core") => "Grow In",
 				esc_html__("Flip In Horizontal", "salient-core") => "Flip In",
 				esc_html__("Flip In Vertical", "salient-core") => "flip-in-vertical",
+				esc_html__("Reveal Rotate From Top", "salient-core") => "ro-reveal-from-top",
+				esc_html__("Reveal Rotate From Bottom", "salient-core") => "ro-reveal-from-bottom",
+				esc_html__("Reveal Rotate From Left", "salient-core") => "ro-reveal-from-left",
+				esc_html__("Reveal Rotate From Right", "salient-core") => "ro-reveal-from-right",
 				esc_html__("None", "salient-core") => "None"
 			),
 			'save_always' => true,
@@ -51,27 +56,7 @@ return array(
 			"param_name" => "delay",
 			"description" => esc_html__("Enter delay (in milliseconds) if needed e.g. 150. This parameter comes in handy when creating the animate in \"one by one\" effect in horizontal columns.", "salient-core")
 		),
-		array(
-			"type" => 'checkbox',
-			"heading" => esc_html__("Link to large image?", "salient-core"),
-			"param_name" => "img_link_large",
-			"description" => esc_html__("If selected, image will be linked to the bigger image.", "salient-core"),
-			"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
-		),
-		array(
-			"type" => "textfield",
-			"heading" => esc_html__("Image link", "salient-core"),
-			"param_name" => "img_link",
-			"description" => esc_html__("Enter url if you want this image to have link.", "salient-core"),
-			"dependency" => Array('element' => "img_link_large", 'is_empty' => true)
-		),
-		array(
-			"type" => "dropdown",
-			"heading" => esc_html__("Link Target", "salient-core"),
-			"param_name" => "img_link_target",
-			"value" => array(esc_html__("Same window", "salient-core") => "_self", esc_html__("New window", "salient-core") => "_blank"),
-			"dependency" => Array('element' => "img_link", 'not_empty' => true)
-		),
+		
 		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Hover Animation", "salient-core"),
@@ -95,17 +80,220 @@ return array(
 			"dependency" => Array('element' => "hover_animation", 'value' => 'color-overlay'),
 			"description" => ""
 		),
+		
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Spacing & Alignment", "salient-core" ),
+		 "param_name" => "group_header_3",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => '<span class="group-title">' . esc_html__("Margin", "salient-core") . "</span><span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+			"param_name" => "margin_top",
+			"placeholder" => esc_html__("Top",'salient-core'),
+			"edit_field_class" => "col-md-2 desktop image-margin-device-group constrain_group_1",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+			'param_name' => 'constrain_group_1', 
+			'description' => '',
+			"edit_field_class" => "desktop image-margin-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+			"param_name" => "margin_bottom",
+			"placeholder" => esc_html__("Bottom",'salient-core'),
+			"edit_field_class" => "col-md-2 desktop image-margin-device-group constrain_group_1",
+			"description" => ''
+		),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+			"param_name" => "margin_left",
+			"placeholder" => esc_html__("Left",'salient-core'),
+			"edit_field_class" => "col-md-2 col-md-2-last desktop image-margin-device-group constrain_group_2",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+			'param_name' => 'constrain_group_2', 
+			'description' => '',
+			"edit_field_class" => "desktop image-margin-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+			"param_name" => "margin_right",
+			"placeholder" => esc_html__("Right",'salient-core'),
+			"edit_field_class" => "col-md-2 desktop image-margin-device-group constrain_group_2",
+			"description" => ''
+		),
+		
+		
+		
+		array(
+			"type" => "nectar_numerical",
+			"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+			"param_name" => "margin_top_tablet",
+			"placeholder" => esc_html__("Top",'salient-core'),
+			"edit_field_class" => "col-md-2 col-md-2-first tablet image-margin-device-group constrain_group_3",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 3', 'salient-core' ),
+			'param_name' => 'constrain_group_3', 
+			'description' => '',
+			"edit_field_class" => "tablet image-margin-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Bottom",'salient-core'),
+			"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+			"param_name" => "margin_bottom_tablet",
+			"edit_field_class" => "col-md-2 tablet image-margin-device-group constrain_group_3",
+			"description" => ''
+		),
+		array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Left",'salient-core'),
+			"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+			"param_name" => "margin_left_tablet",
+			"edit_field_class" => "col-md-2 col-md-2-last tablet image-margin-device-group constrain_group_4",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 4', 'salient-core' ),
+			'param_name' => 'constrain_group_4', 
+			'description' => '',
+			"edit_field_class" => "tablet image-margin-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Right",'salient-core'),
+			"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+			"param_name" => "margin_right_tablet",
+			"edit_field_class" => "col-md-2 tablet image-margin-device-group constrain_group_4",
+			"description" => ''
+		),
+		
+	
+		array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Top",'salient-core'),
+			"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+			"param_name" => "margin_top_phone",
+			"edit_field_class" => "col-md-2 col-md-2-first phone image-margin-device-group constrain_group_5",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 5', 'salient-core' ),
+			'param_name' => 'constrain_group_5', 
+			'description' => '',
+			"edit_field_class" => "phone image-margin-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Bottom",'salient-core'),
+			"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+			"param_name" => "margin_bottom_phone",
+			"edit_field_class" => "col-md-2 phone image-margin-device-group constrain_group_5",
+			"description" => ''
+		),
+		array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Left",'salient-core'),
+			"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+			"param_name" => "margin_left_phone",
+			"edit_field_class" => "col-md-2 col-md-2-last phone image-margin-device-group constrain_group_",
+			"description" => ''
+		),
+		array(
+			'type' => 'checkbox',
+			'heading' => esc_html__( 'Constrain 6', 'salient-core' ),
+			'param_name' => 'constrain_group_6', 
+			'description' => '',
+			"edit_field_class" => "phone image-margin-device-group constrain-icon",
+			'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+		),
+		array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Right",'salient-core'),
+			"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+			"param_name" => "margin_right_phone",
+			"edit_field_class" => "col-md-2 phone image-margin-device-group constrain_group_",
+			"description" => ''
+		),
+		
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Image Alignment", "salient-core"),
+			'save_always' => true,
+			"param_name" => "alignment",
+			"value" => array(esc_html__("Align left", "salient-core") => "", esc_html__("Align right", "salient-core") => "right", esc_html__("Align center", "salient-core") => "center"),
+			"description" => esc_html__("Select image alignment.", "salient-core")
+		),
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Link", "salient-core" ),
+		 "param_name" => "group_header_2",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+		array(
+			"type" => 'checkbox',
+			"heading" => esc_html__("Link to large image?", "salient-core"),
+			"param_name" => "img_link_large",
+			"description" => esc_html__("If selected, image will be linked to the bigger image.", "salient-core"),
+			"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+		),
 		array(
 			"type" => "textfield",
-			"heading" => esc_html__("Extra class name", "salient-core"),
-			"param_name" => "el_class",
-			"description" => esc_html__("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "salient-core")
+			"heading" => esc_html__("Image link", "salient-core"),
+			"param_name" => "img_link",
+			"description" => esc_html__("Enter url if you want this image to have link.", "salient-core"),
+			"dependency" => Array('element' => "img_link_large", 'is_empty' => true)
 		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Link Target", "salient-core"),
+			"param_name" => "img_link_target",
+			"value" => array(esc_html__("Same window", "salient-core") => "_self", esc_html__("New window", "salient-core") => "_blank"),
+			"dependency" => Array('element' => "img_link_large", 'is_empty' => true)
+		),
+		
+		array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Shadow & Rounded Edges", "salient-core" ),
+		 "param_name" => "group_header_4",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ),
+
 		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Border Radius", "salient-core"),
 			'save_always' => true,
 			"param_name" => "border_radius",
+			"edit_field_class" => "col-md-6",
 			"value" => array(
 				esc_html__("0px", "salient-core") => "none",
 				esc_html__("3px", "salient-core") => "3px",
@@ -118,10 +306,22 @@ return array(
 				"type" => "dropdown",
 				"heading" => esc_html__("Box Shadow", "salient-core"),
 				'save_always' => true,
+				"edit_field_class" => "col-md-6 col-md-6-last",
 				"param_name" => "box_shadow",
 				"value" => array(esc_html__("None", "salient-core") => "none", esc_html__("Small Depth", "salient-core") => "small_depth", esc_html__("Medium Depth", "salient-core") => "medium_depth", esc_html__("Large Depth", "salient-core") => "large_depth", esc_html__("Very Large Depth", "salient-core") => "x_large_depth"),
-				"description" => esc_html__("Select your desired image box shadow", "salient-core")
+				"description" => '',
+				"dependency" => Array('element' => "animation", 'value' => array('None','Fade In','Fade In From Left','Fade In From Right','Fade In From Bottom','Grow In', 'Flip In', 'flip-in-vertical')),
 			),
+			
+			array(
+			 "type" => "nectar_group_header",
+			 "class" => "",
+			 "heading" => esc_html__("Advanced", "salient-core" ),
+			 "param_name" => "group_header_5",
+			 "edit_field_class" => "",
+			 "value" => ''
+		 ),
+		 
 			array(
 	      "type" => "dropdown",
 	      "class" => "",
@@ -174,33 +374,11 @@ return array(
 			),
 			array(
 				"type" => "textfield",
-				"heading" => esc_html__("Margin", "salient-core") . "<span>" . esc_html__("Top", "salient-core") . "</span>",
-				"param_name" => "margin_top",
-				"edit_field_class" => "col-md-2",
-				"description" => ''
+				"heading" => esc_html__("Extra class name", "salient-core"),
+				"param_name" => "el_class",
+				"description" => esc_html__("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "salient-core")
 			),
-			array(
-				"type" => "textfield",
-				"heading" => "<span>" . esc_html__("Right", "salient-core") . "</span>",
-				"param_name" => "margin_right",
-				"edit_field_class" => "col-md-2",
-				"description" => ''
-			),
-			array(
-				"type" => "textfield",
-				"heading" => "<span>" . esc_html__("Bottom", "salient-core") . "</span>",
-				"param_name" => "margin_bottom",
-				"edit_field_class" => "col-md-2",
-				"description" => ''
-			),
-			array(
-				"type" => "textfield",
-				"heading" => "<span>" . esc_html__("Left", "salient-core") . "</span>",
-				"param_name" => "margin_left",
-				"edit_field_class" => "col-md-2",
-				"description" => ''
-			)
-			
+
 		)
 	);
 	

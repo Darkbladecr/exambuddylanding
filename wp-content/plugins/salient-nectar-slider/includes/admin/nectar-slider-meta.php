@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_action('add_meta_boxes', 'nectar_metabox_nectar_slider');
 
 if( !function_exists('nectar_metabox_nectar_slider') ) {

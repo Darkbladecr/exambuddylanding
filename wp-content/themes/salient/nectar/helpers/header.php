@@ -4,7 +4,7 @@
  *
  * @package Salient WordPress Theme
  * @subpackage helpers
- * @version 10.5
+ * @version 11.5
  */
 
 // Exit if accessed directly
@@ -135,11 +135,12 @@ function nectar_get_header_variables() {
 		$lightbox_script = 'magnific'; 
 	}
 	
-	$button_styling       = ( ! empty( $nectar_options['button-styling'] ) ) ? $nectar_options['button-styling'] : 'default';
-	$form_style           = ( ! empty( $nectar_options['form-style'] ) ) ? $nectar_options['form-style'] : 'default';
-	$fancy_rcs            = ( ! empty( $nectar_options['form-fancy-select'] ) ) ? $nectar_options['form-fancy-select'] : 'default';
-	$footer_reveal        = ( ! empty( $nectar_options['footer-reveal'] ) ) ? $nectar_options['footer-reveal'] : 'false';
-	$footer_reveal_shadow = ( ! empty( $nectar_options['footer-reveal-shadow'] ) && $footer_reveal === '1' ) ? $nectar_options['footer-reveal-shadow'] : 'none';
+	$button_styling        = ( ! empty( $nectar_options['button-styling'] ) ) ? $nectar_options['button-styling'] : 'default';
+	$header_button_styling = ( isset($nectar_options['header-button-styling']) && ! empty( $nectar_options['header-button-styling'] ) ) ? $nectar_options['header-button-styling'] : 'default';
+	$form_style            = ( ! empty( $nectar_options['form-style'] ) ) ? $nectar_options['form-style'] : 'default';
+	$fancy_rcs             = ( ! empty( $nectar_options['form-fancy-select'] ) ) ? $nectar_options['form-fancy-select'] : 'default';
+	$footer_reveal         = ( ! empty( $nectar_options['footer-reveal'] ) ) ? $nectar_options['footer-reveal'] : 'false';
+	$footer_reveal_shadow  = ( ! empty( $nectar_options['footer-reveal-shadow'] ) && $footer_reveal === '1' ) ? $nectar_options['footer-reveal-shadow'] : 'none';
 
 	$has_main_menu     = ( has_nav_menu( 'top_nav' ) ) ? 'true' : 'false';
 	$animate_in_effect = ( ! empty( $nectar_options['header-animate-in-effect'] ) ) ? $nectar_options['header-animate-in-effect'] : 'none';
@@ -164,18 +165,32 @@ function nectar_get_header_variables() {
 		$full_width_header = 'true';
 	}
 	
-	$column_animation_easing   = ( ! empty( $nectar_options['column_animation_easing'] ) ) ? $nectar_options['column_animation_easing'] : 'linear';
-	$column_animation_duration = ( ! empty( $nectar_options['column_animation_timing'] ) ) ? $nectar_options['column_animation_timing'] : '650';
-	$prepend_top_nav_mobile    = ( ! empty( $nectar_options['header-slide-out-widget-area-top-nav-in-mobile'] ) && $user_set_side_widget_area === '1' ) ? $nectar_options['header-slide-out-widget-area-top-nav-in-mobile'] : 'false';
-	$smooth_scrolling          = '0';
-	$page_full_screen_rows 		 = ( isset( $post->ID ) ) ? get_post_meta( $post->ID, '_nectar_full_screen_rows', true ) : '';
-	$form_submit_style         = ( ! empty( $nectar_options['form-submit-btn-style'] ) ) ? $nectar_options['form-submit-btn-style'] : 'default';
-	$n_boxed_style             = ( ! empty( $nectar_options['boxed_layout'] ) && $nectar_options['boxed_layout'] === '1' && $header_format != 'left-header' ) ? true : false;
-	$n_remove_mobile_parallax  = ( ! empty( $nectar_options['disable-mobile-parallax'] ) && $nectar_options['disable-mobile-parallax'] === '1' ) ? true : false;
-	$n_remove_mobile_video_bgs = ( ! empty( $nectar_options['disable-mobile-video-bgs'] ) && $nectar_options['disable-mobile-video-bgs'] === '1' ) ? true : false;
-	$using_secondary           = ( ! empty( $nectar_options['header_layout'] ) && $header_format != 'left-header' ) ? $nectar_options['header_layout'] : ' ';
+	$column_animation_easing    = ( ! empty( $nectar_options['column_animation_easing'] ) ) ? $nectar_options['column_animation_easing'] : 'linear';
+	$column_animation_duration  = ( ! empty( $nectar_options['column_animation_timing'] ) ) ? $nectar_options['column_animation_timing'] : '650';
+	$prepend_top_nav_mobile     = ( ! empty( $nectar_options['header-slide-out-widget-area-top-nav-in-mobile'] ) && $user_set_side_widget_area === '1' ) ? $nectar_options['header-slide-out-widget-area-top-nav-in-mobile'] : 'false';
+	$smooth_scrolling           = '0';
+	$page_full_screen_rows 		  = ( isset( $post->ID ) ) ? get_post_meta( $post->ID, '_nectar_full_screen_rows', true ) : '';
+	$form_submit_style          = ( ! empty( $nectar_options['form-submit-btn-style'] ) ) ? $nectar_options['form-submit-btn-style'] : 'default';
+	$n_boxed_style              = ( ! empty( $nectar_options['boxed_layout'] ) && $nectar_options['boxed_layout'] === '1' && $header_format != 'left-header' ) ? true : false;
+	$n_remove_mobile_parallax   = ( ! empty( $nectar_options['disable-mobile-parallax'] ) && $nectar_options['disable-mobile-parallax'] === '1' ) ? true : false;
+	$n_remove_mobile_video_bgs  = ( ! empty( $nectar_options['disable-mobile-video-bgs'] ) && $nectar_options['disable-mobile-video-bgs'] === '1' ) ? true : false;
+	$n_mobile_animations        = ( ! empty( $nectar_options['column_animation_mobile'] ) && $nectar_options['column_animation_mobile'] === 'enable' ) ? '1' : '0';
+	$using_secondary            = ( ! empty( $nectar_options['header_layout'] ) && $header_format != 'left-header' ) ? $nectar_options['header_layout'] : ' ';
+	
+	$ocm_menu_btn_bg_color = 'false';
+	
+	if( isset($nectar_options['header-slide-out-widget-area-menu-btn-bg-color']) && 
+  !empty( $nectar_options['header-slide-out-widget-area-menu-btn-bg-color'] ) ) {
+		
+		// Ascend full width does not support custom OCM coloring.
+		$ocm_menu_btn_color_non_compatible = ( 'ascend' === $theme_skin && 'true' === $full_width_header ) ? true : false;
+		
+		if( false === $ocm_menu_btn_color_non_compatible ) {
+			$ocm_menu_btn_bg_color = 'true';
+		}
 
-
+  } 
+	
 	// using pr
 	$using_pr_menu = 'false';
 	if ( $header_format === 'menu-left-aligned' || $header_format === 'centered-menu' || $header_format === 'centered-logo-between-menu' ) {
@@ -203,6 +218,7 @@ function nectar_get_header_variables() {
 		'dropdown_style'                   => $dropdown_style,
 		'n_remove_mobile_video_bgs'        => $n_remove_mobile_video_bgs,
 		'n_remove_mobile_parallax'         => $n_remove_mobile_parallax,
+		'n_mobile_animations'              => $n_mobile_animations,
 		'n_boxed_style'                    => $n_boxed_style,
 		'form_submit_style'                => $form_submit_style,
 		'smooth_scrolling'                 => $smooth_scrolling,
@@ -212,6 +228,7 @@ function nectar_get_header_variables() {
 		'full_width_header'                => $full_width_header,
 		'side_widget_class'                => $side_widget_class,
 		'side_widget_area'                 => $side_widget_area,
+		'ocm_menu_btn_color'               => $ocm_menu_btn_bg_color,
 		'user_set_side_widget_area'        => $user_set_side_widget_area,
 		'user_set_bg'                      => $user_set_bg,
 		'animate_in_effect'                => $animate_in_effect,
@@ -221,6 +238,7 @@ function nectar_get_header_variables() {
 		'fancy_rcs'                        => $fancy_rcs,
 		'form_style'                       => $form_style,
 		'button_styling'                   => $button_styling,
+		'header_button_styling'            => $header_button_styling,
 		'lightbox_script'                  => $lightbox_script,
 		'header_resize'                    => $header_resize,
 		'body_border'                      => $body_border,
@@ -377,6 +395,7 @@ function nectar_body_attributes() {
 
 	echo 'data-remove-m-parallax="' . esc_attr( $n_remove_mobile_parallax ) . '" ';
 	echo 'data-remove-m-video-bgs="' . esc_attr( $n_remove_mobile_video_bgs ) . '" ';
+	echo 'data-m-animate="' . esc_attr( $n_mobile_animations ) . '" ';
 	echo 'data-force-header-trans-color="' . esc_attr( $nectar_transparency_color_forced ) . '" ';
 	echo 'data-smooth-scrolling="0" ';
 	echo 'data-permanent-transparent="' . esc_attr( $perm_trans ) . '" ';
@@ -401,6 +420,7 @@ function nectar_header_nav_attributes() {
 
 	echo 'data-has-menu="' . esc_attr( $has_main_menu ) . '" ';
 	echo 'data-has-buttons="' . esc_attr( $using_header_buttons ) . '" ';
+	echo 'data-header-button_style="' . esc_attr( $header_button_styling ) . '" ';
 	echo 'data-using-pr-menu="' . esc_attr( $using_pr_menu ) . '" ';
 	echo 'data-mobile-fixed="' . esc_attr( $mobile_fixed ) . '" ';
 	echo 'data-ptnm="' . esc_attr( $prepend_top_nav_mobile ) . '" ';
@@ -765,7 +785,7 @@ if ( ! function_exists( 'nectar_header_social_icons' ) ) {
 			'dribbble'      => 'fa fa-dribbble',
 			'rss'           => 'fa fa-rss',
 			'github'        => 'fa fa-github-alt',
-			'google-plus'   => 'fa fa-google-plus',
+			'google-plus'   => 'fa fa-google',
 			'instagram'     => 'fa fa-instagram',
 			'stackexchange' => 'fa fa-stackexchange',
 			'soundcloud'    => 'fa fa-soundcloud',
@@ -786,6 +806,7 @@ if ( ! function_exists( 'nectar_header_social_icons' ) ) {
 			'artstation'    => 'icon-salient-artstation',
 			'discord'       => 'icon-salient-discord',
 			'whatsapp'       => 'fa fa-whatsapp',
+			'messenger'       => 'icon-salient-facebook-messenger',
 			'phone'         => 'fa fa-phone',
 			'email'         => 'fa fa-envelope',
 		);
@@ -876,6 +897,7 @@ if ( ! function_exists( 'nectar_ocm_add_social' ) ) {
 			'artstation-url', 
 			'discord-url', 
 			'whatsapp-url',
+			'messenger-url',
 			'phone-url', 
 			'email-url' 
 		);
@@ -891,7 +913,7 @@ if ( ! function_exists( 'nectar_ocm_add_social' ) ) {
 			'fa fa-rss', 
 			'fa fa-github-alt', 
 			'fa fa-behance', 
-			'fa fa-google-plus', 
+			'fa fa-google', 
 			'fa fa-instagram', 
 			'fa fa-stackexchange', 
 			'fa fa-soundcloud', 
@@ -911,6 +933,7 @@ if ( ! function_exists( 'nectar_ocm_add_social' ) ) {
 			'icon-salient-artstation', 
 			'icon-salient-discord', 
 			'fa fa-whatsapp', 
+			'icon-salient-facebook-messenger', 
 			'fa fa-phone', 
 			'fa fa-envelope' );
 		
@@ -947,6 +970,43 @@ if ( ! function_exists( 'nectar_header_button_items' ) ) {
 		$user_account_btn     = ( ! empty( $nectar_options['header-account-button'] ) && $nectar_options['header-account-button'] === '1' ) ? 'true' : 'false';
 		$user_account_btn_url = ( ! empty( $nectar_options['header-account-button-url'] ) ) ? $nectar_options['header-account-button-url'] : '';
 		$header_format        = ( ! empty( $nectar_options['header_format'] ) ) ? $nectar_options['header_format'] : 'default';
+		$full_width_header    = ( ! empty( $nectar_options['header-fullwidth'] ) && $nectar_options['header-fullwidth'] === '1' ) ? 'true' : 'false';
+		$side_widget_area     = ( ! empty( $nectar_options['header-slide-out-widget-area'] ) && $header_format != 'left-header' ) ? $nectar_options['header-slide-out-widget-area'] : 'off';
+		
+		$user_set_side_widget_area = $side_widget_area;
+		
+		// Determine is the header is full width.
+		//// Slide out from right hover forces full width.
+		if ( $header_format === 'centered-menu-under-logo' ) {
+			if ( $side_widget_class === 'slide-out-from-right-hover' && $user_set_side_widget_area === '1' ) {
+				$side_widget_class = 'slide-out-from-right';
+			}
+			$full_width_header = 'false';
+		}
+		if ( $side_widget_class === 'slide-out-from-right-hover' && $user_set_side_widget_area === '1' ) {
+			$full_width_header = 'true';
+		}
+		
+		// Determine the current theme skin.
+		$theme_skin = ( ! empty( $nectar_options['theme-skin'] ) ) ? $nectar_options['theme-skin'] : 'original';
+		if ( $header_format === 'centered-menu-bottom-bar' ) {
+			$theme_skin = 'material'; 
+		}
+		
+		// Custom OCM coloring.
+		$ocm_menu_btn_bg_color = 'false';
+		
+		if( isset($nectar_options['header-slide-out-widget-area-menu-btn-bg-color']) && 
+	  !empty( $nectar_options['header-slide-out-widget-area-menu-btn-bg-color'] ) ) {
+			
+			//// Ascend full width does not support custom OCM coloring.
+			$ocm_menu_btn_color_non_compatible = ( 'ascend' === $theme_skin && 'true' === $full_width_header ) ? true : false;
+			
+			if( false === $ocm_menu_btn_color_non_compatible ) {
+				$ocm_menu_btn_bg_color = 'true';
+			}
+			
+	  } 
 		
 		$menu_label = '';
 		$menu_label_class = '';
@@ -978,7 +1038,7 @@ if ( ! function_exists( 'nectar_header_button_items' ) ) {
 		}
 
 		if ( $side_widget_area === '1' && $side_widget_class !== 'simple' ) {
-			echo '<li class="slide-out-widget-area-toggle" data-icon-animation="simple-transform">';
+			echo '<li class="slide-out-widget-area-toggle" data-icon-animation="simple-transform" data-custom-color="'.esc_attr($ocm_menu_btn_bg_color) .'">';
 				echo '<div> <a href="#sidewidgetarea" aria-label="'. esc_attr__('Navigation Menu', 'salient') .'" aria-expanded="false" class="closed'.$menu_label_class.'"> '.$menu_label.'<span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span> </a> </div>';
 			echo '</li>';
 		}

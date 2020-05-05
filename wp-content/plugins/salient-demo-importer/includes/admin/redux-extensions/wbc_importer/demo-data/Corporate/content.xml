@@ -64,6 +64,414 @@
 
 	<generator>https://wordpress.org/?v=4.4.1</generator>
 
+
+ 
+	<item>
+ 		<title>anibal-porras-WJZl-n3pI3Y-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/anibal-porras-wjzl-n3pi3y-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:26 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/anibal-porras-WJZl-n3pI3Y-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6605</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:26]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:26]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[anibal-porras-wjzl-n3pi3y-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/anibal-porras-WJZl-n3pI3Y-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/anibal-porras-WJZl-n3pI3Y-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:900;s:6:"height";i:600;s:4:"file";s:46:"2020/03/anibal-porras-WJZl-n3pI3Y-unsplash.jpg";s:5:"sizes";a:14:{s:9:"thumbnail";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-900x500.jpg";s:5:"width";i:900;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-500x600.jpg";s:5:"width";i:500;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:46:"anibal-porras-WJZl-n3pI3Y-unsplash-800x600.jpg";s:5:"width";i:800;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>brooke-cagle-g1Kr4Ozfoac-unsplash (3)</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/brooke-cagle-g1kr4ozfoac-unsplash-3/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:27 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/brooke-cagle-g1Kr4Ozfoac-unsplash-3.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6606</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:27]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:27]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[brooke-cagle-g1kr4ozfoac-unsplash-3]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/brooke-cagle-g1Kr4Ozfoac-unsplash-3.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/brooke-cagle-g1Kr4Ozfoac-unsplash-3.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:900;s:6:"height";i:600;s:4:"file";s:47:"2020/03/brooke-cagle-g1Kr4Ozfoac-unsplash-3.jpg";s:5:"sizes";a:14:{s:9:"thumbnail";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-900x500.jpg";s:5:"width";i:900;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-500x600.jpg";s:5:"width";i:500;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:47:"brooke-cagle-g1Kr4Ozfoac-unsplash-3-800x600.jpg";s:5:"width";i:800;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>eberhard-grossgasteiger-5P91SF0zNsI-unsplash (1)</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/eberhard-grossgasteiger-5p91sf0znsi-unsplash-1/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:28 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6607</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:28]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:28]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[eberhard-grossgasteiger-5p91sf0znsi-unsplash-1]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1600;s:6:"height";i:926;s:4:"file";s:58:"2020/03/eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1.jpg";s:5:"sizes";a:18:{s:9:"thumbnail";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-300x174.jpg";s:5:"width";i:300;s:6:"height";i:174;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-768x444.jpg";s:5:"width";i:768;s:6:"height";i:444;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:59:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-1024x593.jpg";s:5:"width";i:1024;s:6:"height";i:593;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-900x604.jpg";s:5:"width";i:900;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:59:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-500x926.jpg";s:5:"width";i:500;s:6:"height";i:926;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:59:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-1000x926.jpg";s:5:"width";i:1000;s:6:"height";i:926;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:59:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-1600x770.jpg";s:5:"width";i:1600;s:6:"height";i:770;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:58:"eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>evgeni-evgeniev-LPKk3wtkC-g-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/evgeni-evgeniev-lpkk3wtkc-g-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:31 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/evgeni-evgeniev-LPKk3wtkC-g-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6608</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:31]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:31]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[evgeni-evgeniev-lpkk3wtkc-g-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/evgeni-evgeniev-LPKk3wtkC-g-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/evgeni-evgeniev-LPKk3wtkC-g-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1600;s:6:"height";i:1254;s:4:"file";s:48:"2020/03/evgeni-evgeniev-LPKk3wtkC-g-unsplash.jpg";s:5:"sizes";a:18:{s:9:"thumbnail";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-300x235.jpg";s:5:"width";i:300;s:6:"height";i:235;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-768x602.jpg";s:5:"width";i:768;s:6:"height";i:602;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:49:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-1024x803.jpg";s:5:"width";i:1024;s:6:"height";i:803;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-900x604.jpg";s:5:"width";i:900;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:49:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:49:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-500x1000.jpg";s:5:"width";i:500;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:50:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-1000x1000.jpg";s:5:"width";i:1000;s:6:"height";i:1000;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:49:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-1600x770.jpg";s:5:"width";i:1600;s:6:"height";i:770;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:48:"evgeni-evgeniev-LPKk3wtkC-g-unsplash-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>federico-gutierrez-saD2awm7brs-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/federico-gutierrez-sad2awm7brs-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:37 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/federico-gutierrez-saD2awm7brs-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6610</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:37]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:37]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[federico-gutierrez-sad2awm7brs-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/federico-gutierrez-saD2awm7brs-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/federico-gutierrez-saD2awm7brs-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:600;s:6:"height";i:524;s:4:"file";s:51:"2020/03/federico-gutierrez-saD2awm7brs-unsplash.jpg";s:5:"sizes";a:11:{s:9:"thumbnail";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-300x262.jpg";s:5:"width";i:300;s:6:"height";i:262;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-600x500.jpg";s:5:"width";i:600;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-600x335.jpg";s:5:"width";i:600;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:51:"federico-gutierrez-saD2awm7brs-unsplash-500x524.jpg";s:5:"width";i:500;s:6:"height";i:524;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>ignacio-aguilar-PK32VXa8LGM-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/ignacio-aguilar-pk32vxa8lgm-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:37 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/ignacio-aguilar-PK32VXa8LGM-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6611</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:37]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:37]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[ignacio-aguilar-pk32vxa8lgm-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/ignacio-aguilar-PK32VXa8LGM-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/ignacio-aguilar-PK32VXa8LGM-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:550;s:6:"height";i:553;s:4:"file";s:48:"2020/03/ignacio-aguilar-PK32VXa8LGM-unsplash.jpg";s:5:"sizes";a:11:{s:9:"thumbnail";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-298x300.jpg";s:5:"width";i:298;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-550x403.jpg";s:5:"width";i:550;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-550x500.jpg";s:5:"width";i:550;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-550x335.jpg";s:5:"width";i:550;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:48:"ignacio-aguilar-PK32VXa8LGM-unsplash-500x553.jpg";s:5:"width";i:500;s:6:"height";i:553;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>jr-korpa-wIMIADaj4Xg-unsplash (1)</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/jr-korpa-wimiadaj4xg-unsplash-1/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:38 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/jr-korpa-wIMIADaj4Xg-unsplash-1.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6612</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:38]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:38]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[jr-korpa-wimiadaj4xg-unsplash-1]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/jr-korpa-wIMIADaj4Xg-unsplash-1.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/jr-korpa-wIMIADaj4Xg-unsplash-1.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:900;s:6:"height";i:600;s:4:"file";s:43:"2020/03/jr-korpa-wIMIADaj4Xg-unsplash-1.jpg";s:5:"sizes";a:14:{s:9:"thumbnail";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-900x500.jpg";s:5:"width";i:900;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-500x600.jpg";s:5:"width";i:500;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:43:"jr-korpa-wIMIADaj4Xg-unsplash-1-800x600.jpg";s:5:"width";i:800;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>mae-mu-8Vh6ulKc50o-unsplash (1)</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/mae-mu-8vh6ulkc50o-unsplash-1/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:39 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/mae-mu-8Vh6ulKc50o-unsplash-1.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6613</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:39]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:39]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[mae-mu-8vh6ulkc50o-unsplash-1]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/mae-mu-8Vh6ulKc50o-unsplash-1.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/mae-mu-8Vh6ulKc50o-unsplash-1.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:934;s:4:"file";s:41:"2020/03/mae-mu-8Vh6ulKc50o-unsplash-1.jpg";s:5:"sizes";a:18:{s:9:"thumbnail";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:42:"mae-mu-8Vh6ulKc50o-unsplash-1-1024x683.jpg";s:5:"width";i:1024;s:6:"height";i:683;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-900x604.jpg";s:5:"width";i:900;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:42:"mae-mu-8Vh6ulKc50o-unsplash-1-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-500x934.jpg";s:5:"width";i:500;s:6:"height";i:934;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:42:"mae-mu-8Vh6ulKc50o-unsplash-1-1000x934.jpg";s:5:"width";i:1000;s:6:"height";i:934;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:42:"mae-mu-8Vh6ulKc50o-unsplash-1-1400x770.jpg";s:5:"width";i:1400;s:6:"height";i:770;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:41:"mae-mu-8Vh6ulKc50o-unsplash-1-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>maksym-kaharlytskyi-M9BEb78r2IY-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/maksym-kaharlytskyi-m9beb78r2iy-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:42 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/maksym-kaharlytskyi-M9BEb78r2IY-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6614</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:42]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:42]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[maksym-kaharlytskyi-m9beb78r2iy-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/maksym-kaharlytskyi-M9BEb78r2IY-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/maksym-kaharlytskyi-M9BEb78r2IY-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:900;s:6:"height";i:599;s:4:"file";s:52:"2020/03/maksym-kaharlytskyi-M9BEb78r2IY-unsplash.jpg";s:5:"sizes";a:15:{s:9:"thumbnail";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-768x511.jpg";s:5:"width";i:768;s:6:"height";i:511;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-900x599.jpg";s:5:"width";i:900;s:6:"height";i:599;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-900x500.jpg";s:5:"width";i:900;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-500x599.jpg";s:5:"width";i:500;s:6:"height";i:599;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-900x599.jpg";s:5:"width";i:900;s:6:"height";i:599;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:52:"maksym-kaharlytskyi-M9BEb78r2IY-unsplash-800x599.jpg";s:5:"width";i:800;s:6:"height";i:599;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>nitish-meena-RbbdzZBKRDY-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/nitish-meena-rbbdzzbkrdy-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:43 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/nitish-meena-RbbdzZBKRDY-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6615</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:43]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:43]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[nitish-meena-rbbdzzbkrdy-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/nitish-meena-RbbdzZBKRDY-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/nitish-meena-RbbdzZBKRDY-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:933;s:4:"file";s:45:"2020/03/nitish-meena-RbbdzZBKRDY-unsplash.jpg";s:5:"sizes";a:18:{s:9:"thumbnail";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-768x512.jpg";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:46:"nitish-meena-RbbdzZBKRDY-unsplash-1024x682.jpg";s:5:"width";i:1024;s:6:"height";i:682;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-900x604.jpg";s:5:"width";i:900;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:46:"nitish-meena-RbbdzZBKRDY-unsplash-1000x500.jpg";s:5:"width";i:1000;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-670x335.jpg";s:5:"width";i:670;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-500x933.jpg";s:5:"width";i:500;s:6:"height";i:933;s:9:"mime-type";s:10:"image/jpeg";}s:9:"wide_tall";a:4:{s:4:"file";s:46:"nitish-meena-RbbdzZBKRDY-unsplash-1000x933.jpg";s:5:"width";i:1000;s:6:"height";i:933;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-900x600.jpg";s:5:"width";i:900;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:14:"large_featured";a:4:{s:4:"file";s:46:"nitish-meena-RbbdzZBKRDY-unsplash-1400x770.jpg";s:5:"width";i:1400;s:6:"height";i:770;s:9:"mime-type";s:10:"image/jpeg";}s:15:"medium_featured";a:4:{s:4:"file";s:45:"nitish-meena-RbbdzZBKRDY-unsplash-800x800.jpg";s:5:"width";i:800;s:6:"height";i:800;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>rohit-tandon-9wg5jCEPBsw-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/rohit-tandon-9wg5jcepbsw-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:45 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/rohit-tandon-9wg5jCEPBsw-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6616</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:45]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:45]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[rohit-tandon-9wg5jcepbsw-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/rohit-tandon-9wg5jCEPBsw-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/rohit-tandon-9wg5jCEPBsw-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:600;s:6:"height";i:577;s:4:"file";s:45:"2020/03/rohit-tandon-9wg5jCEPBsw-unsplash.jpg";s:5:"sizes";a:11:{s:9:"thumbnail";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-300x289.jpg";s:5:"width";i:300;s:6:"height";i:289;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-600x500.jpg";s:5:"width";i:600;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-600x335.jpg";s:5:"width";i:600;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:45:"rohit-tandon-9wg5jCEPBsw-unsplash-500x577.jpg";s:5:"width";i:500;s:6:"height";i:577;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>sam-loyd-dwHZZX-s1T0-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/sam-loyd-dwhzzx-s1t0-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:46 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/sam-loyd-dwHZZX-s1T0-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6617</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:46]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:46]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[sam-loyd-dwhzzx-s1t0-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/sam-loyd-dwHZZX-s1T0-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/sam-loyd-dwHZZX-s1T0-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:600;s:6:"height";i:622;s:4:"file";s:41:"2020/03/sam-loyd-dwHZZX-s1T0-unsplash.jpg";s:5:"sizes";a:13:{s:9:"thumbnail";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-289x300.jpg";s:5:"width";i:289;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_large";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-600x604.jpg";s:5:"width";i:600;s:6:"height";i:604;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-600x500.jpg";s:5:"width";i:600;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-600x335.jpg";s:5:"width";i:600;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-500x622.jpg";s:5:"width";i:500;s:6:"height";i:622;s:9:"mime-type";s:10:"image/jpeg";}s:16:"wide_photography";a:4:{s:4:"file";s:41:"sam-loyd-dwHZZX-s1T0-unsplash-600x600.jpg";s:5:"width";i:600;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 	<item>
+ 		<title>vlad-kutepov-NXyPvKgNnWg-unsplash</title>
+ 		<link>http://themenectar.com/demo/salient-corporate/vlad-kutepov-nxypvkgnnwg-unsplash/</link>
+ 		<pubDate>Tue, 24 Mar 2020 14:23:47 +0000</pubDate>
+ 		<dc:creator><![CDATA[themenectar]]></dc:creator>
+ 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/vlad-kutepov-NXyPvKgNnWg-unsplash.jpg</guid>
+ 		<description></description>
+ 		<content:encoded><![CDATA[]]></content:encoded>
+ 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+ 		<wp:post_id>6618</wp:post_id>
+ 		<wp:post_date><![CDATA[2020-03-24 14:23:47]]></wp:post_date>
+ 		<wp:post_date_gmt><![CDATA[2020-03-24 14:23:47]]></wp:post_date_gmt>
+ 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+ 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+ 		<wp:post_name><![CDATA[vlad-kutepov-nxypvkgnnwg-unsplash]]></wp:post_name>
+ 		<wp:status><![CDATA[inherit]]></wp:status>
+ 		<wp:post_parent>0</wp:post_parent>
+ 		<wp:menu_order>0</wp:menu_order>
+ 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+ 		<wp:post_password><![CDATA[]]></wp:post_password>
+ 		<wp:is_sticky>0</wp:is_sticky>
+ 		<wp:attachment_url><![CDATA[http://themenectar.com/demo/salient-corporate/wp-content/uploads/2020/03/vlad-kutepov-NXyPvKgNnWg-unsplash.jpg]]></wp:attachment_url>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[2020/03/vlad-kutepov-NXyPvKgNnWg-unsplash.jpg]]></wp:meta_value>
+ 		</wp:postmeta>
+ 		<wp:postmeta>
+ 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+ 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:600;s:6:"height";i:584;s:4:"file";s:45:"2020/03/vlad-kutepov-NXyPvKgNnWg-unsplash.jpg";s:5:"sizes";a:11:{s:9:"thumbnail";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-300x292.jpg";s:5:"width";i:300;s:6:"height";i:292;s:9:"mime-type";s:10:"image/jpeg";}s:15:"portfolio-thumb";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-600x403.jpg";s:5:"width";i:600;s:6:"height";i:403;s:9:"mime-type";s:10:"image/jpeg";}s:21:"portfolio-thumb_small";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-400x269.jpg";s:5:"width";i:400;s:6:"height";i:269;s:9:"mime-type";s:10:"image/jpeg";}s:16:"portfolio-widget";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-100x100.jpg";s:5:"width";i:100;s:6:"height";i:100;s:9:"mime-type";s:10:"image/jpeg";}s:19:"nectar_small_square";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-140x140.jpg";s:5:"width";i:140;s:6:"height";i:140;s:9:"mime-type";s:10:"image/jpeg";}s:4:"wide";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-600x500.jpg";s:5:"width";i:600;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:10:"wide_small";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-600x335.jpg";s:5:"width";i:600;s:6:"height";i:335;s:9:"mime-type";s:10:"image/jpeg";}s:7:"regular";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-500x500.jpg";s:5:"width";i:500;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:13:"regular_small";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-350x350.jpg";s:5:"width";i:350;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}s:4:"tall";a:4:{s:4:"file";s:45:"vlad-kutepov-NXyPvKgNnWg-unsplash-500x584.jpg";s:5:"width";i:500;s:6:"height";i:584;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+ 		</wp:postmeta>
+ 	</item>
+ 
+
+
 	<item>
 		<title>Home</title>
 		<link>http://localhost/wordpress-3-8/home/</link>
@@ -71,7 +479,7 @@
 		<dc:creator><![CDATA[themenectar]]></dc:creator>
 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/?page_id=4</guid>
 		<description></description>
-		<content:encoded><![CDATA[[vc_row type="full_width_content" bg_image="9" bg_position="center center" bg_repeat="no-repeat" scene_position="center" text_color="light" text_align="left" top_padding="14%" bottom_padding="12%" enable_gradient="true" color_overlay="#585b64" color_overlay_2="#2c2f38" gradient_direction="left_t_to_right_b" overlay_strength="0.95"][vc_column centered_text="true" column_padding="padding-3-percent" column_padding_position="left-right" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_row_inner][vc_column_inner enable_animation="true" animation="fade-in-from-bottom" column_padding="padding-1-percent" column_padding_position="bottom" background_color_opacity="1" width="1/1" delay="200"][vc_column_text]
+		<content:encoded><![CDATA[[vc_row type="full_width_content" bg_image="https://source.unsplash.com/1500x800/daily/?office" bg_position="center center" bg_repeat="no-repeat" scene_position="center" text_color="light" text_align="left" top_padding="14%" bottom_padding="12%" enable_gradient="true" color_overlay="#585b64" color_overlay_2="#2c2f38" gradient_direction="left_t_to_right_b" overlay_strength="0.95"][vc_column centered_text="true" column_padding="padding-3-percent" column_padding_position="left-right" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_row_inner][vc_column_inner enable_animation="true" animation="fade-in-from-bottom" column_padding="padding-1-percent" column_padding_position="bottom" background_color_opacity="1" width="1/1" delay="200"][vc_column_text]
 <h1>Salient Is Digital Brilliance</h1>
 [/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner bottom_padding="30"][vc_column_inner enable_animation="true" animation="fade-in-from-bottom" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" width="1/1" delay="300"][vc_column_text]
 <h2>Get Noticed and Stay Remembered</h2>
@@ -153,7 +561,7 @@ control over your website</h2>
 <h5></h5>
 [/vc_column_text][vc_row_inner][vc_column_inner enable_animation="true" animation="fade-in-from-bottom" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" width="1/1" delay="1200"][vc_column_text]
 <h5>Solid Code</h5>
-<span style="color: #a3a3a3;">Ut elit tellus, luctus nec magna mattis et, pulvinar dapibus lorem leo ultricies et vitae enim.</span>[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][divider line_type="Full Width Line"][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" top_padding="7%" bottom_padding="6%" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][testimonial_slider style="multiple_visible" color="accent-color-dark"][testimonial image="36" title="Testimonial" tab_id="1451491481781-2" name="Aura Brooks" subtitle="Graphic Designer, Owl Eyes" quote="By far the best team I've ever worked with. They truly understood the look I was going for and completely nailed it! I would highly recommend them as a company, you simply just won't find any better team!"] Click the edit button to add your testimonial. [/testimonial][testimonial image="37" title="Testimonial" tab_id="1451491481781-2" name="Eve Crawford" subtitle="Product Designer, That Biz" quote="It was really fun getting to know the team during the project. They were all helpful in answering my questions and made me feel completely at ease. The design ended up being twice as good as I could have ever envisioned!"] Click the edit button to add your testimonial. [/testimonial][testimonial image="38" title="Testimonial" tab_id="1451491482058-4" name="Jack Graham" subtitle="Co founder, Coffee Inc" quote="I'm wondering why I never contacted these guys sooner! Seriously, they all have commendable talent in their respective fields and knocked my concept out of the ballpark. Thanks for an amazing experience!"] Click the edit button to add your testimonial. [/testimonial][testimonial image="39" title="Testimonial" tab_id="1451491482058-4" name="Zak Reid" subtitle="Instructor, Skate Nao" quote="Salient is by far the most astonishing WP theme out there! I literally could not be happier that I chose to buy your theme! Your regular updates and superb attention to detail blows me away every time I visit my new site! "] Click the edit button to add your testimonial. [/testimonial][/testimonial_slider][/vc_column][/vc_row][vc_row type="full_width_background" bg_image="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/blur.png" bg_position="left top" bg_repeat="no-repeat" scene_position="center" text_color="dark" text_align="left" top_padding="3%" bottom_padding="325" enable_gradient="true" color_overlay="#ffffff" gradient_direction="top_to_bottom" overlay_strength="1"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/4"][/vc_column][vc_column column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][split_line_heading]
+<span style="color: #a3a3a3;">Ut elit tellus, luctus nec magna mattis et, pulvinar dapibus lorem leo ultricies et vitae enim.</span>[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][divider line_type="Full Width Line"][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" top_padding="7%" bottom_padding="6%" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][testimonial_slider style="multiple_visible" color="accent-color-dark"][testimonial title="Testimonial" tab_id="1451491481781-2" name="Aura Brooks" subtitle="Graphic Designer, Owl Eyes" quote="By far the best team I've ever worked with. They truly understood the look I was going for and completely nailed it! I would highly recommend them as a company, you simply just won't find any better team!"] Click the edit button to add your testimonial. [/testimonial][testimonial title="Testimonial" tab_id="1451491481781-2" name="Eve Crawford" subtitle="Product Designer, That Biz" quote="It was really fun getting to know the team during the project. They were all helpful in answering my questions and made me feel completely at ease. The design ended up being twice as good as I could have ever envisioned!"] Click the edit button to add your testimonial. [/testimonial][testimonial title="Testimonial" tab_id="1451491482058-4" name="Jack Graham" subtitle="Co founder, Coffee Inc" quote="I'm wondering why I never contacted these guys sooner! Seriously, they all have commendable talent in their respective fields and knocked my concept out of the ballpark. Thanks for an amazing experience!"] Click the edit button to add your testimonial. [/testimonial][testimonial image="https://source.unsplash.com/300x300/daily/?face" title="Testimonial" tab_id="1451491482058-4" name="Zak Reid" subtitle="Instructor, Skate Nao" quote="Salient is by far the most astonishing WP theme out there! I literally could not be happier that I chose to buy your theme! Your regular updates and superb attention to detail blows me away every time I visit my new site! "] Click the edit button to add your testimonial. [/testimonial][/testimonial_slider][/vc_column][/vc_row][vc_row type="full_width_background" bg_image="6607" bg_position="left top" bg_repeat="no-repeat" scene_position="center" text_color="dark" text_align="left" top_padding="3%" bottom_padding="325" enable_gradient="true" color_overlay="#ffffff" gradient_direction="top_to_bottom" overlay_strength="1" parallax_bg="true" parallax_bg_speed="fast"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/4"][/vc_column][vc_column column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][split_line_heading]
 <h2 style="color: #1e83ec;"><span style="color: #1e83ec;">Design is the paradise</span></h2>
 <h2 style="color: #1e83ec;"><span style="color: #1e83ec;">of individuality, eccentricity,</span></h2>
 <h2 style="color: #1e83ec;"><span style="color: #1e83ec;">abnormality, and humors.</span></h2>
@@ -182,7 +590,7 @@ control over your website</h2>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display-sortable]]></wp:meta_key>
@@ -304,23 +712,23 @@ control over your website</h2>
 		<dc:creator><![CDATA[themenectar]]></dc:creator>
 		<guid isPermaLink="false">http://themenectar.com/demo/salient-corporate/?page_id=19</guid>
 		<description></description>
-		<content:encoded><![CDATA[[vc_row type="full_width_background" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][page_submenu sticky="true" bg_color="#111111" link_color="#ffffff"][page_link link_url="#intro" title="Introduction" tab_id="1451708274600-9" id="1451966795422-6"] [/page_link][page_link link_url="#services" title="Our Services" tab_id="1451708274600-9" id="1451966795475-6"] [/page_link][page_link link_url="#team" title="Meet The Team" tab_id="1451708274756-7" id="1451966795453-10"] [/page_link][page_link title="Salient Culture" tab_id="1451708335865-4" link_url="#culture" id="1451966795496-9"][/page_link][/page_submenu][/vc_column][/vc_row][vc_row type="full_width_background" bg_image="6502" bg_position="center top" bg_repeat="no-repeat" bg_color="#cbcbc3" scene_position="center" text_color="light" text_align="left" top_padding="4%" bottom_padding="4%" id="intro" enable_gradient="true" color_overlay_2="#151519" gradient_direction="top_to_bottom" overlay_strength="1"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][vc_row_inner top_padding="65%"][vc_column_inner column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" width="1/1"][/vc_column_inner][/vc_row_inner][split_line_heading]
+		<content:encoded><![CDATA[[vc_row type="full_width_background" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][page_submenu sticky="true" bg_color="#111111" link_color="#ffffff"][page_link link_url="#intro" title="Introduction" tab_id="1451708274600-9" id="1451966795422-6"] [/page_link][page_link link_url="#services" title="Our Services" tab_id="1451708274600-9" id="1451966795475-6"] [/page_link][page_link link_url="#team" title="Meet The Team" tab_id="1451708274756-7" id="1451966795453-10"] [/page_link][page_link title="Salient Culture" tab_id="1451708335865-4" link_url="#culture" id="1451966795496-9"][/page_link][/page_submenu][/vc_column][/vc_row][vc_row type="full_width_background" bg_image="6606" bg_position="center top" bg_repeat="no-repeat" bg_color="#cbcbc3" scene_position="center" text_color="light" text_align="left" top_padding="4%" bottom_padding="4%" id="intro" enable_gradient="true" color_overlay_2="#151519" gradient_direction="top_to_bottom" overlay_strength="1"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][vc_row_inner top_padding="65%"][vc_column_inner column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" width="1/1"][/vc_column_inner][/vc_row_inner][split_line_heading]
 <h2>Whether you need a new</h2>
 <h2>web application or company</h2>
 <h2>branding - we can help.</h2>
 [/split_line_heading][vc_row_inner][vc_column_inner enable_animation="true" animation="fade-in-from-bottom" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" width="1/1"][vc_column_text]Our team has many skills so we're able to offer a wide array of services. Far away, behind the word mountains, far from the countries Vokalia and Contia, there live the blind texts. Separated they live in Booksgrove right at the coast of the Semantics, a large language ocean.
 
-It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][/vc_column][/vc_row][vc_row type="full_width_background" bg_color="#151519" scene_position="center" text_color="dark" text_align="left" top_padding="7%" bottom_padding="7%" id="services" enable_gradient="true" color_overlay="#232323" color_overlay_2="#191919" gradient_direction="left_t_to_right_b" overlay_strength="1"][vc_column enable_animation="true" animation="reveal-from-bottom" column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/3"][fancy_box image_url="6083" color="Accent-Color" link_url="http://themenectar.com/demo/salient-corporate/portfolio/blog-ui/" link_text="View Case Study" min_height="400"]
+It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][/vc_column][/vc_row][vc_row type="full_width_background" bg_color="#151519" scene_position="center" text_color="dark" text_align="left" top_padding="7%" bottom_padding="7%" id="services" enable_gradient="true" color_overlay="#232323" color_overlay_2="#191919" gradient_direction="left_t_to_right_b" overlay_strength="1"][vc_column enable_animation="true" animation="reveal-from-bottom" column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/3"][fancy_box image_url="6615" color="Accent-Color" link_url="http://themenectar.com/demo/salient-corporate/portfolio/blog-ui/" link_text="View Case Study" min_height="400"]
 <h3>UI Design</h3>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ullamcorper aliquet.[/fancy_box][/vc_column][vc_column enable_animation="true" animation="reveal-from-bottom" column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/3" delay="200"][fancy_box image_url="6082" color="Extra-Color-1" link_url="http://themenectar.com/demo/salient-corporate/portfolio/night-sky-app/" link_text="View Case Study" min_height="400"]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ullamcorper aliquet.[/fancy_box][/vc_column][vc_column enable_animation="true" animation="reveal-from-bottom" column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/3" delay="200"][fancy_box image_url="6608" color="Extra-Color-1" link_url="http://themenectar.com/demo/salient-corporate/portfolio/night-sky-app/" link_text="View Case Study" min_height="400"]
 <h3>Web Design</h3>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ullamcorper aliquet.[/fancy_box][/vc_column][vc_column enable_animation="true" animation="reveal-from-bottom" column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/3" delay="400"][fancy_box image_url="6052" color="Extra-Color-2" link_url="http://themenectar.com/demo/salient-corporate/portfolio/waveform/" link_text="View Case Study" min_height="400"]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ullamcorper aliquet.[/fancy_box][/vc_column][vc_column enable_animation="true" animation="reveal-from-bottom" column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/3" delay="400"][fancy_box image_url="6616" color="Extra-Color-2" link_url="http://themenectar.com/demo/salient-corporate/portfolio/waveform/" link_text="View Case Study" min_height="400"]
 <h3>Mountain Design</h3>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ullamcorper aliquet.[/fancy_box][/vc_column][/vc_row][vc_row type="full_width_background" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" top_padding="7%" bottom_padding="2%" id="team" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/6"][/vc_column][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="2/3"][vc_column_text css=".vc_custom_1452103307998{padding-bottom: 8px !important;}"]
 <h6 style="text-align: center;"><span style="color: #1e83ec;">The Faces You've Been Waiting For</span></h6>
 [/vc_column_text][vc_column_text]
 <h2 style="text-align: center;">Our team works wonders</h2>
-[/vc_column_text][/vc_column][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/6"][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="padding-1-percent" column_padding_position="left-right" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_row_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="93" team_memeber_style="meta_overlaid_alt" name="Jake Graham" job_position="Founder"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="36" team_memeber_style="meta_overlaid_alt" name="Aura Brooks" job_position="Graphic Designer"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="37" team_memeber_style="meta_overlaid_alt" name="Eve Crawford" job_position="Product Designer"][/vc_column_inner][/vc_row_inner][vc_row_inner bottom_padding="1%"][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="39" team_memeber_style="meta_overlaid_alt" name="Alex Parker" job_position="Founder"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="6068" team_memeber_style="meta_overlaid_alt" name="Jessica Collins" job_position="Graphic Designer"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="6073" team_memeber_style="meta_overlaid_alt" name="Luke Smith" job_position="Web Developer"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_background" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" top_padding="5%" bottom_padding="5%" overlay_strength="0.3"][vc_column column_padding="padding-2-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][split_line_heading]
+[/vc_column_text][/vc_column][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/6"][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="padding-1-percent" column_padding_position="left-right" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_row_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="https://source.unsplash.com/600x500/daily/?man" team_memeber_style="meta_overlaid_alt" name="Jake Graham" job_position="Founder"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="https://source.unsplash.com/600x500/daily/?smile" team_memeber_style="meta_overlaid_alt" name="Aura Brooks" job_position="Graphic Designer"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="https://source.unsplash.com/600x500/daily/?face" team_memeber_style="meta_overlaid_alt" name="Eve Crawford" job_position="Product Designer"][/vc_column_inner][/vc_row_inner][vc_row_inner bottom_padding="1%"][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="https://source.unsplash.com/600x500/daily/?girl" team_memeber_style="meta_overlaid_alt" name="Alex Parker" job_position="Founder"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="https://source.unsplash.com/600x500/daily/?woman" team_memeber_style="meta_overlaid_alt" name="Jessica Collins" job_position="Graphic Designer"][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/3"][team_member image_url="https://source.unsplash.com/600x500/daily/?happy" team_memeber_style="meta_overlaid_alt" name="Luke Smith" job_position="Web Developer"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_background" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" top_padding="5%" bottom_padding="5%" overlay_strength="0.3"][vc_column column_padding="padding-2-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][split_line_heading]
 <h2 style="color: #1e83ec;"><span style="color: #1e83ec;">Design is the paradise</span></h2>
 <h2 style="color: #1e83ec;"><span style="color: #1e83ec;">of individuality, eccentricity,</span></h2>
 <h2 style="color: #1e83ec;"><span style="color: #1e83ec;">abnormality, and humors.</span></h2>
@@ -366,7 +774,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ul
 	<li><span style="color: #999999;">ThemeForest</span></li>
 	<li><span style="color: #999999;">Salient</span></li>
 </ul>
-[/fancy-ul][/vc_column][/vc_row][vc_row type="full_width_background" bg_image="6507" bg_position="center bottom" bg_repeat="no-repeat" parallax_bg="true" parallax_bg_speed="fast" scene_position="center" text_color="light" text_align="left" top_padding="13%" bottom_padding="13%" id="culture" enable_gradient="true" color_overlay="#585b64" color_overlay_2="#2c2f38" gradient_direction="left_t_to_right_b" overlay_strength="0.8"][vc_column centered_text="true" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][nectar_video_lightbox link_style="play_button" video_url="https://www.youtube.com/watch?v=6oTurM7gESE"][/vc_column][/vc_row][vc_row type="full_width_background" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_gallery type="image_grid" layout="fullwidth" constrain_max_cols="true" gallery_style="3" img_size="500x500"][/vc_column][/vc_row]]]></content:encoded>
+[/fancy-ul][/vc_column][/vc_row][vc_row type="full_width_background" bg_image="https://source.unsplash.com/1500x800/daily/?working" bg_position="center bottom" bg_repeat="no-repeat" parallax_bg="true" parallax_bg_speed="fast" scene_position="center" text_color="light" text_align="left" top_padding="13%" bottom_padding="13%" id="culture" enable_gradient="true" color_overlay="#585b64" color_overlay_2="#2c2f38" gradient_direction="left_t_to_right_b" overlay_strength="0.8"][vc_column centered_text="true" column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][nectar_video_lightbox link_style="play_button" video_url="https://www.youtube.com/watch?v=6oTurM7gESE"][/vc_column][/vc_row][vc_row type="full_width_background" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_gallery type="image_grid" layout="fullwidth" constrain_max_cols="true" gallery_style="3" img_size="500x500"][/vc_column][/vc_row]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>19</wp:post_id>
 		<wp:post_date><![CDATA[2015-12-30 15:36:57]]></wp:post_date>
@@ -394,7 +802,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ul
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display-sortable]]></wp:meta_key>
@@ -534,7 +942,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ul
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display-sortable]]></wp:meta_key>
@@ -643,10 +1051,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et arcu vel risus ul
 		<content:encoded><![CDATA[[vc_row type="full_width_background" scene_position="center" text_color="light" text_align="left" top_padding="13%" bottom_padding="12%" color_overlay="#005187" overlay_strength="0.95"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text]
 <h1 style="text-align: center;">Let's Make Things Happen</h1>
 <h6></h6>
-[/vc_column_text][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#f7f7f7" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_row_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/2"][fancy_box link_new_tab="true" color="Accent-Color" min_height="100" link_url="https://www.google.com/maps" link_text="Get Directions"]
+[/vc_column_text][/vc_column][/vc_row][vc_row type="full_width_content" bg_color="#f7f7f7" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_row_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/2"][fancy_box link_new_tab="true" color="Accent-Color" min_height="100" link_url="https://www.google.com/maps" link_text="Get Directions" image_url="6617"]
 <h3>San Francisco</h3>
 123 Nectar St. Suite 4917
-hello@themenectar.com[/fancy_box][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/2"][fancy_box image_url="6135" link_new_tab="true" color="Extra-Color-1" min_height="100" link_url="https://www.google.com/maps" link_text="Get Directions"]
+hello@themenectar.com[/fancy_box][/vc_column_inner][vc_column_inner column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" width="1/2"][fancy_box image_url="6616" link_new_tab="true" color="Extra-Color-1" min_height="100" link_url="https://www.google.com/maps" link_text="Get Directions"]
 <h3>British Columbia</h3>
 58 Nectar Rd. Apt 2C
 hello@themenectar.com[/fancy_box][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row type="full_width_background" bg_color="#ffffff" scene_position="center" text_color="dark" text_align="left" top_padding="6%" bottom_padding="6%" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_row_inner bottom_padding="15"][vc_column_inner column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" width="1/2"][vc_column_text]
@@ -682,7 +1090,7 @@ We're currently in look of a few new designers - If you're a passionate worker a
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display-sortable]]></wp:meta_key>
@@ -816,7 +1224,7 @@ We're currently in look of a few new designers - If you're a passionate worker a
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:3:"all";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[all]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[nectar-metabox-portfolio-display-sortable]]></wp:meta_key>
@@ -1082,6 +1490,10 @@ Ut elit tellus, luctus nec magna mattis et, pulvinar dapibus lorem leo ultricies
 			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[6610]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Waveform</title>
@@ -1231,6 +1643,10 @@ Company Branding, Responsive Web Design[/vc_column_text][/vc_column][/vc_row][vc
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[6618]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -1386,6 +1802,10 @@ Company Branding, Responsive Web Design[/vc_column_text][/vc_column][/vc_row][vc
 			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[6617]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Blog Design</title>
@@ -1536,6 +1956,10 @@ Company Branding, Responsive Web Design[/vc_column_text][/vc_column][/vc_row][vc
 			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[6616]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Jack Graham</title>
@@ -1682,6 +2106,10 @@ Company Branding, Responsive Web Design[/vc_column_text][/vc_column][/vc_row][vc
 			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[6611]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>The Sweetest WordPress Themes Around.</title>
@@ -1791,259 +2219,8 @@ Company Branding, Responsive Web Design[/vc_column_text][/vc_column][/vc_row][vc
 			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
-	<item>
-		<title>Mellow Waves</title>
-		<link>http://localhost/wordpress-3-8/2013/01/07/suspendisse-vulputate-diam/</link>
-		<pubDate>Mon, 07 Jan 2013 18:10:00 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=152</guid>
-		<description></description>
-		<content:encoded><![CDATA[Phasellus venenatis venenatis velit ut ultricies. Cras porta dignissim malesuada. Etiam auctor, justo et facilisis ultrices, justo mauris imperdiet ligula, vitae tincidunt justo quam fermentum nulla. Nunc interdum porta ligula, eu malesuada nunc tristique eu. Integer sed mi ac velit congue vulputate sed quis lacus. Fusce tellus sem, ultricies consequat porta at, ultrices in odio. Nullam a sapien vitae erat porta faucibus rhoncus eleifend dolor. Mauris semper rutrum ante a auctor. Nullam non arcu erat, vel sollicitudin felis. Nam erat nisl, mattis euismod lacinia at, tempus quis nunc.
-
-Donec luctus odio eget ipsum lacinia lacinia. Suspendisse porttitor laoreet sagittis. Nulla mi justo, auctor sed posuere sit amet, pretium ac metus. Nulla porta justo ac velit accumsan faucibus. In dignissim, orci nec ultricies elementum, erat mi tristique dui, a tristique ligula quam non est. Suspendisse mattis aliquet est, at tempor ipsum lacinia a. Cras enim sapien, dapibus sit amet iaculis sit amet, pharetra non diam. Curabitur sed nisi in metus eleifend fringilla. Aenean viverra sem in quam luctus eget gravida diam scelerisque.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>152</wp:post_id>
-		<wp:post_date><![CDATA[2013-01-07 18:10:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-01-07 18:10:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[suspendisse-vulputate-diam]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>15</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="music"><![CDATA[Music]]></category>
-		<category domain="post_format" nicename="post-format-video"><![CDATA[Video]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_quote]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_m4v]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_ogv]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_poster]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_ogg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
-			<wp:meta_value><![CDATA[108]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_gallery_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_interface_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_parallax]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[#474747]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_font_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_overlay]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bottom_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_disable_transparent_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Elementum</title>
-		<link>http://localhost/wordpress-3-8/2013/01/07/facilisis-nulla/</link>
-		<pubDate>Mon, 07 Jan 2013 22:47:29 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=1251</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text]
-<h3><span style="color: #50d18d;">Even the all-powerful Pointing has no control over the situation.</span></h3>
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-
-She packed her seven versalia, put her initial into the belt and made herself on the way. l using her.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.[/vc_column_text][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" top_padding="20" bottom_padding="20" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_gallery type="image_grid" layout="fullwidth" constrain_max_cols="true" gallery_style="3" img_size="600x403"][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text][nectar_dropcap color="#50d18d"]S [/nectar_dropcap]eparated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-
-l using her.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.[/vc_column_text][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][vc_column_text]
-<h4><span style="color: #50d18d;">Sentences fly into your mouth.</span></h4>
-<span style="color: #999999;">far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</span>[/vc_column_text][/vc_column][vc_column column_padding="padding-1-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/2"][vc_column_text]
-<h4><span style="color: #50d18d;">Her hometown Bookmarksgrove.</span></h4>
-<span style="color: #999999;">far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</span>[/vc_column_text][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="light" text_align="left" bottom_padding="30" overlay_strength="0.3"][vc_column enable_animation="true" animation="reveal-from-top" column_padding="padding-5-percent" column_padding_position="all" background_color="#50d18d" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][testimonial_slider style="default"][testimonial title="Testimonial" tab_id="1452009327934-7" name="Blind Text" quote="And if she hasn’t been rewritten, then they are still using her. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."] Click the edit button to add your testimonial. [/testimonial][/testimonial_slider][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text]Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-
-She packed her seven versalia, put her initial into the belt and made herself on the way. l using her.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.[/vc_column_text][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>1251</wp:post_id>
-		<wp:post_date><![CDATA[2013-01-07 22:47:29]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-01-07 22:47:29]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[facilisis-nulla]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>10</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="fashion"><![CDATA[Fashion]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
-			<wp:meta_value><![CDATA[49]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_gallery_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_quote]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_m4v]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_ogv]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_poster]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_ogg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[facilisis-nulla-eget]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_interface_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_parallax]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[#232323]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_font_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_overlay]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bottom_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_disable_transparent_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_opengraph-image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://themenectar.com/demo/salient-blog/wp-content/uploads/2014/07/1gnYuBa2.jpg]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
+	
+	
 	<item>
 		<title>sample-blog-img</title>
 		<link>http://localhost/wordpress-3-8/2013/01/15/ownage-in-the-mountains/sample-blog-img/</link>
@@ -2533,7 +2710,7 @@ far from the countries Vokalia and Consonantia, there live the blind texts. Sepa
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
+			<wp:meta_value><![CDATA[6615]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -2660,7 +2837,7 @@ far from the countries Vokalia and Consonantia, there live the blind texts. Sepa
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
+			<wp:meta_value><![CDATA[6613]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>2</wp:comment_id>
@@ -2677,138 +2854,7 @@ far from the countries Vokalia and Consonantia, there live the blind texts. Sepa
 			<wp:comment_user_id>0</wp:comment_user_id>
 		</wp:comment>
 	</item>
-	<item>
-		<title>Ink In Water</title>
-		<link>http://localhost/wordpress-3-8/2013/01/10/ink-in-water/</link>
-		<pubDate>Thu, 10 Jan 2013 17:19:25 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=108</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" top_padding="40" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text][nectar_dropcap color="#1e83ec"]S [/nectar_dropcap]eparated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. l using her.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.[/vc_column_text][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" top_padding="30" bottom_padding="30" overlay_strength="0.3"][vc_column column_padding="padding-2-percent" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][split_line_heading]
-<h2>But nothing the copy said could convince her</h2>
-<h2>and so it didn’t take long until a few insidious</h2>
-<h2>Copy Writers ambushed her</h2>
-[/split_line_heading][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text]The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.[/vc_column_text][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[A small river named Duden flows by their place and supplies it with the necessary regelialia. ]]></excerpt:encoded>
-		<wp:post_id>136</wp:post_id>
-		<wp:post_date><![CDATA[2013-01-10 17:19:25]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-01-10 17:19:25]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[ink-in-water]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>12</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="gaming"><![CDATA[Gaming]]></category>
-		<category domain="post_format" nicename="post-format-video"><![CDATA[Video]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_quote]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_m4v]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_ogv]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_poster]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[<iframe width="1280" height="720" src="//www.youtube.com/embed/4BfKFCOCJe8" frameborder="0" allowfullscreen></iframe>]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_ogg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
-			<wp:meta_value><![CDATA[89]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_gallery_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_interface_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_parallax]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[#262626]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_font_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_overlay]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bottom_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_disable_transparent_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_opengraph-description]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Sed sit amet sem dignissim, sollicitudin ante vel, consequat neque. Nunc justo lacus, rhoncus ut interdum nec, iaculis mattis orci. Donec at blandit augue, nec tristique ligula. Donec euismod nulla at erat fringilla.]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_opengraph-image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://themenectar.com/demo/salient-blog/wp-content/uploads/2013/01/Comp-1-0000119.png]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[quisque-sit-amet]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[large_featured]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
+	
 	<item>
 		<title>Forest Path</title>
 		<link>http://localhost/wordpress-3-8/2013/03/23/the-field/</link>
@@ -2935,20 +2981,16 @@ far from the countries Vokalia and Consonantia, there live the blind texts. Sepa
 			<wp:meta_value><![CDATA[amazing-post-with-all-the-goodies]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_opengraph-description]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Nulla sed mi leo, sit amet molestie nulla. Phasellus lobortis blandit ipsum, at adipiscing eros porta quis. Phasellus in nisi ipsum, quis dapibus magna]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_opengraph-image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://themenectar.com/demo/salient-blog/wp-content/uploads/2013/03/tumblr_n6rzpcsMk41st5lhmo1_12802.jpg]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
 			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
 			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[6608]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>3</wp:comment_id>
@@ -2979,236 +3021,7 @@ far from the countries Vokalia and Consonantia, there live the blind texts. Sepa
 			<wp:comment_user_id>0</wp:comment_user_id>
 		</wp:comment>
 	</item>
-	<item>
-		<title>Aenean tortor</title>
-		<link>http://localhost/wordpress-3-8/2013/01/08/aenean-laoreet-tortor/</link>
-		<pubDate>Tue, 08 Jan 2013 23:55:44 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=559</guid>
-		<description></description>
-		<content:encoded><![CDATA[Vivamus risus mi, lobortis ut congue vitae, vestibulum vitae augue. Maecenas nunc odio, pulvinar id vulputate nec, porttitor at quam. Suspendisse vulputate diam eu leo bibendum feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non ligula augue. Praesent imperdiet magna at risus lobortis ac accumsan lorem ornare Cras sed lobortis libero. Pellentesque arcu lacus, dignissim ut porta in, interdum vel risus. Curabitur non est purus. Ut adipiscing purus augue, quis elementum dolor convallis id.]]></content:encoded>
-		<excerpt:encoded><![CDATA[Vivamus risus mi, lobortis ut congue vitae, vestibulum vitae augue. Maecenas nunc odio, pulvinar id vulputate nec, porttitor at quam. Suspendisse vulputate diam eu leo bibendum feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non ligula augue.]]></excerpt:encoded>
-		<wp:post_id>559</wp:post_id>
-		<wp:post_date><![CDATA[2013-01-08 23:55:44]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-01-08 23:55:44]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[aenean-laoreet-tortor]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>9</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="food-for-thought"><![CDATA[Food for thought]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_quote]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_m4v]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_ogv]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_poster]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_ogg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
-			<wp:meta_value><![CDATA[125]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_interface_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_gallery_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_parallax]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_font_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_overlay]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bottom_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_disable_transparent_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Velit Porttito</title>
-		<link>http://localhost/wordpress-3-8/2013/01/11/velit-feugiat-porttito/</link>
-		<pubDate>Fri, 11 Jan 2013 04:31:39 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=1239</guid>
-		<description></description>
-		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et consectetur erat, ac iaculis lectus. Vestibulum porta leo vel dignissim imperdiet. Ut consectetur nisi eros, sed consectetur magna egestas id. Vivamus tincidunt faucibus ante, vel rhoncus sapien egestas nec. Nulla ultrices, dolor et dignissim adipiscing, tellus diam tempus mi, vitae egestas purus ligula eget risus. Cras scelerisque augue sapien, vitae lacinia sapien rhoncus vitae. Aliquam quis enim in nulla ullamcorper consequat. Vivamus sollicitudin tortor augue, sed fringilla neque commodo eu. Vestibulum hendrerit massa a nulla gravida ullamcorper. Vestibulum sodales magna nec lorem feugiat, ac interdum justo gravida. Duis et iaculis enim. Aenean aliquet interdum mi, sit amet dapibus est porttitor in. In eget dolor egestas, commodo ante eget, lacinia dui. Praesent at tristique erat. Proin luctus tortor et lectus gravida varius.
 
-Cras rhoncus metus quis diam malesuada vulputate. Duis euismod lectus id varius interdum. Etiam quis tincidunt mi. Praesent aliquam purus at purus blandit auctor. Etiam pharetra tellus sem, in laoreet turpis euismod sed. Ut massa lectus, volutpat non convallis ut, hendrerit quis dui. In nec lacinia sapien. Proin placerat tincidunt orci, scelerisque imperdiet ante laoreet et. Fusce porta ante eget tortor sagittis ultrices. In consectetur fringilla urna, non fringilla elit consequat at. Nam vel porta lectus. Donec condimentum hendrerit erat, gravida feugiat dolor accumsan vehicula. Sed vel laoreet elit.
-
-Mauris lacinia velit augue, vel pellentesque sem ultrices ut. Curabitur lobortis leo ultrices velit interdum, sed placerat urna mollis. Curabitur ullamcorper odio et sapien pharetra, non adipiscing magna faucibus. Vestibulum bibendum a magna vel eleifend. Etiam malesuada commodo tortor eu convallis. Nunc enim nisi, porta et dolor nec, porttitor tempor leo. Sed eu rhoncus risus. Aenean eu luctus lectus, vitae semper leo. Sed porta, nunc sit amet scelerisque fermentum, lacus enim elementum tortor, sed molestie nulla diam a leo. Vestibulum iaculis dolor ligula, gravida rhoncus odio sollicitudin eu. Nunc ultrices nunc ut odio feugiat fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dolor augue, suscipit eu dui quis, commodo tincidunt turpis. Nulla facilisi. Proin aliquet rhoncus ipsum eget convallis. Aliquam pretium vestibulum viverra.]]></content:encoded>
-		<excerpt:encoded><![CDATA[Quisque porta ipsum quis neque elementum lacinia. Pellentesque ut risus rutrum, tristique lacus nec, mollis risus. Vestibulum mollis erat arcu, eu vehicula purus consequat nec.  Maecenas nunc odio, pulvinar id vulputate nec, porttitor at quam. Suspendisse vulputate diam eu leo bibendum feugiat.]]></excerpt:encoded>
-		<wp:post_id>1239</wp:post_id>
-		<wp:post_date><![CDATA[2013-01-11 04:31:39]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-01-11 04:31:39]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[velit-feugiat-porttito]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>11</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="food-for-thought"><![CDATA[Food for thought]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
-			<wp:meta_value><![CDATA[52]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_gallery_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_quote]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_m4v]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_ogv]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_poster]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_ogg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_interface_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_parallax]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[#303030]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_font_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_overlay]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bottom_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_disable_transparent_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
 	<item>
 		<title>Basically Salient is beauitful from all around</title>
 		<link>http://localhost/wordpress-3-8/2015/05/22/porttitor-porttitor-mollis-vitae-placerat-2/</link>
@@ -3596,130 +3409,7 @@ far from the countries Vokalia and Consonantia, there live the blind texts. Sepa
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Interdum</title>
-		<link>http://localhost/wordpress-3-8/2013/01/23/mauris-pharetra-interdum-lorem-2/</link>
-		<pubDate>Wed, 23 Jan 2013 18:06:42 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient/?p=144</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text][nectar_dropcap color=""]M [/nectar_dropcap]auris vel tortor accumsan, faucibus orci non, varius turpis. Aenean ac eros libero. Quisque quis sapien in ante scelerisque volutpat. Cras et libero iaculis, consequat nisi nec, tristique metus. Praesent eu odio in velit maximus accumsan vitae id lectus. Aenean ullamcorper vitae tortor vitae blandit. Nullam placerat eleifend metus, at tempus lacus suscipit non.
-
-Praesent in nunc sit amet orci dignissim mollis. Pellentesque elementum lacinia urna, sit amet scelerisque libero blandit vel. Aliquam erat volutpat. Praesent vel nunc orci. Suspendisse quis mauris sed ipsum lobortis semper id nec diam. Donec a porta nibh. Vivamus nibh metus, facilisis ut maximus eget, lobortis at erat. Nulla luctus nec eros ac vehicula. Nullam scelerisque laoreet lorem a sodales.
-
-Integer convallis, odio ut rutrum euismod, mi purus pulvinar justo, quis mollis metus metus vitae nibh. Proin eget tincidunt arcu. Donec ante mi, elementum non adipiscing vitae, pharetra quis mauris.[/vc_column_text][/vc_column][/vc_row][vc_row type="full_width_content" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_gallery type="flickity_style" onclick="link_no" img_size="full"][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text]Quisque at dolor venenatis justo fringilla dignissim ut id eros. Quisque non elit id purus feugiat vestibulum. Phasellus eget sodales neque. <!--more--> Morbi eget odio nec justo consequat gravida. Phasellus dolor nisl, venenatis eget euismod et, dapibus et purus. Maecenas interdum nisi a dolor facilisis eu laoreet mi facilisis. Mauris pharetra interdum lorem eu venenatis. Praesent est diam, fringilla in hendrerit vel, ullamcorper et mauris.
-
-Mauris vel tortor accumsan, faucibus orci non, varius turpis. Aenean ac eros libero. Quisque quis sapien in ante scelerisque volutpat. Cras et libero iaculis, consequat nisi nec, tristique metus. Praesent eu odio in velit maximus accumsan vitae id lectus. Aenean ullamcorper vitae tortor vitae blandit. Nullam placerat eleifend metus, at tempus lacus suscipit non. Praesent in nunc sit amet orci dignissim mollis. Pellentesque elementum lacinia urna, sit amet scelerisque libero blandit vel. Aliquam erat volutpat. Praesent vel nunc orci. Suspendisse quis mauris sed ipsum lobortis semper id nec diam. Donec a porta nibh. Vivamus nibh metus, facilisis ut maximus eget, lobortis at erat. Nulla luctus nec eros ac vehicula. Nullam scelerisque laoreet lorem a sodales.
-
-Integer convallis, odio ut rutrum euismod, mi purus pulvinar justo, quis mollis metus metus vitae nibh. Proin eget tincidunt arcu. Donec ante mi, elementum non adipiscing vitae, pharetra quis mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur eget nibh non odio iaculis posuere. Sed ante tortor, pharetra vitae iaculis id, sodales ac tellus. Ut viverra, nulla et adipiscing condimentum, libero nisi condimentum tellus, vel pharetra neque ligula sit amet mi. Sed rutrum consectetur purus ac tincidunt.[/vc_column_text][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[ Cras et libero iaculis, consequat nisi nec, tristi que metus. Praesent eu odio in velit maximus accumsan ]]></excerpt:encoded>
-		<wp:post_id>2329</wp:post_id>
-		<wp:post_date><![CDATA[2013-01-23 18:06:42]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-01-23 18:06:42]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[mauris-pharetra-interdum-lorem-2]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>13</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="music"><![CDATA[Music]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_quote]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_m4v]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_ogv]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_poster]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_ogg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
-			<wp:meta_value><![CDATA[84]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_interface_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_gallery_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_parallax]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[#3a3a3a]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_font_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_overlay]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bottom_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_disable_transparent_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[6612]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -3850,7 +3540,7 @@ Integer convallis, odio ut rutrum euismod, mi purus pulvinar justo, quis mollis 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
+			<wp:meta_value><![CDATA[6606]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -3969,126 +3659,10 @@ Integer convallis, odio ut rutrum euismod, mi purus pulvinar justo, quis mollis 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
+			<wp:meta_value><![CDATA[6608]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
-	<item>
-		<title>Donec Porta</title>
-		<link>http://localhost/wordpress-3-8/2013/01/08/donec-porta/</link>
-		<pubDate>Tue, 08 Jan 2013 23:17:36 +0000</pubDate>
-		<dc:creator><![CDATA[themenectar]]></dc:creator>
-		<guid isPermaLink="false">http://themenectar.com/demo/salient-blog/?p=3145</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text]
-<h3><span style="color: #1e83ec;">Even the all-powerful Pointing has no control over the situation.</span></h3>
-far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.[/vc_column_text][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="dark" text_align="left" overlay_strength="0.3"][vc_column column_padding="no-extra-padding" column_padding_position="all" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][vc_column_text]Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. l using her.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.[/vc_column_text][/vc_column][/vc_row][vc_row type="in_container" scene_position="center" text_color="light" text_align="left" bottom_padding="30" overlay_strength="0.3"][vc_column column_padding="padding-5-percent" column_padding_position="all" background_color="#1e83ec" background_color_opacity="1" background_hover_color_opacity="1" width="1/1"][testimonial_slider style="default"][testimonial title="Testimonial" tab_id="1452009327934-7" name="Blind Text" quote="And if she hasn’t been rewritten, then they are still using her. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."] Click the edit button to add your testimonial. [/testimonial][/testimonial_slider][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>3145</wp:post_id>
-		<wp:post_date><![CDATA[2013-01-08 23:17:36]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-01-08 23:17:36]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[donec-porta]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="gaming"><![CDATA[Gaming]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_interface_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_gallery_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_quote]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_m4v]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_ogv]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_poster]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_video_embed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_audio_ogg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_post_item_masonry_sizing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[wide_tall]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_parallax]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[#3f3f3f]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_font_color]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_overlay]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bottom_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[on]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_disable_transparent_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_love]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{s:7:"vc_grid";a:0:{}s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_nectar_header_bg_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
+	
 	<item>
 		<title>Portit mollis</title>
 		<link>http://localhost/wordpress-3-8/2013/02/22/porttitor-porttitor-mollis-vitae-placerat/</link>
@@ -4213,7 +3787,7 @@ Nunc ipsum orci, consectetur in euismod id, adipiscing nec libero. Vivamus sed n
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
+			<wp:meta_value><![CDATA[6605]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>6</wp:comment_id>
@@ -4334,7 +3908,7 @@ Nunc ipsum orci, consectetur in euismod id, adipiscing nec libero. Vivamus sed n
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[6187]]></wp:meta_value>
+			<wp:meta_value><![CDATA[6614]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>

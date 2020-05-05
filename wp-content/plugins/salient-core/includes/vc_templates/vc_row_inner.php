@@ -1,5 +1,10 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
    extract(shortcode_atts(array(
 	  "type" => 'in_container',
 	  'bg_image'=> '', 
@@ -46,6 +51,11 @@
 	  'equal_height' => '',
 	  'content_placement' => '',
 	  'column_margin' => 'default',
+		
+		'column_direction' => 'default',
+		'column_direction_tablet' => 'default',
+		'column_direction_phone' => 'default',
+		
 	  'css' => '',
 	  'class' => '',
     'translate_x' => '',
@@ -91,19 +101,19 @@
     		// For pattern bgs.
     		if(strtolower($bg_repeat) === 'repeat'){
     			$bg_props .= 'background-repeat: '. esc_attr(strtolower($bg_repeat)) .'; ';
-    			$etxra_class = 'no-cover';
+    			$etxra_class = ' no-cover';
     		} else {
     			$bg_props .= 'background-repeat: '. esc_attr(strtolower($bg_repeat)) .'; ';
     			$etxra_class = null;
     		}
 
-    		$using_image_class = 'using-image';
+    		$using_image_class = ' using-image';
     	}
 
     	if( !empty($bg_color) ) {
     		$bg_props .= 'background-color: '. esc_attr($bg_color).'; ';
     		if($exclude_row_header_color_inherit != 'true') {
-          $using_bg_color_class = 'using-bg-color';
+          $using_bg_color_class = ' using-bg-color';
         }
     	}
     	
@@ -116,22 +126,28 @@
     	}
     	
     	if(strtolower($vertically_center_columns) === 'true'){
-    		$vertically_center_class = 'vertically-align-columns';
+    		$vertically_center_class = ' vertically-align-columns';
     	} else {
     		$vertically_center_class = null;
     	}
     	
 
-    	if(strpos($top_padding,'%') !== false) {
+    	if( strpos($top_padding,'%') !== false || 
+			strpos($top_padding,'vh') !== false || 
+			strpos($top_padding,'vw') !== false || 
+			strpos($top_padding,'em') !== false) {
     		$style .= 'padding-top: '. esc_attr($top_padding) .'; ';
     	} else {
-    		$style .= 'padding-top: '. esc_attr($top_padding) .'px; ';
+    		$style .= 'padding-top: '. esc_attr(intval($top_padding)) .'px; ';
     	}
 
-    	if(strpos($bottom_padding,'%') !== false) {
+    	if( strpos($bottom_padding,'%') !== false || 
+			strpos($bottom_padding,'vh') !== false || 
+			strpos($bottom_padding,'vw') !== false || 
+			strpos($bottom_padding,'em') !== false) {
     		$style .= 'padding-bottom: '. esc_attr($bottom_padding) .'; ';
     	} else {	
-    		$style .= 'padding-bottom: '. esc_attr($bottom_padding) .'px; ';
+    		$style .= 'padding-bottom: '. esc_attr(intval($bottom_padding)) .'px; ';
     	}
       
       
@@ -205,10 +221,20 @@
     	$row_id    = (!empty($el_id)) ? $el_id: uniqid("fws_");
     	$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
     	
-      echo '<div id="'.$row_id.'" data-midnight="'.esc_attr(strtolower($text_color)).'" data-column-margin="'.esc_attr($column_margin).'" data-bg-mobile-hidden="'.esc_attr($background_image_mobile_hidden).'" class="wpb_row vc_row-fluid vc_row inner_row '. $main_class . $equal_height_class . $parallax_class . ' ' .  $css_class . ' '. $vertically_center_class . ' '. $class . ' " '.$using_custom_text_color.' style="'.$style.'">';
+			// Dynamic style classes.
+			if( function_exists('nectar_el_dynamic_classnames') ) {
+				$dynamic_el_styles = nectar_el_dynamic_classnames('inner_row', $atts);
+			} else {
+				$dynamic_el_styles = '';
+			}
+			
+			$bg_mobile_hidden = ( !empty($background_image_mobile_hidden) ) ? ' data-bg-mobile-hidden="'.esc_attr($background_image_mobile_hidden).'" ' : '';
+			
+      echo '<div id="'.$row_id.'" data-midnight="'.esc_attr(strtolower($text_color)).'" data-column-margin="'.esc_attr($column_margin).'"'.$bg_mobile_hidden.' class="wpb_row vc_row-fluid vc_row inner_row '. $main_class . $equal_height_class . $parallax_class . ' ' .  $css_class . $vertically_center_class . ' '. $class . $dynamic_el_styles. ' " '.$using_custom_text_color.' style="'.$style.'">';
     	
     	// Row bg. 
-    	echo '<div class="row-bg-wrap"> <div class="row-bg '.$using_image_class . ' ' . $using_bg_color_class . ' '. $etxra_class.'" '.$parallax_speed.' style="'.$bg_props.'"></div> </div>';
+			$row_bg_style_markup = (!empty($bg_props)) ? ' style="'.$bg_props.'"' : '';
+    	echo '<div class="row-bg-wrap"> <div class="row-bg'.$using_image_class . $using_bg_color_class . $etxra_class.'" '.$parallax_speed . $row_bg_style_markup.'></div> </div>';
 
     	// Mouse based parallax.
     	if( $mouse_based_parallax_bg === 'true' ) {
@@ -285,10 +311,12 @@
     	// Video bg.
       if($video_bg) {
     		
+				$video_image_src = '';
+				
     		// Parse video image.
     		if(strpos($video_image, "http://") !== false){
     			$video_image_src = $video_image;
-    		} else {
+    		} else if( preg_match('/^\d+$/', $video_image) ) {
     			$video_image_src = wp_get_attachment_image_src($video_image, 'full');
     			$video_image_src = $video_image_src[0];
     		}
@@ -313,7 +341,7 @@
     		
     	<?php }
     	
-        echo '<div class="col span_12 '. esc_attr(strtolower($text_color)) .' '. esc_attr($text_align) .'">'.do_shortcode($content).'</div></div>';
+        echo '<div class="row_col_wrap_12_inner col span_12 '. esc_attr(strtolower($text_color)) .' '. esc_attr($text_align) .'">'.do_shortcode($content).'</div></div>';
   
   } //disable row
     	

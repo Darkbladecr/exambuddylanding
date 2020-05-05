@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_action('vc_before_init', 'salient_portfolio_maps');
 
 if( ! function_exists('salient_portfolio_maps') ) {

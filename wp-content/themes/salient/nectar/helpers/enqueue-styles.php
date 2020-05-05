@@ -59,6 +59,7 @@ function nectar_main_styles() {
 		 
 		 wp_register_style( 'nectar-ocm-slide-out-right-hover', $nectar_get_template_directory_uri . '/css/off-canvas/slide-out-right-hover.css', '', $nectar_theme_version );
 		 wp_register_style( 'nectar-ocm-fullscreen', $nectar_get_template_directory_uri . '/css/off-canvas/fullscreen.css', '', $nectar_theme_version );
+		 wp_register_style( 'nectar-ocm-fullscreen-split', $nectar_get_template_directory_uri . '/css/off-canvas/fullscreen-split.css', '', $nectar_theme_version );
 		 wp_register_style( 'nectar-ocm-simple', $nectar_get_template_directory_uri . '/css/off-canvas/simple-dropdown.css', '', $nectar_theme_version );
 		 
 		 wp_register_style( 'twentytwenty', $nectar_get_template_directory_uri . '/css/plugins/twentytwenty.css' );		
@@ -145,6 +146,8 @@ function nectar_main_styles() {
 		 	wp_enqueue_style( 'nectar-ocm-slide-out-right-hover' );
 	 } else if( $header_off_canvas_style === 'fullscreen' || $header_off_canvas_style === 'fullscreen-alt' ) {
 	 		wp_enqueue_style( 'nectar-ocm-fullscreen' );
+	 } else if( $header_off_canvas_style === 'fullscreen-split' ) {
+		 wp_enqueue_style( 'nectar-ocm-fullscreen-split' );
 	 } else if( $header_off_canvas_style === 'simple' ) {
 		 wp_enqueue_style( 'nectar-ocm-simple' );
 	 }
@@ -276,7 +279,7 @@ function nectar_main_styles() {
 
 
 	// Front end editor needs all.
-	if ( $nectar_using_VC_front_end_editor || NectarElAssets::locate(array('[templatera')) ) {
+	if ( $nectar_using_VC_front_end_editor ) {
 		wp_enqueue_style( 'wp-mediaelement' );
 		wp_enqueue_style( 'iconsmind' );
 		wp_enqueue_style( 'fullpage' );

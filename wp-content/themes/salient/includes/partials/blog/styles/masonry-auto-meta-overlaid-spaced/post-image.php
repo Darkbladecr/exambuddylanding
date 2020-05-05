@@ -23,7 +23,7 @@ $image_attrs = array(
 if( has_post_thumbnail() ) { 
   
   // Lazy load.
-  if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] ) {
+  if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] && NectarLazyImages::activate_lazy() ) {
     echo '<span class="post-featured-img" data-nectar-img-src="' . get_the_post_thumbnail_url( $post->ID, 'medium_featured', array( 'title' => '' ) ) . '"></span>';
   } else {
     echo '<span class="post-featured-img" style="background-image: url(' . get_the_post_thumbnail_url( $post->ID, 'medium_featured', array( 'title' => '' ) ) . ');"></span>';

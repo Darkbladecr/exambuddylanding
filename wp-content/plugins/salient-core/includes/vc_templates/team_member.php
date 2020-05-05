@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
   "description" => '', 
   'team_member_bio' => '',
@@ -79,7 +84,8 @@ extract(shortcode_atts(array(
           $has_dimension_data = true;
         }
         
-        $image_url = $image_src[0];
+				$image_url = ( isset($image_src[0]) ) ? $image_src[0] : '';
+
       }
       
     }

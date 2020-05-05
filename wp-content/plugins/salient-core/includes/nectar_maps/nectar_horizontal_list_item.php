@@ -312,11 +312,12 @@ return array(
 		array(
 			"type" => "dropdown",
 			'save_always' => true,
-			"heading" => "Hover Effect",
+			"heading" => "Style",
 			"param_name" => "hover_effect",
 			"value" => array(
-				"Background Color Change" => "default",
-				"None" => "none",
+				"Bottom Border, Color Hover Effect" => "default",
+				"Bottom Border, No Hover Effect" => "none",
+				"Full Border" => "full_border",
 			),
 		),
 		
@@ -325,7 +326,7 @@ return array(
 			"heading" => esc_html__("Hover Color", "salient-core"),
 			"param_name" => "hover_color",
 			"admin_label" => false,
-			"dependency" => Array('element' => "hover_effect", 'value' => array('default')),
+			"dependency" => Array('element' => "hover_effect", 'value' => array('default','full_border')),
 			"value" => array(
 				"Accent-Color" => "accent-color",
 				"Extra-Color-1" => "extra-color-1",
@@ -337,6 +338,85 @@ return array(
 			'save_always' => true,
 			'description' => esc_html__( 'Choose a color from your','salient-core') . ' <a target="_blank" href="'. esc_url(admin_url()) .'?page=Salient&tab=6"> ' . esc_html__('globally defined color scheme','salient-core') . '</a>',
 		),
+		array(
+			"type" => "dropdown",
+			"heading" => esc_html__("Border Radius", "salient-core"),
+			'save_always' => true,
+			"dependency" => Array('element' => "hover_effect", 'value' => array('full_border')),
+			"param_name" => "border_radius",
+			"value" => array(
+				esc_html__("0px", "salient-core") => "none",
+				esc_html__("3px", "salient-core") => "3px",
+				esc_html__("5px", "salient-core") => "5px", 
+				esc_html__("10px", "salient-core") => "10px", 
+				esc_html__("15px", "salient-core") => "15px"
+				)
+			),	
+			
+			array(
+				'type' => 'dropdown',
+				"group" => "Icon",
+				'heading' => __( 'Icon library', 'salient-core' ),
+				'value' => array(
+					esc_html__( 'None', 'salient-core' ) => 'none',
+					esc_html__( 'Font Awesome', 'salient-core' ) => 'fontawesome',
+					esc_html__( 'Iconsmind', 'salient-core' ) => 'iconsmind',
+					esc_html__( 'Steadysets', 'salient-core' ) => 'steadysets',
+					esc_html__( 'Linecons', 'salient-core' ) => 'linecons',
+				),
+				'save_always' => true,
+				'param_name' => 'icon_family',
+				'description' => __( 'Select icon library.', 'salient-core' ),
+			),
+			array(
+				'type' => 'dropdown',
+				"group" => "Icon",
+				'heading' => __( 'Icon Size', 'salient-core' ),
+				'value' => array(
+					esc_html__( 'Regular', 'salient-core' ) => 'regular',
+					esc_html__( 'Small', 'salient-core' ) => 'small',
+					esc_html__( 'Large', 'salient-core' ) => 'large',
+					esc_html__( 'Extra Large', 'salient-core' ) => 'x_large',
+				),
+				'save_always' => true,
+				'param_name' => 'icon_size',
+			),
+			array(
+				"type" => "iconpicker",
+				"group" => "Icon",
+				"heading" => esc_html__("Icon", "salient-core"),
+				"param_name" => "icon_fontawesome",
+				"settings" => array( "iconsPerPage" => 240),
+				"dependency" => array('element' => "icon_family", 'emptyIcon' => true, 'value' => 'fontawesome'),
+				"description" => esc_html__("Select icon from library.", "salient-core")
+			),
+			array(
+				"type" => "iconpicker",
+				"group" => "Icon",
+				"heading" => esc_html__("Icon", "salient-core"),
+				"param_name" => "icon_iconsmind",
+				"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => true, "iconsPerPage" => 240),
+				"dependency" => array('element' => "icon_family", 'value' => 'iconsmind'),
+				"description" => esc_html__("Select icon from library.", "salient-core")
+			),
+			array(
+				"type" => "iconpicker",
+				"group" => "Icon",
+				"heading" => esc_html__("Icon", "salient-core"),
+				"param_name" => "icon_linecons",
+				"settings" => array( 'type' => 'linecons', 'emptyIcon' => true, "iconsPerPage" => 240),
+				"dependency" => array('element' => "icon_family", 'value' => 'linecons'),
+				"description" => esc_html__("Select icon from library.", "salient-core")
+			),
+			array(
+				"type" => "iconpicker",
+				"group" => "Icon",
+				"heading" => esc_html__("Icon", "salient-core"),
+				"param_name" => "icon_steadysets",
+				"settings" => array( 'type' => 'steadysets', 'emptyIcon' => true, "iconsPerPage" => 240),
+				"dependency" => array('element' => "icon_family", 'value' => 'steadysets'),
+				"description" => esc_html__("Select icon from library.", "salient-core")
+			),
 		
 	)
 );

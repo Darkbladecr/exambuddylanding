@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
 	"columns" => "1", 
 	"column_layout_using_2_columns" => 'even',
@@ -27,7 +32,14 @@ extract(shortcode_atts(array(
 	"url" => '',
 	"hover_effect" => 'default',
 	"hover_color" => 'accent-color',
-	'font_family' => 'p'
+	'font_family' => 'p',
+	'border_radius' => '0px',
+	'icon_family' => '',
+  'icon_fontawesome' => '',
+  'icon_linecons' => '',
+  'icon_iconsmind' => '',
+  'icon_steadysets' => '',
+	'icon_size' => ''
 ), $atts));
 
 
@@ -46,7 +58,69 @@ else {
 
 $hasbtn_class = (!empty($cta_1_text) || !empty($cta_2_text)) ? 'has-btn' : null;
 
-echo '<div class="nectar-hor-list-item '.$hasbtn_class.'" data-hover-effect="'.esc_attr($hover_effect).'" data-font-family="'.esc_attr($font_family).'" data-color="'.esc_attr($hover_color).'" data-columns="'.esc_attr($columns).'" data-column-layout="'.esc_attr($column_layout_to_use).'">'; 
+
+switch($icon_family) {
+	case 'fontawesome':
+		$icon = $icon_fontawesome;
+		break;
+	case 'steadysets':
+		$icon = $icon_steadysets;
+		break;
+	case 'linea':
+		$icon = $icon_linea;
+		break;
+	case 'linecons':
+		$icon = $icon_linecons;
+		break;
+	case 'iconsmind':
+		$icon = $icon_iconsmind;
+		break;
+	default:
+		$icon = '';
+		break;
+}
+
+$icon_markup = null;
+$has_icon    = 'false';
+
+// Check if iconsmind SVGs exist.
+$svg_iconsmind = ( defined('NECTAR_THEME_DIRECTORY') && file_exists( NECTAR_THEME_DIRECTORY . '/css/fonts/svg-iconsmind/Aa.svg.php' ) ) ? true : false;
+
+// SVG Icon.
+if( $icon_family === 'iconsmind' && $svg_iconsmind ) {
+	
+	$icon_id        = 'nectar-iconsmind-icon-'.uniqid();
+	$icon_markup    = '<span class="im-icon-wrap item-icon" data-size="'.esc_attr($icon_size).'" data-color="'.strtolower($icon_color) .'"><span>';
+	$converted_icon = str_replace('iconsmind-', '', $icon);
+	
+	ob_start();
+
+	get_template_part( 'css/fonts/svg-iconsmind/'. $converted_icon .'.svg' );
+	$icon_markup .=  ob_get_contents();
+	
+	ob_end_clean();
+	
+	$icon_markup .= '</span></span>';
+	$has_icon = 'true';
+}
+// Regular Icon.
+else {
+
+	if( !empty($icon_family) && $icon_family === 'iconsmind' ) {
+		wp_enqueue_style( 'iconsmind' );
+	}
+
+	if( !empty($icon_family) && $icon_family !== 'none' ) {
+		$has_icon    = 'true';
+		$icon_markup = '<i class="item-icon ' . esc_attr($icon) .'" data-size="'.esc_attr($icon_size).'"></i>'; 
+	} 
+	else {
+		$icon_markup = null; 
+	}
+}
+
+
+echo '<div class="nectar-hor-list-item '.$hasbtn_class.'" data-hover-effect="'.esc_attr($hover_effect).'" data-br="'.esc_attr($border_radius).'" data-font-family="'.esc_attr($font_family).'" data-color="'.esc_attr($hover_color).'" data-columns="'.esc_attr($columns).'" data-column-layout="'.esc_attr($column_layout_to_use).'">'; 
 	
 	for($i = 0; $i < intval($columns); $i++) {
 
@@ -79,6 +153,15 @@ echo '<div class="nectar-hor-list-item '.$hasbtn_class.'" data-hover-effect="'.e
 			}
 		}
 		
+		// Add icon to first col.
+		if( $i == 0 ) {
+			$icon_tag = $icon_markup;
+			$icon_attr = ' data-icon="'.esc_attr($has_icon).'"';
+		} else {
+			$icon_attr = null;
+			$icon_tag  = null;
+		}
+		
 		$opening_tag = null;
 		$closing_tag = null;
 		
@@ -87,7 +170,7 @@ echo '<div class="nectar-hor-list-item '.$hasbtn_class.'" data-hover-effect="'.e
 			$closing_tag = '</' . $atts['col_'.$index_to_grab.'_text_element'] . '>';
 		}
 		
-		echo '<div class="nectar-list-item" data-text-align="'.esc_attr($atts['col_'.$index_to_grab.'_text_align']).'">'. $opening_tag . wp_kses_post($atts['col_'.$index_to_grab.'_content']) . $closing_tag . $cta_1_markup . $cta_2_markup. '</div>';
+		echo '<div class="nectar-list-item"'.$icon_attr.' data-text-align="'.esc_attr($atts['col_'.$index_to_grab.'_text_align']).'">'. $icon_tag . $opening_tag . wp_kses_post($atts['col_'.$index_to_grab.'_content']) . $closing_tag . $cta_1_markup . $cta_2_markup. '</div>';
 	}
 
 $url_markup = null;

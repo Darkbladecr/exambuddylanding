@@ -43,6 +43,11 @@ $nectar_scale_vals_arr = array(
 	"200%" => "2",
 	"225%" => "2.25",
 	"250%" => "2.5",
+	"75%" => "0.75",
+	"50%" => "0.5",
+	"40%" => "0.4",
+	"30%" => "0.3",
+	"20%" => "0.2",
 );
 
 return array(
@@ -230,6 +235,33 @@ return array(
 		),
 		
 		array(
+			"type" => "dropdown",
+			"group" => 'Layer #1',
+			"heading" => esc_html__("Mobile Image Width", "salient-core"),
+			"param_name" => "image_1_image_width_mobile",
+			"value" => array(
+				"Default" => "default",
+				"100%" => "100",
+				"95%" => "95",
+				"90%" => "90",
+				"85%" => "85",
+				"80%" => "80",
+				"75%" => "75",	
+				"70%" => "70",	
+				"65%" => "65",
+				"60%" => "60",
+				"55%" => "55",
+				"50%" => "50",
+				"45%" => "45",
+				"40%" => "40",
+				"35%" => "35",
+				"30%" => "30",
+			),
+			"description" => esc_html__("This allows you to tell the browser how much space your image will approximately take up. Doing so will fine-tune performance so that the optimal image size can be loaded. Value is based on a total percentage of screen width. (Will be used in image \"sizes\" attribute)", "salient-core"),
+			'save_always' => true
+		),
+		
+		array(
 			"type" => "fws_image",
 			"group" => 'Layer #2',
 			"heading" => esc_html__("Image #2", "salient-core"),
@@ -400,6 +432,32 @@ return array(
 				"175%" => "175%",	
 				"200%" => "200%"
 			),
+			'save_always' => true
+		),
+		array(
+			"type" => "dropdown",
+			"group" => 'Layer #2',
+			"heading" => esc_html__("Mobile Image Width", "salient-core"),
+			"param_name" => "image_2_image_width_mobile",
+			"value" => array(
+				"Default" => "default",
+				"100%" => "100",
+				"95%" => "95",
+				"90%" => "90",
+				"85%" => "85",
+				"80%" => "80",
+				"75%" => "75",	
+				"70%" => "70",	
+				"65%" => "65",
+				"60%" => "60",
+				"55%" => "55",
+				"50%" => "50",
+				"45%" => "45",
+				"40%" => "40",
+				"35%" => "35",
+				"30%" => "30",
+			),
+			"description" => esc_html__("This allows you to tell the browser how much space your image will approximately take up. Doing so will fine-tune performance so that the optimal image size can be loaded. Value is based on a total percentage of screen width. (Will be used in image \"sizes\" attribute)", "salient-core"),
 			'save_always' => true
 		),
 		
@@ -576,7 +634,32 @@ return array(
 			),
 			'save_always' => true
 		),
-		
+		array(
+			"type" => "dropdown",
+			"group" => 'Layer #3',
+			"heading" => esc_html__("Mobile Image Width", "salient-core"),
+			"param_name" => "image_3_image_width_mobile",
+			"value" => array(
+				"Default" => "default",
+				"100%" => "100",
+				"95%" => "95",
+				"90%" => "90",
+				"85%" => "85",
+				"80%" => "80",
+				"75%" => "75",	
+				"70%" => "70",	
+				"65%" => "65",
+				"60%" => "60",
+				"55%" => "55",
+				"50%" => "50",
+				"45%" => "45",
+				"40%" => "40",
+				"35%" => "35",
+				"30%" => "30",
+			),
+			"description" => esc_html__("This allows you to tell the browser how much space your image will approximately take up. Doing so will fine-tune performance so that the optimal image size can be loaded. Value is based on a total percentage of screen width. (Will be used in image \"sizes\" attribute)", "salient-core"),
+			'save_always' => true
+		),
 		array(
 			"type" => "fws_image",
 			"group" => 'Layer #4',
@@ -750,7 +833,32 @@ return array(
 			),
 			'save_always' => true
 		),
-		
+		array(
+			"type" => "dropdown",
+			"group" => 'Layer #4',
+			"heading" => esc_html__("Mobile Image Width", "salient-core"),
+			"param_name" => "image_4_image_width_mobile",
+			"value" => array(
+				"Default" => "default",
+				"100%" => "100",
+				"95%" => "95",
+				"90%" => "90",
+				"85%" => "85",
+				"80%" => "80",
+				"75%" => "75",	
+				"70%" => "70",	
+				"65%" => "65",
+				"60%" => "60",
+				"55%" => "55",
+				"50%" => "50",
+				"45%" => "45",
+				"40%" => "40",
+				"35%" => "35",
+				"30%" => "30",
+			),
+			"description" => esc_html__("This allows you to tell the browser how much space your image will approximately take up. Doing so will fine-tune performance so that the optimal image size can be loaded. Value is based on a total percentage of screen width. (Will be used in image \"sizes\" attribute)", "salient-core"),
+			'save_always' => true
+		),
 		array(
 			"type" => "textfield",
 			"heading" => esc_html__("Time Between Animations", "salient-core"),
@@ -789,6 +897,17 @@ return array(
 				"param_name" => "parallax_scrolling",
 				"description" => esc_html__("If selected, each layer will scroll at a slightly different speed to create a parallax effect.", "salient-core") . '<br />' . esc_html__("Note: using this will disable the individual layer animations.", "salient-core"),
 				"value" => Array(esc_html__("Yes, please", "salient-core") => 'yes')
+			),
+			array(
+				"type" => "dropdown",
+				"heading" => esc_html__("Layer #1 Scrolling", "salient-core"),
+				'save_always' => true,
+				"param_name" => "layer_1_parallax_scrolling",
+				"dependency" => Array('element' => "parallax_scrolling", 'not_empty' => true),
+				"value" => array(
+					esc_html__("No parallax scrolling", "salient-core") => "no",
+					esc_html__("Enable parallax scrolling", "salient-core") => "yes",
+				),
 			),
 			array(
 				"type" => "dropdown",

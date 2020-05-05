@@ -3,7 +3,7 @@
  * The template for displaying single portfolio post type projects.
  *
  * @package Salient Portfolio
- * @version 1.0
+ * @version 1.5
  */
 
 // Exit if accessed directly
@@ -41,18 +41,25 @@ $subtitle                  = get_post_meta( $post->ID, '_nectar_header_subtitle'
 $project_social_style      = get_option( 'salient_social_button_style', 'fixed' );
 $portfolio_remove_comments = ( ! empty( $options['portfolio_remove_comments'] ) ) ? $options['portfolio_remove_comments'] : '0';
 $theme_skin                = ( ! empty( $options['theme-skin'] ) && $options['theme-skin'] === 'ascend' ) ? 'ascend' : 'default';
+$remove_single_header      = 'false';  
+  
+if( isset($options['portfolio_remove_single_header']) && 
+    !empty($options['portfolio_remove_single_header']) && 
+	  '1' === $options['portfolio_remove_single_header'] ) {
+	$remove_single_header = 'true';
+} 
 
 ?>
 
-<div id="<?php echo esc_attr( $full_width_portfolio ); ?>" <?php  if ( ! empty( $bg ) && $fwp !== 'enabled' || ! empty( $bg_color ) && $fwp !== 'enabled' ) { echo ' data-project-header-bg="true"'; } ?> data-featured-img="<?php echo esc_attr( $featured_src[0] ); ?>">
+<div id="<?php echo esc_attr( $full_width_portfolio ); ?>" <?php if ( ! empty( $bg ) && $fwp !== 'enabled' || ! empty( $bg_color ) && $fwp !== 'enabled' ) { echo ' data-project-header-bg="true"'; } ?> data-featured-img="<?php echo esc_attr( $featured_src[0] ); ?>">
 			
 		<?php
-		if( function_exists('nectar_page_header') ) {
+		if( function_exists('nectar_page_header') && 'true' !== $remove_single_header ) {
 			nectar_page_header( $post->ID );
 		} 
 		
 
-		if ( defined( 'NECTAR_THEME_NAME' ) && empty( $bg ) && empty( $bg_color ) && $bg_type !== 'video_bg' ) {
+		if ( defined( 'NECTAR_THEME_NAME' ) && empty( $bg ) && empty( $bg_color ) && $bg_type !== 'video_bg' && 'true' !== $remove_single_header ) {
 			?>
 			
 				<div class="row project-title">
@@ -79,7 +86,7 @@ $theme_skin                = ( ! empty( $options['theme-skin'] ) && $options['th
 			
 		<?php } //project header ?>
 		
-	<div class="container-wrap" data-nav-pos="<?php echo esc_attr( $single_nav_pos ); ?>">
+	<div class="container-wrap" data-nav-pos="<?php echo esc_attr( $single_nav_pos ); ?>" data-rm-header="<?php echo esc_attr( $remove_single_header ); ?>">
 		
 		<div class="container main-content"> 
 			

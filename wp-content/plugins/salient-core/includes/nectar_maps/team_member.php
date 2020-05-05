@@ -102,7 +102,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Social Icon", "salient-core"),
 			"param_name" => "social_icon_1",
-			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 4000 ),
+			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 240 ),
 			"dependency" => Array('element' => "team_memeber_style", 'value' => array('bio_fullscreen','bio_fullscreen_alt')),
 			"description" => ''
 		),
@@ -117,7 +117,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Social Icon 2", "salient-core"),
 			"param_name" => "social_icon_2",
-			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "team_memeber_style", 'value' => array('bio_fullscreen','bio_fullscreen_alt')),
 			"description" => ''
 		),
@@ -133,7 +133,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Social Icon 3", "salient-core"),
 			"param_name" => "social_icon_3",
-			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "team_memeber_style", 'value' => array('bio_fullscreen','bio_fullscreen_alt')),
 			"description" => ''
 		),
@@ -149,7 +149,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Social Icon 4", "salient-core"),
 			"param_name" => "social_icon_4",
-			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 4000),
+			"settings" => array( "emptyIcon" => true, "iconsPerPage" => 240),
 			"dependency" => Array('element' => "team_memeber_style", 'value' => array('bio_fullscreen','bio_fullscreen_alt')),
 			"description" => ''
 		),

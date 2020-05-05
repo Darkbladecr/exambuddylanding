@@ -28,5 +28,10 @@ if ( ! class_exists( 'Menu_Item_Custom_Fields' ) ) :
 		}
 		
 	}
-	add_action( 'wp_loaded', array( 'Menu_Item_Custom_Fields', 'load' ), 9 );
+	
+	global $wp_version;
+	 if (version_compare(preg_replace("/[^0-9\.]/","",$wp_version), '5.4', '<') ) {
+		add_action( 'wp_loaded', array( 'Menu_Item_Custom_Fields', 'load' ), 9 );
+	}
+	
 endif; // class_exists( 'Menu_Item_Custom_Fields' )

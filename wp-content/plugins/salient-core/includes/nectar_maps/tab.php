@@ -38,7 +38,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_fontawesome",
-			"settings" => array( "iconsPerPage" => 4000),
+			"settings" => array( "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'emptyIcon' => true, 'value' => 'fontawesome'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -46,7 +46,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_iconsmind",
-			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => true, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'iconsmind', 'emptyIcon' => true, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'iconsmind'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -54,7 +54,7 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_linecons",
-			"settings" => array( 'type' => 'linecons', 'emptyIcon' => true, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'linecons', 'emptyIcon' => true, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'linecons'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
 		),
@@ -62,9 +62,21 @@ return array(
 			"type" => "iconpicker",
 			"heading" => esc_html__("Icon", "salient-core"),
 			"param_name" => "icon_steadysets",
-			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => true, "iconsPerPage" => 4000),
+			"settings" => array( 'type' => 'steadysets', 'emptyIcon' => true, "iconsPerPage" => 240),
 			"dependency" => array('element' => "icon_family", 'value' => 'steadysets'),
 			"description" => esc_html__("Select icon from library.", "salient-core")
+		),
+		array(
+			"type" => "textfield",
+			"heading" => esc_html__("Extra class name", "salient-core"),
+			"param_name" => "el_class",
+			"description" => esc_html__("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "salient-core")
+		),
+		array(
+			"type" => "textarea",
+			"heading" => esc_html__("Sub Description", "salient-core"),
+			"param_name" => "sub_desc",
+			"description" => esc_html__("Tab sub description. (Only used in the following tab styles: Vertical Sticky Scrolling)", "salient-core")
 		),
 		array(
 			"type" => "tab_id",

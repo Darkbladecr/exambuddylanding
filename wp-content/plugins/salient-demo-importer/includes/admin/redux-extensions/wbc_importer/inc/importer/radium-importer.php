@@ -128,8 +128,13 @@ if ( !class_exists( 'Radium_Theme_Importer' ) ) {
       }else {
         $imported_demos = array_merge( $imported_demos , $this->active_import );
       }
-
-      do_action( 'wbc_importer_after_content_import', $this->active_import, $this->demo_files_path );
+      
+      // Nectar addition 
+      // Do not trigger after conent importer unless user has selected to import content.
+      if( !isset( $this->nectar_import_demo_content ) || $this->nectar_import_demo_content == 'true' ) {
+        do_action( 'wbc_importer_after_content_import', $this->active_import, $this->demo_files_path );
+      }
+      
 
       update_option( 'wbc_imported_demos', $imported_demos );
     }

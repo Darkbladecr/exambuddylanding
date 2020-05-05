@@ -1,6 +1,84 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 global $nectar_options;
+
+/**
+ * Returns a list of Salient 
+ * page builder elements.
+ *
+ * @since 1.4
+ */
+if( !function_exists('nectar_wpbakery_element_list') ) { 
+	
+	function nectar_wpbakery_element_list() {
+		
+		$element_list = array(
+			'carousel',
+			'client',
+			'clients',
+			'divider',
+			'fancy_box',
+			'full_width_section',
+			'heading',
+			'image_with_animation',
+			'item',
+			'milestone',
+			'morphing_outline',
+			'nectar_animated_title',
+			'nectar_blog',
+			'nectar_btn',
+			'nectar_cascading_images',
+			'nectar_category_grid',
+			'nectar_cta',
+			'nectar_flip_box',
+			'nectar_food_menu_item',
+			'nectar_gmap',
+			'nectar_gradient_text',
+			'nectar_highlighted_text',
+			'nectar_horizontal_list_item',
+			'nectar_hotspot',
+			'nectar_icon',
+			'nectar_icon_list',
+			'nectar_icon_list_item',
+			'nectar_image_comparison',
+			'nectar_image_with_hotspots',
+			'nectar_post_grid',
+			'nectar_single_testimonial',
+			'nectar_video_lightbox',
+			'nectar_woo_products',
+			'page_link',
+			'page_submenu',
+			'pricing_column',
+			'pricing_table',
+			'recent_posts',
+			'split_line_heading',
+			'tab',
+			'tabbed_section',
+			'team_member',
+			'testimonial',
+			'testimonial_slider',
+			'toggle',
+			'toggles',
+			'vc_column',
+			'vc_column_inner',
+			'vc_column_text',
+			'vc_gallery',
+			'vc_pie',
+			'vc_row',
+			'vc_row_inner'
+		);
+		
+		return $element_list;
+		
+	}
+}
+
 
 /**
  * Set WPBakery elements directory.
@@ -13,15 +91,16 @@ if( ! function_exists('nectar_set_vc_as_theme') ) {
 
 		vc_set_as_theme($disable_updater = true);
 		$template_directory = SALIENT_CORE_ROOT_DIR_PATH;
-
+		
+		// Salient WPBakery is active.
 		if(defined( 'SALIENT_VC_ACTIVE')) {
-		    $child_dir  = $template_directory . 'includes/vc_templates';
+
 		    $parent_dir = $template_directory . 'includes/vc_templates';
-
 		    vc_set_shortcodes_templates_dir($parent_dir);
-		    vc_set_shortcodes_templates_dir($child_dir);
-		} else {
 
+		} 
+		// Raw WPBakery is active.
+		else {
 		    $child_dir  = $template_directory . 'includes/vc_templates';
 		    $parent_dir = $template_directory . 'includes/vc_templates';
 		    vc_set_shortcodes_templates_dir($parent_dir);
@@ -39,6 +118,64 @@ if( ! function_exists('nectar_set_vc_as_theme') ) {
 add_action('vc_before_init', 'nectar_set_vc_as_theme');
 
 
+/**
+* Checks to see if any child template 
+* overrides exist and if so, filters the location.
+*
+* @since 1.4
+*/
+
+if( !function_exists('nectar_child_wpbakery_template_overrides') ) {
+	
+	function nectar_child_wpbakery_template_overrides() {
+		
+		if( is_child_theme() ) {
+			
+			$nectar_elements = nectar_wpbakery_element_list();
+			
+			foreach($nectar_elements as $element) {
+				
+				if( file_exists( get_stylesheet_directory() . '/vc_templates/' . $element . '.php' ) ) {
+					
+					add_filter('vc_shortcode_set_template_'.$element, 'nectar_child_wpbakery_template_path');
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+add_action('vc_before_init','nectar_child_wpbakery_template_overrides');
+
+/**
+* Filters the path of a given template file 
+* to load from the child theme.
+*
+* @since 1.4
+*/
+if( !function_exists('nectar_child_wpbakery_template_path') ) {
+	
+	function nectar_child_wpbakery_template_path( $template_location ) {
+		
+		if( isset($template_location) && 
+		!empty($template_location) && 
+		false !== strpos($template_location,'/vc_templates') &&
+		false !== strpos($template_location,'.php') ) {
+			
+			$element = substr($template_location, strpos($template_location,'/vc_templates') );
+			return get_stylesheet_directory() . $element;
+			
+		}
+		
+		return $template_location;
+		
+	}
+	
+}
 
 
 add_filter( 'vc_load_default_templates', 'nectar_custom_template_modify_array' ); // Hook in
@@ -203,24 +340,55 @@ function nectar_select_color_styles() {
 	$nectar_extra_color_2 = (!empty($nectar_options["extra-color-2"])) ? $nectar_options["extra-color-2"] : 'transparent';
 	$nectar_extra_color_3 = (!empty($nectar_options["extra-color-3"])) ? $nectar_options["extra-color-3"] : 'transparent';
 
-	$nectar_color_css = '.vc_edit-form-tab .chosen-container .chosen-results li.Default:before, .vc_edit-form-tab .chosen-container .chosen-results li.default:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].Default + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].default + .chosen-container > a:before { background: linear-gradient(to right, #444 49%, #fff 51%); } 
-	.vc_edit-form-tab .chosen-container .chosen-results li[class*="Accent-Color"]:before, .vc_edit-form-tab .chosen-container .chosen-results li.Default-Accent-Color:before, .vc_edit-form-tab .chosen-container .chosen-results li[class*="accent-color"]:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].Default-Accent-Color + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Accent-Color"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="accent-color"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].accent-color + .chosen-container > a:before { background-color: '.$nectar_accent_color.'; } 
-    .vc_edit-form-tab .chosen-container .chosen-results li[class*="Extra-Color-1"]:before, .vc_edit-form-tab .chosen-container .chosen-results li[class*="extra-color-1"]:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Extra-Color-1"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="extra-color-1"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].extra-color-1 + .chosen-container > a:before { background-color: '.$nectar_extra_color_1.'; }
-    .vc_edit-form-tab .chosen-container .chosen-results li[class*="Extra-Color-2"]:before, .vc_edit-form-tab .chosen-container .chosen-results li[class*="extra-color-2"]:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Extra-Color-2"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="extra-color-2"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].extra-color-2 + .chosen-container > a:before { background-color: '.$nectar_extra_color_2.'; }
-    .vc_edit-form-tab .chosen-container .chosen-results li[class*="Extra-Color-3"]:before, .vc_edit-form-tab .chosen-container .chosen-results li[class*="extra-color-3"]:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Extra-Color-3"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="extra-color-3"] + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].extra-color-3 + .chosen-container > a:before { background-color: '.$nectar_extra_color_3.'; }';
+	$nectar_color_css = '.vc_edit-form-tab .chosen-container .chosen-results li.Default:before, 
+	.vc_edit-form-tab .chosen-container .chosen-results li.default:before, 
+	.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].Default + .chosen-container > a:before, 
+	.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].default + .chosen-container > a:before { background: linear-gradient(to right, #444 49%, #fff 51%); } 
+	
+	.vc_edit-form-tab .chosen-container .chosen-results li[class*="Accent-Color"]:before,
+	.vc_edit-form-tab .chosen-container .chosen-results li.Default-Accent-Color:before, 
+	.vc_edit-form-tab .chosen-container .chosen-results li[class*="accent-color"]:before, 
+	.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].Default-Accent-Color + .chosen-container > a:before, 
+	.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Accent-Color"] + .chosen-container > a:before, 
+	.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="accent-color"] + .chosen-container > a:before, 
+	.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].accent-color + .chosen-container > a:before { background-color: '.$nectar_accent_color.'; } 
+	
+    .vc_edit-form-tab .chosen-container .chosen-results li[class*="Extra-Color-1"]:before, 
+		.vc_edit-form-tab .chosen-container .chosen-results li[class*="extra-color-1"]:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Extra-Color-1"] + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="extra-color-1"] + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].extra-color-1 + .chosen-container > a:before { background-color: '.$nectar_extra_color_1.'; }
+		
+    .vc_edit-form-tab .chosen-container .chosen-results li[class*="Extra-Color-2"]:before, 
+		.vc_edit-form-tab .chosen-container .chosen-results li[class*="extra-color-2"]:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Extra-Color-2"] + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="extra-color-2"] + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].extra-color-2 + .chosen-container > a:before { background-color: '.$nectar_extra_color_2.'; }
+		
+    .vc_edit-form-tab .chosen-container .chosen-results li[class*="Extra-Color-3"]:before, 
+		.vc_edit-form-tab .chosen-container .chosen-results li[class*="extra-color-3"]:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="Extra-Color-3"] + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"][class*="extra-color-3"] + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="cta_button_style"].extra-color-3 + .chosen-container > a:before { background-color: '.$nectar_extra_color_3.'; }';
 
 	if( !empty($nectar_options["extra-color-gradient"]) && $nectar_options["extra-color-gradient"]['to'] && $nectar_options["extra-color-gradient"]['from']) {
 		$nectar_gradient_1_from = $nectar_options["extra-color-gradient"]['from'];
 		$nectar_gradient_1_to = $nectar_options["extra-color-gradient"]['to'];
 
-		$nectar_color_css .= '.vc_edit-form-tab .chosen-container .chosen-results li.extra-color-gradient-1:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].extra-color-gradient-1 + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="button_color"].extra-color-gradient-1 + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name="icon_color"].extra-color-gradient-1 + .chosen-container > a:before {  background: linear-gradient(to right, '.$nectar_gradient_1_from.', '.$nectar_gradient_1_to.'); }';
+		$nectar_color_css .= '.vc_edit-form-tab .chosen-container .chosen-results li.extra-color-gradient-1:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].extra-color-gradient-1 + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="button_color"].extra-color-gradient-1 + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name="icon_color"].extra-color-gradient-1 + .chosen-container > a:before {  background: linear-gradient(to right, '.$nectar_gradient_1_from.', '.$nectar_gradient_1_to.'); }';
 	}
 
 	if( !empty($nectar_options["extra-color-gradient-2"]) && $nectar_options["extra-color-gradient-2"]['to'] && $nectar_options["extra-color-gradient-2"]['from']) {
 		$nectar_gradient_2_from = $nectar_options["extra-color-gradient-2"]['from'];
 		$nectar_gradient_2_to = $nectar_options["extra-color-gradient-2"]['to'];
 
-		$nectar_color_css .= '.vc_edit-form-tab .chosen-container .chosen-results li.extra-color-gradient-2:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].extra-color-gradient-2 + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="button_color"].extra-color-gradient-2 + .chosen-container > a:before, .vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name="icon_color"].extra-color-gradient-2 + .chosen-container > a:before {  background: linear-gradient(to right, '.$nectar_gradient_2_from.', '.$nectar_gradient_2_to.'); }';
+		$nectar_color_css .= '.vc_edit-form-tab .chosen-container .chosen-results li.extra-color-gradient-2:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="color"].extra-color-gradient-2 + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name*="button_color"].extra-color-gradient-2 + .chosen-container > a:before, 
+		.vc_edit-form-tab .vc_shortcode-param[data-param_type="dropdown"] select[name="icon_color"].extra-color-gradient-2 + .chosen-container > a:before {  background: linear-gradient(to right, '.$nectar_gradient_2_from.', '.$nectar_gradient_2_to.'); }';
 	}
 
    
@@ -266,13 +434,44 @@ if(function_exists('vc_add_shortcode_param')) {
 	   return  $param_line;
 	}
 	
+	
+	/**
+ * @param array $images IDs or srcs of images
+ *
+ */
+	function nectar_fws_field_attached_images( $images = array() ) {
+		$output = '';
+
+		foreach ( $images as $image ) {
+			if ( is_numeric( $image ) ) {
+				$thumb_src = wp_get_attachment_image_src( $image, 'medium_featured' );
+				$thumb_src = isset( $thumb_src[0] ) ? $thumb_src[0] : '';
+			} else {
+				$thumb_src = $image;
+			}
+
+			if ( $thumb_src ) {
+				$output .= '
+				<li class="added">
+					<img rel="' . esc_attr( $image ) . '" src="' . esc_url( $thumb_src ) . '" />
+					<a href="javascript:;" class="vc_icon-remove"><i class="vc-composer-icon vc-c-icon-close"></i></a>
+				</li>';
+			}
+		}
+
+		return $output;
+	}
+
+
 	/**
 	 * Create full width section BG image param.
 	 *
 	 * @since 1.0
 	 */
 	vc_add_shortcode_param( 'fws_image', 'fws_image_settings_field' );
+	
 	function fws_image_settings_field( $param, $value ) {
+		
 			$param_line = '';
 			$param_line .= '<input type="hidden" class="wpb_vc_param_value gallery_widget_attached_images_ids '.esc_attr($param['param_name']).' '.esc_attr($param['type']).'" name="'.esc_attr($param['param_name']).'" value="'.esc_attr($value).'"/>';
 	        
@@ -285,18 +484,17 @@ if(function_exists('vc_add_shortcode_param')) {
 					<a href="#" class="vc_icon-remove"><i class="vc-composer-icon vc-c-icon-close"></i></a>
 				</li>';
 			} else {
-				$param_line .= ($value != '') ? fieldAttachedImages(explode(",", esc_attr($value))) : '';
+				$param_line .= ($value != '') ? nectar_fws_field_attached_images(explode(",", esc_attr($value))) : '';
 			}
 			
 	        
-	        $param_line .= '</ul>';
-	        $param_line .= '</div>';
-	        $param_line .= '<div class="gallery_widget_site_images">';
-	        $param_line .= '</div>';
-	        $param_line .= '<a class="gallery_widget_add_images" href="#" use-single="true" title="'.esc_html__('Add image', "js_composer").'">'.esc_html__('Add image', "js_composer").'</a>';//class: button
-	
-
-	        return $param_line;
+      $param_line .= '</ul>';
+      $param_line .= '</div>';
+      $param_line .= '<div class="gallery_widget_site_images">';
+      $param_line .= '</div>';
+      $param_line .= '<a class="gallery_widget_add_images" href="#" use-single="true" title="'.esc_html__('Add image', "js_composer").'"><i class="dashicons dashicons-camera-alt"></i>'.esc_html__('Add image', "js_composer").'</a>';//class: button
+      return $param_line;
+			
 	}
 
 	/**
@@ -356,6 +554,66 @@ if(function_exists('vc_add_shortcode_param')) {
 
 	   return '<div id="nectar_image_with_hotspots_preview"><input name="' . esc_attr( $settings['param_name'] ) . '" type="hidden" class="wpb_vc_param_value ' . esc_attr( $settings['param_name'] ) . '" value="'.$value.'" /> '.$image_output. '</div>'; 
 	}
+	
+	
+	/**
+	 * Create attach video param.
+	 *
+	 * @since 12.0
+	 */
+	vc_add_shortcode_param( 'nectar_attach_video', 'nectar_attach_video_field' );
+	function nectar_attach_video_field( $settings, $value ) {
+		
+		$output = '';
+		
+		$param_value = htmlspecialchars( $value );
+		
+		if( $value == '' ) {
+				$add_class = ''; 
+				$remove_class = ' hidden'; 
+		} 
+		else {
+				$add_class = ' hidden'; 
+				$remove_class = ''; 
+		}
+		
+		$output .= '<input id="'.esc_attr( $settings['param_name'] ).'" name="' . esc_attr($settings['param_name']) . '" class="wpb_vc_param_value wpb-textinput ' . esc_attr($settings['param_name']) . ' ' . esc_attr($settings['type']) . '" type="text" value="' . esc_attr( $param_value) . '"/>';
+		$output .= '<a href="#" data-update="'.esc_html__('Select File.','salient-core').'" data-title="'.esc_html__('Choose Your File.','salient-core').'" class="nectar-add-media-btn button-secondary' . $add_class . '" rel-id="'.esc_attr( $settings['param_name'] ).'"><i class="dashicons dashicons-video-alt3"></i>'.esc_html__('Add Media File','salient-core').'</a>';
+		$output .= '<a href="#" class="nectar-remove-media-btn button-secondary' . $remove_class . '" rel-id="'.esc_attr( $settings['param_name'] ).'"><i class="dashicons dashicons-no-alt"></i>'.esc_html__('Remove Media File','salient-core').'</a>';
+		
+		return $output;
+		
+	}
+	
+	
+	/**
+	 * Create nectar numerical
+	 *
+	 * @since 12.0
+	 */
+	vc_add_shortcode_param( 'nectar_numerical', 'nectar_numerical_field' );
+	function nectar_numerical_field( $settings, $value ) {
+		
+		$value = htmlspecialchars( $value );
+
+		$placeholder_active = ( !empty($value) || '0' === $value ) ? ' focus' : '';
+		return '<span class="placeholder'.esc_attr($placeholder_active).'">'.esc_attr($settings['placeholder']).'</span><input name="' . $settings['param_name'] . '" class="wpb_vc_param_value nectar-numerical wpb-textinput ' . $settings['param_name'] . ' ' . $settings['type'] . '" type="text" value="' . $value . '"/>';
+	
+	}
+	
+	/**
+	 * Create nectar group header
+	 *
+	 * @since 12.0
+	 */
+	vc_add_shortcode_param( 'nectar_group_header', 'nectar_group_header_field' );
+	function nectar_group_header_field( $settings, $value ) {
+		
+		return '<input name="' . $settings['param_name'] . '" class="wpb_vc_param_value wpb-textinput ' . $settings['param_name'] . ' ' . $settings['type'] . '" type="hidden" value=""/>';
+	
+	}
+	
+		 
 }
 
  
@@ -418,6 +676,16 @@ function nectar_custom_maps() {
 			'category' => esc_html__( 'Structure', 'salient-core' ),
 			'description' => esc_html__( 'Place content elements inside the row', 'salient-core' ),
 			'params' => array(
+				
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Structure", "salient-core" ),
+				 "param_name" => "group_header_1",
+				 "edit_field_class" => "first-field",
+				 "value" => ''
+			 ),
+			 
 				 array(
 					"type" => "dropdown",
 					"class" => "",
@@ -445,17 +713,19 @@ function nectar_custom_maps() {
 						esc_html__("Full Height", "salient-core" ) => 'full_height'		
 						)
 				),
-
+				
+				$row_column_margin,
+				
 				 array(
 					'type' => 'checkbox',
-					'heading' => esc_html__( 'Equal height', 'salient-core' ),
+					'heading' => esc_html__( 'Equal Height Columns', 'salient-core' ),
 					'param_name' => 'equal_height',
-					'description' => esc_html__( 'If checked columns will be set to equal height.', 'salient-core' ),
+					'description' => esc_html__( 'If enabled, columns will be set to equal height.', 'salient-core' ),
 					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' )
 				),
 				array(
 					'type' => 'dropdown',
-					'heading' => esc_html__( 'Column Content position', 'salient-core' ),
+					'heading' => esc_html__( 'Column Content Alignment', 'salient-core' ),
 					'param_name' => 'content_placement',
 					'value' => array(
 						esc_html__( 'Default', 'salient-core' ) => '',
@@ -463,7 +733,7 @@ function nectar_custom_maps() {
 						esc_html__( 'Middle', 'salient-core' ) => 'middle',
 						esc_html__( 'Bottom', 'salient-core' ) => 'bottom',
 					),
-					'description' => esc_html__( 'Select content position within columns.', 'salient-core' ),
+					'description' => esc_html__( 'Select the column content alignment within columns.', 'salient-core' ),
 					"dependency" => Array('element' => "equal_height", 'not_empty' => true)
 				),
 				array(
@@ -476,10 +746,65 @@ function nectar_custom_maps() {
 					"dependency" => Array('element' => "type", 'value' => array('full_width_content'))
 				),
 				
-				$row_column_margin,
+
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"edit_field_class" => "desktop column-direction-device-group",
+					"heading" => '<span class="group-title">' . esc_html__("Column Direction", "salient-core") . "</span>",
+					"param_name" => "column_direction",
+					"value" => array(
+						"Default" => "default",
+						"Row Reverse" => "reverse"
+					),
+					'description' => esc_html__( 'The order your columns will display in.', 'salient-core' ),
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"edit_field_class" => "tablet column-direction-device-group",
+					"heading" => '',
+					"param_name" => "column_direction_tablet",
+					"value" => array(
+						"Default" => "default",
+						"Row Reverse" => "row_reverse",
+						"Column Reverse" => "column_reverse"
+					),
+					'description' => esc_html__( 'The order your columns will display in.','salient-core') . '<br /><br />' . esc_html__('Column Direction Reversing Guide:','salient-core'). '<br />'.esc_html__('Select','salient-core') . ' <b>'. esc_html__('Row Reverse','salient-core') . '</b> '.esc_html__('when columns are set to display inline.') .'<br/>' . esc_html__('Select','salient-core').' <b>'. esc_html__('Column Reverse','salient-core') .'</b> ' . esc_html__('when columns are stacking on top of each other. (Most common setup)', 'salient-core' ),
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"edit_field_class" => "phone column-direction-device-group",
+					"heading" => '',
+					"param_name" => "column_direction_phone",
+					"value" => array(
+						"Default" => "default",
+						"Row Reverse" => "row_reverse",
+						"Column Reverse" => "column_reverse"
+					),
+					'description' => esc_html__( 'The order your columns will display in.','salient-core') . '<br /><br />' . esc_html__('Column Direction Reversing Guide:','salient-core'). '<br />'.esc_html__('Select','salient-core') . ' <b>'. esc_html__('Row Reverse','salient-core') . '</b> '.esc_html__('when columns are set to display inline.') .'<br/>' . esc_html__('Select','salient-core').' <b>'. esc_html__('Column Reverse','salient-core') .'</b> ' . esc_html__('when columns are stacking on top of each other. (Most common setup)', 'salient-core' ),
+				),
+				
+
+				array(
+					"type" => "colorpicker",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("Background Color", "salient-core" ),
+					"param_name" => "bg_color",
+					"value" => "",
+					"description" => ""
+				),
 				
 				array(
 					"type" => "fws_image",
+					"group" => "Background",
 					"class" => "",
 					"heading" => esc_html__("Background Image", "salient-core" ),
 					"param_name" => "bg_image",
@@ -491,6 +816,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "checkbox",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Background Image Mobile Hidden", "salient-core" ),
 					"param_name" => "background_image_mobile_hidden",
 					"value" => array("Hide Background Image on Mobile Views?" => "true" ),
@@ -501,6 +827,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "dropdown",
 					"class" => "",
+					"group" => "Background",
 					'save_always' => true,
 					"heading" => esc_html__("Background Position", "salient-core" ),
 					"param_name" => "bg_position",
@@ -515,6 +842,7 @@ function nectar_custom_maps() {
 			  		 esc_html__("Right Center", "salient-core" ) => "right center",
 			  		 esc_html__("Right Bottom", "salient-core" ) => "right bottom"
 					),
+					"edit_field_class" => "col-md-6",
 					"dependency" => Array('element' => "bg_image", 'not_empty' => true)
 				),
 
@@ -522,6 +850,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "dropdown",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Background Repeat", "salient-core" ),
 					"param_name" => "bg_repeat",
 					'save_always' => true,
@@ -529,20 +858,21 @@ function nectar_custom_maps() {
 						esc_html__("No Repeat", "salient-core" ) => "no-repeat",
 						esc_html__("Repeat", "salient-core" ) => "repeat"
 					),
+					"edit_field_class" => "col-md-6 col-md-6-last",
 					"dependency" => Array('element' => "bg_image", 'not_empty' => true)
 				),
 
 				array(
 					'type' => 'checkbox',
-					'heading' => esc_html__( 'Full height row', 'salient-core' ),
+					'heading' => esc_html__( 'Full Height Row', 'salient-core' ),
 					'param_name' => 'full_height',
-					'description' => esc_html__( 'If checked row will be set to full height.', 'salient-core' ),
+					'description' => esc_html__( 'Scales the row height to be the same height as the browser window.', 'salient-core' ),
 					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
 				),
 
 				array(
 					'type' => 'dropdown',
-					'heading' => esc_html__( 'Columns position', 'salient-core' ),
+					'heading' => esc_html__( 'Column Alignment', 'salient-core' ),
 					'param_name' => 'columns_placement',
 					'value' => array(
 						esc_html__( 'Middle', 'salient-core' ) => 'middle',
@@ -550,25 +880,105 @@ function nectar_custom_maps() {
 						esc_html__( 'Bottom', 'salient-core' ) => 'bottom',
 						esc_html__( 'Stretch', 'salient-core' ) => 'stretch',
 					),
-					'description' => esc_html__( 'Select columns position within row.', 'salient-core' ),
+					'description' => esc_html__( 'Select the column alignment within the full height row.', 'salient-core' ),
 					'dependency' => array(
 						'element' => 'full_height',
 						'not_empty' => true,
 					),
 				),
 
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("Video Background", "salient-core"),
+					"value" => array("Enable Video Background?" => "use_video" ),
+					"param_name" => "video_bg",
+					"description" => ""
+				),
+
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("Video Color Overlay", "salient-core"),
+					"value" => array("Enable a color overlay ontop of your video?" => "true" ),
+					"param_name" => "enable_video_color_overlay",
+					"description" => "",
+					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+				),
 
 				array(
 					"type" => "colorpicker",
 					"class" => "",
-					"heading" => esc_html__("Background Color", "salient-core" ),
-					"param_name" => "bg_color",
+					"group" => "Background",
+					"heading" => esc_html__("Overlay Color", "salient-core"),
+					"param_name" => "video_overlay_color",
 					"value" => "",
-					"description" => ""
+					"description" => "",
+					"dependency" => Array('element' => "enable_video_color_overlay", 'value' => array('true'))
 				),
+
+				array(
+					"type" => "textfield",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("Youtube Video URL", "salient-core"),
+					"value" => "",
+					"param_name" => "video_external",
+					"description" => esc_html__("Can be used as an alternative to self hosted videos. Enter full video URL e.g. https://www.youtube.com/watch?v=6oTurM7gESE", "salient-core"),
+					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+				),
+
+				array(
+					"type" => "nectar_attach_video",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("WebM File URL", "salient-core"),
+					"value" => "",
+					"param_name" => "video_webm",
+					"description" => esc_html__("You must include this format & the mp4 format to render your video with cross browser compatibility. OGV is optional.
+				Video must be in a 16:9 aspect ratio.", "salient-core"),
+					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+				),
+
+				array(
+					"type" => "nectar_attach_video",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("MP4 File URL", "salient-core"),
+					"value" => "",
+					"param_name" => "video_mp4",
+					"description" => esc_html__("Enter the URL for your mp4 video file here", "salient-core"),
+					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+				),
+
+				array(
+					"type" => "nectar_attach_video",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("OGV File URL", "salient-core"),
+					"value" => "",
+					"param_name" => "video_ogv",
+					"description" => esc_html__("Enter the URL for your ogv video file here", "salient-core"),
+					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+				),
+
+				array(
+					"type" => "attach_image",
+					"class" => "",
+					"group" => "Background",
+					"heading" => esc_html__("Video Preview Image", "salient-core"),
+					"value" => "",
+					"param_name" => "video_image",
+					"description" => "",
+					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+				),
+				
 				array(
 					"type" => "checkbox",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Mouse Based Parallax Scene", "salient-core" ),
 					"value" => array("Enable Mouse Based Parallax BG?" => "true" ),
 					"param_name" => "mouse_based_parallax_bg",
@@ -577,6 +987,7 @@ function nectar_custom_maps() {
 
 				 array(
 					  "type" => "dropdown",
+						"group" => "Background",
 					  "heading" => esc_html__("Scene Positioning", "salient-core"),
 					  "param_name" => "scene_position",
 					  'save_always' => true,
@@ -590,6 +1001,7 @@ function nectar_custom_maps() {
 
 				 array(
 					"type" => "textfield",
+					"group" => "Background",
 					"class" => "",
 					"heading" => esc_html__("Scene Parallax Overall Strength", "salient-core"),
 					"value" => "",
@@ -600,6 +1012,7 @@ function nectar_custom_maps() {
 
 				array(
 					"type" => "fws_image",
+					"group" => "Background",
 					"class" => "",
 					"heading" => esc_html__("Scene Layer One", "salient-core"),
 					"param_name" => "layer_one_image",
@@ -609,6 +1022,7 @@ function nectar_custom_maps() {
 
 				array(
 					"type" => "textfield",
+					"group" => "Background",
 					"class" => "",
 					"heading" => esc_html__("Layer One Strength", "salient-core"),
 					"value" => "",
@@ -619,6 +1033,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "fws_image",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Scene Layer Two", "salient-core"),
 					"param_name" => "layer_two_image",
 					"value" => "",
@@ -628,6 +1043,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "textfield",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Layer Two Strength", "salient-core"),
 					"value" => "",
 					"param_name" => "layer_two_strength",
@@ -637,6 +1053,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "fws_image",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Scene Layer Three", "salient-core"),
 					"param_name" => "layer_three_image",
 					"value" => "",
@@ -646,6 +1063,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "textfield",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Layer Three Strength", "salient-core"),
 					"value" => "",
 					"param_name" => "layer_three_strength",
@@ -655,6 +1073,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "fws_image",
 					"class" => "",
+					"group" => "Background",
 					"heading" => "Scene Layer Four",
 					"param_name" => "layer_four_image",
 					"value" => "",
@@ -664,6 +1083,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "textfield",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Layer Four Strength", "salient-core"),
 					"value" => "",
 					"param_name" => "layer_four_strength",
@@ -673,6 +1093,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "fws_image",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Scene Layer Five", "salient-core"),
 					"param_name" => "layer_five_image",
 					"value" => "",
@@ -682,6 +1103,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "textfield",
 					"class" => "",
+					"group" => "Background",
 					"heading" => esc_html__("Layer Five Strength", "salient-core"),
 					"value" => "",
 					"param_name" => "layer_five_strength",
@@ -689,85 +1111,273 @@ function nectar_custom_maps() {
 				),
 
 				array(
-					"type" => "checkbox",
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Spacing & Transform", "salient-core" ),
+				 "param_name" => "group_header_2",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),
+				array(
+					"type" => "nectar_numerical",
 					"class" => "",
-					"heading" => esc_html__("Video Background", "salient-core"),
-					"value" => array("Enable Video Background?" => "use_video" ),
-					"param_name" => "video_bg",
+					"edit_field_class" => "col-md-6 desktop row-padding-device-group constrain_group_1",
+					"heading" => '<span class="group-title">' . esc_html__("Padding", "salient-core") . "</span><span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"param_name" => "top_padding",
+					"description" => ''
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+					'param_name' => 'constrain_group_1', 
+					'description' => '',
+					"edit_field_class" => "desktop row-padding-device-group constrain-icon left",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"edit_field_class" => "col-md-6 col-md-6-last desktop row-padding-device-group constrain_group_1",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "bottom_padding",
+					"description" => ''
+				),
+				
+
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"edit_field_class" => "col-md-6 desktop col-md-6-last row-padding-device-group constrain_group_2",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "left_padding_desktop",
+					"description" => ''
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+					'param_name' => 'constrain_group_2', 
+					"edit_field_class" => "desktop row-padding-device-group constrain-icon right",
+					'description' => '',
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-6 col-md-6-last desktop row-padding-device-group constrain_group_2",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_padding_desktop",
+					"description" => ''
+				),
+				
+				
+
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"edit_field_class" => "col-md-6 tablet row-padding-device-group constrain_group_3",
+					"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "top_padding_tablet",
+					"description" => ''
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 3', 'salient-core' ),
+					'param_name' => 'constrain_group_3', 
+					"edit_field_class" => "tablet row-padding-device-group constrain-icon left",
+					'description' => '',
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"edit_field_class" => "col-md-6 col-md-6-last tablet row-padding-device-group constrain_group_3",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "bottom_padding_tablet",
+					"description" => ''
+				),
+				
+
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"edit_field_class" => "col-md-6 tablet col-md-6-last row-padding-device-group constrain_group_4",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "left_padding_tablet",
+					"description" => ''
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 4', 'salient-core' ),
+					'param_name' => 'constrain_group_4', 
+					"edit_field_class" => "tablet row-padding-device-group constrain-icon right",
+					'description' => '',
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-6 col-md-6-last tablet row-padding-device-group constrain_group_4",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_padding_tablet",
+					"description" => ''
+				),
+
+
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"edit_field_class" => "col-md-6 phone row-padding-device-group constrain_group_5",
+					"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "top_padding_phone",
+					"description" => ''
+				),
+				array(
+					'type' => 'checkbox',
+					"edit_field_class" => "phone row-padding-device-group constrain-icon left",
+					'heading' => esc_html__( 'Constrain 5', 'salient-core' ),
+					'param_name' => 'constrain_group_5', 
+					'description' => '',
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"edit_field_class" => "col-md-6 col-md-6-last phone row-padding-device-group constrain_group_5",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "bottom_padding_phone",
+					"description" => ''
+				),
+				
+				
+				
+				
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"edit_field_class" => "col-md-6 phone col-md-6-last row-padding-device-group constrain_group_6",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "left_padding_phone",
+					"description" => ''
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 6', 'salient-core' ),
+					'param_name' => 'constrain_group_6', 
+					"edit_field_class" => "phone row-padding-device-group constrain-icon right",
+					'description' => '',
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-6 col-md-6-last phone row-padding-device-group constrain_group_6",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_padding_phone",
+					"description" => ''
+				),
+				
+				
+				
+				
+				
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"heading" => '<span class="group-title">' . esc_html__("Transform", "salient-core") . "</span><span class='attr-title'>" . esc_html__("Translate Y", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Translate Y",'salient-core'),
+					"edit_field_class" => "col-md-6 desktop row-transform-device-group",
+					"param_name" => "translate_y",
 					"description" => ""
 				),
 
 				array(
-					"type" => "checkbox",
+					"type" => "nectar_numerical",
 					"class" => "",
-					"heading" => esc_html__("Video Color Overlay", "salient-core"),
-					"value" => array("Enable a color overlay ontop of your video?" => "true" ),
-					"param_name" => "enable_video_color_overlay",
-					"description" => "",
-					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+					"placeholder" => esc_html__("Translate X",'salient-core'),
+					"heading" => "<span class='attr-title'>" . esc_html__("Translate X", "salient-core") . "</span>",
+					"value" => "",
+					"edit_field_class" => "col-md-6 col-md-6-last desktop row-transform-device-group",
+					"param_name" => "translate_x",
+					"description" => ""
+				),
+				
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Translate Y",'salient-core'),
+					"heading" => "<span class='attr-title'>" . esc_html__("Translate Y", "salient-core") . "</span>",
+					"value" => "",
+					"edit_field_class" => "col-md-6 tablet row-transform-device-group",
+					"param_name" => "translate_y_tablet",
+					"description" => ""
 				),
 
 				array(
-					"type" => "colorpicker",
+					"type" => "nectar_numerical",
 					"class" => "",
-					"heading" => esc_html__("Overlay Color", "salient-core"),
-					"param_name" => "video_overlay_color",
+					"placeholder" => esc_html__("Translate X",'salient-core'),
+					"heading" => "<span class='attr-title'>" . esc_html__("Translate X", "salient-core") . "</span>",
 					"value" => "",
-					"description" => "",
-					"dependency" => Array('element' => "enable_video_color_overlay", 'value' => array('true'))
+					"edit_field_class" => "col-md-6 col-md-6-last tablet row-transform-device-group",
+					"param_name" => "translate_x_tablet",
+					"description" => ""
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Translate Y",'salient-core'),
+					"heading" => "<span class='attr-title'>" . esc_html__("Translate Y", "salient-core") . "</span>",
+					"value" => "",
+					"edit_field_class" => "col-md-6 phone row-transform-device-group",
+					"param_name" => "translate_y_phone",
+					"description" => ""
 				),
 
 				array(
-					"type" => "textfield",
+					"type" => "nectar_numerical",
 					"class" => "",
-					"heading" => esc_html__("Youtube Video URL", "salient-core"),
+					"placeholder" => esc_html__("Translate X",'salient-core'),
+					"heading" => "<span class='attr-title'>" . esc_html__("Translate X", "salient-core") . "</span>",
 					"value" => "",
-					"param_name" => "video_external",
-					"description" => esc_html__("Can be used as an alternative to self hosted videos. Enter full video URL e.g. https://www.youtube.com/watch?v=6oTurM7gESE", "salient-core"),
-					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
+					"edit_field_class" => "col-md-6 col-md-6-last phone row-transform-device-group",
+					"param_name" => "translate_x_phone",
+					"description" => ""
 				),
-
+				
 				array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("WebM File URL", "salient-core"),
-					"value" => "",
-					"param_name" => "video_webm",
-					"description" => esc_html__("You must include this format & the mp4 format to render your video with cross browser compatibility. OGV is optional.
-				Video must be in a 16:9 aspect ratio.", "salient-core"),
-					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
-				),
-
-				array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("MP4 File URL", "salient-core"),
-					"value" => "",
-					"param_name" => "video_mp4",
-					"description" => esc_html__("Enter the URL for your mp4 video file here", "salient-core"),
-					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
-				),
-
-				array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("OGV File URL", "salient-core"),
-					"value" => "",
-					"param_name" => "video_ogv",
-					"description" => esc_html__("Enter the URL for your ogv video file here", "salient-core"),
-					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
-				),
-
-				array(
-					"type" => "attach_image",
-					"class" => "",
-					"heading" => esc_html__("Video Preview Image", "salient-core"),
-					"value" => "",
-					"param_name" => "video_image",
-					"description" => "",
-					"dependency" => Array('element' => "video_bg", 'value' => array('use_video'))
-				),
-
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Content", "salient-core" ),
+				 "param_name" => "group_header_3",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),
+			 
 				array(
 					"type" => "dropdown",
 					"class" => "",
@@ -803,45 +1413,47 @@ function nectar_custom_maps() {
 						esc_html__("Right", "salient-core") => "right"
 					)
 				),
-
-				array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("Padding Top", "salient-core"),
-					"value" => "",
-					"param_name" => "top_padding",
-					"description" => esc_html__("Don't include \"px\" in your string. e.g \"40\" - However you can also use a percent value in which case a \"%\" would be needed at the end e.g. \"10%\"", "salient-core")
-				),
-
-				array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("Padding Bottom", "salient-core"),
-					"value" => "",
-					"param_name" => "bottom_padding",
-					"description" => esc_html__("Don't include \"px\" in your string. e.g \"40\" - However you can also use a percent value in which case a \"%\" would be needed at the end e.g. \"10%\"", "salient-core")
-				),
 				
 				array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("Translate Y", "salient-core"),
-					"value" => "",
-					"edit_field_class" => "col-md-6",
-					"param_name" => "translate_y",
-					"description" => ""
-				),
-
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Rounded Edges", "salient-core" ),
+				 "param_name" => "group_header_4",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),
 				array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("Translate X", "salient-core"),
-					"value" => "",
-					"edit_field_class" => "col-md-6",
-					"param_name" => "translate_x",
-					"description" => ""
-				),
-				
+						"type" => "dropdown",
+						"heading" => esc_html__("Border Radius", "salient-core"),
+						'save_always' => true,
+						"edit_field_class" => "col-md-6",
+						"param_name" => "row_border_radius",
+						"value" => array(
+							esc_html__("0px", "salient-core") => "none",
+							esc_html__("5px", "salient-core") => "5px", 
+							esc_html__("10px", "salient-core") => "10px", 
+							esc_html__("20px", "salient-core") => "20px"),
+						"description" => ''
+					),	
+					array(
+						"type" => "dropdown",
+						"heading" => esc_html__("Applies To", "salient-core"),
+						'save_always' => true,
+						"edit_field_class" => "col-md-6 col-md-6-last",
+						"param_name" => "row_border_radius_applies",
+						"value" => array(
+							esc_html__("Row Background", "salient-core") => "bg",
+							esc_html__("Inner Content", "salient-core") => "inner"),
+						"description" => ''
+					),	
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Advanced", "salient-core" ),
+				 "param_name" => "group_header_5",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),
 				array(
 					"type" => "textfield",
 					"class" => "",
@@ -904,6 +1516,7 @@ function nectar_custom_maps() {
 					"heading" => esc_html__("Color Overlay", "salient-core"),
 					"param_name" => "color_overlay",
 					"value" => "",
+					"edit_field_class" => "col-md-6",
 					"group" => "Color Overlay",
 					"description" => ""
 				),
@@ -913,24 +1526,9 @@ function nectar_custom_maps() {
 					"heading" => esc_html__("Color Overlay 2", "salient-core"),
 					"param_name" => "color_overlay_2",
 					"value" => "",
+					"edit_field_class" => "col-md-6 col-md-6-last",
 					"group" => "Color Overlay",
 					"description" => "",
-					"dependency" => Array('element' => "enable_gradient", 'not_empty' => true)
-				),
-				array(
-					"type" => "dropdown",
-					"class" => "",
-					'save_always' => true,
-					"heading" => esc_html__("Gradient Direction", "salient-core"),
-					"param_name" => "gradient_direction",
-					"group" => "Color Overlay",
-					"value" => array(
-						esc_html__("Left to Right", "salient-core") => "left_to_right",
-						esc_html__("Left Top to Right Bottom", "salient-core") => "left_t_to_right_b",
-						esc_html__("Left Bottom to Right Top", "salient-core") => "left_b_to_right_t",
-						esc_html__("Bottom to Top", "salient-core") => 'top_to_bottom'
-					),
-					"dependency" => Array('element' => "enable_gradient", 'not_empty' => true)
 				),
 				array(
 					"type" => "dropdown",
@@ -945,6 +1543,21 @@ function nectar_custom_maps() {
 						esc_html__("Heavy", "salient-core") => "0.8",
 						esc_html__("Very Heavy", "salient-core") => "0.95",
 						esc_html__("Solid", "salient-core") => '1'
+					)
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"heading" => esc_html__("Gradient Direction", "salient-core"),
+					"param_name" => "gradient_direction",
+					"group" => "Color Overlay",
+					"value" => array(
+						esc_html__("Left to Right", "salient-core") => "left_to_right",
+						esc_html__("Left Top to Right Bottom", "salient-core") => "left_t_to_right_b",
+						esc_html__("Left Bottom to Right Top", "salient-core") => "left_b_to_right_t",
+						esc_html__("Bottom to Top", "salient-core") => 'top_to_bottom'
 					)
 				),
 
@@ -1121,20 +1734,22 @@ function nectar_custom_maps() {
 			'is_container' => true,
 			'content_element' => false,
 			'params' => array(
-
+				
 				array(
-					"type" => "checkbox",
-					"class" => "",
-					"heading" => esc_html__("Centered Content", "salient-core"),
-					"value" => array("Centered Content Alignment" => "true" ),
-					"param_name" => "centered_text",
-					"description" => ""
-				),
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Spacing", "salient-core" ),
+				 "param_name" => "group_header_1",
+				 "edit_field_class" => "first-field",
+				 "value" => ''
+			 ),
+			 
 				array(
 					"type" => "dropdown",
 					"class" => "",
 					'save_always' => true,
-					"heading" => esc_html__("Column Padding", "salient-core"),
+					"edit_field_class" => "desktop column-padding-device-group",
+					"heading" => '<span class="group-title">' . esc_html__("Column Padding", "salient-core") . "</span>",
 					"param_name" => "column_padding",
 					"value" => array(
 						"None" => "no-extra-padding",
@@ -1154,9 +1769,80 @@ function nectar_custom_maps() {
 						"14%" => "padding-14-percent",
 						"15%" => "padding-15-percent",
 						"16%" => "padding-16-percent",
-						"17%" => "padding-17-percent"
+						"17%" => "padding-17-percent",
+						"18%" => "padding-18-percent",
+						"19%" => "padding-19-percent",
+						"20%" => "padding-20-percent"
 					),
-					"description" => esc_html__("When using the full width content row type or providing a background color/image for the column, you have the option to define the amount of padding your column will receive.", "salient-core"),
+					"description" => '',
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"edit_field_class" => "tablet column-padding-device-group",
+					"heading" => '',
+					"param_name" => "column_padding_tablet",
+					"value" => array(
+						"Inherit" => "inherit",
+						"None" => "no-extra-padding",
+						"1%" => "padding-1-percent",
+						"2%" => "padding-2-percent",
+						"3%" => "padding-3-percent",
+						"4%" => "padding-4-percent",
+						"5%" => "padding-5-percent",
+						"6%" => "padding-6-percent",
+						"7%" => "padding-7-percent",
+						"8%" => "padding-8-percent",
+						"9%" => "padding-9-percent",
+						"10%" => "padding-10-percent",
+						"11%" => "padding-11-percent",
+						"12%" => "padding-12-percent",
+						"13%" => "padding-13-percent",
+						"14%" => "padding-14-percent",
+						"15%" => "padding-15-percent",
+						"16%" => "padding-16-percent",
+						"17%" => "padding-17-percent",
+						"18%" => "padding-18-percent",
+						"19%" => "padding-19-percent",
+						"20%" => "padding-20-percent"
+					),
+					"description" => '',
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"edit_field_class" => "phone column-padding-device-group",
+					"heading" => '',
+					"param_name" => "column_padding_phone",
+					"value" => array(
+						"Inherit" => "inherit",
+						"None" => "no-extra-padding",
+						"1%" => "padding-1-percent",
+						"2%" => "padding-2-percent",
+						"3%" => "padding-3-percent",
+						"4%" => "padding-4-percent",
+						"5%" => "padding-5-percent",
+						"6%" => "padding-6-percent",
+						"7%" => "padding-7-percent",
+						"8%" => "padding-8-percent",
+						"9%" => "padding-9-percent",
+						"10%" => "padding-10-percent",
+						"11%" => "padding-11-percent",
+						"12%" => "padding-12-percent",
+						"13%" => "padding-13-percent",
+						"14%" => "padding-14-percent",
+						"15%" => "padding-15-percent",
+						"16%" => "padding-16-percent",
+						"17%" => "padding-17-percent",
+						"18%" => "padding-18-percent",
+						"19%" => "padding-19-percent",
+						"20%" => "padding-20-percent"
+					),
+					"description" => '',
 				),
 
 				array(
@@ -1180,6 +1866,198 @@ function nectar_custom_maps() {
 					),
 					"description" => esc_html__("Use this to fine tune where the column padding will take effect", "salient-core")
 				),
+				
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 desktop column-margin-device-group constrain_group_1",
+					"heading" => '<span class="group-title">' . esc_html__("Margin", "salient-core") . "</span><span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"param_name" => "top_margin",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+					'param_name' => 'constrain_group_1', 
+					'description' => '',
+					"edit_field_class" => "desktop column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"edit_field_class" => "col-md-4 desktop column-margin-device-group constrain_group_1",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "bottom_margin",
+					"description" => ""
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"edit_field_class" => "col-md-4 desktop col-md-6-last column-margin-device-group constrain_group_2",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "left_margin",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+					'param_name' => 'constrain_group_2', 
+					'description' => '',
+					"edit_field_class" => "desktop column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-4 desktop column-margin-device-group constrain_group_2",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_margin",
+					"description" => ""
+				),
+				
+				
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"edit_field_class" => "col-md-4 tablet column-margin-device-group constrain_group_3",
+					"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "top_margin_tablet",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 3', 'salient-core' ),
+					'param_name' => 'constrain_group_3', 
+					'description' => '',
+					"edit_field_class" => "tablet column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"edit_field_class" => "col-md-4 tablet column-margin-device-group constrain_group_3",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "bottom_margin_tablet",
+					"description" => ""
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"edit_field_class" => "col-md-4 col-md-4-last tablet column-margin-device-group constrain_group_4",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "left_margin_tablet",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 4', 'salient-core' ),
+					'param_name' => 'constrain_group_4', 
+					'description' => '',
+					"edit_field_class" => "tablet column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-4 tablet column-margin-device-group constrain_group_4",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_margin_tablet",
+					"description" => ""
+				),
+				
+
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 phone column-margin-device-group constrain_group_5",
+					"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"param_name" => "top_margin_phone",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 5', 'salient-core' ),
+					'param_name' => 'constrain_group_5', 
+					'description' => '',
+					"edit_field_class" => "phone column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 phone column-margin-device-group constrain_group_5",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"param_name" => "bottom_margin_phone",
+					"description" => ""
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 col-md-4-last phone column-margin-device-group constrain_group_6",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"param_name" => "left_margin_phone",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 6', 'salient-core' ),
+					'param_name' => 'constrain_group_6', 
+					'description' => '',
+					"edit_field_class" => "phone column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-4 phone column-margin-device-group constrain_group_6",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_margin_phone",
+					"description" => ""
+				),
+				
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Content", "salient-core" ),
+				 "param_name" => "group_header_2",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),
+			 
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"heading" => esc_html__("Centered Content", "salient-core"),
+					"value" => array("Centered Content Alignment" => "true" ),
+					"param_name" => "centered_text",
+					"description" => ""
+				),
+				
 
 				array(
 					"type" => "colorpicker",
@@ -1187,6 +2065,7 @@ function nectar_custom_maps() {
 					"heading" => esc_html__("Background Color", "salient-core"),
 					"param_name" => "background_color",
 					"value" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"description" => "",
 				),
 
@@ -1196,6 +2075,7 @@ function nectar_custom_maps() {
 					'save_always' => true,
 					"heading" => esc_html__("Background Color Opacity", "salient-core"),
 					"param_name" => "background_color_opacity",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"value" => array(
 						"1" => "1",
 						"0.9" => "0.9",
@@ -1215,6 +2095,7 @@ function nectar_custom_maps() {
 					"type" => "colorpicker",
 					"class" => "",
 					"heading" => esc_html__("Background Color Hover", "salient-core"),
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"param_name" => "background_color_hover",
 					"value" => "",
 					"description" => "",
@@ -1225,6 +2106,7 @@ function nectar_custom_maps() {
 					"class" => "",
 					'save_always' => true,
 					"heading" => esc_html__("Background Hover Color Opacity", "salient-core"),
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"param_name" => "background_hover_color_opacity",
 					"value" => array(
 						"1" => "1",
@@ -1244,15 +2126,38 @@ function nectar_custom_maps() {
 				array(
 					"type" => "fws_image",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("Background Image", "salient-core"),
 					"param_name" => "background_image",
 					"value" => "",
 					"description" => "",
 				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					"group" => "Background",
+					'save_always' => true,
+					"heading" => esc_html__("Background Image Position", "salient-core" ),
+					"param_name" => "background_image_position",
+					"value" => array(
+						 esc_html__("Center Center", "salient-core" ) => "center center",
+						 esc_html__("Center Top", "salient-core" ) => "center top",
+						 esc_html__("Center Bottom", "salient-core" ) => "center bottom",
+						 esc_html__("Left Top", "salient-core" ) => "left top",
+						 esc_html__("Left Center", "salient-core" ) => "left center",
+						 esc_html__("Left Bottom", "salient-core" ) => "left bottom",
+						 esc_html__("Right Top", "salient-core" ) => "right top",
+						 esc_html__("Right Center", "salient-core" ) => "right center",
+						 esc_html__("Right Bottom", "salient-core" ) => "right bottom"
+					),
+					"dependency" => Array('element' => "background_image", 'not_empty' => true)
+				),
 
 				array(
 					"type" => "checkbox",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("Scale Background Image To Column", "salient-core"),
 					"value" => array("Enable" => "true" ),
 					"param_name" => "enable_bg_scale",
@@ -1263,6 +2168,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "checkbox",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("Video Background", "salient-core"),
 					"value" => array("Enable Video Background?" => "use_video" ),
 					"param_name" => "video_bg",
@@ -1270,8 +2176,9 @@ function nectar_custom_maps() {
 				),
 
 				array(
-					"type" => "textfield",
+					"type" => "nectar_attach_video",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("WebM File URL", "salient-core"),
 					"value" => "",
 					"param_name" => "video_webm",
@@ -1281,8 +2188,9 @@ function nectar_custom_maps() {
 				),
 
 				array(
-					"type" => "textfield",
+					"type" => "nectar_attach_video",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("MP4 File URL", "salient-core"),
 					"value" => "",
 					"param_name" => "video_mp4",
@@ -1291,8 +2199,9 @@ function nectar_custom_maps() {
 				),
 
 				array(
-					"type" => "textfield",
+					"type" => "nectar_attach_video",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("OGV File URL", "salient-core"),
 					"value" => "",
 					"param_name" => "video_ogv",
@@ -1303,6 +2212,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "attach_image",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("Video Preview Image", "salient-core"),
 					"value" => "",
 					"param_name" => "video_image",
@@ -1318,14 +2228,56 @@ function nectar_custom_maps() {
 					"value" => "",
 					"description" => ""
 				),
-
+				
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Shadow & Rounded Edges", "salient-core" ),
+				 "param_name" => "group_header_3",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),
+			 
+				array(
+						"type" => "dropdown",
+						"heading" => esc_html__("Box Shadow", "salient-core"),
+						'save_always' => true,
+						"edit_field_class" => "col-md-6",
+						"param_name" => "column_shadow",
+						"value" => array(esc_html__("None", "salient-core") => "none", esc_html__("Small Depth", "salient-core") => "small_depth", esc_html__("Medium Depth", "salient-core") => "medium_depth", esc_html__("Large Depth", "salient-core") => "large_depth", esc_html__("Very Large Depth", "salient-core") => "x_large_depth"),
+						"description" => ''
+					),	
+					array(
+							"type" => "dropdown",
+							"heading" => esc_html__("Border Radius", "salient-core"),
+							'save_always' => true,
+							"edit_field_class" => "col-md-6 col-md-6-last",
+							"param_name" => "column_border_radius",
+							"value" => array(
+								esc_html__("0px", "salient-core") => "none",
+								esc_html__("3px", "salient-core") => "3px",
+								esc_html__("5px", "salient-core") => "5px", 
+								esc_html__("10px", "salient-core") => "10px", 
+								esc_html__("15px", "salient-core") => "15px", 
+								esc_html__("20px", "salient-core") => "20px"),
+							"description" => ''
+						),	
+				
+					array(
+					 "type" => "nectar_group_header",
+					 "class" => "",
+					 "heading" => esc_html__("Link", "salient-core" ),
+					 "param_name" => "group_header_4",
+					 "edit_field_class" => "",
+					 "value" => ''
+				 ),		
 				array(
 					"type" => "textfield",
 					"class" => "",
 					"heading" => esc_html__("Column Link", "salient-core"),
 					"param_name" => "column_link",
 					"admin_label" => false,
-					"description" => esc_html__("If you wish for this column to link somewhere, enter the URL in here", "salient-core"),
+					"description" => '',
 				),
 				array(
 					"type" => "dropdown",
@@ -1337,54 +2289,50 @@ function nectar_custom_maps() {
 				),
 				
 				array(
-			      "type" => "dropdown",
-			      "heading" => esc_html__("Box Shadow", "salient-core"),
-			      'save_always' => true,
-			      "param_name" => "column_shadow",
-			      "value" => array(esc_html__("None", "salient-core") => "none", esc_html__("Small Depth", "salient-core") => "small_depth", esc_html__("Medium Depth", "salient-core") => "medium_depth", esc_html__("Large Depth", "salient-core") => "large_depth", esc_html__("Very Large Depth", "salient-core") => "x_large_depth"),
-			      "description" => esc_html__("Select your desired column box shadow", "salient-core")
-			    ),	
-					array(
-				      "type" => "dropdown",
-				      "heading" => esc_html__("Border Radius", "salient-core"),
-				      'save_always' => true,
-				      "param_name" => "column_border_radius",
-				      "value" => array(
-								esc_html__("0px", "salient-core") => "none",
-								esc_html__("3px", "salient-core") => "3px",
-								esc_html__("5px", "salient-core") => "5px", 
-								esc_html__("10px", "salient-core") => "10px", 
-								esc_html__("15px", "salient-core") => "15px", 
-								esc_html__("20px", "salient-core") => "20px"),
-				      "description" => esc_html__("This will round the edges of your column", "salient-core")
-				    ),	
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Advanced", "salient-core" ),
+				 "param_name" => "group_header_5",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),	
 				array(
 					"type" => "textfield",
 					"class" => "",
-					"heading" => esc_html__("Margin Top", "salient-core"),
+					"heading" => '<span class="group-title">' . esc_html__("Maximum Width", "salient-core") . "</span>",
 					"value" => "",
-					"param_name" => "top_margin",
-					"description" => "Don't include \"px\" in your strings . e.g \"40\" - However you can also use a percent value in which case a \"%\" would be needed at the end e.g. \"10%\". Negative Values are also accepted."
+					"edit_field_class" => "desktop column-max-width-device-group",
+					"param_name" => "max_width_desktop",
+					"description" => ""
+				),
+				array(
+					"type" => "textfield",
+					"class" => "",
+					"heading" => "",
+					"value" => "",
+					"edit_field_class" => "tablet column-max-width-device-group",
+					"param_name" => "max_width_tablet",
+					"description" => ""
+				),
+				array(
+					"type" => "textfield",
+					"class" => "",
+					"heading" => "",
+					"value" => "",
+					"edit_field_class" => "phone column-max-width-device-group",
+					"param_name" => "max_width_phone",
+					"description" => ""
 				),
 
 				array(
 					"type" => "textfield",
 					"class" => "",
-					"heading" => esc_html__("Margin Bottom", "salient-core"),
-					"value" => "",
-					"param_name" => "bottom_margin",
-					"description" => ""
+					"heading" => esc_html__("Z-Index", "salient-core"),
+					"param_name" => "zindex",
+					"description" => esc_html__("If you want to set a custom stacking order on this column, enter it here. Can be useful when overlapping elements from other columns with negative margins/translates.", "salient-core"),
+					"value" => ""
 				),
 				
-				array(
-					"type" => "checkbox",
-					"class" => "",
-					"heading" => esc_html__("Boxed Column", "salient-core"),
-					"value" => array("Boxed Style" => "true" ),
-					"param_name" => "boxed",
-					"description" => ""
-				),
-
 				array(
 					"type" => "textfield",
 					"class" => "",
@@ -1392,6 +2340,84 @@ function nectar_custom_maps() {
 					"param_name" => "el_class",
 					"value" => ""
 				),
+				
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Legacy Options", "salient-core" ),
+				 "param_name" => "group_header_6",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),	
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"heading" => esc_html__("Boxed Column", "salient-core"),
+					"value" => array("Boxed Style" => "true" ),
+					"param_name" => "boxed",
+					"description" => esc_html__("This will automatically set a background color/shadow on your column.",'salient-core')
+				),
+				
+				
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"group" => "Color Overlay",
+					"heading" => esc_html__("Enable Gradient", "salient-core"),
+					"value" => array("Yes, please" => "true" ),
+					"param_name" => "enable_gradient",
+					"description" => ""
+				),
+				array(
+					"type" => "colorpicker",
+					"class" => "",
+					"heading" => esc_html__("Color Overlay", "salient-core"),
+					"param_name" => "color_overlay",
+					"value" => "",
+					"edit_field_class" => "col-md-6",
+					"group" => "Color Overlay",
+					"description" => ""
+				),
+				array(
+					"type" => "colorpicker",
+					"class" => "",
+					"heading" => esc_html__("Color Overlay 2", "salient-core"),
+					"param_name" => "color_overlay_2",
+					"value" => "",
+					"edit_field_class" => "col-md-6 col-md-6-last",
+					"group" => "Color Overlay",
+					"description" => "",
+				),
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"heading" => esc_html__("Gradient Direction", "salient-core"),
+					"param_name" => "gradient_direction",
+					"group" => "Color Overlay",
+					"value" => array(
+						esc_html__("Left to Right", "salient-core") => "left_to_right",
+						esc_html__("Left Top to Right Bottom", "salient-core") => "left_t_to_right_b",
+						esc_html__("Left Bottom to Right Top", "salient-core") => "left_b_to_right_t",
+						esc_html__("Bottom to Top", "salient-core") => 'top_to_bottom'
+					)
+				),
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"group" => "Color Overlay",
+					"heading" => "Overlay Strength",
+					"param_name" => "overlay_strength",
+					"value" => array(
+						esc_html__("Light", "salient-core") => "0.3",
+						esc_html__("Medium", "salient-core") => "0.5",
+						esc_html__("Heavy", "salient-core") => "0.8",
+						esc_html__("Very Heavy", "salient-core") => "0.95",
+						esc_html__("Solid", "salient-core") => '1'
+					)
+				),
+				
 				array(
 					'type' => 'dropdown',
 					'save_always' => true,
@@ -1456,65 +2482,7 @@ function nectar_custom_maps() {
 					"description" => esc_html__("Text alignment that will be used on smartphones", "salient-core" )
 				),
 				
-				array(
-					"type" => "checkbox",
-					"class" => "",
-					"group" => "Color Overlay",
-					"heading" => esc_html__("Enable Gradient", "salient-core"),
-					"value" => array("Yes, please" => "true" ),
-					"param_name" => "enable_gradient",
-					"description" => ""
-				),
-				array(
-					"type" => "colorpicker",
-					"class" => "",
-					"heading" => esc_html__("Color Overlay", "salient-core"),
-					"param_name" => "color_overlay",
-					"value" => "",
-					"group" => "Color Overlay",
-					"description" => ""
-				),
-				array(
-					"type" => "colorpicker",
-					"class" => "",
-					"heading" => esc_html__("Color Overlay 2", "salient-core"),
-					"param_name" => "color_overlay_2",
-					"value" => "",
-					"group" => "Color Overlay",
-					"description" => "",
-					"dependency" => Array('element' => "enable_gradient", 'not_empty' => true)
-				),
-				array(
-					"type" => "dropdown",
-					"class" => "",
-					'save_always' => true,
-					"heading" => esc_html__("Gradient Direction", "salient-core"),
-					"param_name" => "gradient_direction",
-					"group" => "Color Overlay",
-					"value" => array(
-						esc_html__("Left to Right", "salient-core") => "left_to_right",
-						esc_html__("Left Top to Right Bottom", "salient-core") => "left_t_to_right_b",
-						esc_html__("Left Bottom to Right Top", "salient-core") => "left_b_to_right_t",
-						esc_html__("Bottom to Top", "salient-core") => 'top_to_bottom'
-					),
-					"dependency" => Array('element' => "enable_gradient", 'not_empty' => true)
-				),
-				array(
-					"type" => "dropdown",
-					"class" => "",
-					'save_always' => true,
-					"group" => "Color Overlay",
-					"heading" => "Overlay Strength",
-					"param_name" => "overlay_strength",
-					"value" => array(
-						esc_html__("Light", "salient-core") => "0.3",
-						esc_html__("Medium", "salient-core") => "0.5",
-						esc_html__("Heavy", "salient-core") => "0.8",
-						esc_html__("Very Heavy", "salient-core") => "0.95",
-						esc_html__("Solid", "salient-core") => '1'
-					)
-				),
-				
+
 				array(
 					"type" => "dropdown",
 					"class" => "",
@@ -1596,7 +2564,11 @@ function nectar_custom_maps() {
 						esc_html__("Zoom Out", "salient-core" ) => 'zoom-out',
 						esc_html__("Zoom Out Far", "salient-core" ) => 'zoom-out-high',
 						esc_html__("Zoom Out Reveal", "salient-core" ) => 'zoom-out-reveal',
-						esc_html__("Zoom Out Slowly", "salient-core" ) => 'zoom-out-slow'
+						esc_html__("Zoom Out Slowly", "salient-core" ) => 'zoom-out-slow',
+						esc_html__("Reveal Rotate From Top", "salient-core") => "ro-reveal-from-top",
+						esc_html__("Reveal Rotate From Bottom", "salient-core") => "ro-reveal-from-bottom",
+						esc_html__("Reveal Rotate From Left", "salient-core") => "ro-reveal-from-left",
+						esc_html__("Reveal Rotate From Right", "salient-core") => "ro-reveal-from-right",
 					),
 				),
 				
@@ -1665,29 +2637,22 @@ function nectar_custom_maps() {
 			"content_element" => false,
 			"is_container" => true,
 			"params" => array(
+				
 				array(
-					"type" => "fws_image",
-					"class" => "",
-					"heading" => esc_html__("Background Image", "salient-core" ),
-					"param_name" => "background_image",
-					"value" => "",
-					"description" => "",
-				),
-				array(
-					"type" => "checkbox",
-					"class" => "",
-					"heading" => esc_html__("Scale Background Image To Column", "salient-core" ),
-					"value" => array("Enable" => "true" ),
-					"param_name" => "enable_bg_scale",
-					"description" => "",
-					"dependency" => array('element' => "background_image", 'not_empty' => true)
-				),
-
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Spacing", "salient-core" ),
+				 "param_name" => "group_header_1",
+				 "edit_field_class" => "first-field",
+				 "value" => ''
+			 ),	
+			 
 				array(
 					"type" => "dropdown",
 					"class" => "",
 					'save_always' => true,
-					"heading" => esc_html__("Column Padding", "salient-core" ),
+					"edit_field_class" => "desktop column-padding-device-group",
+					"heading" => '<span class="group-title">' . esc_html__("Column Padding", "salient-core") . "</span>",
 					"param_name" => "column_padding",
 					"value" => array(
 						"None" => "no-extra-padding",
@@ -1707,9 +2672,80 @@ function nectar_custom_maps() {
 						"14%" => "padding-14-percent",
 						"15%" => "padding-15-percent",
 						"16%" => "padding-16-percent",
-						"17%" => "padding-17-percent"
+						"17%" => "padding-17-percent",
+						"18%" => "padding-18-percent",
+						"19%" => "padding-19-percent",
+						"20%" => "padding-20-percent"
 					),
-					"description" => esc_html__("When using the full width content row type or providing a background color/image for the column, you have the option to define the amount of padding your column will receive.", "salient-core" ),
+					"description" => '',
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"edit_field_class" => "tablet column-padding-device-group",
+					"heading" => '',
+					"param_name" => "column_padding_tablet",
+					"value" => array(
+						"Inherit" => "inherit",
+						"None" => "no-extra-padding",
+						"1%" => "padding-1-percent",
+						"2%" => "padding-2-percent",
+						"3%" => "padding-3-percent",
+						"4%" => "padding-4-percent",
+						"5%" => "padding-5-percent",
+						"6%" => "padding-6-percent",
+						"7%" => "padding-7-percent",
+						"8%" => "padding-8-percent",
+						"9%" => "padding-9-percent",
+						"10%" => "padding-10-percent",
+						"11%" => "padding-11-percent",
+						"12%" => "padding-12-percent",
+						"13%" => "padding-13-percent",
+						"14%" => "padding-14-percent",
+						"15%" => "padding-15-percent",
+						"16%" => "padding-16-percent",
+						"17%" => "padding-17-percent",
+						"18%" => "padding-18-percent",
+						"19%" => "padding-19-percent",
+						"20%" => "padding-20-percent"
+					),
+					"description" => '',
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"edit_field_class" => "phone column-padding-device-group",
+					"heading" => '',
+					"param_name" => "column_padding_phone",
+					"value" => array(
+						"Inherit" => "inherit",
+						"None" => "no-extra-padding",
+						"1%" => "padding-1-percent",
+						"2%" => "padding-2-percent",
+						"3%" => "padding-3-percent",
+						"4%" => "padding-4-percent",
+						"5%" => "padding-5-percent",
+						"6%" => "padding-6-percent",
+						"7%" => "padding-7-percent",
+						"8%" => "padding-8-percent",
+						"9%" => "padding-9-percent",
+						"10%" => "padding-10-percent",
+						"11%" => "padding-11-percent",
+						"12%" => "padding-12-percent",
+						"13%" => "padding-13-percent",
+						"14%" => "padding-14-percent",
+						"15%" => "padding-15-percent",
+						"16%" => "padding-16-percent",
+						"17%" => "padding-17-percent",
+						"18%" => "padding-18-percent",
+						"19%" => "padding-19-percent",
+						"20%" => "padding-20-percent"
+					),
+					"description" => '',
 				),
 
 				array(
@@ -1735,6 +2771,188 @@ function nectar_custom_maps() {
 				),
 				
 				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 desktop column-margin-device-group constrain_group_1",
+					"heading" => '<span class="group-title">' . esc_html__("Margin", "salient-core") . "</span><span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"param_name" => "top_margin",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+					'param_name' => 'constrain_group_1', 
+					'description' => '',
+					"edit_field_class" => "desktop column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 desktop column-margin-device-group constrain_group_1",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"param_name" => "bottom_margin",
+					"description" => ""
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 desktop col-md-6-last column-margin-device-group constrain_group_2",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"param_name" => "left_margin",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+					'param_name' => 'constrain_group_2', 
+					'description' => '',
+					"edit_field_class" => "desktop column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-4 desktop column-margin-device-group constrain_group_2",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_margin",
+					"description" => ""
+				),
+				
+				
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 tablet column-margin-device-group constrain_group_3",
+					"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"param_name" => "top_margin_tablet",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 3', 'salient-core' ),
+					'param_name' => 'constrain_group_3', 
+					'description' => '',
+					"edit_field_class" => "tablet column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 tablet column-margin-device-group constrain_group_3",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"param_name" => "bottom_margin_tablet",
+					"description" => ""
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 col-md-4-last tablet column-margin-device-group constrain_group_4",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"param_name" => "left_margin_tablet",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 4', 'salient-core' ),
+					'param_name' => 'constrain_group_4', 
+					'description' => '',
+					"edit_field_class" => "tablet column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-4 tablet column-margin-device-group constrain_group_4",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_margin_tablet",
+					"description" => ""
+				),
+				
+
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"edit_field_class" => "col-md-4 phone column-margin-device-group constrain_group_5",
+					"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+					"value" => "",
+					"placeholder" => esc_html__("Top",'salient-core'),
+					"param_name" => "top_margin_phone",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 5', 'salient-core' ),
+					'param_name' => 'constrain_group_5', 
+					'description' => '',
+					"edit_field_class" => "phone column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Bottom",'salient-core'),
+					"edit_field_class" => "col-md-4 phone column-margin-device-group constrain_group_5",
+					"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "bottom_margin_phone",
+					"description" => ""
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Left",'salient-core'),
+					"edit_field_class" => "col-md-4 col-md-4-last phone column-margin-device-group constrain_group_6",
+					"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "left_margin_phone",
+					"description" => ""
+				),
+				array(
+					'type' => 'checkbox',
+					'heading' => esc_html__( 'Constrain 6', 'salient-core' ),
+					'param_name' => 'constrain_group_6', 
+					'description' => '',
+					"edit_field_class" => "phone column-margin-device-group constrain-icon",
+					'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+				),
+				array(
+					"type" => "nectar_numerical",
+					"class" => "",
+					"placeholder" => esc_html__("Right",'salient-core'),
+					"edit_field_class" => "col-md-4 phone column-margin-device-group constrain_group_6",
+					"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+					"value" => "",
+					"param_name" => "right_margin_phone",
+					"description" => ""
+				),
+				
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Content", "salient-core" ),
+				 "param_name" => "group_header_2",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),	
+			 
+				array(
 					"type" => "checkbox",
 					"class" => "",
 					"heading" => esc_html__("Centered Content", "salient-core" ),
@@ -1742,9 +2960,11 @@ function nectar_custom_maps() {
 					"param_name" => "centered_text",
 					"description" => ""
 				),
+				
 				array(
 					"type" => "colorpicker",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("Background Color", "salient-core" ),
 					"param_name" => "background_color",
 					"value" => "",
@@ -1755,6 +2975,7 @@ function nectar_custom_maps() {
 					"type" => "dropdown",
 					"class" => "",
 					'save_always' => true,
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("Background Color Opacity", "salient-core" ),
 					"param_name" => "background_color_opacity",
 					"value" => array(
@@ -1775,6 +2996,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "colorpicker",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					"heading" => esc_html__("Background Color Hover", "salient-core" ),
 					"param_name" => "background_color_hover",
 					"value" => "",
@@ -1784,6 +3006,7 @@ function nectar_custom_maps() {
 				array(
 					"type" => "dropdown",
 					"class" => "",
+					'group' => esc_html__( 'Background', 'salient-core' ),
 					'save_always' => true,
 					"heading" => esc_html__("Background Hover Color Opacity", "salient-core" ),
 					"param_name" => "background_hover_color_opacity",
@@ -1803,6 +3026,48 @@ function nectar_custom_maps() {
 				),
 				
 				array(
+					"type" => "fws_image",
+					"class" => "",
+					"heading" => esc_html__("Background Image", "salient-core" ),
+					"param_name" => "background_image",
+					'group' => esc_html__( 'Background', 'salient-core' ),
+					"value" => "",
+					"description" => "",
+				),
+				
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					"group" => "Background",
+					'save_always' => true,
+					"heading" => esc_html__("Background Image Position", "salient-core" ),
+					"param_name" => "background_image_position",
+					"value" => array(
+						esc_html__("Center Center", "salient-core" ) => "center center",
+						esc_html__("Center Top", "salient-core" ) => "center top",
+						esc_html__("Center Bottom", "salient-core" ) => "center bottom",
+						esc_html__("Left Top", "salient-core" ) => "left top",
+						esc_html__("Left Center", "salient-core" ) => "left center",
+						esc_html__("Left Bottom", "salient-core" ) => "left bottom",
+						esc_html__("Right Top", "salient-core" ) => "right top",
+						esc_html__("Right Center", "salient-core" ) => "right center",
+						esc_html__("Right Bottom", "salient-core" ) => "right bottom"
+					),
+					"dependency" => Array('element' => "background_image", 'not_empty' => true)
+				),
+				
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"heading" => esc_html__("Scale Background Image To Column", "salient-core" ),
+					"value" => array("Enable" => "true" ),
+					'group' => esc_html__( 'Background', 'salient-core' ),
+					"param_name" => "enable_bg_scale",
+					"description" => "",
+					"dependency" => array('element' => "background_image", 'not_empty' => true)
+				),
+				
+				array(
 					"type" => "colorpicker",
 					"class" => "",
 					"heading" => esc_html__("Font Color", "salient-core" ),
@@ -1810,19 +3075,31 @@ function nectar_custom_maps() {
 					"value" => "",
 					"description" => ""
 				),
+				
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Shadow & Rounded Edges", "salient-core" ),
+				 "param_name" => "group_header_3",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),	
+			 
 				array(
 			      "type" => "dropdown",
 			      "heading" => esc_html__("Box Shadow", "salient-core"),
 			      'save_always' => true,
 			      "param_name" => "column_shadow",
+						"edit_field_class" => "col-md-6",
 			      "value" => array(esc_html__("None", "salient-core") => "none", esc_html__("Small Depth", "salient-core") => "small_depth", esc_html__("Medium Depth", "salient-core") => "medium_depth", esc_html__("Large Depth", "salient-core") => "large_depth", esc_html__("Very Large Depth", "salient-core") => "x_large_depth"),
-			      "description" => esc_html__("Select your desired column box shadow", "salient-core")
+			      "description" => ''
 			    ),	
 				array(
 						"type" => "dropdown",
 						"heading" => esc_html__("Border Radius", "salient-core"),
 						'save_always' => true,
 						"param_name" => "column_border_radius",
+						"edit_field_class" => "col-md-6 col-md-6-last",
 						"value" => array(
 							esc_html__("0px", "salient-core") => "none",
 							esc_html__("3px", "salient-core") => "3px",
@@ -1830,26 +3107,17 @@ function nectar_custom_maps() {
 							esc_html__("10px", "salient-core") => "10px", 
 							esc_html__("15px", "salient-core") => "15px", 
 							esc_html__("20px", "salient-core") => "20px"),
-						"description" => esc_html__("This will round the edges of your column", "salient-core")
+						"description" => ''
 					),	
 					
 					array(
-						"type" => "textfield",
-						"class" => "",
-						"heading" => esc_html__("Margin Top", "salient-core"),
-						"value" => "",
-						"param_name" => "top_margin",
-						"description" => esc_html__("Don't include \"px\" in your strings . e.g \"40\" - However you can also use a percent value in which case a \"%\" would be needed at the end e.g. \"10%\". Negative Values are also accepted.", "salient-core"),
-					),
-		
-					array(
-						"type" => "textfield",
-						"class" => "",
-						"heading" => esc_html__("Margin Bottom", "salient-core"),
-						"value" => "",
-						"param_name" => "bottom_margin",
-						"description" => ""
-					),
+					 "type" => "nectar_group_header",
+					 "class" => "",
+					 "heading" => esc_html__("Link", "salient-core" ),
+					 "param_name" => "group_header_4",
+					 "edit_field_class" => "",
+					 "value" => ''
+				 ),	
 				array(
 					"type" => "textfield",
 					"class" => "",
@@ -1868,15 +3136,22 @@ function nectar_custom_maps() {
 				),
 				
 				array(
-					"type" => "checkbox",
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Advanced", "salient-core" ),
+				 "param_name" => "group_header_5",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),	
+				array(
+					"type" => "textfield",
 					"class" => "",
-					"heading" => esc_html__("Boxed Column", "salient-core"),
-					"value" => array("Boxed Style" => "true" ),
-					"param_name" => "boxed",
-					"description" => ""
+					"heading" => esc_html__("Z-Index", "salient-core"),
+					"param_name" => "zindex",
+					"description" => esc_html__("If you want to set a custom stacking order on this column, enter it here. Can be useful when overlapping elements from other columns with negative margins/translates.", "salient-core"),
+					"value" => ""
 				),
-
-
+				
 				array(
 					"type" => "textfield",
 					"class" => "",
@@ -1884,7 +3159,85 @@ function nectar_custom_maps() {
 					"param_name" => "el_class",
 					"value" => ""
 				),
-
+				
+				array(
+				 "type" => "nectar_group_header",
+				 "class" => "",
+				 "heading" => esc_html__("Legacy Options", "salient-core" ),
+				 "param_name" => "group_header_6",
+				 "edit_field_class" => "",
+				 "value" => ''
+			 ),	
+			 
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"heading" => esc_html__("Boxed Column", "salient-core"),
+					"value" => array("Boxed Style" => "true" ),
+					"param_name" => "boxed",
+					"description" => esc_html__("This will automatically set a background color/shadow on your column.",'salient-core')
+				),
+				
+				array(
+					"type" => "checkbox",
+					"class" => "",
+					"group" => "Color Overlay",
+					"heading" => esc_html__("Enable Gradient", "salient-core"),
+					"value" => array("Yes, please" => "true" ),
+					"param_name" => "enable_gradient",
+					"description" => ""
+				),
+				array(
+					"type" => "colorpicker",
+					"class" => "",
+					"heading" => esc_html__("Color Overlay", "salient-core"),
+					"param_name" => "color_overlay",
+					"value" => "",
+					"edit_field_class" => "col-md-6",
+					"group" => "Color Overlay",
+					"description" => ""
+				),
+				array(
+					"type" => "colorpicker",
+					"class" => "",
+					"heading" => esc_html__("Color Overlay 2", "salient-core"),
+					"param_name" => "color_overlay_2",
+					"edit_field_class" => "col-md-6 col-md-6-last",
+					"value" => "",
+					"group" => "Color Overlay",
+					"description" => "",
+				),
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"heading" => esc_html__("Gradient Direction", "salient-core"),
+					"param_name" => "gradient_direction",
+					"group" => "Color Overlay",
+					"value" => array(
+						esc_html__("Left to Right", "salient-core") => "left_to_right",
+						esc_html__("Left Top to Right Bottom", "salient-core") => "left_t_to_right_b",
+						esc_html__("Left Bottom to Right Top", "salient-core") => "left_b_to_right_t",
+						esc_html__("Bottom to Top", "salient-core") => 'top_to_bottom'
+					),
+				),
+				array(
+					"type" => "dropdown",
+					"class" => "",
+					'save_always' => true,
+					"group" => "Color Overlay",
+					"heading" => "Overlay Strength",
+					"param_name" => "overlay_strength",
+					"value" => array(
+						esc_html__("Light", "salient-core") => "0.3",
+						esc_html__("Medium", "salient-core") => "0.5",
+						esc_html__("Heavy", "salient-core") => "0.8",
+						esc_html__("Very Heavy", "salient-core") => "0.95",
+						esc_html__("Solid", "salient-core") => '1'
+					)
+				),
+				
+				
 				array(
 					'type' => 'dropdown',
 					'save_always' => true,
@@ -1917,65 +3270,7 @@ function nectar_custom_maps() {
 					"description" => esc_html__("This allows you to determine what your column width will inherit from when viewed on tablets in a portrait orientation.", "salient-core")
 				),
 				
-				array(
-					"type" => "checkbox",
-					"class" => "",
-					"group" => "Color Overlay",
-					"heading" => esc_html__("Enable Gradient", "salient-core"),
-					"value" => array("Yes, please" => "true" ),
-					"param_name" => "enable_gradient",
-					"description" => ""
-				),
-				array(
-					"type" => "colorpicker",
-					"class" => "",
-					"heading" => esc_html__("Color Overlay", "salient-core"),
-					"param_name" => "color_overlay",
-					"value" => "",
-					"group" => "Color Overlay",
-					"description" => ""
-				),
-				array(
-					"type" => "colorpicker",
-					"class" => "",
-					"heading" => esc_html__("Color Overlay 2", "salient-core"),
-					"param_name" => "color_overlay_2",
-					"value" => "",
-					"group" => "Color Overlay",
-					"description" => "",
-					"dependency" => Array('element' => "enable_gradient", 'not_empty' => true)
-				),
-				array(
-					"type" => "dropdown",
-					"class" => "",
-					'save_always' => true,
-					"heading" => esc_html__("Gradient Direction", "salient-core"),
-					"param_name" => "gradient_direction",
-					"group" => "Color Overlay",
-					"value" => array(
-						esc_html__("Left to Right", "salient-core") => "left_to_right",
-						esc_html__("Left Top to Right Bottom", "salient-core") => "left_t_to_right_b",
-						esc_html__("Left Bottom to Right Top", "salient-core") => "left_b_to_right_t",
-						esc_html__("Bottom to Top", "salient-core") => 'top_to_bottom'
-					),
-					"dependency" => Array('element' => "enable_gradient", 'not_empty' => true)
-				),
-				array(
-					"type" => "dropdown",
-					"class" => "",
-					'save_always' => true,
-					"group" => "Color Overlay",
-					"heading" => "Overlay Strength",
-					"param_name" => "overlay_strength",
-					"value" => array(
-						esc_html__("Light", "salient-core") => "0.3",
-						esc_html__("Medium", "salient-core") => "0.5",
-						esc_html__("Heavy", "salient-core") => "0.8",
-						esc_html__("Very Heavy", "salient-core") => "0.95",
-						esc_html__("Solid", "salient-core") => '1'
-					)
-				),
-				
+			
 				array(
 					"type" => "dropdown",
 					"class" => "",
@@ -2058,7 +3353,11 @@ function nectar_custom_maps() {
 						"Zoom Out" => 'zoom-out',
 						"Zoom Out Far" => 'zoom-out-high',
 						"Zoom Out Reveal" => 'zoom-out-reveal',
-						"Zoom Out Slowly" => 'zoom-out-slow'
+						"Zoom Out Slowly" => 'zoom-out-slow',
+						esc_html__("Reveal Rotate From Top", "salient-core") => "ro-reveal-from-top",
+						esc_html__("Reveal Rotate From Bottom", "salient-core") => "ro-reveal-from-bottom",
+						esc_html__("Reveal Rotate From Left", "salient-core") => "ro-reveal-from-left",
+						esc_html__("Reveal Rotate From Right", "salient-core") => "ro-reveal-from-right",
 					),
 				),
 				
@@ -2124,64 +3423,331 @@ function nectar_custom_maps() {
 		vc_remove_param("vc_row_inner", "gap");
 
 		if( function_exists('nectar_use_flexbox_grid') && true === nectar_use_flexbox_grid() ) {
+			vc_add_param("vc_row_inner", array(
+				"type" => "dropdown",
+				"class" => "",
+				'save_always' => true,
+				"heading" => esc_html__("Column Margin", "salient-core"),
+				"param_name" => "column_margin",
+				"value" => array(
+					esc_html__("Default", "salient-core") => "default",
+					esc_html__("20px", "salient-core") => "20px",
+					esc_html__("30px", "salient-core") => "30px",
+					esc_html__("40px", "salient-core") => "40px",
+					esc_html__("50px", "salient-core") => "50px",
+					esc_html__("60px", "salient-core") => "60px",
+					esc_html__("70px", "salient-core") => "70px",
+					esc_html__("80px", "salient-core") => "80px",
+					esc_html__("90px", "salient-core") => "90px",
+					esc_html__("None", "salient-core") => "none"
+				)
+			));
+		}
+	
+	
 		vc_add_param("vc_row_inner", array(
 			"type" => "dropdown",
 			"class" => "",
 			'save_always' => true,
-			"heading" => esc_html__("Column Margin", "salient-core"),
-			"param_name" => "column_margin",
+			"edit_field_class" => "desktop column-direction-device-group",
+			"heading" => '<span class="group-title">' . esc_html__("Column Direction", "salient-core") . "</span>",
+			"param_name" => "column_direction",
 			"value" => array(
-				esc_html__("Default", "salient-core") => "default",
-				esc_html__("20px", "salient-core") => "20px",
-				esc_html__("30px", "salient-core") => "30px",
-				esc_html__("40px", "salient-core") => "40px",
-				esc_html__("50px", "salient-core") => "50px",
-				esc_html__("60px", "salient-core") => "60px",
-				esc_html__("70px", "salient-core") => "70px",
-				esc_html__("80px", "salient-core") => "80px",
-				esc_html__("90px", "salient-core") => "90px",
-				esc_html__("None", "salient-core") => "none"
-			)
-		));
-	}
-
-		vc_add_param("vc_row_inner", array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("Padding Top", "salient-core"),
-					"value" => "",
-					"param_name" => "top_padding",
-					"description" => esc_html__("Don't include \"px\" in your string. e.g \"40\" - However you can also use a percent value in which case a \"%\" would be needed at the end e.g. \"10%\"", "salient-core"),
-		));
-
-		vc_add_param("vc_row_inner", array(
-					"type" => "textfield",
-					"class" => "",
-					"heading" => esc_html__("Padding Bottom", "salient-core"),
-					"value" => "",
-					"param_name" => "bottom_padding",
-					"description" => esc_html__("Don't include \"px\" in your string. e.g \"40\" - However you can also use a percent value in which case a \"%\" would be needed at the end e.g. \"10%\"", "salient-core"),
+				"Default" => "default",
+				"Reverse" => "reverse"
+			),
+			'description' => esc_html__( 'The order your columns will display in.', 'salient-core' ),
 		));
 		
 		vc_add_param("vc_row_inner", array(
-			"type" => "textfield",
+			"type" => "dropdown",
 			"class" => "",
-			"heading" => esc_html__("Translate Y", "salient-core"),
+			'save_always' => true,
+			"edit_field_class" => "tablet column-direction-device-group",
+			"heading" => '',
+			"param_name" => "column_direction_tablet",
+			"value" => array(
+				"Default" => "default",
+				"Row Reverse" => "row_reverse",
+				"Column Reverse" => "column_reverse"
+			),
+			'description' => esc_html__( 'The order your columns will display in.','salient-core') . '<br /><br />' . esc_html__('Column Direction Reversing Guide:','salient-core'). '<br />'.esc_html__('Select','salient-core') . ' <b>'. esc_html__('Row Reverse','salient-core') . '</b> '.esc_html__('when columns are set to display inline.') .'<br/>' . esc_html__('Select','salient-core').' <b>'. esc_html__('Column Reverse','salient-core') .'</b> ' . esc_html__('when columns are stacking on top of each other. (Most common setup)', 'salient-core' ),
+		));
+		
+		vc_add_param("vc_row_inner", array(
+			"type" => "dropdown",
+			"class" => "",
+			'save_always' => true,
+			"edit_field_class" => "phone column-direction-device-group",
+			"heading" => '',
+			"param_name" => "column_direction_phone",
+			"value" => array(
+				"Default" => "default",
+				"Row Reverse" => "row_reverse",
+				"Column Reverse" => "column_reverse"
+			),
+			'description' => esc_html__( 'The order your columns will display in.','salient-core') . '<br /><br />' . esc_html__('Column Direction Reversing Guide:','salient-core'). '<br />'.esc_html__('Select','salient-core') . ' <b>'. esc_html__('Row Reverse','salient-core') . '</b> '.esc_html__('when columns are set to display inline.') .'<br/>' . esc_html__('Select','salient-core').' <b>'. esc_html__('Column Reverse','salient-core') .'</b> ' . esc_html__('when columns are stacking on top of each other. (Most common setup)', 'salient-core' ),
+		));
+			
+		
+  vc_add_param("vc_row_inner", array(
+	 "type" => "nectar_group_header",
+	 "class" => "",
+	 "heading" => esc_html__("Spacing & Transform", "salient-core" ),
+	 "param_name" => "group_header_1",
+	 "edit_field_class" => "",
+	 "value" => ''
+ ));
+ 
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"edit_field_class" => "col-md-6 desktop row-padding-device-group constrain_group_1",
+		"heading" => '<span class="group-title">' . esc_html__("Padding", "salient-core") . "</span><span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+		"value" => "",
+		"placeholder" => esc_html__("Top",'salient-core'),
+		"param_name" => "top_padding",
+		"description" => ''
+	));
+	vc_add_param("vc_row_inner", array(
+		'type' => 'checkbox',
+		'heading' => esc_html__( 'Constrain 1', 'salient-core' ),
+		'param_name' => 'constrain_group_1', 
+		'description' => '',
+		"edit_field_class" => "desktop row-padding-device-group constrain-icon left",
+		'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+	));
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Bottom",'salient-core'),
+		"edit_field_class" => "col-md-6 col-md-6-last desktop row-padding-device-group constrain_group_1",
+		"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "bottom_padding",
+		"description" => ''
+	));
+	
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Left",'salient-core'),
+		"edit_field_class" => "col-md-6 desktop col-md-6-last row-padding-device-group constrain_group_2",
+		"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "left_padding_desktop",
+		"description" => ''
+	));
+	vc_add_param("vc_row_inner", array(
+		'type' => 'checkbox',
+		'heading' => esc_html__( 'Constrain 2', 'salient-core' ),
+		'param_name' => 'constrain_group_2', 
+		"edit_field_class" => "desktop row-padding-device-group constrain-icon right",
+		'description' => '',
+		'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+	));
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Right",'salient-core'),
+		"edit_field_class" => "col-md-6 col-md-6-last desktop row-padding-device-group constrain_group_2",
+		"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "right_padding_desktop",
+		"description" => ''
+	));
+	
+
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Top",'salient-core'),
+		"edit_field_class" => "col-md-6 tablet row-padding-device-group constrain_group_3",
+		"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "top_padding_tablet",
+		"description" => ''
+	));
+	vc_add_param("vc_row_inner", array(
+		'type' => 'checkbox',
+		'heading' => esc_html__( 'Constrain 3', 'salient-core' ),
+		'param_name' => 'constrain_group_3', 
+		"edit_field_class" => "tablet row-padding-device-group constrain-icon left",
+		'description' => '',
+		'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+	));
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Bottom",'salient-core'),
+		"edit_field_class" => "col-md-6 col-md-6-last tablet row-padding-device-group constrain_group_3",
+		"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "bottom_padding_tablet",
+		"description" => ''
+	));
+	
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Left",'salient-core'),
+		"edit_field_class" => "col-md-6 tablet col-md-6-last row-padding-device-group constrain_group_4",
+		"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "left_padding_tablet",
+		"description" => ''
+	));
+	vc_add_param("vc_row_inner", array(
+		'type' => 'checkbox',
+		'heading' => esc_html__( 'Constrain 4', 'salient-core' ),
+		'param_name' => 'constrain_group_4', 
+		"edit_field_class" => "tablet row-padding-device-group constrain-icon right",
+		'description' => '',
+		'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+	));
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Right",'salient-core'),
+		"edit_field_class" => "col-md-6 col-md-6-last tablet row-padding-device-group constrain_group_4",
+		"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "right_padding_tablet",
+		"description" => ''
+	));
+
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Top",'salient-core'),
+		"edit_field_class" => "col-md-6 phone row-padding-device-group constrain_group_5",
+		"heading" => "<span class='attr-title'>" . esc_html__("Top", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "top_padding_phone",
+		"description" => ''
+	));
+	vc_add_param("vc_row_inner", array(
+		'type' => 'checkbox',
+		"edit_field_class" => "phone row-padding-device-group constrain-icon left",
+		'heading' => esc_html__( 'Constrain 5', 'salient-core' ),
+		'param_name' => 'constrain_group_5', 
+		'description' => '',
+		'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+	));
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Bottom",'salient-core'),
+		"edit_field_class" => "col-md-6 col-md-6-last phone row-padding-device-group constrain_group_5",
+		"heading" => "<span class='attr-title'>" . esc_html__("Bottom", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "bottom_padding_phone",
+		"description" => ''
+	));
+	
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Left",'salient-core'),
+		"edit_field_class" => "col-md-6 phone col-md-6-last row-padding-device-group constrain_group_6",
+		"heading" => "<span class='attr-title'>" . esc_html__("Left", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "left_padding_phone",
+		"description" => ''
+	));
+	vc_add_param("vc_row_inner", array(
+		'type' => 'checkbox',
+		'heading' => esc_html__( 'Constrain 6', 'salient-core' ),
+		'param_name' => 'constrain_group_6', 
+		"edit_field_class" => "phone row-padding-device-group constrain-icon right",
+		'description' => '',
+		'value' => array( esc_html__( 'Yes', 'salient-core' ) => 'yes' ),
+	));
+	vc_add_param("vc_row_inner", array(
+		"type" => "nectar_numerical",
+		"class" => "",
+		"placeholder" => esc_html__("Right",'salient-core'),
+		"edit_field_class" => "col-md-6 col-md-6-last phone row-padding-device-group constrain_group_6",
+		"heading" => "<span class='attr-title'>" . esc_html__("Right", "salient-core") . "</span>",
+		"value" => "",
+		"param_name" => "right_padding_phone",
+		"description" => ''
+	));
+	
+		
+		vc_add_param("vc_row_inner", array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Translate Y",'salient-core'),
+			"class" => "",
+			"heading" => '<span class="group-title">' . esc_html__("Transform", "salient-core") . "</span><span class='attr-title'>" . esc_html__("Translate Y", "salient-core") . "</span>",
 			"value" => "",
-			"edit_field_class" => "col-md-6",
+			"edit_field_class" => "col-md-6 desktop row-transform-device-group",
 			"param_name" => "translate_y",
 			"description" => ""
 		));
 
 		vc_add_param("vc_row_inner", array(
-			"type" => "textfield",
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Translate X",'salient-core'),
 			"class" => "",
-			"heading" => esc_html__("Translate X", "salient-core"),
+			"heading" => "<span class='attr-title'>" . esc_html__("Translate X", "salient-core") . "</span>",
 			"value" => "",
-			"edit_field_class" => "col-md-6",
+			"edit_field_class" => "col-md-6 col-md-6-last desktop row-transform-device-group",
 			"param_name" => "translate_x",
 			"description" => ""
 		));
+		
+		vc_add_param("vc_row_inner", array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Translate Y",'salient-core'),
+			"class" => "",
+			"heading" => "<span class='attr-title'>" . esc_html__("Translate Y", "salient-core") . "</span>",
+			"value" => "",
+			"edit_field_class" => "col-md-6 tablet row-transform-device-group",
+			"param_name" => "translate_y_tablet",
+			"description" => ""
+		));
+
+		vc_add_param("vc_row_inner", array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Translate X",'salient-core'),
+			"class" => "",
+			"heading" => "<span class='attr-title'>" . esc_html__("Translate X", "salient-core") . "</span>",
+			"value" => "",
+			"edit_field_class" => "col-md-6 col-md-6-last tablet row-transform-device-group",
+			"param_name" => "translate_x_tablet",
+			"description" => ""
+		));
+		vc_add_param("vc_row_inner", array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Translate Y",'salient-core'),
+			"class" => "",
+			"heading" => "<span class='attr-title'>" . esc_html__("Translate Y", "salient-core") . "</span>",
+			"value" => "",
+			"edit_field_class" => "col-md-6 phone row-transform-device-group",
+			"param_name" => "translate_y_phone",
+			"description" => ""
+		));
+
+		vc_add_param("vc_row_inner", array(
+			"type" => "nectar_numerical",
+			"placeholder" => esc_html__("Translate X",'salient-core'),
+			"class" => "",
+			"heading" => "<span class='attr-title'>" . esc_html__("Translate X", "salient-core") . "</span>",
+			"value" => "",
+			"edit_field_class" => "col-md-6 col-md-6-last phone row-transform-device-group",
+			"param_name" => "translate_x_phone",
+			"description" => ""
+		));
+		
+		vc_add_param("vc_row_inner", array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Content", "salient-core" ),
+		 "param_name" => "group_header_2",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ));
 
 		vc_add_param("vc_row_inner", array(
 			"type" => "dropdown",
@@ -2195,6 +3761,47 @@ function nectar_custom_maps() {
 				esc_html__("Right", "salient-core") => "right"
 			)
 		));
+		
+		vc_add_param("vc_row_inner", array(
+		 "type" => "nectar_group_header",
+		 "class" => "",
+		 "heading" => esc_html__("Advanced", "salient-core" ),
+		 "param_name" => "group_header_3",
+		 "edit_field_class" => "",
+		 "value" => ''
+	 ));
+
+		vc_add_param("vc_row_inner", array(
+			"type" => "textfield",
+			"class" => "",
+			"heading" => '<span class="group-title">' . esc_html__("Minimum Width", "salient-core") . "</span>",
+			"value" => "",
+			"edit_field_class" => "desktop row-min-width-device-group",
+			"param_name" => "min_width_desktop",
+			"description" => ""
+		));
+
+		vc_add_param("vc_row_inner", array(
+			"type" => "textfield",
+			"class" => "",
+			"heading" => "",
+			"value" => "",
+			"edit_field_class" => "tablet row-min-width-device-group",
+			"param_name" => "min_width_tablet",
+			"description" => ""
+		));
+
+
+		vc_add_param("vc_row_inner", array(
+			"type" => "textfield",
+			"class" => "",
+			"heading" => "",
+			"value" => "",
+			"edit_field_class" => "phone row-min-width-device-group",
+			"param_name" => "min_width_phone",
+			"description" => ""
+		));
+
 
 		vc_add_param("vc_row_inner", array(
 			"type" => "textfield",
@@ -2885,6 +4492,15 @@ function nectar_custom_maps() {
 		  "description" => '',
 		  "dependency" => Array('element' => "type", 'value' => array('flickity_style'))
 	));
+	
+	vc_add_param("vc_gallery",array(
+			 "type" => 'checkbox',
+			 "heading" => esc_html__("Subtle Image Scale When Dragging", "salient-core"),
+			 "param_name" => "flickity_image_scale_on_drag",
+			 "description" => esc_html__("Will cause your gallery images to shrink slightly when dragging.", "salient-core"),
+			 "value" => Array(esc_html__("Yes, please", "salient-core") => 'true'),
+			 "dependency" => Array('element' => "type", 'value' => array('flickity_style', 'flickity_static_height_style'))
+	 ));
 
 	 vc_add_param("vc_gallery",array(
 	      "type" => 'checkbox',
@@ -3222,7 +4838,21 @@ function nectar_custom_maps() {
 	class WPBakeryShortCode_Nectar_Icon extends WPBakeryShortCode { }
 
 	vc_lean_map('nectar_icon', null, SALIENT_CORE_ROOT_DIR_PATH . 'includes/nectar_maps/nectar_icon.php');
+	
+	
+	
+	//Nectar Scrolling Text
+	class WPBakeryShortCode_Nectar_Scrolling_Text extends WPBakeryShortCode { }
 
+	vc_lean_map('nectar_scrolling_text', null, SALIENT_CORE_ROOT_DIR_PATH . 'includes/nectar_maps/nectar_scrolling_text.php');
+	
+	
+	
+	//Nectar Video Player - Self Hosted
+	class WPBakeryShortCode_Nectar_Video_Player_Self_Hosted extends WPBakeryShortCode { }
+
+	vc_lean_map('nectar_video_player_self_hosted', null, SALIENT_CORE_ROOT_DIR_PATH . 'includes/nectar_maps/nectar_video_player_self_hosted.php');
+	
 	
 
 	

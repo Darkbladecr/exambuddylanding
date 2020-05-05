@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
 	'testimonial_style' => 'small_modern',
   'quote' => '',
@@ -7,6 +12,7 @@ extract(shortcode_atts(array(
   'name' => '',
   'subtitle' => '',
   'color' => '',
+	'text_color' => '',
 	'add_image_shadow' => ''
 ), $atts));
 
@@ -33,10 +39,29 @@ if($testimonial_style !== 'basic' && $testimonial_style !== 'basic_left_image') 
 	$open_quote = '<span class="open-quote">&#8221;</span>'; 
 }
 
+$text_color_style_escaped = '';
+if( !empty($text_color) ) {
+	$text_color_style_escaped = 'data-custom-color="true" style="color: '.esc_attr($text_color).';"';
+}
+
+$bottom_content_escaped = '';
+
+if( !empty($name) || !empty($subtitle) ) {
+	
+	$bottom_content_escaped .= '<span class="wrap">';
+	if( !empty($name) ) {
+		$bottom_content_escaped .= '<span>'.wp_kses_post($name).'</span>';
+	}
+	if( !empty($subtitle) ) {
+		$bottom_content_escaped .= '<span class="title">'.wp_kses_post($subtitle).'</span>';
+	}
+	$bottom_content_escaped .= '</span>';
+	
+}
 
 echo '<blockquote class="nectar_single_testimonial" data-color="'.esc_attr(strtolower($color)).'" data-style="'.esc_attr($testimonial_style).'">';  
-echo '<div class="inner">';
-echo ' <p>'. $open_quote . wp_kses_post($quote) . $close_quote.' </p>'. $image_icon_markup_escaped .'<span class="wrap"><span>'.wp_kses_post($name).'</span><span class="title">'.wp_kses_post($subtitle).'</span></span>';
+echo '<div class="inner"'.$text_color_style_escaped.'>';
+echo ' <p>'. $open_quote . wp_kses_post($quote) . $close_quote.' </p>'. $image_icon_markup_escaped .$bottom_content_escaped;
 echo '</div></blockquote>';
 
 ?>

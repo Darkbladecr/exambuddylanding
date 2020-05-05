@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 	extract(shortcode_atts(array(
 		"title"=>'Column title', 
 		"highlight" => 'false', 

@@ -18,7 +18,7 @@ wp_enqueue_script('nectarMap', get_template_directory_uri() . '/js/map.js', arra
 		<?php
 			$count = 0;
 
-			for($i = 1; $i <= 10; $i++){
+			for($i = 1; $i < 9; $i++){
 				if(!empty($nectar_options['map-point-'.$i]) && $nectar_options['map-point-'.$i] != 0 ) {
 					$count++;
 

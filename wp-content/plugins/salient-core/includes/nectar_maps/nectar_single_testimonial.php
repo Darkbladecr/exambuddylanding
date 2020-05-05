@@ -63,6 +63,14 @@ return array(
 			"description" => esc_html__("The optional subtitle that will follow the testimonial name", "salient-core")
 		),
 		array(
+			"type" => "colorpicker",
+			"class" => "",
+			"heading" => "Text Color",
+			"param_name" => "text_color",
+			"value" => "",
+			"description" => ""
+		),
+		array(
 			"type" => "dropdown",
 			"heading" => esc_html__("Added Color", "salient-core"),
 			"param_name" => "color",

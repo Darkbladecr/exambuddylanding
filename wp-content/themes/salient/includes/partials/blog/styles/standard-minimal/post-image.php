@@ -21,7 +21,7 @@ $image_attrs = array(
 );
 
 // Lazy load.
-if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] ) {
+if( !empty($nectar_options['blog_lazy_load']) && '1' === $nectar_options['blog_lazy_load'] && NectarLazyImages::activate_lazy() ) {
 
   // src.
   $img_src = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');

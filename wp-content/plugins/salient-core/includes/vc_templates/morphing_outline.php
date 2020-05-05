@@ -1,5 +1,10 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $title = $el_class = $value = $label_value= $units = '';
 
 extract(shortcode_atts(array(

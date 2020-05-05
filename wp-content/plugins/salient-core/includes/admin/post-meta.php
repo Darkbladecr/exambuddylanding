@@ -1,5 +1,11 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 add_action('add_meta_boxes_post', 'nectar_metabox_salient_headers_post');
 
 function nectar_metabox_salient_headers_post() {

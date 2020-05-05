@@ -33,23 +33,3 @@ if ( ! function_exists( 'nectar_add_ajax_to_search' ) ) {
 	}
 }
 nectar_add_ajax_to_search();
-
-
-/**
- * Sets the search items to show per page.
- *
- * @since 5.0
- */
-if ( ! function_exists( 'nectar_change_wp_search_size' ) ) {
-	function nectar_change_wp_search_size( $query ) {
-		if ( $query->is_search ) {
-			$query->query_vars['posts_per_page'] = 12;
-		}
-
-		return $query;
-	}
-}
-if ( ! is_admin() ) {
-	add_filter( 'pre_get_posts', 'nectar_change_wp_search_size' );
-}
-

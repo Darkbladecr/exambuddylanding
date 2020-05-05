@@ -4,7 +4,7 @@
 *
 * Used when "Classic" standard style is selected.
 *
-* @version 10.5
+* @version 12.0
 */
 
 // Exit if accessed directly
@@ -14,9 +14,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $nectar_options;
 
+$use_nectar_love    = 'true';
+$remove_nectar_love = get_option( 'salient_social_remove_love', '0' );
+
+if( function_exists('nectar_social_sharing_output') && '1' === $remove_nectar_love ) {
+  $use_nectar_love = 'false';
+}
+
 ?>
 
-<div class="post-meta">
+<div class="post-meta" data-love="<?php echo esc_attr($use_nectar_love); ?>">
   
   <div class="date">
     <span class="month"><?php the_time( 'M' ); ?></span>
@@ -30,7 +37,7 @@ global $nectar_options;
   
   <div class="nectar-love-wrap">
     <?php
-    if ( function_exists( 'nectar_love' ) ) {
+    if ( function_exists( 'nectar_love' ) && 'false' !== $use_nectar_love ) {
       nectar_love();
     }
     ?>

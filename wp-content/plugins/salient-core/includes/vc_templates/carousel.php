@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
 	"carousel_title" => '', 
 	"scroll_speed" => 'medium', 
@@ -11,6 +16,10 @@ extract(shortcode_atts(array(
 	'flickity_overflow' => 'hidden',
 	'flickity_wrap_around' => 'wrap',
 	'flickity_spacing' => 'default',
+	'flickity_image_scale_on_drag' => '',
+	'flickity_fixed_content_alignment' => 'default',
+	'flickity_touch_total_hide_indicator' => '',
+	'flickity_adaptive_height' => '',
 	'easing' => 'easeInExpo', 
 	'autorotate' => '', 
 	'enable_animation' => '', 
@@ -77,7 +86,7 @@ else if( $script === 'flickity' ) {
 	
 	if( $flickity_formatting === 'fixed_text_content_fullwidth' ) {
 		
-		echo '<div class="nectar-carousel-flickity-fixed-content" data-control-color="'.esc_attr($color).'"> <div class="nectar-carousel-fixed-content">';
+		echo '<div class="nectar-carousel-flickity-fixed-content" data-alignment="'.esc_attr($flickity_fixed_content_alignment).'" data-control-color="'.esc_attr($color).'"> <div class="nectar-carousel-fixed-content">';
 		echo do_shortcode($flickity_fixed_content);
 		
 		if(!empty($cta_button_text)) {
@@ -113,7 +122,7 @@ else if( $script === 'flickity' ) {
 	}
 	
 	
-	echo '<div class="nectar-flickity not-initialized nectar-carousel" data-control-color="'.esc_attr($color).'" data-overflow="'.esc_attr($flickity_overflow).'" data-wrap="'.esc_attr($flickity_wrap_around).'" data-spacing="'.esc_attr($flickity_spacing).'" data-controls="'.esc_attr($flickity_controls).'" data-pagination-alignment="'.esc_attr($pagination_alignment_flickity).'" data-border-radius="'.esc_attr($border_radius).'" data-column-border="'.esc_attr($enable_column_border).'" data-column-padding="'.esc_attr($column_padding).'" data-format="'.esc_attr($flickity_formatting).'" data-autoplay="'.esc_attr($autorotate).'" data-autoplay-dur="'.esc_attr($autorotation_speed).'" data-control-style="material_pagination" data-desktop-columns="'.esc_attr($desktop_cols_flickity).'" data-small-desktop-columns="'.esc_attr($desktop_small_cols_flickity).'" data-tablet-columns="'.esc_attr($tablet_cols_flickity).'" data-column-color="'.esc_attr($column_color).'">';
+	echo '<div class="nectar-flickity not-initialized nectar-carousel" data-control-color="'.esc_attr($color).'" data-overflow="'.esc_attr($flickity_overflow).'" data-r-bottom-total="'.esc_attr($flickity_touch_total_hide_indicator).'" data-drag-scale="'.esc_attr($flickity_image_scale_on_drag).'" data-wrap="'.esc_attr($flickity_wrap_around).'" data-spacing="'.esc_attr($flickity_spacing).'" data-controls="'.esc_attr($flickity_controls).'" data-pagination-alignment="'.esc_attr($pagination_alignment_flickity).'" data-adaptive-height="'.esc_attr($flickity_adaptive_height).'" data-border-radius="'.esc_attr($border_radius).'" data-column-border="'.esc_attr($enable_column_border).'" data-column-padding="'.esc_attr($column_padding).'" data-format="'.esc_attr($flickity_formatting).'" data-autoplay="'.esc_attr($autorotate).'" data-autoplay-dur="'.esc_attr($autorotation_speed).'" data-control-style="material_pagination" data-desktop-columns="'.esc_attr($desktop_cols_flickity).'" data-small-desktop-columns="'.esc_attr($desktop_small_cols_flickity).'" data-tablet-columns="'.esc_attr($tablet_cols_flickity).'" data-column-color="'.esc_attr($column_color).'">';
 	echo '<div class="flickity-viewport"> <div class="flickity-slider">' . do_shortcode($content) . '</div></div>';
 	echo '</div>';
 	

@@ -1,4 +1,9 @@
 <?php 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
 	"el_class" => '', 
 	'style' => 'default'), $atts));

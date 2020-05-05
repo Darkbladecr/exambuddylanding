@@ -1,5 +1,11 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 /**
  * Create metabox markup
  *
@@ -45,7 +51,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 				switch( $field['type'] ){	
 					
 					case 'text': 
-						echo '<td><input type="text" name="nectar_meta['. $field['id'] .']" id="'. $field['id'] .'" value="'. ($meta ? $meta : $field['std']) .'" size="30" /></td>';
+						echo '<td><input type="text" name="nectar_meta['. $field['id'] .']" id="'. $field['id'] .'" value="'. esc_attr(($meta ? $meta : $field['std'])) .'" size="30" /></td>';
 					break;	
 					
 					case 'textarea':
@@ -88,7 +94,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 					
 						$upload_meta = ($meta) ? $meta : $field['std'];
 					 
-						echo '<td><input type="hidden" name="nectar_meta[' . $field['id'] . ']" id="' . $field['id'] . '" value="' . $upload_meta . '" />';
+						echo '<td><input type="hidden" name="nectar_meta[' . $field['id'] . ']" id="' . $field['id'] . '" value="' . esc_attr($upload_meta) . '" />';
 						echo '<img class="nectar-media-preview" id="' . $field['id'] . '" src="' . $upload_meta . '" />';
 						echo '<a href="#" data-update="Select Image" data-title="Choose Your Image" class="nectar-add-btn button-secondary' . $add_class . '" rel-id="' . $field['id'] . '">' . esc_html__('Upload', 'salient-core') . '</a>';
 						echo '<a href="#" class="nectar-remove-btn button-secondary' . $remove_class . '" rel-id="' . $field['id'] . '">' . esc_html__('Remove Upload', 'salient-core') . '</a></td>';
@@ -104,7 +110,7 @@ if( !function_exists('nectar_create_meta_box') ) {
 							true
 						);
 					
-						echo '<td><input type="text" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . ($meta ? $meta : $field['std']) . '" class=" popup-colorpicker" style="width: 70px;" data-default-color="' . ($meta ? $meta : $field['std']) . '"/></td>';
+						echo '<td><input type="text" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . esc_attr(($meta ? $meta : $field['std'])) . '" class=" popup-colorpicker" style="width: 70px;" data-default-color="' . esc_attr(($meta ? $meta : $field['std'])) . '"/></td>';
 					break;
 					
 					case 'media':

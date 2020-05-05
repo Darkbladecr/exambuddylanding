@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $is_admin = is_admin();
 
 $portfolio_types = ($is_admin) ? get_terms('project-type') : array('All' => 'all');

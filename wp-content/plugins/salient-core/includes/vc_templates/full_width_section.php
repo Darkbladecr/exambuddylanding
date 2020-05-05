@@ -1,5 +1,10 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
    extract(shortcode_atts(array(
 	  "type" => 'full_width_background',
 	  'image_url'=> '', 
@@ -47,8 +52,10 @@
 		} else {
 			$bg_image_src = wp_get_attachment_image_src($image_url, 'full');
 			
-			$bg_props .= 'background-image: url('. $bg_image_src[0]. '); ';
-			$bg_props .= 'background-position: '. $bg_pos .'; ';
+			if( false !== $bg_image_src ) {
+				$bg_props .= 'background-image: url('. $bg_image_src[0]. '); ';
+				$bg_props .= 'background-position: '. $bg_pos .'; ';
+			}
 		}
 		
 		// For pattern bgs.
@@ -132,10 +139,12 @@
 	// Video bg.
 	if($video_bg) {
 		
+		$video_image_src = '';
+			
 		// Parse video image.
-		if(strpos($video_image, "http://") !== false){
+		if(strpos($video_image, "http") !== false){
 			$video_image_src = $video_image;
-		} else {
+		} else if( preg_match('/^\d+$/', $video_image) ) {
 			$video_image_src = wp_get_attachment_image_src($video_image, 'full');
 			$video_image_src = $video_image_src[0];
 		}

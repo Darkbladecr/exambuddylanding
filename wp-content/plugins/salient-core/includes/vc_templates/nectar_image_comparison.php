@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 extract(shortcode_atts(array(
   "image_url" => '',
   "image_2_url" => ''
@@ -19,6 +24,8 @@ if( !empty($image_url) ) {
 		$image_url = $image_url;
 	
 	} else {
+		
+		$image_url = apply_filters('wpml_object_id', $image_url, 'attachment', TRUE);
 
 		$wp_img_alt_tag = get_post_meta( $image_url, '_wp_attachment_image_alt', true );
 		if(!empty($wp_img_alt_tag)) {
@@ -40,6 +47,8 @@ if( !empty($image_2_url) ) {
 		$image_2_url = $image_2_url;
 	
 	} else {
+		
+		$image_2_url = apply_filters('wpml_object_id', $image_2_url, 'attachment', TRUE);
 		
 		$wp_img_alt_tag_2 = get_post_meta( $image_2_url, '_wp_attachment_image_alt', true );
 		if(!empty($wp_img_alt_tag_2)) {

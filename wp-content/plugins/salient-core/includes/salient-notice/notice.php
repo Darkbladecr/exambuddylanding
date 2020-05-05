@@ -1,6 +1,12 @@
 
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 if( get_option( 'salient_core_dismiss_plugin_notice' ) !== 'true' ) {
     add_action( 'admin_notices', 'salient_core_add_dismissible_notice' );
 }
@@ -32,4 +38,5 @@ add_action( 'wp_ajax_salient_core_dismiss_plugin_notice', 'salient_core_dismiss_
 
 function salient_core_dismiss_plugin_notice() {
     update_option( 'salient_core_dismiss_plugin_notice', 'true' );
+		wp_die();
 }

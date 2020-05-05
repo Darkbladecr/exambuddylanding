@@ -394,7 +394,7 @@ if ( ! function_exists( 'nectar_my_convert_restrict' ) ) {
 	function nectar_my_convert_restrict( $query ) {
 		global $pagenow;
 		global $typenow;
-		if ( $pagenow === 'edit.php' ) {
+		if ( $pagenow === 'edit.php' && 'nectar_slider' === $typenow) {
 			$filters = get_object_taxonomies( $typenow );
 			foreach ( $filters as $tax_slug ) {
 				$var = &$query->query_vars[ $tax_slug ];
@@ -620,7 +620,9 @@ if ( ! function_exists( 'nectar_slider_display' ) ) {
 		// Adding parallax wrapper if selected.
 		if ( $config_arr['parallax'] === 'true' ) {
 			
-			if ( stripos( $post->post_content, '[nectar_slider' ) !== false && stripos( $post->post_content, '[nectar_slider' ) === 0 && $real_fs == 0 ) {
+			if ( isset($post->post_content) && 
+			stripos( $post->post_content, '[nectar_slider' ) !== false && 
+			stripos( $post->post_content, '[nectar_slider' ) === 0 && $real_fs == 0 ) {
 				$first_section = '';
 				$real_fs       = 1;
 			} else {
@@ -638,7 +640,9 @@ if ( ! function_exists( 'nectar_slider_display' ) ) {
 		
 		if ( $config_arr['parallax'] != 'true' ) {
 			
-			if ( isset($post->post_content) && stripos( $post->post_content, '[nectar_slider' ) !== false && stripos( $post->post_content, '[nectar_slider' ) === 0 && $real_fs == 0 ) {
+			if ( isset($post->post_content) && 
+			stripos( $post->post_content, '[nectar_slider' ) !== false && 
+			stripos( $post->post_content, '[nectar_slider' ) === 0 && $real_fs == 0 ) {
 				$first_section     = '';
 				$real_fs           = 1;
 				$midnight_parallax = null;

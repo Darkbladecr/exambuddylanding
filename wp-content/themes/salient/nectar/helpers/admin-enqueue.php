@@ -44,7 +44,7 @@ if ( ! function_exists( 'nectar_enqueue_media' ) ) {
  * @since 1.0
  */
 function nectar_metabox_styles() {
-	wp_enqueue_style( 'nectar_meta_css', NECTAR_FRAMEWORK_DIRECTORY . 'assets/css/nectar_meta.css', '', '10.5.1' );
+	wp_enqueue_style( 'nectar_meta_css', NECTAR_FRAMEWORK_DIRECTORY . 'assets/css/nectar_meta.css', '', '11.2' );
 }
 
 

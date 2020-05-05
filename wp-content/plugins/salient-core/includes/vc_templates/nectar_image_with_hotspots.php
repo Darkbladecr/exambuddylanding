@@ -1,5 +1,10 @@
 <?php 
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $title = $image = $style = $color_1 = $color_2 = $hotspot_icon  = $tooltip = $tooltip_shadow = $animation = '';
 
 extract(shortcode_atts(array(
@@ -32,13 +37,18 @@ if( !empty($image) ) {
 }
 
 echo '<div class="nectar_image_with_hotspots '.$image_class.'" data-stlye="'.esc_attr($style).'" data-hotspot-icon="'.esc_attr($hotspot_icon).'" data-size="medium" data-color="'.esc_attr($color_attr).'" data-tooltip-func="'.esc_attr($tooltip).'" data-tooltip_shadow="'.esc_attr($tooltip_shadow).'" data-animation="'.esc_attr($animation).'">';
+
 if( !empty($image) ) {
 	if( !preg_match('/^\d+$/',$image) ){
 		echo '<img src="'.esc_url($image).'" alt="'. esc_html__('Hotspot Image','salient-core') . '" />';
 	} else {
+		
+		$image = apply_filters('wpml_object_id', $image, 'attachment', TRUE);
+			
 		echo wp_get_attachment_image($image, 'full');
 	}  
 }
+
 echo do_shortcode($content);
 echo '</div>';
 
