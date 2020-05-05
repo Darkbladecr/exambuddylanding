@@ -18,7 +18,7 @@ services:
   wordpress:
     depends_on:
       - db
-    build: .
+    build: docker.mitrasinovic.co.uk/exambuddy-wp
     container_name: exambuddy-wp
     restart: unless-stopped
     env_file: .env
