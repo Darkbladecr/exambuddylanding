@@ -553,7 +553,7 @@ body[data-ajax-transitions="true"] .nectar-slider-loading {
 }
 
 .active_texture {
-	background-image: url('/wp-content/plugins/salient-nectar-slider/img/textures/grid.png');
+	background-image: url('../img/textures/grid.png');
 }
 
 .swiper-slide .button {

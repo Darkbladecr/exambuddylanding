@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'salient-social';
-  src:  url('/wp-content/plugins/salient-social/css/fonts/salient-social.eot?clmgym');
-  src:  url('/wp-content/plugins/salient-social/css/fonts/salient-social.eot?clmgym#iefix') format('embedded-opentype'),
-    url('/wp-content/plugins/salient-social/css/fonts/salient-social.ttf?clmgym') format('truetype'),
-    url('/wp-content/plugins/salient-social/css/fonts/salient-social.woff?clmgym') format('woff'),
-    url('/wp-content/plugins/salient-social/css/fonts/salient-social.svg?clmgym#salient-social') format('svg');
+  src:  url('fonts/salient-social.eot?clmgym');
+  src:  url('fonts/salient-social.eot?clmgym#iefix') format('embedded-opentype'),
+    url('fonts/salient-social.ttf?clmgym') format('truetype'),
+    url('fonts/salient-social.woff?clmgym') format('woff'),
+    url('fonts/salient-social.svg?clmgym#salient-social') format('svg');
   font-weight: normal;
   font-style: normal;
 }

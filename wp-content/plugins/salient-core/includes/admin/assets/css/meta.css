@@ -122,6 +122,7 @@ tr.font-family, tr.font-family, tr.font-option  {
     margin: 0px 0 0;
     font-weight: normal;
 }
+
 .nectar-metabox-table label .ui-button-text {
 	line-height: 16px;
 }
@@ -294,7 +295,7 @@ td.inline textarea {
 	display: block;
 	height: 20px;
 	width: 20px;
-	background-image: url('/wp-content/plugins/salient-core/includes/admin/assets/img/loading.GIF');
+	background-image: url('../img/loading.GIF');
 }
 
 .modal.wpb-element-edit-modal, .wpb-elements-list-modal {
@@ -377,6 +378,7 @@ td.inline textarea {
 .compat-item tr.compat-field-masonry-image-sizing {
 	display: none;
 }
+
 
 #nectar_slider_canvas_shape .nectar-media-preview {
 	width: 100px;
@@ -465,9 +467,9 @@ box-sizing: border-box;
 }
 
 .nectar-metabox-table .switch-options.activated.salient {
-    border-color: rgba(119, 204, 109, 1);
-		background-color: rgba(119, 204, 109, 1);
-		box-shadow: inset 0px 0px 0px 15px rgba(119, 204, 109, 1);
+    border-color: rgb(58, 103, 255);
+		background-color: rgb(58, 103, 255);
+		box-shadow: inset 0px 0px 0px 15px rgb(58, 103, 255);
     -webkit-transition: box-shadow .45s cubic-bezier(0.4, 0.0, 0.2, 1), background-color 0.25s 0.1s cubic-bezier(0.4, 0.0, 0.2, 1);
     transition: box-shadow .45s cubic-bezier(0.4, 0.0, 0.2, 1), background-color 0.25s 0.1s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
@@ -488,7 +490,7 @@ box-sizing: border-box;
 }
 
 .nectar-metabox-table .cb-enable span {
-	color: rgba(119, 204, 109, 1)!important;
+	color: rgb(58, 103, 255)!important;
 }
 
 .nectar-metabox-table .cb-disable.selected span {

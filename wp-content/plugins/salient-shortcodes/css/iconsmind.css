@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconsmind';
-  src:  url('/wp-content/plugins/salient-shortcodes/css/fonts/iconsmind.eot?qnd6ae');
-  src:  url('/wp-content/plugins/salient-shortcodes/css/fonts/iconsmind.eot?qnd6ae#iefix') format('embedded-opentype'),
-    url('/wp-content/plugins/salient-shortcodes/css/fonts/iconsmind.ttf?qnd6ae') format('truetype'),
-    url('/wp-content/plugins/salient-shortcodes/css/fonts/iconsmind.woff?qnd6ae') format('woff'),
-    url('/wp-content/plugins/salient-shortcodes/css/fonts/iconsmind.svg?qnd6ae#icomoon') format('svg');
+  src:  url('fonts/iconsmind.eot?qnd6ae');
+  src:  url('fonts/iconsmind.eot?qnd6ae#iefix') format('embedded-opentype'),
+    url('fonts/iconsmind.ttf?qnd6ae') format('truetype'),
+    url('fonts/iconsmind.woff?qnd6ae') format('woff'),
+    url('fonts/iconsmind.svg?qnd6ae#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
