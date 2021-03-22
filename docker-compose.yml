@@ -46,7 +46,6 @@ services:
       traefik.http.routers.exambuddy-wp-http.entrypoints: web
       traefik.http.routers.exambuddy-wp.rule: Host(`wp.exambuddy.co.uk`)
       traefik.http.routers.exambuddy-wp.entrypoints: websecure
-      traefik.http.routers.exambuddy-wp.tls.certresolver: letsencrypt
       traefik.http.routers.exambuddy-wp-http.middlewares: https_redirect@file
       traefik.http.routers.exambuddy-wp-http.middlewares: wwwtohttps@file
     volumes:
