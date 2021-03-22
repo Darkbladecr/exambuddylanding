@@ -42,12 +42,8 @@ services:
       - 80
     labels:
       traefik.enable: true
-      traefik.http.routers.exambuddy-wp-http.rule: Host(`wp.exambuddy.co.uk`)
-      traefik.http.routers.exambuddy-wp-http.entrypoints: web
       traefik.http.routers.exambuddy-wp.rule: Host(`wp.exambuddy.co.uk`)
-      traefik.http.routers.exambuddy-wp.entrypoints: websecure
-      traefik.http.routers.exambuddy-wp-http.middlewares: https_redirect@file
-      traefik.http.routers.exambuddy-wp-http.middlewares: wwwtohttps@file
+      traefik.http.routers.exambuddy-wp.tls: true
     volumes:
       - wordpress:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
