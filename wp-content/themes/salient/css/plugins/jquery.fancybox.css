@@ -585,56 +585,7 @@ body.compensate-for-scrollbar {
     transform: scale3d(1, 1, 1);
 }
 
-/* transitionEffect: rotate */
 
-.fancybox-fx-rotate.fancybox-slide--previous {
-    opacity: 0;
-    -ms-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-}
-
-.fancybox-fx-rotate.fancybox-slide--next {
-    opacity: 0;
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
-.fancybox-fx-rotate.fancybox-slide--current {
-    opacity: 1;
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-}
-
-/* transitionEffect: circular */
-
-.fancybox-fx-circular.fancybox-slide--previous {
-    opacity: 0;
-    transform: scale3d(0, 0, 0) translate3d(-100%, 0, 0);
-}
-
-.fancybox-fx-circular.fancybox-slide--next {
-    opacity: 0;
-    transform: scale3d(0, 0, 0) translate3d(100%, 0, 0);
-}
-
-.fancybox-fx-circular.fancybox-slide--current {
-    opacity: 1;
-    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-}
-
-/* transitionEffect: tube */
-
-.fancybox-fx-tube.fancybox-slide--previous {
-    transform: translate3d(-100%, 0, 0) scale(.1) skew(-10deg);
-}
-
-.fancybox-fx-tube.fancybox-slide--next {
-    transform: translate3d(100%, 0, 0) scale(.1) skew(10deg);
-}
-
-.fancybox-fx-tube.fancybox-slide--current {
-    transform: translate3d(0, 0, 0) scale(1);
-}
 
 /* Styling for Small-Screen Devices */
 @media all and (max-height: 576px) {

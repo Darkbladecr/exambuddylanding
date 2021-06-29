@@ -56,6 +56,11 @@ Description: Styles for the "Salient Widgets" plugin.
   line-height: 26px;
   vertical-align: middle;
 }
+.widget-area-active .widget .nectar_widget[data-style="minimal-counter"] > li a,
+.widget-area-active .widget .nectar_widget[data-style="hover-featured-image"] > li a,
+.widget-area-active .widget .nectar_widget[data-style="hover-featured-image-gradient-and-counter"] > li a {
+  position: static!important;
+}
 
 .widget .nectar_widget[class*="nectar_blog_posts_"] > li a, 
 .widget .nectar_widget[class*="nectar_blog_posts_"] > li:not(.has-img) .post-title, 
@@ -99,17 +104,12 @@ body .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featu
   border-color: #fff;
 }
 
-.widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] > li::before {
-  left: 25px;
-  border-width: 2px;
-  z-index: 20;
-}
 
-#footer-outer #footer-widgets .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] li,
+body #footer-outer #footer-widgets .row .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] li,
 .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] li,
  #sidebar .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] li,
 .ascend #sidebar .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] li {
-  padding-left: 85px;
+  padding-left: 85px!important;
 }
 
 .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] > li a .popular-featured-img:after,
@@ -170,6 +170,8 @@ body .widget .nectar_widget[class*="nectar_blog_posts_"] > li .post-date {
   margin-top: 6px;
 }
 
+#header-outer .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > .has-img a:hover span,
+#header-outer .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > li:first-child a span,
 .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > .has-img a:hover,
 #sidebar .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > .has-img a:hover,
 .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] > li a:hover,
@@ -185,7 +187,9 @@ body .widget .nectar_widget[class*="nectar_blog_posts_"] > li .post-date {
 .material #sidebar .widget [data-style="hover-featured-image-gradient-and-counter"] li:not(.has-img) a:hover .post-title,
 #footer-outer .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > .has-img a:hover,
 #footer-outer .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image"] > li:first-child a,
-#footer-outer .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] > li:first-child a {
+#footer-outer .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] > li:first-child a,
+#slide-out-widget-area .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > .has-img a:hover span,
+#slide-out-widget-area .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > li:first-child a span {
   color: #fff!important;
 }
 
@@ -300,7 +304,7 @@ body .widget .nectar_widget[class*="nectar_blog_posts_"] > li .post-date {
 }
 
 .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="featured-image-left"] > li a .meta-wrap {
-  width: calc(100% - 70px);
+  width: calc(100% - 71px);
   padding-left: 25px;
 }
 
@@ -326,14 +330,61 @@ body .widget .nectar_widget[class*="nectar_blog_posts_"] > li .post-date {
 
 .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="featured-image-left"] > li:not(.has-img) a:before,
 .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="featured-image-left"] > li a .popular-featured-img,
-.widget .nectar_widget[class*="nectar_blog_posts_"][data-style="featured-image-left"] > li a .meta-wrap,
-.blog-recent[data-style="list_featured_first_row"] .small {
+.widget .nectar_widget[class*="nectar_blog_posts_"][data-style="featured-image-left"] > li a .meta-wrap {
   position: relative;
   -webkit-transform: none;
   transform: none;
   top: 0;
   display: inline-block;
   vertical-align: middle;
+}
+
+
+
+.widget .nectar_widget[class*="nectar_blog_posts_"][data-style="minimal-counter"] > li::before,
+.widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] > li::before {
+  content: counter(step-counter);
+  margin-right: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  line-height: 34px;
+  font-size: 12px;
+  pointer-events: none;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: color 0.4s cubic-bezier(0.25, 1, 0.2, 1), border-color 0.4s cubic-bezier(0.25, 1, 0.2, 1);
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.2, 1), border-color 0.4s cubic-bezier(0.25, 1, 0.2, 1);
+}
+.widget .nectar_widget[class*="nectar_blog_posts_"][data-style="featured-image-left"] > li:not(.has-img):after {
+  border-radius: 0;
+  text-align: center;
+  color: #fff;
+  font: normal normal normal 18px/60px FontAwesome;
+  content: "\f03e";
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.widget .nectar_widget[class*="nectar_blog_posts_"][data-style="hover-featured-image-gradient-and-counter"] > li::before {
+  left: 25px;
+  border-width: 2px;
+  z-index: 20;
+}
+
+.material #footer-outer #footer-widgets .widget .nectar_widget[class*="nectar_blog_posts_"][data-style="minimal-counter"] > li {
+  padding-left: 55px!important;
+}
+.material #footer-outer #footer-widgets .widget .nectar_widget[class*="nectar_blog_posts_"][data-style*="hover-featured-image"] > li {
+  padding: 20px!important;
 }
 
 @media only screen and (min-width : 1px) and (max-width : 999px) {

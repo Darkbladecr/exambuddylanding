@@ -1043,7 +1043,7 @@
         this.bgCanvas = document.createElement( 'canvas' );
         this.bgCanvas.width = this.canvas.width;
         this.bgCanvas.height = this.canvas.height;
-        
+      
         var newWidth, newHeight;
         var userResized = resize;
         var $selector = ($('.nectar-box-roll').length > 0) ? '.nectar-box-roll': '.nectar-particles';
@@ -1089,7 +1089,7 @@
         }
         
         // Draw to background canvas
-        var headerHeight = ($('#header-outer[data-transparent-header="true"]').length > 0 && $('body.mobile').length == 0 || $('#header-outer[data-permanent-transparent="1"]').length > 0) ? 0 : $('#header-outer').height();
+        var headerHeight = 0;
         
         this.bgContext = this.bgCanvas.getContext( '2d' );
         this.bgContext.drawImage( shapeIndex, (this.canvas.width - newWidth) / 2, (((this.canvas.height+headerHeight/2) - newHeight - heightDiff*1) / 2) , newWidth, newHeight);

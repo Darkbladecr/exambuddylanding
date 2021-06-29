@@ -69,13 +69,11 @@ body .nectar-box-roll #page-header-bg{
     top:50%;
     transform:translateY(-50%);
     -webkit-transform:translateY(-50%);
+    left:0;
+    position:absolute;
+    width:100%
 }
 
-body.box-rolling, 
-body[data-footer-reveal="1"].ascend.box-rolling,
-body[data-footer-reveal="1"].box-rolling {
-    background-color: #e4e4e4!important;
-}
 .container-wrap, .container-wrap .main-content, #ajax-content-wrap {
     min-height: 100%;
 }
@@ -203,10 +201,13 @@ body #header-space {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: visible;
+    backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+}
+.nectar-box-roll .nectar-particles {
+  z-index: 15;
 }
 .nectar-box-roll canvas {
     backface-visibility: visible;
@@ -221,6 +222,11 @@ body #header-space {
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
+#ajax-content-wrap > .nectar-global-section {
+  display: none;
+}
+
 /*content*/
 .nectar-box-roll .overlaid-content {
     position: absolute;
@@ -229,9 +235,9 @@ body #header-space {
     width: 100%;
     height:100%;
     color: #fff;
-    backface-visibility: visible;
+    backface-visibility: hidden;
     transform-style: preserve-3d;
-    webkit-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
     transform-origin: 50% 100%;
 }
 .nectar-box-roll .overlaid-content .row {
@@ -321,20 +327,7 @@ body .bottomBoxOut:after{
         -webkit-transform: translateY(-100%) rotateX(90deg);
    }
 }
-@keyframes rotateCubeTopOut {
-    0% {
-   }
-    65% {
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-        -webkit-transform: translateY(-55%) translateZ(-300px) rotateX(55deg);
-        transform: translateY(-55%) translateZ(-300px) rotateX(55deg);
-   }
-    100% {
-        -webkit-transform: translateY(-100%) rotateX(90deg);
-        transform: translateY(-100%) rotateX(90deg);
-   }
-}
+
 
 @-webkit-keyframes rotateCubeTopOut2 {
     0% {
@@ -373,24 +366,36 @@ body .bottomBoxOut:after{
         -webkit-transform: translateZ(0px);
    }
 }
+
+
+
+
+@keyframes rotateCubeTopOut {
+    0% {
+   }
+    65% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-transform: translateY(-55%) translateZ(-300px) rotateX(55deg);
+        transform: translateY(-55%) translateZ(-300px) rotateX(55deg);
+   }
+    100% {
+        -webkit-transform: translateY(-100%) rotateX(90deg);
+        transform: translateY(-100%) rotateX(90deg);
+   }
+}
 @keyframes rotateCubeTopIn {
     0% {
-        z-index: 999;
         -webkit-transform: translateY(100%) rotateX(-90deg);
         transform: translateY(100%) rotateX(-90deg);
    }
-    64% {
-        z-index: 999;
-   }
     65% {
-        z-index: 1001;
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
         -webkit-transform: translateY(45%) translateZ(-300px) rotateX(-40deg);
         transform: translateY(45%) translateZ(-300px) rotateX(-40deg);
    }
     100% {
-        z-index: 1001;
         -webkit-transform: translateZ(0px);
         transform: translateZ(0px);
    }
@@ -408,20 +413,14 @@ body .bottomBoxOut:after{
 }
 @keyframes rotateCubeBottomOut {
     0% {
-        z-index: 1001;
-   }
-    44% {
-        z-index: 1001;
    }
     45% {
-        z-index: 999;
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
         -webkit-transform: translateY(40%) translateZ(-300px) rotateX(-40deg);
         transform: translateY(40%) translateZ(-300px) rotateX(-40deg);
    }
     100% {
-        z-index: 999;
         -webkit-transform: translateY(100%) rotateX(-90deg);
         transform: translateY(100%) rotateX(-90deg);
    }
@@ -446,7 +445,6 @@ body .bottomBoxOut:after{
     45% {
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
-        -webkit-transform: translateY(-60%) translateZ(-25 300px) rotateX(60deg);
         transform: translateY(-60%) translateZ(-300px) rotateX(60deg);
    }
     100% {

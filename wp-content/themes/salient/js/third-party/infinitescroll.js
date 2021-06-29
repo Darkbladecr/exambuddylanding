@@ -161,7 +161,8 @@
                 var $locationToAppend = '.portfolio-items.infinite_scroll';
             }
             opts.loading.start = opts.loading.start || function() {
-                $(opts.navSelector).hide();
+							  // nectar addition.
+                //$(opts.navSelector).hide(); 
                 opts.loading.msg
                 .insertAfter($locationToAppend)
                 .show(0, $.proxy(function() {
@@ -411,9 +412,9 @@
             pixelsFromWindowBottomToBottom = 0 + $(document).height() - ($(window).scrollTop()) - $(window).height();
 						
 						opts.pixelsFromNavToBottom = $(opts.navSelector).offset().top;
-					
+
             // if distance remaining in the scroll (including buffer) is less than the orignal nav to bottom....
-            return ($(window).scrollTop() + $(window).height() + 500 > opts.pixelsFromNavToBottom);
+            return ($(window).scrollTop() + $(window).height() + 800 > opts.pixelsFromNavToBottom);
 
         },
 

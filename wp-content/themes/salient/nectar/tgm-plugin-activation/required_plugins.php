@@ -48,7 +48,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'js_composer_salient', // The plugin slug (typically the folder name)
         'source'             => get_template_directory() . '/plugins/js_composer_salient.zip', // The plugin source
         'required'           => true, // If false, the plugin is only 'recommended' instead of required
-        'version'            => '6.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+        'version'            => '6.6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
         'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
         'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
     ),
@@ -57,7 +57,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-core', 
         'source'             => get_template_directory() . '/plugins/salient-core.zip', 
         'required'           => true, 
-        'version'            => '1.5', 
+        'version'            => '1.8.2', 
         'force_activation'   => false, 
         'force_deactivation' => false, 
     ),
@@ -66,7 +66,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-demo-importer', 
         'source'             => get_template_directory() . '/plugins/salient-demo-importer.zip', 
         'required'           => false,  
-        'version'            => '1.2', 
+        'version'            => '1.3', 
         'force_activation'   => false,
         'force_deactivation' => false, 
     ),
@@ -75,7 +75,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-social', 
         'source'             => get_template_directory() . '/plugins/salient-social.zip', 
         'required'           => false, 
-        'version'            => '1.1', 
+        'version'            => '1.2', 
         'force_activation'   => false,
         'force_deactivation' => false, 
     ),
@@ -84,7 +84,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-widgets', 
         'source'             => get_template_directory() . '/plugins/salient-widgets.zip', 
         'required'           => false, 
-        'version'            => '1.1', 
+        'version'            => '1.2', 
         'force_activation'   => false,
         'force_deactivation' => false, 
     ),
@@ -93,7 +93,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-portfolio', 
         'source'             => get_template_directory() . '/plugins/salient-portfolio.zip', 
         'required'           => false, 
-        'version'            => '1.5', 
+        'version'            => '1.7', 
         'force_activation'   => false,
         'force_deactivation' => false, 
     ),
@@ -102,7 +102,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-nectar-slider', 
         'source'             => get_template_directory() . '/plugins/salient-nectar-slider.zip', 
         'required'           => false,  
-        'version'            => '1.5', 
+        'version'            => '1.7', 
         'force_activation'   => false,
         'force_deactivation' => false, 
     ),
@@ -111,7 +111,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-home-slider', 
         'source'             => get_template_directory() . '/plugins/salient-home-slider.zip', 
         'required'           => false, 
-        'version'            => '1.2', 
+        'version'            => '1.4', 
         'force_activation'   => false,
         'force_deactivation' => false, 
     ),
@@ -120,7 +120,7 @@ function nectar_register_required_plugins() {
         'slug'               => 'salient-shortcodes', 
         'source'             => get_template_directory() . '/plugins/salient-shortcodes.zip', 
         'required'           => false, 
-        'version'            => '1.3', 
+        'version'            => '1.5', 
         'force_activation'   => false,
         'force_deactivation' => false, 
     )

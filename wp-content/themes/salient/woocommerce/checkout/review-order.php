@@ -11,8 +11,8 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.8.0
+ * @package WooCommerce\Templates
+ * @version 5.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -39,13 +39,15 @@ defined( 'ABSPATH' ) || exit;
 							?>
 						</div>
 						<div class="product-info">
-							<?php echo '<h4>' . apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <span class="product-quantity">' . __('Quantity: ','salient') . $cart_item['quantity'] . '</span></h4>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-							<?php if(function_exists('wc_get_formatted_cart_item_data')) { 
-								echo wc_get_formatted_cart_item_data( $cart_item ); 
-							} else {
-								echo WC()->cart->get_item_data( $cart_item );
-							} ?>
+							<div class="inner">
+								<?php echo '<h4><a href="'. esc_url(get_permalink($cart_item['product_id'])) .'" target="_blank">' . wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) ) . '&nbsp;</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <span class="product-quantity">' . esc_html__('Quantity: ','salient') . $cart_item['quantity'] . '</span></h4>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								<?php if(function_exists('wc_get_formatted_cart_item_data')) { 
+									echo wc_get_formatted_cart_item_data( $cart_item ); 
+								} else {
+									echo WC()->cart->get_item_data( $cart_item );
+								} ?>
+							</div>
 							<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
 						</div>
 					</div>

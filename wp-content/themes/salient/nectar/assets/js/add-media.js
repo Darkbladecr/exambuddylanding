@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
   $(".nectar-add-btn").on('click',function(e) {
     
     var $that = $(this);  
+    var storeID = $(this).hasClass('store-id');
     
     e.preventDefault();
     
@@ -33,7 +34,14 @@ jQuery(document).ready(function($) {
       var image_attachment_url = image_attachment.attributes.url;
       
       $that.parent().find('.nectar-media-preview').attr('src', image_attachment_url);
-      $('#' + $that.attr('rel-id') ).val(image_attachment_url).trigger('change');
+      
+      if( storeID ) {
+        $('.' + $that.attr('rel-id') + '-url' ).val(image_attachment.attributes.url).trigger('change');
+        $('.' + $that.attr('rel-id') + '-id' ).val(image_attachment.attributes.id).trigger('change');
+      } 
+      else {
+        $('#' + $that.attr('rel-id') ).val(image_attachment_url).trigger('change');
+      }
       
       $that.parent().find('.nectar-add-btn').hide();
       $that.parent().find('.nectar-media-preview').show();
@@ -51,7 +59,14 @@ jQuery(document).ready(function($) {
     
     e.preventDefault();
     
-    $('#' + $(this).attr('rel-id')).val('');
+    var storeID = $(this).hasClass('store-id');
+    
+    if( storeID ) {
+      $('.' + $(this).attr('rel-id') + '-url' ).val('');
+      $('.' + $(this).attr('rel-id') + '-id' ).val('');
+    } else {
+      $('#' + $(this).attr('rel-id')).val('');
+    }
     $(this).prev().fadeIn();
     
     $(this).parent().find('.nectar-media-preview').fadeOut();

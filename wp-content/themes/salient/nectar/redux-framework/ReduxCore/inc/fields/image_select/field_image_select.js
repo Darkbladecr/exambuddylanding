@@ -5,6 +5,7 @@
 (function( $ ) {
     "use strict";
 
+
     redux.field_objects = redux.field_objects || {};
     redux.field_objects.image_select = redux.field_objects.image_select || {};
 
@@ -90,17 +91,17 @@
                         } else {
                             el.find( 'label[for="' + id + '"]' ).addClass( 'redux-image-select-selected' ).find( "input[type='radio']" ).attr(
                                 "checked", true
-                            ).trigger('change');
+                            ).trigger('change').trigger('click');
 
                             redux_change( $( this ).closest( 'label' ).find( 'input[type="radio"]' ) );
                         }
                     }
                 );
-                
+
                 /*nectar addition*/
                 el.find( 'label' ).each(function(){
                   if($(this).find('img').is('[data-ntooltip]') && $(this).find('img').attr('data-ntooltip').length > 0) {
-                    
+
                       $(this).qtip(
                           {
                               content: $(this).find('img').attr('data-ntooltip'),
@@ -114,8 +115,8 @@
                   }
                 });
                 /*nectar addition end*/
-                
-                
+
+
                 // Used to display a full image preview of a tile/pattern
                 el.find( '.tiles' ).qtip(
                     {

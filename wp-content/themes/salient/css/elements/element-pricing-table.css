@@ -83,7 +83,6 @@ Description: Styles for the "Pricing Table" page builder element.
 }
  .pricing-table[data-style="default"] .pricing-column.highlight h3{
      color:#fff;
-     background-color:#27CFC3;
      padding:15px 0px;
      margin-bottom:0px
 }
@@ -92,7 +91,6 @@ Description: Styles for the "Pricing Table" page builder element.
 }
  .pricing-column h3{
     background-color:#fff;
-     color:#27CFC3;
      margin-bottom:0px;
      font-size:26px;
      line-height:28px;
@@ -307,5 +305,26 @@ body .pricing-table[data-style="flat-alternative"] .pricing-column h3{
      .pricing-table[data-style="flat-alternative"].four-cols > div, 
      .pricing-table[data-style="flat-alternative"].five-cols > div {
          width: 48%!important;
+    }
+    .pricing-table[class*="cols"] > div {
+      width: 50%;
+      margin-bottom: 25px;
+    }
+  
+    .pricing-table[data-style] .pricing-column.highlight .nectar-button {
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+  
+    .pricing-column.highlight {
+      margin-top: 0;
+    }
+  
+    .pricing-table[data-style] .pricing-column h3 {
+      font-size: 20px;
+    }
+  
+    .pricing-table[data-style] .pricing-column.highlight h3 {
+      padding: 5px 0px;
     }
 }

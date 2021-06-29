@@ -3,10 +3,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%!important;
   z-index: 104200;
   overflow: hidden;
-  position: fixed;
+  position: fixed!important;
   background: #0b0b0b;
   opacity: 0.8;
   filter: alpha(opacity=80); }

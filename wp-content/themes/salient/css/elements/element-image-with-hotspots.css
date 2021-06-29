@@ -25,6 +25,14 @@ Description: Styles for the "Image with Hotspots" page builder element.
    width:30px;
    height:30px
 }
+@media only screen and (min-width: 690px) {
+  .nectar_image_with_hotspots[data-tooltip-func="click"] .nectar_hotspot_wrap {
+    pointer-events: none;
+  }
+  .nectar_image_with_hotspots[data-tooltip-func="click"] .nectar_hotspot {
+    pointer-events: all;
+  }
+}
 .nectar_image_with_hotspots .nectar_hotspot_wrap .nttip{
    position:relative;
     display:block;
@@ -191,9 +199,7 @@ body .nectar_image_with_hotspots .nectar_hotspot_wrap .nttip[data-tooltip-positi
     font-size:11px;
     display:block
 }
-.nectar_image_with_hotspots[data-stlye="color_pulse"] .nectar_hotspot{
-   background-color:#27CFC3
-}
+
 .nectar_image_with_hotspots[data-stlye="color_pulse"] .nectar_hotspot:before{
     display:block;
     position:absolute;

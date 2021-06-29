@@ -26,7 +26,12 @@ jQuery(document).ready(function ($) {
 						$.getJSON(MyAcSearch.url+'?callback=?&action='+acs_action, req, response);  
 					},  
 					select: function(event, ui) {  
-						window.location.href=ui.item.link;  
+            if( ui.item.target == '_blank' ) {
+              window.open(ui.item.link);  
+            } else {
+              window.location.href = ui.item.link;  
+            }
+				
 					},  
 					minLength: 2,  
 				}).data( "ui-autocomplete" )._renderItem = function( ul, item ) {

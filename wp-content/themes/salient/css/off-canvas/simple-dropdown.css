@@ -3,17 +3,6 @@ Theme Name:  Salient
 Description: Off canvas menu set to "Simple Dropdown" in theme options
 */
 
-
-#header-outer #mobile-menu {
-  display: none;
-  padding: 0;
-  z-index: 1000;
-  position: absolute;
-  left: 0;
-  top: calc(99% + 12px);
-  width: 100%;
-}
-
 #header-outer #mobile-menu > .inner {
   max-height: 85vh;
   position: relative;
@@ -84,13 +73,21 @@ body[data-header-color="dark"] #header-outer #mobile-menu p {
   padding: 15px 0;
 }
 
-#mobile-menu .inner ul ul > li > a span { 
+#mobile-menu .inner ul ul > li > a span {
   opacity: 0;
   display: block;
   -webkit-transform: translateX(-10px);
   transform: translateX(-10px);
   -webkit-transition: opacity 0.3s ease, transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#mobile-menu .inner ul ul > li > a span.nectar-menu-label,
+#mobile-menu .inner ul ul > li > a span.menu-title-text {
+  display: inline-block;
+}
+#mobile-menu .inner .widget-area-active ul > li > a span {
+  opacity: 1;
+  transform: none;
 }
 
 #mobile-menu .inner ul .visible > ul > li > a span {
@@ -138,7 +135,7 @@ body[data-header-color="dark"] #header-outer #mobile-menu p {
   transition-delay: 0.48s;
 }
 
-#mobile-menu .menu-items-wrap ul li:before {
+#mobile-menu .menu-items-wrap ul:not(.nectar_widget) > li:before {
   background-color: rgba(0,0,0,0.08);
   content: '';
   display: block;
@@ -179,6 +176,13 @@ body[data-header-color="dark"] #mobile-menu .menu-items-wrap > ul:last-child > l
   width: auto;
 }
 
+#header-outer #mobile-menu a > .nectar-ext-menu-item + .sf-sub-indicator {
+  top: 0;
+  right: 10px;
+  transform: none;
+  z-index: 100;
+}
+
 #header-outer #mobile-menu a > .sf-sub-indicator i {
   font-size: 20px;
   color: inherit;
@@ -189,6 +193,11 @@ body[data-header-color="dark"] #mobile-menu .menu-items-wrap > ul:last-child > l
 
 #header-outer #mobile-menu .current-open-item > a > .sf-sub-indicator i {
   transform: rotate(180deg);
+}
+
+#mobile-menu .inner ul ul .nectar-menu-item-with-icon > span {
+	display: flex;
+	align-items: flex-start;
 }
 
 #header-outer #mobile-menu .bottom-text {
@@ -215,6 +224,15 @@ body[data-header-color="dark"] #mobile-menu .menu-items-wrap > ul:last-child > l
   margin-left: 100px;
 }
 
+#header-outer #mobile-menu ul ul > li > a .item_desc {
+  display: block;
+  margin-top: 5px;
+}
+
+#header-outer #mobile-menu ul .widget-area-active .widget ul > li > a {
+  margin-left: 0;
+}
+
 #header-outer #mobile-menu .off-canvas-social-links li {
   display: inline-block;
 }
@@ -231,12 +249,13 @@ body[data-header-color="dark"] #mobile-menu .menu-items-wrap > ul:last-child > l
   margin-top: 20px;
 }
 
-#header-outer #mobile-menu .secondary-header-text p { 
+#header-outer #mobile-menu .secondary-header-text p {
   margin-bottom: 0;
-  padding: 0; 
+  padding: 0;
   line-height: 1.5em;
 }
-#header-outer #mobile-menu .secondary-header-text {
+#header-outer #mobile-menu .secondary-header-text,
+#header-outer #mobile-menu .nectar-header-text-content {
   padding: 15px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -245,6 +264,10 @@ body[data-header-color="dark"] #mobile-menu .menu-items-wrap > ul:last-child > l
   border-radius: 5px;
   position: relative;
   z-index: 10;
+}
+
+#header-outer #mobile-menu .nectar-header-text-content > span {
+  width: 100%;
 }
 
 #header-outer #mobile-menu .secondary-header-text p a {
@@ -262,12 +285,18 @@ body[data-header-color="dark"] #header-outer #mobile-menu .secondary-header-text
 
 
 @media only screen and (min-width: 691px) {
-  
+
   #header-outer #mobile-menu .secondary-header-text {
     display: none;
   }
-  #header-outer #mobile-menu .secondary-header-items { 
-    display: none; 
+  #header-outer #mobile-menu .secondary-header-items {
+    display: none;
   }
-  
+
+}
+
+@media only screen and (min-width: 1000px) {
+  #header-outer #mobile-menu .nectar-header-text-content {
+    display: none;
+  }
 }

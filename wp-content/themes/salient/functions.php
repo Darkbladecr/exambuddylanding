@@ -6,8 +6,8 @@
  * @package Salient
  * @since 1.0
  */
- 
- 
+
+
  /**
   * Define Constants.
   */
@@ -18,7 +18,7 @@ define( 'NECTAR_THEME_NAME', 'salient' );
 
 if ( ! function_exists( 'get_nectar_theme_version' ) ) {
 	function nectar_get_theme_version() {
-		return '12.0';
+		return '13.0.5';
 	}
 }
 
@@ -61,11 +61,13 @@ function get_nectar_theme_options() {
 $nectar_options                    = get_nectar_theme_options();
 $nectar_get_template_directory_uri = get_template_directory_uri();
 
+require_once NECTAR_THEME_DIRECTORY . '/includes/class-nectar-theme-manager.php';
 
 
 /**
  * Register/Enqueue theme assets.
  */
+require_once NECTAR_THEME_DIRECTORY . '/nectar/helpers/icon-collections.php';
 require_once NECTAR_THEME_DIRECTORY . '/includes/class-nectar-element-assets.php';
 require_once NECTAR_THEME_DIRECTORY . '/includes/class-nectar-element-styles.php';
 require_once NECTAR_THEME_DIRECTORY . '/includes/class-nectar-lazy.php';
@@ -84,17 +86,17 @@ require_once NECTAR_THEME_DIRECTORY . '/nectar/plugin-notices/salient-plugin-not
  * Salient welcome page.
  */
  require_once NECTAR_THEME_DIRECTORY . '/nectar/welcome/welcome-page.php';
- 
+
 
 /**
  * Theme hooks & actions.
  */
 function nectar_hooks_init() {
-	
+
 	require_once NECTAR_THEME_DIRECTORY . '/nectar/hooks/hooks.php';
 	require_once NECTAR_THEME_DIRECTORY . '/nectar/hooks/actions.php';
-	
-} 
+
+}
 
 add_action( 'after_setup_theme', 'nectar_hooks_init', 10 );
 
@@ -134,12 +136,8 @@ require_once NECTAR_THEME_DIRECTORY . '/nectar/helpers/wpbakery-init.php';
 /**
  * Theme skin specific class and assets.
  */
-$nectar_theme_skin    = ( ! empty( $nectar_options['theme-skin'] ) ) ? $nectar_options['theme-skin'] : 'original';
+$nectar_theme_skin    = NectarThemeManager::$skin;
 $nectar_header_format = ( ! empty( $nectar_options['header_format'] ) ) ? $nectar_options['header_format'] : 'default';
-
-if ( 'centered-menu-bottom-bar' === $nectar_header_format ) {
-	$nectar_theme_skin = 'material';
-}
 
 add_filter( 'body_class', 'nectar_theme_skin_class' );
 

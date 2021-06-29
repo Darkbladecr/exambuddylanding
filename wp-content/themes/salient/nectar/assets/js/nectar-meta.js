@@ -7,7 +7,7 @@
  /* global jQuery */
  
 jQuery(document).ready(function($){
-	
+
 	"use strict";
 	
 	/*----------------------------------------------------------------------------------*/
@@ -27,7 +27,7 @@ jQuery(document).ready(function($){
 		if( $('.post-type-post .components-panel .editor-post-format select').length > 0) {
 			format = $('.post-type-post .components-panel .editor-post-format select').val();
 			
-			$('#normal-sortables [id*="nectar-metabox-post-"]').hide();
+			$('#normal-sortables [id*="nectar-metabox-post-"]:not(#nectar-metabox-post-config)').hide();
 			
 			if( format == 'gallery' ) {
 				$('#nectar-metabox-post-gallery').stop(true,true).fadeIn(500);
@@ -256,11 +256,14 @@ jQuery(document).ready(function($){
 	
 	
 	// BG type
-	$('a[rel-id=_nectar_media_upload_mp4], a[rel-id=_nectar_media_upload_ogv], a[rel-id=_nectar_media_upload_webm], a[rel-id=_nectar_slider_image], a[rel-id=_nectar_header_bg]').parents('tr').hide();
-	
 	function backgroundType() {
 		
-		var $active = $('label[for=_nectar_slider_bg_type]').parents('tr').find('.buttonset .ui-state-active').attr('for');
+    var $active = '';
+    $('label[for=_nectar_slider_bg_type]').parents('tr').find('.buttonset input').each(function(){
+      if($(this).prop('checked') == true) {
+        $active = $(this).attr('id');
+      }
+    });
 		
 		if($active == 'nectar_meta_video_bg'){
 			
@@ -295,10 +298,16 @@ jQuery(document).ready(function($){
 	
 	
 	////link tpye
-	$('td.inline, label[for=_nectar_slider_entire_link], label[for=_nectar_slider_video_popup]').parents('tr').hide();
+	//$('td.inline, label[for=_nectar_slider_entire_link], label[for=_nectar_slider_video_popup]').parents('tr').hide();
 	
-	function linkType(){
-		var $active = $('label[for=_nectar_slider_link_type]').parents('tr').find('.buttonset .ui-state-active').attr('for');
+	function linkType() {
+		var $active = '';
+    $('label[for=_nectar_slider_link_type]').parents('tr').find('.buttonset input').each(function(){
+      if($(this).prop('checked') == true) {
+        $active = $(this).attr('id');
+      }
+    });
+    
 		if($active == 'nectar_meta_button_links'){
 			$('td.inline').parents('tr').fadeIn();
 			$('label[for=_nectar_slider_entire_link], label[for=_nectar_slider_video_popup]').parents('tr').hide();
@@ -315,11 +324,11 @@ jQuery(document).ready(function($){
 	$('label[for=_nectar_slider_link_type]').parents('tr').find('.buttonset label').on('click', function(){ setTimeout(linkType,60); });
 	
 	function fullscreenHeight(){
-		
-		if($('input#_nectar_header_box_roll').attr('checked') == 'checked') {
+
+		if($('input#_nectar_header_box_roll').prop('checked') == true) {
 			return false;
 		}
-		if( $('input#_nectar_header_fullscreen').attr('checked') == 'checked' ) {
+		if( $('input#_nectar_header_fullscreen').prop('checked') == true) {
 			$('input#_nectar_header_bg_height').parents('tr').hide();
 		} else {
 			$('input#_nectar_header_bg_height').parents('tr').fadeIn();
@@ -329,7 +338,7 @@ jQuery(document).ready(function($){
 	
 	
 	$('input#_nectar_header_fullscreen').on('click', function(){
-		if($('input#_nectar_header_box_roll').attr('checked') == 'checked') {
+		if($('input#_nectar_header_box_roll').prop('checked') == true) {
 			return false;
 		}
 	});
@@ -349,16 +358,16 @@ jQuery(document).ready(function($){
 	
 	
 	$('input#_nectar_header_fullscreen').on('click', function(){
-		if($('input#_nectar_header_box_roll').attr('checked') == 'checked') {
+		if($('input#_nectar_header_box_roll').prop('checked') == true) {
 			return false;
 		}
 	});
 	
 	
 	function boxRoll() {
-		if($('input#_nectar_header_box_roll').attr('checked') == 'checked') {
+		if($('input#_nectar_header_box_roll').prop('checked') == true) {
 			$('#_nectar_header_parallax').removeAttr('checked');
-			$('input#_nectar_header_fullscreen').attr('checked','checked');
+			$('input#_nectar_header_fullscreen').prop('checked',true);
 			$('input#_nectar_header_bg_height').parents('tr').hide();
 			
 			$('#_nectar_header_parallax').parents('.switch-options.salient').find( ".cb-disable" ).trigger('click');
@@ -369,17 +378,18 @@ jQuery(document).ready(function($){
 	$('#_nectar_header_box_roll').on('click', boxRoll);
 	
 	function parallaxHeader() {
-		if($('#_nectar_header_parallax').attr('checked') == 'checked') {
+		if($('#_nectar_header_parallax').prop('checked') == true) {
 			$('input#_nectar_header_box_roll').removeAttr('checked');
 			$('#_nectar_header_box_roll').parents('.switch-options.salient').find( ".cb-disable" ).trigger('click');
 		} 
 	}
 	$('#_nectar_header_parallax').on('click', parallaxHeader);
 	
-	$(window).load(function(){
+  linkType();
+  backgroundType();
+  
+	$(window).on('load', function(){
 		checkFormat();
-		backgroundType();
-		linkType();
 		fullscreenHeight();
 		checkButtonStyle();
 		boxRoll();
@@ -416,7 +426,7 @@ jQuery(document).ready(function($){
 		$('input#post_type').attr('value') == 'portfolio' && 
 		$('#nectar-metabox-project-configuration ._nectar_portfolio_custom_grid_item .ui-state-active').attr('for') != 'nectar_meta_on'){
 			
-			if($('#nectar-metabox-project-configuration ._nectar_portfolio_item_layout .ui-state-active').attr('for') == 'nectar_meta_enabled'){
+			if($('#nectar-metabox-project-configuration ._nectar_portfolio_item_layout .ui-state-active').attr('for') == 'nectar_meta_enabled') {
 				$('.edit-form-section, .postarea').stop(true,true).slideUp(700);
 				$('#nectar-metabox-portfolio-extra .hndle span').html('Full Width Content');
 				$('#nectar-metabox-portfolio-extra .inside > p:not(.composer-switch)').html('Please enter your portfolio item content here - all nectar shortcodes are available for use.');
@@ -430,10 +440,12 @@ jQuery(document).ready(function($){
 		}
 	}
 	
-	
-	$('label[for=nectar_meta_disabled]').parents('tr').find('.buttonset label').on('click',function(){ 
-    setTimeout(portfolioLayout,60); 
-  });
+	if( $('body.salient-portfolio-page-builder-layout').length == 0 ) {
+    $('label[for=nectar_meta_disabled]').parents('tr').find('.buttonset label').on('click',function(){ 
+      setTimeout(portfolioLayout,60); 
+    });
+  	
+  }
 	
 	
 	// Portfolio custom content grid item
@@ -489,11 +501,16 @@ jQuery(document).ready(function($){
 						$(this).fadeIn(500);
 					}
 				});
+        
 				setTimeout(function(){ $(window).trigger('resize'); },700);
 				$('#wp-_nectar_portfolio_custom_grid_item_content-wrap').parents('tr').fadeOut(500);
-				$('#nectar-metabox-portfolio-extra .hndle span').html('Extra Content');
-				$('#nectar-metabox-portfolio-extra .inside > p:not(.composer-switch)').html('Please use this section to place any extra content you would like to appear in the main content area under your portfolio item. (The above default editor is only used to populate your items sidebar content)');
-			}
+        
+        if( $('body.salient-portfolio-page-builder-layout').length == 0 ) {
+				  $('#nectar-metabox-portfolio-extra .hndle span').html('Extra Content');
+				  $('#nectar-metabox-portfolio-extra .inside > p:not(.composer-switch)').html('Please use this section to place any extra content you would like to appear in the main content area under your portfolio item. (The above default editor is only used to populate your items sidebar content)');
+        } 
+        
+      }
 			
 		}
 	}
@@ -517,7 +534,9 @@ jQuery(document).ready(function($){
 	
 	setTimeout(function(){ 
 		checkVCVis(); 
-		portfolioLayout(); 
+    if( $('body.salient-portfolio-page-builder-layout').length == 0 ) {
+		    portfolioLayout(); 
+    }
 		portfolioLayout2(); 
 	} ,60);
 	
@@ -608,7 +627,7 @@ jQuery(document).ready(function($){
 					$('.edit_form_line .starting_category option[value="' + selectedCats[i] + '"]').removeAttr('disabled').show();
 				}
 				
-				$('.edit_form_line .starting_category option:not([disabled])').first().attr('selected','selected');
+				$('.edit_form_line .starting_category option:not([disabled])').first().prop('selected',true);
 			}
 			
 		}
@@ -692,7 +711,7 @@ jQuery(document).ready(function($){
 		}
 		
 		if(firstLoad == false) {
-			$('select#_portfolio_item_masonry_content_pos').val('middle').find('option:visible:first').attr('selected','selected');
+			$('select#_portfolio_item_masonry_content_pos').val('middle').find('option:visible:first').prop('selected',true);
 		}
 		
 	}
@@ -752,7 +771,7 @@ jQuery(document).ready(function($){
 		$(this).parent().addClass( 'activated');
 		
 		if($(this).parents('.postbox-container').length > 0) {
-			$( 'input[type="checkbox"]', parent ).val( 'on' ).attr('checked','checked').trigger('change');
+			$( 'input[type="checkbox"]', parent ).val( 'on' ).prop('checked',true).trigger('change');
 		}
 		
 		//item specific triggers
@@ -808,5 +827,13 @@ jQuery(document).ready(function($){
 			$(this).addClass( 'activated');
 		}
 	});
+  
+  
+  // WPBakery wp 5.6 compatibility disabled field temp fix.
+  $('body').on("keyup change input", "[data-vc-disable-empty]", function() {
+    var _this = $(this),
+        $target = $(_this.data("vcDisableEmpty"));
+        _this.val().length ? $target.prop( "disabled", false ) : $target.prop( "disabled", true );
+  });
 	
 });

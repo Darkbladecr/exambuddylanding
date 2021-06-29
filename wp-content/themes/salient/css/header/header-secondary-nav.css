@@ -1,6 +1,6 @@
 /*
 Theme Name:  Salient
-Description: "Secondary Header Bar" enabled in theme options 
+Description: "Secondary Header Bar" enabled in theme options
 */
 
 body[data-header-color="dark"] #header-secondary-outer{
@@ -16,9 +16,9 @@ body[data-header-color="dark"] #header-secondary-outer{
     border-right:1px solid #272727
 }
 
-body[data-header-color="dark"] #header-secondary-outer nav >ul >li >a, 
+body[data-header-color="dark"] #header-secondary-outer nav >ul >li >a,
 body[data-header-color="dark"] #header-secondary-outer nav >ul >li >a .sf-sub-indicator i,
-body[data-header-color="dark"] #header-secondary-outer .nectar-center-text, 
+body[data-header-color="dark"] #header-secondary-outer .nectar-center-text,
 body[data-header-color="dark"] #header-secondary-outer .nectar-center-text a,
 body[data-header-color="dark"] #header-secondary-outer #social li a i {
     color:#A0A0A0
@@ -31,7 +31,7 @@ body[data-header-color="dark"] #header-secondary-outer #social li a i {
 }
 
 
-.material #header-secondary-outer[data-lhe="animated_underline"] nav >.sf-menu >li >a:hover:after, 
+.material #header-secondary-outer[data-lhe="animated_underline"] nav >.sf-menu >li >a:hover:after,
 .material #header-secondary-outer[data-lhe="animated_underline"] nav >.sf-menu >li >a.current-menu-item:after{
      backface-visibility: hidden;
      -ms-transform:scaleX(1);
@@ -46,12 +46,18 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
 #header-secondary-outer .container {
      position: static;
 }
-#header-secondary-outer {
+#header-secondary-outer,
+#header-secondary-outer > .container,
+#header-secondary-outer > .container > nav {
      min-height: 34px;
 }
 
-.material #header-secondary-outer {
+.material #header-secondary-outer{
      min-height: 42px;
+}
+.material #header-secondary-outer > .container,
+.material #header-secondary-outer > .container > nav {
+  min-height: 40px;
 }
 
 #header-secondary-outer .nectar-center-text {
@@ -68,19 +74,22 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
      transform: translateX(-50%) translateY(-50%);
 }
 
- body #header-secondary-outer .nectar-center-text {
+body #header-secondary-outer .nectar-center-text {
      font-size: 16px;
      line-height: 16px;
      max-width: 70%;
 }
+body #header-outer[data-format="centered-menu-bottom-bar"] #header-secondary-outer .nectar-center-text {
+  max-width: 100%;
+}
 
 #header-secondary-outer .nectar-center-text a {
-     color: inherit 
+     color: inherit
 }
 
 
 @media only screen and (max-width: 999px) {
-   
+
      body #header-secondary-outer[data-secondary-text="true"] ul {
          display: none;
     }
@@ -90,7 +99,7 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
 }
 
 @media only screen and (max-width: 690px) {
-   
+
      body.original #header-secondary-outer .nectar-center-text {
          display: none;
     }
@@ -112,6 +121,7 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
  body[data-header-color="custom"]:not(.material) #header-secondary-outer{
     border-bottom:1px solid rgba(0,0,0,0.1)
 }
+
 #header-secondary-outer #social{
     float:left;
      position: relative;
@@ -141,6 +151,12 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
     float: right;
     z-index:1000
 }
+#header-secondary-outer nav > ul > .nectar-megamenu-menu-item ul {
+  float: none;
+}
+#header-secondary-outer nav {
+  position: relative;
+}
 #header-secondary-outer nav >ul >li >a{
    color:rgba(0,0,0,0.55);
 }
@@ -151,11 +167,15 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
      font-size:11px;
      padding:10px
 }
+#header-secondary-outer .nectar-menu-label {
+	padding: 3px 8px;
+  font-size: 11px;
+}
  body[data-header-color="custom"]:not(.material) #header-secondary-outer nav >ul >li >a{
     border-left:1px solid rgba(0,0,0,0.1)
 }
- #header-secondary-outer nav >ul >li >a:hover, 
- #header-secondary-outer nav >ul >.current-menu-item >a, 
+ #header-secondary-outer nav >ul >li >a:hover,
+ #header-secondary-outer nav >ul >.current-menu-item >a,
  #header-secondary-outer nav >ul >.current-menu-ancestor >a{
     color:rgba(0,0,0,0.8)
 }
@@ -181,7 +201,7 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
     height:32px;
     padding-top:8px
 }
- #header-secondary-outer #social li .behance, 
+ #header-secondary-outer #social li .behance,
  #header-secondary-outer #social li .vimeo{
     background-color:#a6a6a6;
      background-position:center;
@@ -200,20 +220,18 @@ body[data-dropdown-style="minimal"] #header-secondary-outer .sf-menu > li ul{
      max-width:100%;
      padding:0 28px
 }
- #header-secondary-outer[data-full-width="true"] >.container nav >ul >li:last-child, 
+ #header-secondary-outer[data-full-width="true"] >.container nav >ul >li:last-child,
  #header-secondary-outer[data-full-width="true"] nav >ul#social >li:first-child >a{
     border:none
 }
 
 
  body[data-header-color="dark"] #header-secondary-outer .current-menu-ancestor >a,
- body[data-header-color="dark"] #header-secondary-outer .current-menu-item >a, 
- body[data-header-color="dark"] #header-secondary-outer .sfHover >a, 
+ body[data-header-color="dark"] #header-secondary-outer .current-menu-item >a,
+ body[data-header-color="dark"] #header-secondary-outer .sfHover >a,
  body[data-header-color="dark"] #header-secondary-outer .sfHover >a i,
- body[data-header-color="dark"] #header-secondary-outer nav >ul >li a:hover, 
- body[data-header-color="dark"] #header-secondary-outer nav >ul >li a:hover .sf-sub-indicator i,
- body[data-dropdown-style="minimal"] #header-secondary-outer ul >li:not(.megamenu) .sfHover >a,
- body[data-dropdown-style="minimal"] #header-secondary-outer ul >li:not(.megamenu) ul a:hover {
+ body[data-header-color="dark"] #header-secondary-outer nav >ul >li a:hover,
+ body[data-header-color="dark"] #header-secondary-outer nav >ul >li a:hover .sf-sub-indicator i {
     color:#fff!important
 }
 
@@ -237,7 +255,7 @@ body[data-header-color="dark"] #header-secondary-outer nav >ul >li >a .sf-sub-in
      clear: both;
      content: '';
 }
- body.material #header-secondary-outer nav >ul >li >a, 
+ body.material #header-secondary-outer nav >ul >li >a,
  body.material #header-secondary-outer #social li a {
      padding: 0;
      margin: 0 10px;
@@ -270,7 +288,7 @@ body[data-header-color="dark"] #header-secondary-outer nav >ul >li >a .sf-sub-in
 }
 
 @media only screen and (max-width: 999px) {
-    
+
     #header-secondary-outer[data-mobile="display_full"] .nectar-center-text {
       position: relative;
       left: 0;
@@ -306,5 +324,84 @@ body[data-header-color="dark"] #header-secondary-outer nav >ul >li >a .sf-sub-in
     display: none!important;
   }
   
+  #header-secondary-outer {
+    top: -13px;
+  }
 
+}
+
+
+@media only screen and (min-width : 690px) and (max-width : 999px) {
+
+  body:not(.material) #header-secondary-outer[data-mobile="display_full"] nav > #social > li:last-child {
+    border: none;
+  }
+}
+
+
+@media only screen and (max-width : 690px) {
+  body[data-header-format].material #header-secondary-outer {
+    display: none;
+    height: 0;
+  }
+  body #header-secondary-outer nav > ul > li,
+  body #header-secondary-outer nav > ul > li a,
+  #header-secondary-outer nav >ul >li:last-child {
+    border: none;
+  }
+
+  body:not(.material) #header-secondary-outer nav .sf-menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  body:not(.material) #header-secondary-outer ul#social {
+    padding: 10px 0px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  
+  body[data-header-format] #header-secondary-outer {
+    height: auto;
+  }
+
+  body:not(.material) #header-secondary-outer nav > ul,
+  body:not(.material) #header-secondary-outer #social {
+    float: none;
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+
+  #header-secondary-outer nav > ul > li > a .sf-sub-indicator {
+    display: none;
+  }
+
+  #header-secondary-outer nav > ul > li,
+  #header-secondary-outer #social li {
+    display: inline-block;
+    float: none;
+  }
+
+  #header-secondary-outer ul ul {
+    z-index: 100000;
+  }
+
+  #header-secondary-outer ul li:hover {
+    z-index: 1000;
+  }
+
+  #header-secondary-outer nav > ul > li ul li {
+    text-align: left;
+  }
+
+  #header-secondary-outer #social li > a {
+    height: 15px;
+  }
+
+  body:not(.material) #header-secondary-outer nav .sf-menu {
+    border-top: 1px solid #DDDDDD;
+  }
+  
 }

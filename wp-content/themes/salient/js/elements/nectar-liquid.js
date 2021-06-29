@@ -211,7 +211,7 @@
 		
 		// resize logic
 		$(window).resize(this.resize.bind(this));
-		$(window).smartresize(this.resize.bind(this));
+		$(window).on('smartresize', this.resize.bind(this));
 		
 	};
 	
